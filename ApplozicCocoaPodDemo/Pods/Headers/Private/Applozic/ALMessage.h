@@ -1,0 +1,1 @@
+../../../Applozic/Applozic/DomainClasses/ALMessage.h

@@ -1,0 +1,1 @@
+../../../Applozic/Applozic/Resources/lib/SDWebImage/UIImage+MultiFormat.h

@@ -1,0 +1,19 @@
+platform :ios, '9.0'
+
+target 'ApplozicCocoaPodDemo' do
+
+  # use_frameworks!
+     pod 'Applozic', '~>3.2'
+  # Pods for ApplozicCocoaPodDemo
+
+  target 'ApplozicCocoaPodDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ApplozicCocoaPodDemoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
