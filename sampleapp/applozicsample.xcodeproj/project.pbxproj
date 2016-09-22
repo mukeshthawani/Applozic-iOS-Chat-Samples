@@ -18,7 +18,6 @@
 		6D6DF2021BC551FA00EBA00F /* applozicdemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DF2001BC551FA00EBA00F /* applozicdemo.xcdatamodeld */; };
 		6D6DF2041BC551FA00EBA00F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6DF2031BC551FA00EBA00F /* Assets.xcassets */; };
 		6D6DF2071BC551FA00EBA00F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6DF2051BC551FA00EBA00F /* LaunchScreen.storyboard */; };
-		6DB445151C2C04D200C64524 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DB445141C2C04D200C64524 /* Info.plist */; };
 		6DB75B091C32CD9100077658 /* ALChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB75B081C32CD9100077658 /* ALChatManager.m */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		6D6DF2031BC551FA00EBA00F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D6DF2061BC551FA00EBA00F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D6DF2081BC551FA00EBA00F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DB445141C2C04D200C64524 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB75B071C32CD9100077658 /* ALChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALChatManager.h; sourceTree = "<group>"; };
 		6DB75B081C32CD9100077658 /* ALChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALChatManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,7 +107,6 @@
 				6D6DF2031BC551FA00EBA00F /* Assets.xcassets */,
 				6D6DF2051BC551FA00EBA00F /* LaunchScreen.storyboard */,
 				6D6DF2081BC551FA00EBA00F /* Info.plist */,
-				6DB445141C2C04D200C64524 /* Info.plist */,
 				6D6DF2001BC551FA00EBA00F /* applozicdemo.xcdatamodeld */,
 				6D6DF1F41BC551FA00EBA00F /* Supporting Files */,
 			);
@@ -202,7 +199,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DB445151C2C04D200C64524 /* Info.plist in Resources */,
 				6D6DF2071BC551FA00EBA00F /* LaunchScreen.storyboard in Resources */,
 				6D6DF2041BC551FA00EBA00F /* Assets.xcassets in Resources */,
 				6D4F28CB1BC58F6C007E7B35 /* Main.storyboard in Resources */,
@@ -334,7 +330,7 @@
 					/Users/devashish/framework/applozicdemo,
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = info.plist;
+				INFOPLIST_FILE = applozicdemo/info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -359,7 +355,7 @@
 					/Users/devashish/framework/applozicdemo,
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = info.plist;
+				INFOPLIST_FILE = applozicdemo/info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
