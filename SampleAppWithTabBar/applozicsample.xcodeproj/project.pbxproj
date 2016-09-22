@@ -344,7 +344,7 @@
 					/Users/devashish/framework/applozicdemo,
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = info.plist;
+				INFOPLIST_FILE = applozicdemo/info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -369,7 +369,7 @@
 					/Users/devashish/framework/applozicdemo,
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = info.plist;
+				INFOPLIST_FILE = applozicdemo/info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
