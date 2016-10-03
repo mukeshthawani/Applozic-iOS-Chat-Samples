@@ -94,20 +94,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)
     {
-        print("Got token data! \(deviceToken)")
-        let characterSet: CharacterSet = CharacterSet(charactersIn: "<>")
         
-        let deviceTokenString: String = (deviceToken.description as NSString)
-            .trimmingCharacters( in: characterSet )
-            .replacingOccurrences(of: " ", with: "") as String
+        print("DEVICE_TOKEN_DATA :: \(deviceToken.description)")  // (SWIFT = 3) : TOKEN PARSING
         
-        print(deviceTokenString)
+        var deviceTokenString: String = ""
+        for i in 0..<deviceToken.count
+        {
+            deviceTokenString += String(format: "%02.2hhx", deviceToken[i] as CVarArg)
+        }
+        
+//        let characterSet: CharacterSet = CharacterSet(charactersIn: "<>")   // (SWIFT < 3) : TOKEN PARSING
+//        
+//        let deviceTokenString: String = (deviceToken.description as NSString)
+//            .trimmingCharacters( in: characterSet )
+//            .replacingOccurrences(of: " ", with: "") as String
+//        
+        print("DEVICE_TOKEN_STRING :: \(deviceTokenString)")
         
         if (ALUserDefaultsHandler.getApnDeviceToken() != deviceTokenString)
         {
             let alRegisterUserClientService: ALRegisterUserClientService = ALRegisterUserClientService()
             alRegisterUserClientService.updateApnDeviceToken(withCompletion: deviceTokenString, withCompletion: { (response, error) in
-                print (response)
+                print ("REGISTRATION_RESPONSE :: \(response)")
             })
         }
     }
@@ -119,15 +127,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any])
     {
-        print("Received notification Completion : \(userInfo)")
+        print("Received notification :: \(userInfo.description)")
+        let alPushNotificationService: ALPushNotificationService = ALPushNotificationService()
+        
+        let appState: NSNumber = NSNumber(value: 0 as Int32)                        // APP_STATE_INACTIVE
+        alPushNotificationService.processPushNotification(userInfo, updateUI: appState)
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler
         completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
     {
-        print("Received notification Completion : \(userInfo)")
+        print("Received notification With Completion :: \(userInfo.description)")
         let alPushNotificationService: ALPushNotificationService = ALPushNotificationService()
-        alPushNotificationService.notificationArrived(to: application, with: userInfo)
+        
+        let appState: NSNumber = NSNumber(value: -1 as Int32)                       // APP_STATE_BACKGROUND
+        alPushNotificationService.processPushNotification(userInfo, updateUI: appState)
         completionHandler(UIBackgroundFetchResult.newData)
     }
     

@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		29A5114C1CC0C14900E1D2D8 /* DVChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVChatViewController.swift; sourceTree = "<group>"; };
+		4645B1361DA25D2E00044DB7 /* sampleapp-swift.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "sampleapp-swift.entitlements"; sourceTree = "<group>"; };
 		46D1619F1DA2478500B9C23C /* Applozic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Applozic.framework; sourceTree = "<group>"; };
 		6DB2153D1C69FCFF007CA71B /* LaunchChatFromSimpleVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchChatFromSimpleVCViewController.swift; sourceTree = "<group>"; };
 		6DB75B511C35221700077658 /* sampleapp-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sampleapp-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +88,7 @@
 		6DB75B531C35221700077658 /* sampleapp-swift */ = {
 			isa = PBXGroup;
 			children = (
+				4645B1361DA25D2E00044DB7 /* sampleapp-swift.entitlements */,
 				6DB75B7B1C3525E900077658 /* applozicswift-Bridging-Header.h */,
 				6DB75B711C35246100077658 /* Assets.xcassets */,
 				6DB75B6B1C35239700077658 /* chat */,
@@ -145,6 +147,7 @@
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = C25JNDCBM4;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -311,8 +314,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "sampleapp-swift/sampleapp-swift.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Adarsh Kumar (RN66F37TC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Adarsh Kumar (RN66F37TC5)";
+				DEVELOPMENT_TEAM = C25JNDCBM4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -323,7 +328,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applozic.customer.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d15515f3-ee5b-4af1-ba2c-588cb6f02c10";
+				PROVISIONING_PROFILE_SPECIFIER = "Dev applozic demo";
 				SWIFT_OBJC_BRIDGING_HEADER = "sampleapp-swift/sampleapp-swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -336,8 +342,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "sampleapp-swift/sampleapp-swift.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Adarsh Kumar (RN66F37TC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Adarsh Kumar (RN66F37TC5)";
+				DEVELOPMENT_TEAM = C25JNDCBM4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -348,7 +356,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applozic.customer.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d15515f3-ee5b-4af1-ba2c-588cb6f02c10";
+				PROVISIONING_PROFILE_SPECIFIER = "Dev applozic demo";
 				SWIFT_OBJC_BRIDGING_HEADER = "sampleapp-swift/sampleapp-swift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

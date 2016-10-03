@@ -6,53 +6,53 @@ provides-nominal:
 provides-member:
 - ["C15sampleapp_swift11AppDelegate", ""]
 provides-dynamic-lookup:
-- "application"
-- "application"
-- "application"
-- "application"
-- "application"
-- "applicationWillResignActive"
 - "applicationDidEnterBackground"
+- "application"
+- "application"
+- "application"
+- "application"
+- "application"
+- "window"
+- "applicationWillResignActive"
+- "applicationDidBecomeActive"
 - "applicationWillTerminate"
 - "applicationWillEnterForeground"
-- "applicationDidBecomeActive"
-- "window"
 depends-top-level:
+- !private "String"
+- "UIResponder"
+- !private "ALPushNotificationService"
+- !private "Notification"
 - !private "NotificationCenter"
 - "Void"
-- !private "print"
-- "UIBackgroundFetchResult"
-- "UIApplication"
-- !private "Notification"
-- !private "NSString"
-- "CastingPrecedence"
-- "AssignmentPrecedence"
-- !private "ALPushNotificationService"
+- !private "BooleanLiteralType"
+- !private "+="
+- "Data"
+- !private "StringLiteralType"
+- !private "!"
 - !private "Int32"
 - !private "ALAppLocalNotifications"
-- "Data"
-- !private "UIStoryboard"
-- !private "NSNumber"
-- "UIWindow"
 - "AppDelegate"
-- !private "ALRegisterUserClientService"
-- !private "ALUserDefaultsHandler"
-- "Bool"
-- "AnyHashable"
-- !private "UnicodeScalarType"
-- !private "StringLiteralType"
-- !private "CharacterSet"
-- "UIResponder"
-- "UIApplicationLaunchOptionsKey"
-- !private "String"
-- !private "!="
-- !private "ALDBHandler"
-- !private "BooleanLiteralType"
-- !private "UIViewController"
-- "UIApplicationDelegate"
+- "UIApplication"
+- !private "NSNumber"
+- !private "..<"
 - "Error"
+- "CastingPrecedence"
+- "UIApplicationDelegate"
+- "UIWindow"
+- !private "ALDBHandler"
 - !private "NSDictionary"
-- !private "!"
+- "AssignmentPrecedence"
+- !private "UIViewController"
+- !private "ALUserDefaultsHandler"
+- !private "print"
+- "AnyHashable"
+- !private "ALRegisterUserClientService"
+- "UIApplicationLaunchOptionsKey"
+- "UIBackgroundFetchResult"
+- !private "!="
+- !private "CVarArg"
+- !private "UIStoryboard"
+- "Bool"
 depends-member:
 - !private ["CSo23ALAppLocalNotifications", "appLocalNotificationHandler"]
 - !private ["CSo23ALAppLocalNotifications", "dataConnectionNotificationHandler"]
@@ -62,7 +62,6 @@ depends-member:
 - !private ["CSo25ALPushNotificationService", "applicationEntersForeground"]
 - ["CSo25ALPushNotificationService", "deinit"]
 - !private ["CSo25ALPushNotificationService", "init"]
-- !private ["CSo25ALPushNotificationService", "notificationArrived"]
 - !private ["CSo25ALPushNotificationService", "processPushNotification"]
 - !private ["CSo27ALRegisterUserClientService", "connect"]
 - ["CSo27ALRegisterUserClientService", "deinit"]
@@ -76,10 +75,10 @@ depends-member:
 - !private ["Ps9AnyObject", "ALPushNotificationService"]
 - !private ["Ps9AnyObject", "ALRegisterUserClientService"]
 - !private ["Ps9AnyObject", "ALUserDefaultsHandler"]
-- !private ["Ps9AnyObject", "CharacterSet"]
 - !private ["Ps9AnyObject", "NSNumber"]
 - !private ["Ps9AnyObject", "Notification"]
 - !private ["Ps9AnyObject", "NotificationCenter"]
+- !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "UIApplication"]
 - !private ["Ps9AnyObject", "UIApplicationLaunchOptionsKey"]
 - !private ["Ps9AnyObject", "UIBackgroundFetchResult"]
@@ -108,17 +107,14 @@ depends-member:
 - !private ["Ps9AnyObject", "instantiateViewController"]
 - !private ["Ps9AnyObject", "isLoggedIn"]
 - !private ["Ps9AnyObject", "makeKeyAndVisible"]
-- !private ["Ps9AnyObject", "notificationArrived"]
 - !private ["Ps9AnyObject", "post"]
 - !private ["Ps9AnyObject", "present"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "processPushNotification"]
-- !private ["Ps9AnyObject", "replacingOccurrences"]
 - !private ["Ps9AnyObject", "rootViewController"]
 - !private ["Ps9AnyObject", "saveContext"]
 - !private ["Ps9AnyObject", "shared"]
 - !private ["Ps9AnyObject", "sharedInstance"]
-- !private ["Ps9AnyObject", "trimmingCharacters"]
 - !private ["Ps9AnyObject", "updateApnDeviceToken"]
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
@@ -129,13 +125,12 @@ depends-member:
 - !private ["C15sampleapp_swift11AppDelegate", "ALUserDefaultsHandler"]
 - ["C15sampleapp_swift11AppDelegate", "AnyHashable"]
 - ["C15sampleapp_swift11AppDelegate", "Bool"]
-- !private ["C15sampleapp_swift11AppDelegate", "CharacterSet"]
+- !private ["C15sampleapp_swift11AppDelegate", "CVarArg"]
 - ["C15sampleapp_swift11AppDelegate", "Data"]
 - ["C15sampleapp_swift11AppDelegate", "Error"]
 - !private ["C15sampleapp_swift11AppDelegate", "Int32"]
 - !private ["C15sampleapp_swift11AppDelegate", "NSDictionary"]
 - !private ["C15sampleapp_swift11AppDelegate", "NSNumber"]
-- !private ["C15sampleapp_swift11AppDelegate", "NSString"]
 - !private ["C15sampleapp_swift11AppDelegate", "Notification"]
 - !private ["C15sampleapp_swift11AppDelegate", "NotificationCenter"]
 - !private ["C15sampleapp_swift11AppDelegate", "String"]
@@ -162,30 +157,56 @@ depends-member:
 - ["C15sampleapp_swift11AppDelegate", "init"]
 - !private ["C15sampleapp_swift11AppDelegate", "print"]
 - ["C15sampleapp_swift11AppDelegate", "window"]
+- !private ["Ps23BidirectionalCollection", "Index"]
+- !private ["Ps23BidirectionalCollection", "IndexDistance"]
+- !private ["Ps23BidirectionalCollection", "Indices"]
+- !private ["Ps23BidirectionalCollection", "Iterator"]
+- !private ["Ps23BidirectionalCollection", "SubSequence"]
+- !private ["Ps23BidirectionalCollection", "_Element"]
+- !private ["Ps23BidirectionalCollection", "count"]
 - !private ["Ps23BidirectionalCollection", "description"]
+- !private ["Ps23BidirectionalCollection", "subscript"]
+- !private ["Ps22BidirectionalIndexable", "Index"]
+- !private ["Ps22BidirectionalIndexable", "IndexDistance"]
+- !private ["Ps22BidirectionalIndexable", "Indices"]
+- !private ["Ps22BidirectionalIndexable", "Iterator"]
+- !private ["Ps22BidirectionalIndexable", "SubSequence"]
+- !private ["Ps22BidirectionalIndexable", "_Element"]
+- !private ["Ps22BidirectionalIndexable", "count"]
 - !private ["Ps22BidirectionalIndexable", "description"]
+- !private ["Ps22BidirectionalIndexable", "subscript"]
+- !private ["Vs18BidirectionalSlice", "Index"]
+- !private ["Vs18BidirectionalSlice", "IndexDistance"]
+- !private ["Vs18BidirectionalSlice", "Indices"]
+- !private ["Vs18BidirectionalSlice", "Iterator"]
+- !private ["Vs18BidirectionalSlice", "SubSequence"]
+- !private ["Vs18BidirectionalSlice", "_Element"]
+- !private ["Ps17BitwiseOperations", "IntegerLiteralType"]
+- !private ["Ps17BitwiseOperations", "Stride"]
+- !private ["Ps17BitwiseOperations", "_DisabledRangeIndex"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
 - !private ["PSo15CALayerDelegate", "makeKeyAndVisible"]
 - !private ["PSo15CALayerDelegate", "rootViewController"]
 - !private ["PSo15CNKeyDescriptor", "init"]
-- !private ["PSo15CNKeyDescriptor", "replacingOccurrences"]
-- !private ["PSo15CNKeyDescriptor", "trimmingCharacters"]
 - !private ["Ps7CVarArg", "ALAppLocalNotifications"]
 - !private ["Ps7CVarArg", "ALDBHandler"]
 - !private ["Ps7CVarArg", "ALPushNotificationService"]
 - !private ["Ps7CVarArg", "ALRegisterUserClientService"]
 - !private ["Ps7CVarArg", "ALUserDefaultsHandler"]
-- !private ["Ps7CVarArg", "CharacterSet"]
 - !private ["Ps7CVarArg", "Index"]
+- !private ["Ps7CVarArg", "IntegerLiteralType"]
 - !private ["Ps7CVarArg", "NSNumber"]
 - !private ["Ps7CVarArg", "Notification"]
 - !private ["Ps7CVarArg", "NotificationCenter"]
+- !private ["Ps7CVarArg", "Stride"]
+- !private ["Ps7CVarArg", "String"]
 - !private ["Ps7CVarArg", "SubSequence"]
 - !private ["Ps7CVarArg", "UIApplication"]
 - !private ["Ps7CVarArg", "UIApplicationLaunchOptionsKey"]
 - !private ["Ps7CVarArg", "UIBackgroundFetchResult"]
 - !private ["Ps7CVarArg", "UIStoryboard"]
+- !private ["Ps7CVarArg", "_DisabledRangeIndex"]
 - !private ["Ps7CVarArg", "appLocalNotificationHandler"]
 - ["Ps7CVarArg", "application"]
 - ["Ps7CVarArg", "applicationDidBecomeActive"]
@@ -204,56 +225,63 @@ depends-member:
 - !private ["Ps7CVarArg", "connect"]
 - !private ["Ps7CVarArg", "dataConnectionNotificationHandler"]
 - !private ["Ps7CVarArg", "default"]
+- ["Ps7CVarArg", "deinit"]
+- !private ["Ps7CVarArg", "description"]
 - !private ["Ps7CVarArg", "disconnect"]
 - !private ["Ps7CVarArg", "getApnDeviceToken"]
 - !private ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "instantiateViewController"]
 - !private ["Ps7CVarArg", "isLoggedIn"]
 - !private ["Ps7CVarArg", "makeKeyAndVisible"]
-- !private ["Ps7CVarArg", "notificationArrived"]
 - !private ["Ps7CVarArg", "post"]
 - !private ["Ps7CVarArg", "present"]
 - !private ["Ps7CVarArg", "print"]
 - !private ["Ps7CVarArg", "processPushNotification"]
-- !private ["Ps7CVarArg", "replacingOccurrences"]
 - !private ["Ps7CVarArg", "rootViewController"]
 - !private ["Ps7CVarArg", "saveContext"]
 - !private ["Ps7CVarArg", "shared"]
 - !private ["Ps7CVarArg", "sharedInstance"]
 - !private ["Ps7CVarArg", "subscript"]
-- !private ["Ps7CVarArg", "trimmingCharacters"]
 - !private ["Ps7CVarArg", "updateApnDeviceToken"]
 - ["Ps7CVarArg", "window"]
 - ["Ps7CVarArg", ""]
 - !private ["Vs9Character", "deinit"]
-- ["V10Foundation12CharacterSet", "deinit"]
-- !private ["V10Foundation12CharacterSet", "init"]
-- !private ["Vs11ClosedRange", "deinit"]
 - !private ["Ps10Collection", "Index"]
+- !private ["Ps10Collection", "IndexDistance"]
+- !private ["Ps10Collection", "Indices"]
 - !private ["Ps10Collection", "Iterator"]
 - !private ["Ps10Collection", "SubSequence"]
 - !private ["Ps10Collection", "_Element"]
+- !private ["Ps10Collection", "count"]
 - !private ["Ps10Collection", "description"]
 - !private ["Ps10Collection", "subscript"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "Stride"]
+- !private ["Ps10Comparable", "_DisabledRangeIndex"]
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps10Comparable", "remoteNotification"]
-- !private ["Ps10Comparable", "replacingOccurrences"]
+- !private ["Vs14CountableRange", "Iterator"]
+- !private ["Vs14CountableRange", "_Element"]
+- ["Vs14CountableRange", "deinit"]
 - !private ["Ps28CustomDebugStringConvertible", "ALAppLocalNotifications"]
 - !private ["Ps28CustomDebugStringConvertible", "ALDBHandler"]
 - !private ["Ps28CustomDebugStringConvertible", "ALPushNotificationService"]
 - !private ["Ps28CustomDebugStringConvertible", "ALRegisterUserClientService"]
 - !private ["Ps28CustomDebugStringConvertible", "ALUserDefaultsHandler"]
-- !private ["Ps28CustomDebugStringConvertible", "CharacterSet"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
+- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
 - !private ["Ps28CustomDebugStringConvertible", "NSNumber"]
 - !private ["Ps28CustomDebugStringConvertible", "Name"]
 - !private ["Ps28CustomDebugStringConvertible", "Notification"]
 - !private ["Ps28CustomDebugStringConvertible", "NotificationCenter"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UIApplication"]
 - !private ["Ps28CustomDebugStringConvertible", "UIApplicationLaunchOptionsKey"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBackgroundFetchResult"]
 - !private ["Ps28CustomDebugStringConvertible", "UIStoryboard"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "appLocalNotificationHandler"]
 - ["Ps28CustomDebugStringConvertible", "application"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
@@ -270,6 +298,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "applicationWillResignActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
 - !private ["Ps28CustomDebugStringConvertible", "connect"]
+- !private ["Ps28CustomDebugStringConvertible", "count"]
 - !private ["Ps28CustomDebugStringConvertible", "dataConnectionNotificationHandler"]
 - !private ["Ps28CustomDebugStringConvertible", "default"]
 - !private ["Ps28CustomDebugStringConvertible", "description"]
@@ -279,49 +308,59 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "instantiateViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "isLoggedIn"]
 - !private ["Ps28CustomDebugStringConvertible", "makeKeyAndVisible"]
-- !private ["Ps28CustomDebugStringConvertible", "notificationArrived"]
 - !private ["Ps28CustomDebugStringConvertible", "post"]
 - !private ["Ps28CustomDebugStringConvertible", "present"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "processPushNotification"]
-- !private ["Ps28CustomDebugStringConvertible", "replacingOccurrences"]
 - !private ["Ps28CustomDebugStringConvertible", "rootViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "saveContext"]
 - !private ["Ps28CustomDebugStringConvertible", "shared"]
 - !private ["Ps28CustomDebugStringConvertible", "sharedInstance"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
-- !private ["Ps28CustomDebugStringConvertible", "trimmingCharacters"]
 - !private ["Ps28CustomDebugStringConvertible", "updateApnDeviceToken"]
 - ["Ps28CustomDebugStringConvertible", "window"]
 - ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "IntegerLiteralType"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "Stride"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_DisabledRangeIndex"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "replacingOccurrences"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "trimmingCharacters"]
 - !private ["Ps17CustomReflectable", "Index"]
+- !private ["Ps17CustomReflectable", "IndexDistance"]
+- !private ["Ps17CustomReflectable", "IntegerLiteralType"]
+- !private ["Ps17CustomReflectable", "Iterator"]
 - !private ["Ps17CustomReflectable", "Name"]
+- !private ["Ps17CustomReflectable", "Stride"]
 - !private ["Ps17CustomReflectable", "SubSequence"]
+- !private ["Ps17CustomReflectable", "_DisabledRangeIndex"]
+- !private ["Ps17CustomReflectable", "_Element"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "count"]
 - !private ["Ps17CustomReflectable", "description"]
 - !private ["Ps17CustomReflectable", "init"]
-- !private ["Ps17CustomReflectable", "replacingOccurrences"]
 - !private ["Ps17CustomReflectable", "subscript"]
 - !private ["Ps23CustomStringConvertible", "ALAppLocalNotifications"]
 - !private ["Ps23CustomStringConvertible", "ALDBHandler"]
 - !private ["Ps23CustomStringConvertible", "ALPushNotificationService"]
 - !private ["Ps23CustomStringConvertible", "ALRegisterUserClientService"]
 - !private ["Ps23CustomStringConvertible", "ALUserDefaultsHandler"]
-- !private ["Ps23CustomStringConvertible", "CharacterSet"]
 - !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IndexDistance"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "Iterator"]
 - !private ["Ps23CustomStringConvertible", "NSNumber"]
 - !private ["Ps23CustomStringConvertible", "Name"]
 - !private ["Ps23CustomStringConvertible", "Notification"]
 - !private ["Ps23CustomStringConvertible", "NotificationCenter"]
+- !private ["Ps23CustomStringConvertible", "Stride"]
+- !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "UIApplication"]
 - !private ["Ps23CustomStringConvertible", "UIApplicationLaunchOptionsKey"]
 - !private ["Ps23CustomStringConvertible", "UIBackgroundFetchResult"]
 - !private ["Ps23CustomStringConvertible", "UIStoryboard"]
+- !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "appLocalNotificationHandler"]
 - ["Ps23CustomStringConvertible", "application"]
@@ -339,6 +378,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "applicationWillResignActive"]
 - ["Ps23CustomStringConvertible", "applicationWillTerminate"]
 - !private ["Ps23CustomStringConvertible", "connect"]
+- !private ["Ps23CustomStringConvertible", "count"]
 - !private ["Ps23CustomStringConvertible", "dataConnectionNotificationHandler"]
 - !private ["Ps23CustomStringConvertible", "default"]
 - !private ["Ps23CustomStringConvertible", "description"]
@@ -348,26 +388,40 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "instantiateViewController"]
 - !private ["Ps23CustomStringConvertible", "isLoggedIn"]
 - !private ["Ps23CustomStringConvertible", "makeKeyAndVisible"]
-- !private ["Ps23CustomStringConvertible", "notificationArrived"]
 - !private ["Ps23CustomStringConvertible", "post"]
 - !private ["Ps23CustomStringConvertible", "present"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "processPushNotification"]
-- !private ["Ps23CustomStringConvertible", "replacingOccurrences"]
 - !private ["Ps23CustomStringConvertible", "rootViewController"]
 - !private ["Ps23CustomStringConvertible", "saveContext"]
 - !private ["Ps23CustomStringConvertible", "shared"]
 - !private ["Ps23CustomStringConvertible", "sharedInstance"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
-- !private ["Ps23CustomStringConvertible", "trimmingCharacters"]
 - !private ["Ps23CustomStringConvertible", "updateApnDeviceToken"]
 - ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["V10Foundation4Data", "Index"]
+- !private ["V10Foundation4Data", "IndexDistance"]
+- !private ["V10Foundation4Data", "SubSequence"]
+- !private ["V10Foundation4Data", "_Element"]
+- !private ["V10Foundation4Data", "count"]
 - ["V10Foundation4Data", "deinit"]
 - !private ["V10Foundation4Data", "description"]
+- !private ["V10Foundation4Data", "subscript"]
+- !private ["Vs27DefaultBidirectionalIndices", "Index"]
+- !private ["Vs27DefaultBidirectionalIndices", "Iterator"]
+- !private ["Vs27DefaultBidirectionalIndices", "SubSequence"]
+- !private ["Vs27DefaultBidirectionalIndices", "_Element"]
+- !private ["Vs26DefaultRandomAccessIndices", "Index"]
+- !private ["Vs26DefaultRandomAccessIndices", "IndexDistance"]
+- !private ["Vs26DefaultRandomAccessIndices", "Indices"]
+- !private ["Vs26DefaultRandomAccessIndices", "Iterator"]
+- !private ["Vs26DefaultRandomAccessIndices", "SubSequence"]
+- !private ["Vs26DefaultRandomAccessIndices", "_Element"]
 - !private ["Vs10Dictionary", "Index"]
 - !private ["Vs10Dictionary", "SubSequence"]
 - ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "description"]
 - !private ["Vs10Dictionary", "subscript"]
 - !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "ALAppLocalNotifications"]
@@ -375,15 +429,23 @@ depends-member:
 - !private ["Ps9Equatable", "ALPushNotificationService"]
 - !private ["Ps9Equatable", "ALRegisterUserClientService"]
 - !private ["Ps9Equatable", "ALUserDefaultsHandler"]
-- !private ["Ps9Equatable", "CharacterSet"]
+- !private ["Ps9Equatable", "Index"]
+- !private ["Ps9Equatable", "IndexDistance"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "Iterator"]
 - !private ["Ps9Equatable", "NSNumber"]
 - !private ["Ps9Equatable", "Name"]
 - !private ["Ps9Equatable", "Notification"]
 - !private ["Ps9Equatable", "NotificationCenter"]
+- !private ["Ps9Equatable", "Stride"]
+- !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "SubSequence"]
 - !private ["Ps9Equatable", "UIApplication"]
 - !private ["Ps9Equatable", "UIApplicationLaunchOptionsKey"]
 - !private ["Ps9Equatable", "UIBackgroundFetchResult"]
 - !private ["Ps9Equatable", "UIStoryboard"]
+- !private ["Ps9Equatable", "_DisabledRangeIndex"]
+- !private ["Ps9Equatable", "_Element"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "appLocalNotificationHandler"]
 - ["Ps9Equatable", "application"]
@@ -401,6 +463,7 @@ depends-member:
 - ["Ps9Equatable", "applicationWillResignActive"]
 - ["Ps9Equatable", "applicationWillTerminate"]
 - !private ["Ps9Equatable", "connect"]
+- !private ["Ps9Equatable", "count"]
 - !private ["Ps9Equatable", "dataConnectionNotificationHandler"]
 - !private ["Ps9Equatable", "default"]
 - !private ["Ps9Equatable", "description"]
@@ -411,56 +474,57 @@ depends-member:
 - !private ["Ps9Equatable", "isLoggedIn"]
 - !private ["Ps9Equatable", "makeKeyAndVisible"]
 - !private ["Ps9Equatable", "newData"]
-- !private ["Ps9Equatable", "notificationArrived"]
 - !private ["Ps9Equatable", "post"]
 - !private ["Ps9Equatable", "present"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "processPushNotification"]
 - !private ["Ps9Equatable", "remoteNotification"]
-- !private ["Ps9Equatable", "replacingOccurrences"]
 - !private ["Ps9Equatable", "rootViewController"]
 - !private ["Ps9Equatable", "saveContext"]
 - !private ["Ps9Equatable", "shared"]
 - !private ["Ps9Equatable", "sharedInstance"]
-- !private ["Ps9Equatable", "trimmingCharacters"]
+- !private ["Ps9Equatable", "subscript"]
 - !private ["Ps9Equatable", "updateApnDeviceToken"]
 - ["Ps9Equatable", "window"]
 - ["Ps9Equatable", ""]
 - ["Ps5Error", "deinit"]
-- !private ["Ps25ExpressibleByArrayLiteral", "init"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "init"]
 - !private ["Ps30ExpressibleByDictionaryLiteral", "Index"]
 - !private ["Ps30ExpressibleByDictionaryLiteral", "SubSequence"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "description"]
 - !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "replacingOccurrences"]
-- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "trimmingCharacters"]
 - !private ["Ps25ExpressibleByFloatLiteral", "init"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "IntegerLiteralType"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "_DisabledRangeIndex"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "init"]
 - !private ["Ps32ExpressibleByStringInterpolation", "init"]
-- !private ["Ps32ExpressibleByStringInterpolation", "replacingOccurrences"]
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
-- !private ["Ps26ExpressibleByStringLiteral", "replacingOccurrences"]
-- !private ["Ps26ExpressibleByStringLiteral", "trimmingCharacters"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
-- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "replacingOccurrences"]
-- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "trimmingCharacters"]
 - !private ["Sf", "deinit"]
 - !private ["Ps8Hashable", "ALAppLocalNotifications"]
 - !private ["Ps8Hashable", "ALDBHandler"]
 - !private ["Ps8Hashable", "ALPushNotificationService"]
 - !private ["Ps8Hashable", "ALRegisterUserClientService"]
 - !private ["Ps8Hashable", "ALUserDefaultsHandler"]
-- !private ["Ps8Hashable", "CharacterSet"]
+- !private ["Ps8Hashable", "Index"]
+- !private ["Ps8Hashable", "IndexDistance"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "NSNumber"]
 - !private ["Ps8Hashable", "Name"]
 - !private ["Ps8Hashable", "Notification"]
 - !private ["Ps8Hashable", "NotificationCenter"]
+- !private ["Ps8Hashable", "Stride"]
+- !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "SubSequence"]
 - !private ["Ps8Hashable", "UIApplication"]
 - !private ["Ps8Hashable", "UIApplicationLaunchOptionsKey"]
 - !private ["Ps8Hashable", "UIBackgroundFetchResult"]
 - !private ["Ps8Hashable", "UIStoryboard"]
+- !private ["Ps8Hashable", "_DisabledRangeIndex"]
+- !private ["Ps8Hashable", "_Element"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "appLocalNotificationHandler"]
 - ["Ps8Hashable", "application"]
@@ -478,6 +542,7 @@ depends-member:
 - ["Ps8Hashable", "applicationWillResignActive"]
 - ["Ps8Hashable", "applicationWillTerminate"]
 - !private ["Ps8Hashable", "connect"]
+- !private ["Ps8Hashable", "count"]
 - !private ["Ps8Hashable", "dataConnectionNotificationHandler"]
 - !private ["Ps8Hashable", "default"]
 - !private ["Ps8Hashable", "description"]
@@ -488,63 +553,83 @@ depends-member:
 - !private ["Ps8Hashable", "isLoggedIn"]
 - !private ["Ps8Hashable", "makeKeyAndVisible"]
 - !private ["Ps8Hashable", "newData"]
-- !private ["Ps8Hashable", "notificationArrived"]
 - !private ["Ps8Hashable", "post"]
 - !private ["Ps8Hashable", "present"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "processPushNotification"]
 - !private ["Ps8Hashable", "remoteNotification"]
-- !private ["Ps8Hashable", "replacingOccurrences"]
 - !private ["Ps8Hashable", "rootViewController"]
 - !private ["Ps8Hashable", "saveContext"]
 - !private ["Ps8Hashable", "shared"]
 - !private ["Ps8Hashable", "sharedInstance"]
-- !private ["Ps8Hashable", "trimmingCharacters"]
+- !private ["Ps8Hashable", "subscript"]
 - !private ["Ps8Hashable", "updateApnDeviceToken"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
 - ["SQ", "deinit"]
 - !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "IndexDistance"]
+- !private ["Ps9Indexable", "Indices"]
 - !private ["Ps9Indexable", "Iterator"]
 - !private ["Ps9Indexable", "SubSequence"]
 - !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "count"]
 - !private ["Ps9Indexable", "description"]
 - !private ["Ps9Indexable", "subscript"]
 - !private ["Ps13IndexableBase", "Index"]
+- !private ["Ps13IndexableBase", "IndexDistance"]
+- !private ["Ps13IndexableBase", "Indices"]
 - !private ["Ps13IndexableBase", "Iterator"]
 - !private ["Ps13IndexableBase", "SubSequence"]
 - !private ["Ps13IndexableBase", "_Element"]
+- !private ["Ps13IndexableBase", "count"]
 - !private ["Ps13IndexableBase", "description"]
 - !private ["Ps13IndexableBase", "subscript"]
 - !private ["Vs16IndexingIterator", "Element"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "Stride"]
+- !private ["Si", "_DisabledRangeIndex"]
 - ["Si", "deinit"]
 - !private ["Vs5Int16", "deinit"]
 - ["Vs5Int32", "deinit"]
 - !private ["Vs5Int64", "deinit"]
 - !private ["Vs4Int8", "deinit"]
+- !private ["Ps7Integer", "IntegerLiteralType"]
+- !private ["Ps7Integer", "Stride"]
+- !private ["Ps7Integer", "_DisabledRangeIndex"]
+- !private ["Ps17IntegerArithmetic", "IntegerLiteralType"]
+- !private ["Ps17IntegerArithmetic", "Stride"]
+- !private ["Ps17IntegerArithmetic", "_DisabledRangeIndex"]
 - !private ["Ps16IteratorProtocol", "Element"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "init"]
-- !private ["Ps25LosslessStringConvertible", "replacingOccurrences"]
+- !private ["Ps10MirrorPath", "IntegerLiteralType"]
+- !private ["Ps10MirrorPath", "Stride"]
+- !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
 - !private ["Ps10MirrorPath", "init"]
-- !private ["Ps10MirrorPath", "replacingOccurrences"]
+- !private ["Ps17MutableCollection", "Index"]
+- !private ["Ps17MutableCollection", "IndexDistance"]
+- !private ["Ps17MutableCollection", "SubSequence"]
+- !private ["Ps17MutableCollection", "_Element"]
+- !private ["Ps17MutableCollection", "count"]
 - !private ["Ps17MutableCollection", "description"]
+- !private ["Ps17MutableCollection", "subscript"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "IndexDistance"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "count"]
 - !private ["Ps16MutableIndexable", "description"]
+- !private ["Ps16MutableIndexable", "subscript"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "makeKeyAndVisible"]
 - !private ["PSo8NSCoding", "present"]
-- !private ["PSo8NSCoding", "replacingOccurrences"]
 - !private ["PSo8NSCoding", "rootViewController"]
-- !private ["PSo8NSCoding", "trimmingCharacters"]
 - !private ["PSo9NSCopying", "init"]
-- !private ["PSo9NSCopying", "replacingOccurrences"]
-- !private ["PSo9NSCopying", "trimmingCharacters"]
 - ["CSo12NSDictionary", "deinit"]
 - !private ["PSo26NSExtensionRequestHandling", "present"]
 - !private ["PSo20NSFetchRequestResult", "init"]
 - !private ["PSo16NSMutableCopying", "init"]
-- !private ["PSo16NSMutableCopying", "replacingOccurrences"]
-- !private ["PSo16NSMutableCopying", "trimmingCharacters"]
 - ["CSo8NSNumber", "deinit"]
 - !private ["CSo8NSNumber", "init"]
 - !private ["CSo8NSObject", "ALAppLocalNotifications"]
@@ -554,13 +639,12 @@ depends-member:
 - !private ["CSo8NSObject", "ALUserDefaultsHandler"]
 - ["CSo8NSObject", "AnyHashable"]
 - ["CSo8NSObject", "Bool"]
-- !private ["CSo8NSObject", "CharacterSet"]
+- !private ["CSo8NSObject", "CVarArg"]
 - ["CSo8NSObject", "Data"]
 - ["CSo8NSObject", "Error"]
 - !private ["CSo8NSObject", "Int32"]
 - !private ["CSo8NSObject", "NSDictionary"]
 - !private ["CSo8NSObject", "NSNumber"]
-- !private ["CSo8NSObject", "NSString"]
 - !private ["CSo8NSObject", "Notification"]
 - !private ["CSo8NSObject", "NotificationCenter"]
 - !private ["CSo8NSObject", "String"]
@@ -595,17 +679,14 @@ depends-member:
 - !private ["CSo8NSObject", "instantiateViewController"]
 - !private ["CSo8NSObject", "isLoggedIn"]
 - !private ["CSo8NSObject", "makeKeyAndVisible"]
-- !private ["CSo8NSObject", "notificationArrived"]
 - !private ["CSo8NSObject", "post"]
 - !private ["CSo8NSObject", "present"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "processPushNotification"]
-- !private ["CSo8NSObject", "replacingOccurrences"]
 - !private ["CSo8NSObject", "rootViewController"]
 - !private ["CSo8NSObject", "saveContext"]
 - !private ["CSo8NSObject", "shared"]
 - !private ["CSo8NSObject", "sharedInstance"]
-- !private ["CSo8NSObject", "trimmingCharacters"]
 - !private ["CSo8NSObject", "updateApnDeviceToken"]
 - ["CSo8NSObject", "window"]
 - !private ["PSo16NSObjectProtocol", "ALAppLocalNotifications"]
@@ -613,10 +694,10 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "ALPushNotificationService"]
 - !private ["PSo16NSObjectProtocol", "ALRegisterUserClientService"]
 - !private ["PSo16NSObjectProtocol", "ALUserDefaultsHandler"]
-- !private ["PSo16NSObjectProtocol", "CharacterSet"]
 - !private ["PSo16NSObjectProtocol", "NSNumber"]
 - !private ["PSo16NSObjectProtocol", "Notification"]
 - !private ["PSo16NSObjectProtocol", "NotificationCenter"]
+- !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "UIApplication"]
 - !private ["PSo16NSObjectProtocol", "UIApplicationLaunchOptionsKey"]
 - !private ["PSo16NSObjectProtocol", "UIBackgroundFetchResult"]
@@ -645,27 +726,19 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "instantiateViewController"]
 - !private ["PSo16NSObjectProtocol", "isLoggedIn"]
 - !private ["PSo16NSObjectProtocol", "makeKeyAndVisible"]
-- !private ["PSo16NSObjectProtocol", "notificationArrived"]
 - !private ["PSo16NSObjectProtocol", "post"]
 - !private ["PSo16NSObjectProtocol", "present"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "processPushNotification"]
-- !private ["PSo16NSObjectProtocol", "replacingOccurrences"]
 - !private ["PSo16NSObjectProtocol", "rootViewController"]
 - !private ["PSo16NSObjectProtocol", "saveContext"]
 - !private ["PSo16NSObjectProtocol", "shared"]
 - !private ["PSo16NSObjectProtocol", "sharedInstance"]
-- !private ["PSo16NSObjectProtocol", "trimmingCharacters"]
 - !private ["PSo16NSObjectProtocol", "updateApnDeviceToken"]
 - ["PSo16NSObjectProtocol", "window"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "init"]
-- !private ["PSo14NSSecureCoding", "replacingOccurrences"]
-- !private ["PSo14NSSecureCoding", "trimmingCharacters"]
-- ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
-- !private ["CSo8NSString", "replacingOccurrences"]
-- !private ["CSo8NSString", "trimmingCharacters"]
 - !private ["CSo7NSValue", "init"]
 - ["VCSo14NSNotification4Name", "deinit"]
 - !private ["VCSo14NSNotification4Name", "init"]
@@ -674,36 +747,84 @@ depends-member:
 - ["CSo18NotificationCenter", "deinit"]
 - !private ["CSo18NotificationCenter", "post"]
 - ["Sq", "deinit"]
+- !private ["Ps22RandomAccessCollection", "Index"]
+- !private ["Ps22RandomAccessCollection", "IndexDistance"]
+- !private ["Ps22RandomAccessCollection", "Indices"]
+- !private ["Ps22RandomAccessCollection", "Iterator"]
+- !private ["Ps22RandomAccessCollection", "SubSequence"]
+- !private ["Ps22RandomAccessCollection", "_Element"]
+- !private ["Ps22RandomAccessCollection", "count"]
 - !private ["Ps22RandomAccessCollection", "description"]
+- !private ["Ps22RandomAccessCollection", "subscript"]
+- !private ["Ps21RandomAccessIndexable", "Index"]
+- !private ["Ps21RandomAccessIndexable", "IndexDistance"]
+- !private ["Ps21RandomAccessIndexable", "Indices"]
+- !private ["Ps21RandomAccessIndexable", "Iterator"]
+- !private ["Ps21RandomAccessIndexable", "SubSequence"]
+- !private ["Ps21RandomAccessIndexable", "_Element"]
+- !private ["Ps21RandomAccessIndexable", "count"]
 - !private ["Ps21RandomAccessIndexable", "description"]
+- !private ["Ps21RandomAccessIndexable", "subscript"]
+- !private ["Vs17RandomAccessSlice", "Index"]
+- !private ["Vs17RandomAccessSlice", "IndexDistance"]
+- !private ["Vs17RandomAccessSlice", "Indices"]
+- !private ["Vs17RandomAccessSlice", "Iterator"]
+- !private ["Vs17RandomAccessSlice", "SubSequence"]
+- !private ["Vs17RandomAccessSlice", "_Element"]
+- !private ["Vs5Range", "Iterator"]
 - !private ["Vs5Range", "deinit"]
+- !private ["Ps26RangeReplaceableCollection", "Index"]
+- !private ["Ps26RangeReplaceableCollection", "IndexDistance"]
+- !private ["Ps26RangeReplaceableCollection", "SubSequence"]
+- !private ["Ps26RangeReplaceableCollection", "_Element"]
+- !private ["Ps26RangeReplaceableCollection", "count"]
 - !private ["Ps26RangeReplaceableCollection", "description"]
+- !private ["Ps26RangeReplaceableCollection", "subscript"]
+- !private ["Ps25RangeReplaceableIndexable", "Index"]
+- !private ["Ps25RangeReplaceableIndexable", "IndexDistance"]
+- !private ["Ps25RangeReplaceableIndexable", "SubSequence"]
+- !private ["Ps25RangeReplaceableIndexable", "_Element"]
+- !private ["Ps25RangeReplaceableIndexable", "count"]
 - !private ["Ps25RangeReplaceableIndexable", "description"]
+- !private ["Ps25RangeReplaceableIndexable", "subscript"]
 - !private ["Ps16RawRepresentable", "init"]
 - !private ["Ps16RawRepresentable", "newData"]
 - !private ["Ps16RawRepresentable", "remoteNotification"]
+- !private ["P10Foundation20ReferenceConvertible", "Index"]
+- !private ["P10Foundation20ReferenceConvertible", "IndexDistance"]
 - !private ["P10Foundation20ReferenceConvertible", "Name"]
+- !private ["P10Foundation20ReferenceConvertible", "SubSequence"]
+- !private ["P10Foundation20ReferenceConvertible", "_Element"]
+- !private ["P10Foundation20ReferenceConvertible", "count"]
 - !private ["P10Foundation20ReferenceConvertible", "description"]
-- !private ["P10Foundation20ReferenceConvertible", "init"]
+- !private ["P10Foundation20ReferenceConvertible", "subscript"]
 - !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "Index"]
+- !private ["Ps8Sequence", "IndexDistance"]
+- !private ["Ps8Sequence", "Indices"]
 - !private ["Ps8Sequence", "Iterator"]
 - !private ["Ps8Sequence", "SubSequence"]
 - !private ["Ps8Sequence", "_Element"]
+- !private ["Ps8Sequence", "count"]
 - !private ["Ps8Sequence", "description"]
 - !private ["Ps8Sequence", "subscript"]
-- !private ["Ps10SetAlgebra", "init"]
+- !private ["Ps13SignedInteger", "IntegerLiteralType"]
+- !private ["Ps13SignedInteger", "Stride"]
+- !private ["Ps13SignedInteger", "_DisabledRangeIndex"]
+- !private ["Ps12SignedNumber", "IntegerLiteralType"]
+- !private ["Ps12SignedNumber", "Stride"]
+- !private ["Ps12SignedNumber", "_DisabledRangeIndex"]
 - !private ["Vs5Slice", "Index"]
 - !private ["Vs5Slice", "Iterator"]
 - !private ["Vs5Slice", "SubSequence"]
 - !private ["Vs5Slice", "_Element"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "Stride"]
+- !private ["Ps10Strideable", "_DisabledRangeIndex"]
 - ["SS", "deinit"]
 - !private ["SS", "init"]
-- !private ["SS", "replacingOccurrences"]
 - !private ["Ps16TextOutputStream", "init"]
-- !private ["Ps16TextOutputStream", "replacingOccurrences"]
 - !private ["Ps20TextOutputStreamable", "init"]
-- !private ["Ps20TextOutputStreamable", "replacingOccurrences"]
 - !private ["PSo29UIAccessibilityIdentification", "makeKeyAndVisible"]
 - !private ["PSo29UIAccessibilityIdentification", "rootViewController"]
 - !private ["PSo12UIAppearance", "makeKeyAndVisible"]
@@ -719,10 +840,10 @@ depends-member:
 - !private ["PSo21UIApplicationDelegate", "ALPushNotificationService"]
 - !private ["PSo21UIApplicationDelegate", "ALRegisterUserClientService"]
 - !private ["PSo21UIApplicationDelegate", "ALUserDefaultsHandler"]
-- !private ["PSo21UIApplicationDelegate", "CharacterSet"]
 - !private ["PSo21UIApplicationDelegate", "NSNumber"]
 - !private ["PSo21UIApplicationDelegate", "Notification"]
 - !private ["PSo21UIApplicationDelegate", "NotificationCenter"]
+- !private ["PSo21UIApplicationDelegate", "String"]
 - !private ["PSo21UIApplicationDelegate", "UIApplication"]
 - !private ["PSo21UIApplicationDelegate", "UIApplicationLaunchOptionsKey"]
 - !private ["PSo21UIApplicationDelegate", "UIBackgroundFetchResult"]
@@ -763,13 +884,12 @@ depends-member:
 - !private ["CSo11UIResponder", "ALUserDefaultsHandler"]
 - ["CSo11UIResponder", "AnyHashable"]
 - ["CSo11UIResponder", "Bool"]
-- !private ["CSo11UIResponder", "CharacterSet"]
+- !private ["CSo11UIResponder", "CVarArg"]
 - ["CSo11UIResponder", "Data"]
 - ["CSo11UIResponder", "Error"]
 - !private ["CSo11UIResponder", "Int32"]
 - !private ["CSo11UIResponder", "NSDictionary"]
 - !private ["CSo11UIResponder", "NSNumber"]
-- !private ["CSo11UIResponder", "NSString"]
 - !private ["CSo11UIResponder", "Notification"]
 - !private ["CSo11UIResponder", "NotificationCenter"]
 - !private ["CSo11UIResponder", "String"]
@@ -807,10 +927,10 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "ALPushNotificationService"]
 - !private ["PSo30UIResponderStandardEditActions", "ALRegisterUserClientService"]
 - !private ["PSo30UIResponderStandardEditActions", "ALUserDefaultsHandler"]
-- !private ["PSo30UIResponderStandardEditActions", "CharacterSet"]
 - !private ["PSo30UIResponderStandardEditActions", "NSNumber"]
 - !private ["PSo30UIResponderStandardEditActions", "Notification"]
 - !private ["PSo30UIResponderStandardEditActions", "NotificationCenter"]
+- !private ["PSo30UIResponderStandardEditActions", "String"]
 - !private ["PSo30UIResponderStandardEditActions", "UIApplication"]
 - !private ["PSo30UIResponderStandardEditActions", "UIApplicationLaunchOptionsKey"]
 - !private ["PSo30UIResponderStandardEditActions", "UIBackgroundFetchResult"]
@@ -853,36 +973,40 @@ depends-member:
 - !private ["Vs6UInt16", "deinit"]
 - !private ["Vs6UInt32", "deinit"]
 - !private ["Vs6UInt64", "deinit"]
-- !private ["Vs5UInt8", "deinit"]
+- ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "makeKeyAndVisible"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "rootViewController"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "replacingOccurrences"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "IntegerLiteralType"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "_DisabledRangeIndex"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
-- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "replacingOccurrences"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
-- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "replacingOccurrences"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
-- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "replacingOccurrences"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
-- !private ["Ps35_HasCustomAnyHashableRepresentation", "replacingOccurrences"]
-- !private ["Ps35_HasCustomAnyHashableRepresentation", "trimmingCharacters"]
 - !private ["Ps9_Hashable", "ALAppLocalNotifications"]
 - !private ["Ps9_Hashable", "ALDBHandler"]
 - !private ["Ps9_Hashable", "ALPushNotificationService"]
 - !private ["Ps9_Hashable", "ALRegisterUserClientService"]
 - !private ["Ps9_Hashable", "ALUserDefaultsHandler"]
-- !private ["Ps9_Hashable", "CharacterSet"]
+- !private ["Ps9_Hashable", "Index"]
+- !private ["Ps9_Hashable", "IndexDistance"]
+- !private ["Ps9_Hashable", "IntegerLiteralType"]
 - !private ["Ps9_Hashable", "NSNumber"]
 - !private ["Ps9_Hashable", "Name"]
 - !private ["Ps9_Hashable", "Notification"]
 - !private ["Ps9_Hashable", "NotificationCenter"]
+- !private ["Ps9_Hashable", "Stride"]
+- !private ["Ps9_Hashable", "String"]
+- !private ["Ps9_Hashable", "SubSequence"]
 - !private ["Ps9_Hashable", "UIApplication"]
 - !private ["Ps9_Hashable", "UIApplicationLaunchOptionsKey"]
 - !private ["Ps9_Hashable", "UIBackgroundFetchResult"]
 - !private ["Ps9_Hashable", "UIStoryboard"]
+- !private ["Ps9_Hashable", "_DisabledRangeIndex"]
+- !private ["Ps9_Hashable", "_Element"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "appLocalNotificationHandler"]
 - ["Ps9_Hashable", "application"]
@@ -900,6 +1024,7 @@ depends-member:
 - ["Ps9_Hashable", "applicationWillResignActive"]
 - ["Ps9_Hashable", "applicationWillTerminate"]
 - !private ["Ps9_Hashable", "connect"]
+- !private ["Ps9_Hashable", "count"]
 - !private ["Ps9_Hashable", "dataConnectionNotificationHandler"]
 - !private ["Ps9_Hashable", "default"]
 - !private ["Ps9_Hashable", "description"]
@@ -910,33 +1035,56 @@ depends-member:
 - !private ["Ps9_Hashable", "isLoggedIn"]
 - !private ["Ps9_Hashable", "makeKeyAndVisible"]
 - !private ["Ps9_Hashable", "newData"]
-- !private ["Ps9_Hashable", "notificationArrived"]
 - !private ["Ps9_Hashable", "post"]
 - !private ["Ps9_Hashable", "present"]
 - !private ["Ps9_Hashable", "print"]
 - !private ["Ps9_Hashable", "processPushNotification"]
 - !private ["Ps9_Hashable", "remoteNotification"]
-- !private ["Ps9_Hashable", "replacingOccurrences"]
 - !private ["Ps9_Hashable", "rootViewController"]
 - !private ["Ps9_Hashable", "saveContext"]
 - !private ["Ps9_Hashable", "shared"]
 - !private ["Ps9_Hashable", "sharedInstance"]
-- !private ["Ps9_Hashable", "trimmingCharacters"]
+- !private ["Ps9_Hashable", "subscript"]
 - !private ["Ps9_Hashable", "updateApnDeviceToken"]
 - ["Ps9_Hashable", "window"]
 - ["Ps9_Hashable", ""]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps14_Incrementable", "Stride"]
+- !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
+- !private ["Ps8_Integer", "IntegerLiteralType"]
+- !private ["Ps8_Integer", "Stride"]
+- !private ["Ps8_Integer", "_DisabledRangeIndex"]
+- !private ["Ps18_IntegerArithmetic", "IntegerLiteralType"]
+- !private ["Ps18_IntegerArithmetic", "Stride"]
+- !private ["Ps18_IntegerArithmetic", "_DisabledRangeIndex"]
+- !private ["P10Foundation18_MutablePairBoxing", "Index"]
+- !private ["P10Foundation18_MutablePairBoxing", "IndexDistance"]
+- !private ["P10Foundation18_MutablePairBoxing", "SubSequence"]
+- !private ["P10Foundation18_MutablePairBoxing", "_Element"]
+- !private ["P10Foundation18_MutablePairBoxing", "count"]
 - !private ["P10Foundation18_MutablePairBoxing", "description"]
-- !private ["P10Foundation18_MutablePairBoxing", "init"]
+- !private ["P10Foundation18_MutablePairBoxing", "subscript"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["Ps21_ObjectiveCBridgeable", "Name"]
+- !private ["Ps21_ObjectiveCBridgeable", "Stride"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_DisabledRangeIndex"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
 - !private ["Ps21_ObjectiveCBridgeable", "description"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "remoteNotification"]
-- !private ["Ps21_ObjectiveCBridgeable", "replacingOccurrences"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps14_SignedInteger", "IntegerLiteralType"]
+- !private ["Ps14_SignedInteger", "Stride"]
+- !private ["Ps14_SignedInteger", "_DisabledRangeIndex"]
+- !private ["Ps11_Strideable", "IntegerLiteralType"]
+- !private ["Ps11_Strideable", "Stride"]
+- !private ["Ps11_Strideable", "_DisabledRangeIndex"]
 - !private ["Ps20_SwiftNewtypeWrapper", "init"]
 - !private ["Ps20_SwiftNewtypeWrapper", "remoteNotification"]
 depends-nominal:
@@ -949,25 +1097,27 @@ depends-nominal:
 - "C15sampleapp_swift11AppDelegate"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
+- !private "Vs18BidirectionalSlice"
+- !private "Ps17BitwiseOperations"
 - "Sb"
 - !private "PSo15CALayerDelegate"
 - !private "PSo15CNKeyDescriptor"
 - "Ps7CVarArg"
 - !private "Vs9Character"
-- "V10Foundation12CharacterSet"
-- !private "Vs11ClosedRange"
 - !private "Ps10Collection"
 - !private "Ps10Comparable"
+- "Vs14CountableRange"
 - "Ps28CustomDebugStringConvertible"
 - !private "Ps29CustomPlaygroundQuickLookable"
 - !private "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
 - "V10Foundation4Data"
+- !private "Vs27DefaultBidirectionalIndices"
+- !private "Vs26DefaultRandomAccessIndices"
 - "Vs10Dictionary"
 - !private "Sd"
 - "Ps9Equatable"
 - "Ps5Error"
-- !private "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
 - !private "Ps30ExpressibleByDictionaryLiteral"
 - !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
@@ -987,6 +1137,8 @@ depends-nominal:
 - "Vs5Int32"
 - !private "Vs5Int64"
 - !private "Vs4Int8"
+- !private "Ps7Integer"
+- !private "Ps17IntegerArithmetic"
 - !private "Ps16IteratorProtocol"
 - !private "Ps25LosslessStringConvertible"
 - !private "Ps10MirrorPath"
@@ -1002,7 +1154,7 @@ depends-nominal:
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
-- "CSo8NSString"
+- !private "CSo8NSString"
 - !private "CSo7NSValue"
 - "VCSo14NSNotification4Name"
 - !private "V10Foundation12Notification"
@@ -1010,14 +1162,17 @@ depends-nominal:
 - "Sq"
 - !private "Ps22RandomAccessCollection"
 - !private "Ps21RandomAccessIndexable"
+- !private "Vs17RandomAccessSlice"
 - !private "Vs5Range"
 - !private "Ps26RangeReplaceableCollection"
 - !private "Ps25RangeReplaceableIndexable"
 - !private "Ps16RawRepresentable"
 - !private "P10Foundation20ReferenceConvertible"
 - !private "Ps8Sequence"
-- !private "Ps10SetAlgebra"
+- !private "Ps13SignedInteger"
+- !private "Ps12SignedNumber"
 - !private "Vs5Slice"
+- !private "Ps10Strideable"
 - "SS"
 - !private "Ps16TextOutputStream"
 - !private "Ps20TextOutputStreamable"
@@ -1045,19 +1200,25 @@ depends-nominal:
 - !private "Vs6UInt16"
 - !private "Vs6UInt32"
 - !private "Vs6UInt64"
-- !private "Vs5UInt8"
+- "Vs5UInt8"
 - !private "Sc"
 - !private "Ps37_DefaultCustomPlaygroundQuickLookable"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
 - !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
 - !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
+- !private "Ps14_Incrementable"
+- !private "Ps8_Integer"
+- !private "Ps18_IntegerArithmetic"
 - !private "P10Foundation18_MutablePairBoxing"
 - !private "Ps21_ObjectiveCBridgeable"
 - "Vs26_OptionalNilComparisonType"
+- !private "Ps14_SignedInteger"
+- !private "Ps11_Strideable"
 - !private "Ps20_SwiftNewtypeWrapper"
 depends-dynamic-lookup:
 depends-external:

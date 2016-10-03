@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C15sampleapp_swift20DVChatViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
 - "containerView"
 - "viewWillAppear"
 - "viewDidLoad"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- !private "NSLayoutAttribute"
-- !private "CGRect"
-- !private "StringLiteralType"
-- !private "UIStoryboard"
-- !private "NSLayoutRelation"
-- "Bool"
-- !private "NSLayoutConstraint"
-- "UIView"
-- "UIViewController"
-- "DVChatViewController"
 - !private "Bundle"
+- !private "StringLiteralType"
+- !private "NSLayoutAttribute"
+- !private "UIStoryboard"
+- "Bool"
+- !private "CGRect"
+- !private "NSLayoutRelation"
+- "DVChatViewController"
+- "UIViewController"
+- "UIView"
 - !private "AssignmentPrecedence"
+- !private "NSLayoutConstraint"
 depends-member:
 - !private ["Ps9AnyObject", "Bundle"]
 - !private ["Ps9AnyObject", "CGRect"]
