@@ -22,56 +22,57 @@ class DVChatViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
 //        setTabBarNavigationTitle("Chat")
         
-        let frameworkBundle = NSBundle(identifier:"com.applozic.framework")
+        let frameworkBundle = Bundle(identifier:"com.applozic.framework")
         let storyboard = UIStoryboard(name: "Applozic", bundle: frameworkBundle)
-        let chatController = storyboard.instantiateViewControllerWithIdentifier("ALViewController")
+        let chatController = storyboard.instantiateViewController(withIdentifier: "ALViewController")
         showViewControllerInContainerView(chatController)
 //        showViewController(chatController, sender: self)
     }
     
-    private func showViewControllerInContainerView(viewController: UIViewController){
+    fileprivate func showViewControllerInContainerView(_ viewController: UIViewController){
         
         for vc in self.childViewControllers{
             
-            vc.willMoveToParentViewController(nil)
+            vc.willMove(toParentViewController: nil)
             vc.view.removeFromSuperview()
             vc.removeFromParentViewController()
         }
         self.addChildViewController(viewController)
-        viewController.view.frame = CGRectMake(0, 0, containerView.frame.size.width, containerView.frame.size.height);
+        viewController.view.frame = CGRect(x: 0, y: 0, width: containerView.frame.size.width, height: containerView.frame.size.height);
         containerView.addSubview(viewController.view)
-        viewController.didMoveToParentViewController(self)
+        viewController.didMove(toParentViewController: self)
+        
         containerView.addConstraint( NSLayoutConstraint(item: viewController.view,
-            attribute: NSLayoutAttribute.Leading,
-            relatedBy: NSLayoutRelation.Equal,
+            attribute: NSLayoutAttribute.leading,
+            relatedBy: NSLayoutRelation.equal,
             toItem: containerView,
-            attribute: NSLayoutAttribute.Leading,
+            attribute: NSLayoutAttribute.leading,
             multiplier: 1,
             constant: 0 ) );
         containerView.addConstraint( NSLayoutConstraint(item: viewController.view,
-            attribute: NSLayoutAttribute.Top,
-            relatedBy: NSLayoutRelation.Equal,
+            attribute: NSLayoutAttribute.top,
+            relatedBy: NSLayoutRelation.equal,
             toItem: containerView,
-            attribute: NSLayoutAttribute.Top,
+            attribute: NSLayoutAttribute.top,
             multiplier: 1,
             constant: 0 ) );
         containerView.addConstraint( NSLayoutConstraint(item: viewController.view,
-            attribute: NSLayoutAttribute.Bottom,
-            relatedBy: NSLayoutRelation.Equal,
+            attribute: NSLayoutAttribute.bottom,
+            relatedBy: NSLayoutRelation.equal,
             toItem: containerView,
-            attribute: NSLayoutAttribute.Bottom,
+            attribute: NSLayoutAttribute.bottom,
             multiplier: 1,
             constant: 0 ) );
         containerView.addConstraint( NSLayoutConstraint(item: viewController.view,
-            attribute: NSLayoutAttribute.Trailing,
-            relatedBy: NSLayoutRelation.Equal,
+            attribute: NSLayoutAttribute.trailing,
+            relatedBy: NSLayoutRelation.equal,
             toItem: containerView,
-            attribute: NSLayoutAttribute.Trailing,
+            attribute: NSLayoutAttribute.trailing,
             multiplier: 1,
             constant: 0 ) );
         

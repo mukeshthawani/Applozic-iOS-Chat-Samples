@@ -1,0 +1,885 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DVChatViewController"
+provides-nominal:
+- "C15sampleapp_swift20DVChatViewController"
+provides-member:
+- ["C15sampleapp_swift20DVChatViewController", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "containerView"
+- "viewWillAppear"
+- "viewDidLoad"
+depends-top-level:
+- !private "NSLayoutAttribute"
+- !private "CGRect"
+- !private "StringLiteralType"
+- !private "UIStoryboard"
+- !private "NSLayoutRelation"
+- "Bool"
+- !private "NSLayoutConstraint"
+- "UIView"
+- "UIViewController"
+- "DVChatViewController"
+- !private "Bundle"
+- !private "AssignmentPrecedence"
+depends-member:
+- !private ["Ps9AnyObject", "Bundle"]
+- !private ["Ps9AnyObject", "CGRect"]
+- !private ["Ps9AnyObject", "NSLayoutAttribute"]
+- !private ["Ps9AnyObject", "NSLayoutConstraint"]
+- !private ["Ps9AnyObject", "NSLayoutRelation"]
+- !private ["Ps9AnyObject", "UIStoryboard"]
+- !private ["Ps9AnyObject", "addChildViewController"]
+- !private ["Ps9AnyObject", "addConstraint"]
+- !private ["Ps9AnyObject", "addSubview"]
+- !private ["Ps9AnyObject", "childViewControllers"]
+- ["Ps9AnyObject", "containerView"]
+- !private ["Ps9AnyObject", "didMove"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "frame"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "instantiateViewController"]
+- !private ["Ps9AnyObject", "removeFromParentViewController"]
+- !private ["Ps9AnyObject", "removeFromSuperview"]
+- !private ["Ps9AnyObject", "setNeedsUpdateConstraints"]
+- ["Ps9AnyObject", "showViewControllerInContainerView"]
+- !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", "viewWillAppear"]
+- !private ["Ps9AnyObject", "willMove"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Iterator"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "deinit"]
+- !private ["Ps23BidirectionalCollection", "Iterator"]
+- !private ["Ps23BidirectionalCollection", "_Element"]
+- !private ["Ps22BidirectionalIndexable", "Iterator"]
+- !private ["Ps22BidirectionalIndexable", "_Element"]
+- ["Sb", "deinit"]
+- !private ["CSo6Bundle", "init"]
+- !private ["PSo15CALayerDelegate", "addConstraint"]
+- !private ["PSo15CALayerDelegate", "addSubview"]
+- !private ["PSo15CALayerDelegate", "frame"]
+- !private ["PSo15CALayerDelegate", "removeFromSuperview"]
+- !private ["PSo15CALayerDelegate", "setNeedsUpdateConstraints"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["VSC6CGRect", "deinit"]
+- !private ["VSC6CGRect", "init"]
+- !private ["VSC6CGRect", "size"]
+- !private ["VSC6CGSize", "height"]
+- !private ["VSC6CGSize", "width"]
+- !private ["PSo15CNKeyDescriptor", "init"]
+- !private ["Ps7CVarArg", "Bundle"]
+- !private ["Ps7CVarArg", "CGRect"]
+- !private ["Ps7CVarArg", "Iterator"]
+- !private ["Ps7CVarArg", "NSLayoutAttribute"]
+- !private ["Ps7CVarArg", "NSLayoutConstraint"]
+- !private ["Ps7CVarArg", "NSLayoutRelation"]
+- !private ["Ps7CVarArg", "UIStoryboard"]
+- !private ["Ps7CVarArg", "_Element"]
+- !private ["Ps7CVarArg", "addChildViewController"]
+- !private ["Ps7CVarArg", "addConstraint"]
+- !private ["Ps7CVarArg", "addSubview"]
+- !private ["Ps7CVarArg", "childViewControllers"]
+- ["Ps7CVarArg", "containerView"]
+- !private ["Ps7CVarArg", "didMove"]
+- ["Ps7CVarArg", "didReceiveMemoryWarning"]
+- !private ["Ps7CVarArg", "frame"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "instantiateViewController"]
+- !private ["Ps7CVarArg", "removeFromParentViewController"]
+- !private ["Ps7CVarArg", "removeFromSuperview"]
+- !private ["Ps7CVarArg", "setNeedsUpdateConstraints"]
+- ["Ps7CVarArg", "showViewControllerInContainerView"]
+- !private ["Ps7CVarArg", "view"]
+- ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", "viewWillAppear"]
+- !private ["Ps7CVarArg", "willMove"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Collection", "Iterator"]
+- !private ["Ps10Collection", "_Element"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Bundle"]
+- !private ["Ps28CustomDebugStringConvertible", "CGRect"]
+- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
+- !private ["Ps28CustomDebugStringConvertible", "NSLayoutAttribute"]
+- !private ["Ps28CustomDebugStringConvertible", "NSLayoutConstraint"]
+- !private ["Ps28CustomDebugStringConvertible", "NSLayoutRelation"]
+- !private ["Ps28CustomDebugStringConvertible", "UIStoryboard"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "addChildViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "addConstraint"]
+- !private ["Ps28CustomDebugStringConvertible", "addSubview"]
+- !private ["Ps28CustomDebugStringConvertible", "childViewControllers"]
+- ["Ps28CustomDebugStringConvertible", "containerView"]
+- !private ["Ps28CustomDebugStringConvertible", "didMove"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps28CustomDebugStringConvertible", "frame"]
+- !private ["Ps28CustomDebugStringConvertible", "height"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "instantiateViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "removeFromParentViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "removeFromSuperview"]
+- !private ["Ps28CustomDebugStringConvertible", "setNeedsUpdateConstraints"]
+- ["Ps28CustomDebugStringConvertible", "showViewControllerInContainerView"]
+- !private ["Ps28CustomDebugStringConvertible", "size"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
+- !private ["Ps28CustomDebugStringConvertible", "width"]
+- !private ["Ps28CustomDebugStringConvertible", "willMove"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "height"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "size"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "width"]
+- !private ["Ps17CustomReflectable", "Iterator"]
+- !private ["Ps17CustomReflectable", "_Element"]
+- !private ["Ps17CustomReflectable", "height"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "size"]
+- !private ["Ps17CustomReflectable", "width"]
+- !private ["Ps23CustomStringConvertible", "Bundle"]
+- !private ["Ps23CustomStringConvertible", "CGRect"]
+- !private ["Ps23CustomStringConvertible", "Iterator"]
+- !private ["Ps23CustomStringConvertible", "NSLayoutAttribute"]
+- !private ["Ps23CustomStringConvertible", "NSLayoutConstraint"]
+- !private ["Ps23CustomStringConvertible", "NSLayoutRelation"]
+- !private ["Ps23CustomStringConvertible", "UIStoryboard"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "addChildViewController"]
+- !private ["Ps23CustomStringConvertible", "addConstraint"]
+- !private ["Ps23CustomStringConvertible", "addSubview"]
+- !private ["Ps23CustomStringConvertible", "childViewControllers"]
+- ["Ps23CustomStringConvertible", "containerView"]
+- !private ["Ps23CustomStringConvertible", "didMove"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps23CustomStringConvertible", "frame"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "instantiateViewController"]
+- !private ["Ps23CustomStringConvertible", "removeFromParentViewController"]
+- !private ["Ps23CustomStringConvertible", "removeFromSuperview"]
+- !private ["Ps23CustomStringConvertible", "setNeedsUpdateConstraints"]
+- ["Ps23CustomStringConvertible", "showViewControllerInContainerView"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", "viewWillAppear"]
+- !private ["Ps23CustomStringConvertible", "willMove"]
+- ["Ps23CustomStringConvertible", ""]
+- ["C15sampleapp_swift20DVChatViewController", "Bool"]
+- !private ["C15sampleapp_swift20DVChatViewController", "Bundle"]
+- !private ["C15sampleapp_swift20DVChatViewController", "CGRect"]
+- !private ["C15sampleapp_swift20DVChatViewController", "NSLayoutAttribute"]
+- !private ["C15sampleapp_swift20DVChatViewController", "NSLayoutConstraint"]
+- !private ["C15sampleapp_swift20DVChatViewController", "NSLayoutRelation"]
+- !private ["C15sampleapp_swift20DVChatViewController", "UIStoryboard"]
+- ["C15sampleapp_swift20DVChatViewController", "UIView"]
+- !private ["C15sampleapp_swift20DVChatViewController", "UIViewController"]
+- !private ["C15sampleapp_swift20DVChatViewController", "addChildViewController"]
+- !private ["C15sampleapp_swift20DVChatViewController", "childViewControllers"]
+- ["C15sampleapp_swift20DVChatViewController", "containerView"]
+- ["C15sampleapp_swift20DVChatViewController", "deinit"]
+- ["C15sampleapp_swift20DVChatViewController", "didReceiveMemoryWarning"]
+- ["C15sampleapp_swift20DVChatViewController", "init"]
+- !private ["C15sampleapp_swift20DVChatViewController", "showViewControllerInContainerView"]
+- ["C15sampleapp_swift20DVChatViewController", "viewDidLoad"]
+- ["C15sampleapp_swift20DVChatViewController", "viewWillAppear"]
+- !private ["Ps9Equatable", "Bundle"]
+- !private ["Ps9Equatable", "CGRect"]
+- !private ["Ps9Equatable", "NSLayoutAttribute"]
+- !private ["Ps9Equatable", "NSLayoutConstraint"]
+- !private ["Ps9Equatable", "NSLayoutRelation"]
+- !private ["Ps9Equatable", "UIStoryboard"]
+- !private ["Ps9Equatable", "addChildViewController"]
+- !private ["Ps9Equatable", "addConstraint"]
+- !private ["Ps9Equatable", "addSubview"]
+- !private ["Ps9Equatable", "bottom"]
+- !private ["Ps9Equatable", "childViewControllers"]
+- ["Ps9Equatable", "containerView"]
+- !private ["Ps9Equatable", "didMove"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "equal"]
+- !private ["Ps9Equatable", "frame"]
+- !private ["Ps9Equatable", "height"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "instantiateViewController"]
+- !private ["Ps9Equatable", "leading"]
+- !private ["Ps9Equatable", "removeFromParentViewController"]
+- !private ["Ps9Equatable", "removeFromSuperview"]
+- !private ["Ps9Equatable", "setNeedsUpdateConstraints"]
+- ["Ps9Equatable", "showViewControllerInContainerView"]
+- !private ["Ps9Equatable", "size"]
+- !private ["Ps9Equatable", "top"]
+- !private ["Ps9Equatable", "trailing"]
+- !private ["Ps9Equatable", "view"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", "viewWillAppear"]
+- !private ["Ps9Equatable", "width"]
+- !private ["Ps9Equatable", "willMove"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
+- !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "Bundle"]
+- !private ["Ps8Hashable", "CGRect"]
+- !private ["Ps8Hashable", "NSLayoutAttribute"]
+- !private ["Ps8Hashable", "NSLayoutConstraint"]
+- !private ["Ps8Hashable", "NSLayoutRelation"]
+- !private ["Ps8Hashable", "UIStoryboard"]
+- !private ["Ps8Hashable", "addChildViewController"]
+- !private ["Ps8Hashable", "addConstraint"]
+- !private ["Ps8Hashable", "addSubview"]
+- !private ["Ps8Hashable", "bottom"]
+- !private ["Ps8Hashable", "childViewControllers"]
+- ["Ps8Hashable", "containerView"]
+- !private ["Ps8Hashable", "didMove"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "equal"]
+- !private ["Ps8Hashable", "frame"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "instantiateViewController"]
+- !private ["Ps8Hashable", "leading"]
+- !private ["Ps8Hashable", "removeFromParentViewController"]
+- !private ["Ps8Hashable", "removeFromSuperview"]
+- !private ["Ps8Hashable", "setNeedsUpdateConstraints"]
+- ["Ps8Hashable", "showViewControllerInContainerView"]
+- !private ["Ps8Hashable", "top"]
+- !private ["Ps8Hashable", "trailing"]
+- !private ["Ps8Hashable", "view"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", "viewWillAppear"]
+- !private ["Ps8Hashable", "willMove"]
+- ["Ps8Hashable", ""]
+- ["SQ", "deinit"]
+- !private ["Ps9Indexable", "Iterator"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps13IndexableBase", "Iterator"]
+- !private ["Ps13IndexableBase", "_Element"]
+- !private ["Vs16IndexingIterator", "Element"]
+- !private ["Ps16IteratorProtocol", "Element"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "Iterator"]
+- !private ["Ps17MutableCollection", "_Element"]
+- !private ["Ps16MutableIndexable", "Iterator"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "Bundle"]
+- !private ["PSo8NSCoding", "CGRect"]
+- !private ["PSo8NSCoding", "NSLayoutAttribute"]
+- !private ["PSo8NSCoding", "NSLayoutConstraint"]
+- !private ["PSo8NSCoding", "NSLayoutRelation"]
+- !private ["PSo8NSCoding", "UIStoryboard"]
+- !private ["PSo8NSCoding", "addChildViewController"]
+- !private ["PSo8NSCoding", "addConstraint"]
+- !private ["PSo8NSCoding", "addSubview"]
+- !private ["PSo8NSCoding", "childViewControllers"]
+- ["PSo8NSCoding", "containerView"]
+- !private ["PSo8NSCoding", "didMove"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "frame"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "removeFromParentViewController"]
+- !private ["PSo8NSCoding", "removeFromSuperview"]
+- !private ["PSo8NSCoding", "setNeedsUpdateConstraints"]
+- ["PSo8NSCoding", "showViewControllerInContainerView"]
+- !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", "viewWillAppear"]
+- !private ["PSo8NSCoding", "willMove"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "Bundle"]
+- !private ["PSo26NSExtensionRequestHandling", "CGRect"]
+- !private ["PSo26NSExtensionRequestHandling", "NSLayoutAttribute"]
+- !private ["PSo26NSExtensionRequestHandling", "NSLayoutConstraint"]
+- !private ["PSo26NSExtensionRequestHandling", "NSLayoutRelation"]
+- !private ["PSo26NSExtensionRequestHandling", "UIStoryboard"]
+- !private ["PSo26NSExtensionRequestHandling", "addChildViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "childViewControllers"]
+- ["PSo26NSExtensionRequestHandling", "containerView"]
+- !private ["PSo26NSExtensionRequestHandling", "didMove"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "removeFromParentViewController"]
+- ["PSo26NSExtensionRequestHandling", "showViewControllerInContainerView"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
+- !private ["PSo26NSExtensionRequestHandling", "willMove"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["OSC17NSLayoutAttribute", "bottom"]
+- !private ["OSC17NSLayoutAttribute", "deinit"]
+- !private ["OSC17NSLayoutAttribute", "leading"]
+- !private ["OSC17NSLayoutAttribute", "top"]
+- !private ["OSC17NSLayoutAttribute", "trailing"]
+- !private ["CSo18NSLayoutConstraint", "deinit"]
+- !private ["CSo18NSLayoutConstraint", "init"]
+- !private ["OSC16NSLayoutRelation", "deinit"]
+- !private ["OSC16NSLayoutRelation", "equal"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "Bundle"]
+- !private ["CSo8NSObject", "CGRect"]
+- !private ["CSo8NSObject", "NSLayoutAttribute"]
+- !private ["CSo8NSObject", "NSLayoutConstraint"]
+- !private ["CSo8NSObject", "NSLayoutRelation"]
+- !private ["CSo8NSObject", "UIStoryboard"]
+- ["CSo8NSObject", "UIView"]
+- !private ["CSo8NSObject", "UIViewController"]
+- !private ["CSo8NSObject", "addChildViewController"]
+- !private ["CSo8NSObject", "addConstraint"]
+- !private ["CSo8NSObject", "addSubview"]
+- !private ["CSo8NSObject", "childViewControllers"]
+- ["CSo8NSObject", "containerView"]
+- !private ["CSo8NSObject", "didMove"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- !private ["CSo8NSObject", "frame"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "instantiateViewController"]
+- !private ["CSo8NSObject", "removeFromParentViewController"]
+- !private ["CSo8NSObject", "removeFromSuperview"]
+- !private ["CSo8NSObject", "setNeedsUpdateConstraints"]
+- ["CSo8NSObject", "showViewControllerInContainerView"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["CSo8NSObject", "viewWillAppear"]
+- !private ["CSo8NSObject", "willMove"]
+- !private ["PSo16NSObjectProtocol", "Bundle"]
+- !private ["PSo16NSObjectProtocol", "CGRect"]
+- !private ["PSo16NSObjectProtocol", "NSLayoutAttribute"]
+- !private ["PSo16NSObjectProtocol", "NSLayoutConstraint"]
+- !private ["PSo16NSObjectProtocol", "NSLayoutRelation"]
+- !private ["PSo16NSObjectProtocol", "UIStoryboard"]
+- !private ["PSo16NSObjectProtocol", "addChildViewController"]
+- !private ["PSo16NSObjectProtocol", "addConstraint"]
+- !private ["PSo16NSObjectProtocol", "addSubview"]
+- !private ["PSo16NSObjectProtocol", "childViewControllers"]
+- ["PSo16NSObjectProtocol", "containerView"]
+- !private ["PSo16NSObjectProtocol", "didMove"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "frame"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "instantiateViewController"]
+- !private ["PSo16NSObjectProtocol", "removeFromParentViewController"]
+- !private ["PSo16NSObjectProtocol", "removeFromSuperview"]
+- !private ["PSo16NSObjectProtocol", "setNeedsUpdateConstraints"]
+- ["PSo16NSObjectProtocol", "showViewControllerInContainerView"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "viewWillAppear"]
+- !private ["PSo16NSObjectProtocol", "willMove"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- ["Sq", "deinit"]
+- !private ["Ps22RandomAccessCollection", "Iterator"]
+- !private ["Ps22RandomAccessCollection", "_Element"]
+- !private ["Ps21RandomAccessIndexable", "Iterator"]
+- !private ["Ps21RandomAccessIndexable", "_Element"]
+- !private ["Ps26RangeReplaceableCollection", "Iterator"]
+- !private ["Ps26RangeReplaceableCollection", "_Element"]
+- !private ["Ps25RangeReplaceableIndexable", "Iterator"]
+- !private ["Ps25RangeReplaceableIndexable", "_Element"]
+- !private ["Ps16RawRepresentable", "bottom"]
+- !private ["Ps16RawRepresentable", "equal"]
+- !private ["Ps16RawRepresentable", "leading"]
+- !private ["Ps16RawRepresentable", "top"]
+- !private ["Ps16RawRepresentable", "trailing"]
+- !private ["Ps8Sequence", "Element"]
+- !private ["Ps8Sequence", "Iterator"]
+- !private ["Ps8Sequence", "_Element"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "addConstraint"]
+- !private ["PSo29UIAccessibilityIdentification", "addSubview"]
+- !private ["PSo29UIAccessibilityIdentification", "frame"]
+- !private ["PSo29UIAccessibilityIdentification", "removeFromSuperview"]
+- !private ["PSo29UIAccessibilityIdentification", "setNeedsUpdateConstraints"]
+- !private ["PSo12UIAppearance", "addConstraint"]
+- !private ["PSo12UIAppearance", "addSubview"]
+- !private ["PSo12UIAppearance", "frame"]
+- !private ["PSo12UIAppearance", "removeFromSuperview"]
+- !private ["PSo12UIAppearance", "setNeedsUpdateConstraints"]
+- !private ["PSo21UIAppearanceContainer", "Bundle"]
+- !private ["PSo21UIAppearanceContainer", "CGRect"]
+- !private ["PSo21UIAppearanceContainer", "NSLayoutAttribute"]
+- !private ["PSo21UIAppearanceContainer", "NSLayoutConstraint"]
+- !private ["PSo21UIAppearanceContainer", "NSLayoutRelation"]
+- !private ["PSo21UIAppearanceContainer", "UIStoryboard"]
+- !private ["PSo21UIAppearanceContainer", "addChildViewController"]
+- !private ["PSo21UIAppearanceContainer", "addConstraint"]
+- !private ["PSo21UIAppearanceContainer", "addSubview"]
+- !private ["PSo21UIAppearanceContainer", "childViewControllers"]
+- ["PSo21UIAppearanceContainer", "containerView"]
+- !private ["PSo21UIAppearanceContainer", "didMove"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "frame"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "removeFromParentViewController"]
+- !private ["PSo21UIAppearanceContainer", "removeFromSuperview"]
+- !private ["PSo21UIAppearanceContainer", "setNeedsUpdateConstraints"]
+- ["PSo21UIAppearanceContainer", "showViewControllerInContainerView"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", "viewWillAppear"]
+- !private ["PSo21UIAppearanceContainer", "willMove"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "Bundle"]
+- !private ["PSo18UIContentContainer", "CGRect"]
+- !private ["PSo18UIContentContainer", "NSLayoutAttribute"]
+- !private ["PSo18UIContentContainer", "NSLayoutConstraint"]
+- !private ["PSo18UIContentContainer", "NSLayoutRelation"]
+- !private ["PSo18UIContentContainer", "UIStoryboard"]
+- !private ["PSo18UIContentContainer", "addChildViewController"]
+- !private ["PSo18UIContentContainer", "childViewControllers"]
+- ["PSo18UIContentContainer", "containerView"]
+- !private ["PSo18UIContentContainer", "didMove"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "removeFromParentViewController"]
+- ["PSo18UIContentContainer", "showViewControllerInContainerView"]
+- !private ["PSo18UIContentContainer", "view"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", "viewWillAppear"]
+- !private ["PSo18UIContentContainer", "willMove"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "addConstraint"]
+- !private ["PSo17UICoordinateSpace", "addSubview"]
+- !private ["PSo17UICoordinateSpace", "frame"]
+- !private ["PSo17UICoordinateSpace", "removeFromSuperview"]
+- !private ["PSo17UICoordinateSpace", "setNeedsUpdateConstraints"]
+- !private ["PSo13UIDynamicItem", "addConstraint"]
+- !private ["PSo13UIDynamicItem", "addSubview"]
+- !private ["PSo13UIDynamicItem", "frame"]
+- !private ["PSo13UIDynamicItem", "removeFromSuperview"]
+- !private ["PSo13UIDynamicItem", "setNeedsUpdateConstraints"]
+- !private ["PSo18UIFocusEnvironment", "Bundle"]
+- !private ["PSo18UIFocusEnvironment", "CGRect"]
+- !private ["PSo18UIFocusEnvironment", "NSLayoutAttribute"]
+- !private ["PSo18UIFocusEnvironment", "NSLayoutConstraint"]
+- !private ["PSo18UIFocusEnvironment", "NSLayoutRelation"]
+- !private ["PSo18UIFocusEnvironment", "UIStoryboard"]
+- !private ["PSo18UIFocusEnvironment", "addChildViewController"]
+- !private ["PSo18UIFocusEnvironment", "addConstraint"]
+- !private ["PSo18UIFocusEnvironment", "addSubview"]
+- !private ["PSo18UIFocusEnvironment", "childViewControllers"]
+- ["PSo18UIFocusEnvironment", "containerView"]
+- !private ["PSo18UIFocusEnvironment", "didMove"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "frame"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "removeFromParentViewController"]
+- !private ["PSo18UIFocusEnvironment", "removeFromSuperview"]
+- !private ["PSo18UIFocusEnvironment", "setNeedsUpdateConstraints"]
+- ["PSo18UIFocusEnvironment", "showViewControllerInContainerView"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", "viewWillAppear"]
+- !private ["PSo18UIFocusEnvironment", "willMove"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "addConstraint"]
+- !private ["PSo11UIFocusItem", "addSubview"]
+- !private ["PSo11UIFocusItem", "frame"]
+- !private ["PSo11UIFocusItem", "removeFromSuperview"]
+- !private ["PSo11UIFocusItem", "setNeedsUpdateConstraints"]
+- ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "Bundle"]
+- !private ["CSo11UIResponder", "CGRect"]
+- !private ["CSo11UIResponder", "NSLayoutAttribute"]
+- !private ["CSo11UIResponder", "NSLayoutConstraint"]
+- !private ["CSo11UIResponder", "NSLayoutRelation"]
+- !private ["CSo11UIResponder", "UIStoryboard"]
+- ["CSo11UIResponder", "UIView"]
+- !private ["CSo11UIResponder", "UIViewController"]
+- !private ["CSo11UIResponder", "addChildViewController"]
+- !private ["CSo11UIResponder", "addConstraint"]
+- !private ["CSo11UIResponder", "addSubview"]
+- !private ["CSo11UIResponder", "childViewControllers"]
+- ["CSo11UIResponder", "containerView"]
+- !private ["CSo11UIResponder", "didMove"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- !private ["CSo11UIResponder", "frame"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "removeFromParentViewController"]
+- !private ["CSo11UIResponder", "removeFromSuperview"]
+- !private ["CSo11UIResponder", "setNeedsUpdateConstraints"]
+- ["CSo11UIResponder", "showViewControllerInContainerView"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["CSo11UIResponder", "viewWillAppear"]
+- !private ["CSo11UIResponder", "willMove"]
+- !private ["PSo30UIResponderStandardEditActions", "Bundle"]
+- !private ["PSo30UIResponderStandardEditActions", "CGRect"]
+- !private ["PSo30UIResponderStandardEditActions", "NSLayoutAttribute"]
+- !private ["PSo30UIResponderStandardEditActions", "NSLayoutConstraint"]
+- !private ["PSo30UIResponderStandardEditActions", "NSLayoutRelation"]
+- !private ["PSo30UIResponderStandardEditActions", "UIStoryboard"]
+- !private ["PSo30UIResponderStandardEditActions", "addChildViewController"]
+- !private ["PSo30UIResponderStandardEditActions", "addConstraint"]
+- !private ["PSo30UIResponderStandardEditActions", "addSubview"]
+- !private ["PSo30UIResponderStandardEditActions", "childViewControllers"]
+- ["PSo30UIResponderStandardEditActions", "containerView"]
+- !private ["PSo30UIResponderStandardEditActions", "didMove"]
+- ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
+- !private ["PSo30UIResponderStandardEditActions", "frame"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "removeFromParentViewController"]
+- !private ["PSo30UIResponderStandardEditActions", "removeFromSuperview"]
+- !private ["PSo30UIResponderStandardEditActions", "setNeedsUpdateConstraints"]
+- ["PSo30UIResponderStandardEditActions", "showViewControllerInContainerView"]
+- !private ["PSo30UIResponderStandardEditActions", "view"]
+- ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", "viewWillAppear"]
+- !private ["PSo30UIResponderStandardEditActions", "willMove"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "Bundle"]
+- !private ["PSo16UIStateRestoring", "CGRect"]
+- !private ["PSo16UIStateRestoring", "NSLayoutAttribute"]
+- !private ["PSo16UIStateRestoring", "NSLayoutConstraint"]
+- !private ["PSo16UIStateRestoring", "NSLayoutRelation"]
+- !private ["PSo16UIStateRestoring", "UIStoryboard"]
+- !private ["PSo16UIStateRestoring", "addChildViewController"]
+- !private ["PSo16UIStateRestoring", "childViewControllers"]
+- ["PSo16UIStateRestoring", "containerView"]
+- !private ["PSo16UIStateRestoring", "didMove"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "removeFromParentViewController"]
+- ["PSo16UIStateRestoring", "showViewControllerInContainerView"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "viewWillAppear"]
+- !private ["PSo16UIStateRestoring", "willMove"]
+- ["PSo16UIStateRestoring", ""]
+- ["CSo12UIStoryboard", "deinit"]
+- !private ["CSo12UIStoryboard", "init"]
+- !private ["CSo12UIStoryboard", "instantiateViewController"]
+- !private ["PSo18UITraitEnvironment", "Bundle"]
+- !private ["PSo18UITraitEnvironment", "CGRect"]
+- !private ["PSo18UITraitEnvironment", "NSLayoutAttribute"]
+- !private ["PSo18UITraitEnvironment", "NSLayoutConstraint"]
+- !private ["PSo18UITraitEnvironment", "NSLayoutRelation"]
+- !private ["PSo18UITraitEnvironment", "UIStoryboard"]
+- !private ["PSo18UITraitEnvironment", "addChildViewController"]
+- !private ["PSo18UITraitEnvironment", "addConstraint"]
+- !private ["PSo18UITraitEnvironment", "addSubview"]
+- !private ["PSo18UITraitEnvironment", "childViewControllers"]
+- ["PSo18UITraitEnvironment", "containerView"]
+- !private ["PSo18UITraitEnvironment", "didMove"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "frame"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "removeFromParentViewController"]
+- !private ["PSo18UITraitEnvironment", "removeFromSuperview"]
+- !private ["PSo18UITraitEnvironment", "setNeedsUpdateConstraints"]
+- ["PSo18UITraitEnvironment", "showViewControllerInContainerView"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", "viewWillAppear"]
+- !private ["PSo18UITraitEnvironment", "willMove"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "addConstraint"]
+- !private ["CSo6UIView", "addSubview"]
+- !private ["CSo6UIView", "frame"]
+- !private ["CSo6UIView", "removeFromSuperview"]
+- !private ["CSo6UIView", "setNeedsUpdateConstraints"]
+- ["CSo16UIViewController", "Bool"]
+- !private ["CSo16UIViewController", "Bundle"]
+- !private ["CSo16UIViewController", "CGRect"]
+- !private ["CSo16UIViewController", "NSLayoutAttribute"]
+- !private ["CSo16UIViewController", "NSLayoutConstraint"]
+- !private ["CSo16UIViewController", "NSLayoutRelation"]
+- !private ["CSo16UIViewController", "UIStoryboard"]
+- ["CSo16UIViewController", "UIView"]
+- !private ["CSo16UIViewController", "UIViewController"]
+- !private ["CSo16UIViewController", "addChildViewController"]
+- !private ["CSo16UIViewController", "childViewControllers"]
+- ["CSo16UIViewController", "containerView"]
+- ["CSo16UIViewController", "deinit"]
+- !private ["CSo16UIViewController", "didMove"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "removeFromParentViewController"]
+- ["CSo16UIViewController", "showViewControllerInContainerView"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", "viewWillAppear"]
+- !private ["CSo16UIViewController", "willMove"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps14_ArrayProtocol", "Iterator"]
+- !private ["Ps14_ArrayProtocol", "_Element"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "addConstraint"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "addSubview"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "frame"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "removeFromSuperview"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setNeedsUpdateConstraints"]
+- !private ["Ps24_DestructorSafeContainer", "Iterator"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "Bundle"]
+- !private ["Ps9_Hashable", "CGRect"]
+- !private ["Ps9_Hashable", "NSLayoutAttribute"]
+- !private ["Ps9_Hashable", "NSLayoutConstraint"]
+- !private ["Ps9_Hashable", "NSLayoutRelation"]
+- !private ["Ps9_Hashable", "UIStoryboard"]
+- !private ["Ps9_Hashable", "addChildViewController"]
+- !private ["Ps9_Hashable", "addConstraint"]
+- !private ["Ps9_Hashable", "addSubview"]
+- !private ["Ps9_Hashable", "bottom"]
+- !private ["Ps9_Hashable", "childViewControllers"]
+- ["Ps9_Hashable", "containerView"]
+- !private ["Ps9_Hashable", "didMove"]
+- ["Ps9_Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps9_Hashable", "equal"]
+- !private ["Ps9_Hashable", "frame"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "instantiateViewController"]
+- !private ["Ps9_Hashable", "leading"]
+- !private ["Ps9_Hashable", "removeFromParentViewController"]
+- !private ["Ps9_Hashable", "removeFromSuperview"]
+- !private ["Ps9_Hashable", "setNeedsUpdateConstraints"]
+- ["Ps9_Hashable", "showViewControllerInContainerView"]
+- !private ["Ps9_Hashable", "top"]
+- !private ["Ps9_Hashable", "trailing"]
+- !private ["Ps9_Hashable", "view"]
+- ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", "viewWillAppear"]
+- !private ["Ps9_Hashable", "willMove"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23BidirectionalCollection"
+- !private "Ps22BidirectionalIndexable"
+- "Sb"
+- !private "CSo6Bundle"
+- !private "PSo15CALayerDelegate"
+- !private "V12CoreGraphics7CGFloat"
+- !private "VSC6CGRect"
+- !private "VSC6CGSize"
+- !private "PSo15CNKeyDescriptor"
+- "Ps7CVarArg"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "C15sampleapp_swift20DVChatViewController"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "SQ"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- !private "Vs16IndexingIterator"
+- !private "Ps16IteratorProtocol"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- !private "Ps16MutableIndexable"
+- "CSo7NSCoder"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "OSC17NSLayoutAttribute"
+- !private "CSo18NSLayoutConstraint"
+- !private "OSC16NSLayoutRelation"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Sq"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps21RandomAccessIndexable"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps25RangeReplaceableIndexable"
+- !private "Ps16RawRepresentable"
+- !private "Ps8Sequence"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- "CSo12UIStoryboard"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/sampleapp-swift/sampleapp-swift-Bridging-Header.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/HexColors.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTDecoder.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTEncoder.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTSessionManager.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/NSString+Encode.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TSBlurView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TSMessageView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TSMessage.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALVideoCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALShowImageViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALSendMessageResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALPushAssist.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMultipleAttachmentView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMQTTConversationService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLogs.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationCreateResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserProfileVC.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALReceiverUserProfileVC.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/AlMultipleAttachmentCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALVCFClass.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageInfoViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLocationCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImagePickerController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImageActivity.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALGroupDetailViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALGroupCreationViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALDocumentsCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALCustomCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactMessageCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALCollectionReusableView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserBlockResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLastSeenSyncFeed.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALReachability.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAppLocalNotifications.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALDataNetworkConnection.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConnectionQueueHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConnection.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImageCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALNotificationView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImagePickerHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALNewContactCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLocationManager.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_Message.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALNewContactsViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALVCardClass.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAudioAttachmentViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMediaPlayer.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUIConstant.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMediaBaseCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUtilityClass.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TPPropertyAnimation.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/KAProgressLabel.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactsResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserBlocked.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageInfoResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MessageListRequest.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelSyncResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAPIResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelCreateResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALResponseHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/UIImage+Utility.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALRequestHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelFeed.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_FileMetaInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageList.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALSyncMessageFeed.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALApplozicSettings.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALColorUtility.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAudioCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelUserX.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALDBHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_CHANNEL_USER_X.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_CHANNEL.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannel.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageArrayWrapper.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALHyperLabel.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChatCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_Contact.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALBaseViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMapViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChatViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessagesViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALSyncCallService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserDetail.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALPushNotificationService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTSSLSecurityPolicy.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTPersistence.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTMessage.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTSession.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTClient.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALFileMetaInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessage.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_ConversationProxy.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALTopicDetail.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationProxy.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChatLauncher.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContact.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserDefaultsHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConstant.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUser.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALJson.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALRegistrationResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALRegisterUserClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/Applozic.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Modules/module.modulemap"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Contacts.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/AVFoundation.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreMedia.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreAudio.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SwiftOnoneSupport.swiftmodule"
+interface-hash: "4ac564621cbf1c3555fd17d0d428197c"

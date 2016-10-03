@@ -30,7 +30,7 @@ class ALChatManager: NSObject {
     // This will register your User at applozic server.
     //----------------------
     
-     func registerUser(alUser: ALUser) {
+     func registerUser(_ alUser: ALUser) {
         
         let alChatLauncher: ALChatLauncher = ALChatLauncher(applicationId: getApplicationKey() as String)
         ALDefaultChatViewSettings()
@@ -42,14 +42,14 @@ class ALChatManager: NSObject {
             {
                 print("error while registering to applozic");
             }
-            else if(response.message.isEqual("PASSWORD_INVALID"))
+            else if(response?.message.isEqual("PASSWORD_INVALID"))!
             {
                 ALUtilityClass.showAlertMessage("Invalid Passoword", andTitle: "Oops!!!")
             }
             else
             {
                 print("registered")
-                if(ALChatManager.isNilOrEmpty(ALUserDefaultsHandler.getApnDeviceToken()))
+                if(ALChatManager.isNilOrEmpty(ALUserDefaultsHandler.getApnDeviceToken() as NSString?))
                 {
                     alChatLauncher.registerForNotification()
                 }
@@ -57,7 +57,7 @@ class ALChatManager: NSObject {
         })
     }
     
-     func registerUser(alUser: ALUser, completion : (response: ALRegistrationResponse, error: NSError?) -> Void) {
+     func registerUser(_ alUser: ALUser, completion : @escaping (_ response: ALRegistrationResponse, _ error: NSError?) -> Void) {
     
         let alChatLauncher: ALChatLauncher = ALChatLauncher(applicationId: getApplicationKey() as String)
         ALDefaultChatViewSettings()
@@ -70,18 +70,18 @@ class ALChatManager: NSObject {
             {
                 print("error while registering to applozic");
             }
-            else if(response.message.isEqual("PASSWORD_INVALID"))
+            else if(response?.message.isEqual("PASSWORD_INVALID"))!
             {
                 ALUtilityClass.showAlertMessage("Invalid Passoword", andTitle: "Oops!!!")
             }
             else
             {
                 print("registered")
-                if(ALChatManager.isNilOrEmpty(ALUserDefaultsHandler.getApnDeviceToken()))
+                if(ALChatManager.isNilOrEmpty(ALUserDefaultsHandler.getApnDeviceToken() as NSString?))
                 {
                     alChatLauncher.registerForNotification()
                 }
-                completion(response: response , error: error)
+                completion(response! , error as NSError?)
             }
         })
     }
@@ -92,7 +92,7 @@ class ALChatManager: NSObject {
     // This will automatically handle unregistered users provided getLoggedinUserInformation is implemented properly.
     // ----------------------  ------------------------------------------------------/
     
-    func launchChat(fromViewController:UIViewController){
+    func launchChat(_ fromViewController:UIViewController){
         self.registerUserAndLaunchChat(nil, fromController: fromViewController, forUser: nil)
     }
     
@@ -102,7 +102,7 @@ class ALChatManager: NSObject {
     // This will automatically handle unregistered users provided getLoggedinUserInformation is implemented properly.
     // ----------------------  ------------------------------------------------------/
     
-    func launchChatForUser(forUserId : String ,fromViewController:UIViewController){
+    func launchChatForUser(_ forUserId : String ,fromViewController:UIViewController){
         self.registerUserAndLaunchChat(nil, fromController: fromViewController, forUser: forUserId)
     }
     
@@ -111,15 +111,15 @@ class ALChatManager: NSObject {
     //      If user information is not passed, it will try to get user information from getLoggedinUserInformation.
     //-----------------------  ------------------------------------------------------/
     
-    func registerUserAndLaunchChat(alUser:ALUser?, fromController:UIViewController,forUser:String?)
+    func registerUserAndLaunchChat(_ alUser:ALUser?, fromController:UIViewController,forUser:String?)
     {
         let alChatLauncher: ALChatLauncher = ALChatLauncher(applicationId: getApplicationKey() as String)
        
-        if(!ALChatManager.isNilOrEmpty(ALUserDefaultsHandler.getDeviceKeyString()))
+        if(!ALChatManager.isNilOrEmpty(ALUserDefaultsHandler.getDeviceKeyString() as NSString?))
         {
-            if (ALChatManager.isNilOrEmpty(forUser))
+            if (ALChatManager.isNilOrEmpty(forUser as NSString?))
             {
-                let title  = ALChatManager.isNilOrEmpty(fromController.title) ? "< Back" : fromController.title;
+                let title  = ALChatManager.isNilOrEmpty(fromController.title as NSString?) ? "< Back" : fromController.title;
                 alChatLauncher.launchChatList(title, andViewControllerObject:fromController);
             }
             else
@@ -146,16 +146,16 @@ class ALChatManager: NSObject {
                 //TODO : show/handle error
                 print("error while registering to applozic");
                 return;
-            } else if(response.message == "REGISTERD"){
+            } else if(response?.message == "REGISTERD"){
                 print("registered!!!")
-                if(ALChatManager.isNilOrEmpty(ALUserDefaultsHandler.getApnDeviceToken())){
+                if(ALChatManager.isNilOrEmpty(ALUserDefaultsHandler.getApnDeviceToken() as NSString?)){
                     alChatLauncher.registerForNotification()
                 }
                 //let messageClientService: ALMessageClientService = ALMessageClientService()
                 //messageClientService.addWelcomeMessage()
             }
-            if (ALChatManager.isNilOrEmpty(forUser)){
-                let title  = ALChatManager.isNilOrEmpty(fromController.title) ?"< Back" : fromController.title;
+            if (ALChatManager.isNilOrEmpty(forUser as NSString?)){
+                let title  = ALChatManager.isNilOrEmpty(fromController.title as NSString?) ?"< Back" : fromController.title;
                 alChatLauncher.launchChatList(title, andViewControllerObject:fromController);
             }else {
                 alChatLauncher.launchIndividualChat(forUser, withGroupId: nil, andViewControllerObject: fromController, andWithText: nil)
@@ -180,10 +180,10 @@ class ALChatManager: NSObject {
         
     }
   
-    class func isNilOrEmpty(string: NSString?) -> Bool {
+    class func isNilOrEmpty(_ string: NSString?) -> Bool {
         
         switch string {
-        case .Some(let nonNilString): return nonNilString.length == 0
+        case .some(let nonNilString): return nonNilString.length == 0
         default:return true
             
         }
@@ -195,25 +195,26 @@ class ALChatManager: NSObject {
 // This will automatically handle unregistered users provided getLoggedinUserInformation is implemented properly.
 // ----------------------  ------------------------------------------------------/
     
-    func createAndLaunchChatWithSellerWithConversationProxy (alConversationProxy: ALConversationProxy?, fromViewController: UIViewController) {
+    func createAndLaunchChatWithSellerWithConversationProxy (_ alConversationProxy: ALConversationProxy?, fromViewController: UIViewController) {
         
         let alChatLauncher: ALChatLauncher = ALChatLauncher(applicationId: getApplicationKey() as String)
         
         let alconversationService : ALConversationService = ALConversationService()
-        alconversationService.createConversation(alConversationProxy) { (error:NSError?, proxyObject: ALConversationProxy!) -> Void in
-            
-            if((error == nil)){
-                let finalProxy : ALConversationProxy = makeFinalProxyWithGeneratedProxy(alConversationProxy!, responseProxy: proxyObject)
-                alChatLauncher.launchIndividualContextChat(finalProxy, andViewControllerObject: fromViewController, userDisplayName: "User", andWithText: nil)
-            }
-        }
+//        alconversationService.createConversation(alConversationProxy) { (error:NSError?, proxyObject: ALConversationProxy!) -> Void in
+//            
+//            if((error == nil)){
+//                let finalProxy : ALConversationProxy = makeFinalProxyWithGeneratedProxy(alConversationProxy!, responseProxy: proxyObject)
+//                alChatLauncher.launchIndividualContextChat(finalProxy, andViewControllerObject: fromViewController, userDisplayName: "User", andWithText: nil)
+//            }
+//        }
     }
 }
 
  func getApplicationKey() -> NSString {
     
     let appKey = ALUserDefaultsHandler.getApplicationKey() as NSString?
-    let applicationKey = (appKey != nil) ? appKey : ALChatManager.applicationId
+//    let applicationKey = (appKey != nil) ? appKey : ALChatManager.applicationId
+     let applicationKey = appKey
     return applicationKey!;
     
 }
@@ -222,12 +223,12 @@ class ALChatManager: NSObject {
 // The below method combines the conversationID got from server's response with the details already set.
 //----------------------------------------------------------------------------------------------------
 
-func makeFinalProxyWithGeneratedProxy (generatedProxy:ALConversationProxy, responseProxy:ALConversationProxy)->ALConversationProxy{
+func makeFinalProxyWithGeneratedProxy (_ generatedProxy:ALConversationProxy, responseProxy:ALConversationProxy)->ALConversationProxy{
 
     let finalProxy : ALConversationProxy = ALConversationProxy()
     finalProxy.userId = generatedProxy.userId;
     finalProxy.topicDetailJson = generatedProxy.topicDetailJson;
-    finalProxy.Id = responseProxy.Id;
+    finalProxy.id = responseProxy.id;
     finalProxy.groupId = responseProxy.groupId;
     
     return finalProxy;
@@ -254,10 +255,10 @@ func ALDefaultChatViewSettings () {
     ALApplozicSettings.setColorForReceiveMessages(UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha:1))
     ALApplozicSettings.setColorForSendMessages(UIColor(red: 66.0/255, green: 173.0/255, blue: 247.0/255, alpha:1))
     ALApplozicSettings.setColorForNavigation(UIColor(red: 66.0/255, green: 173.0/255, blue: 247.0/255, alpha:1))
-    ALApplozicSettings.setColorForNavigationItem(UIColor.whiteColor())
+    ALApplozicSettings.setColorForNavigationItem(UIColor.white)
 
-    let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"]
-    ALApplozicSettings.setNotificationTitle(appName?.string)
+    let appName = Bundle.main.infoDictionary!["CFBundleName"]
+    ALApplozicSettings.setNotificationTitle((appName as AnyObject).string)
     ALApplozicSettings.setMaxCompressionFactor(0.1)
     ALApplozicSettings.setMaxImageSizeForUploadInMB(3)
     ALApplozicSettings.setGroupOption(true)

@@ -1,0 +1,1082 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TYPE_CLIENT"
+- "TYPE_APPLOZIC"
+- "TYPE_FACEBOOK"
+- "APNS_TYPE_DEVELOPMENT"
+- "APNS_TYPE_DISTRIBUTION"
+- "ALChatManager"
+- "getApplicationKey"
+- "makeFinalProxyWithGeneratedProxy"
+- "ALDefaultChatViewSettings"
+provides-nominal:
+- "C15sampleapp_swift13ALChatManager"
+provides-member:
+- ["C15sampleapp_swift13ALChatManager", ""]
+provides-dynamic-lookup:
+- "registerUser"
+- "registerUser"
+- "isNilOrEmpty"
+- "launchChatForUser"
+- "getUserDetail"
+- "createAndLaunchChatWithSellerWithConversationProxy"
+- "applicationId"
+- "launchChat"
+- "registerUserAndLaunchChat"
+depends-top-level:
+- "ALRegistrationResponse"
+- "Void"
+- !private "Bundle"
+- !private "print"
+- "TYPE_FACEBOOK"
+- "makeFinalProxyWithGeneratedProxy"
+- !private "!"
+- "ALDefaultChatViewSettings"
+- "TernaryPrecedence"
+- "String"
+- "APNS_TYPE_DEVELOPMENT"
+- !private "=="
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "Bool"
+- !private "ALUserDefaultsHandler"
+- "TYPE_CLIENT"
+- "NSObject"
+- "NSString"
+- "UIViewController"
+- "StringLiteralType"
+- "ALConversationProxy"
+- !private "ALConversationService"
+- !private "ALRegisterUserClientService"
+- "APNS_TYPE_DISTRIBUTION"
+- "ALUser"
+- !private "UIColor"
+- !private "ALUtilityClass"
+- "Int16"
+- !private "!="
+- !private "ALApplozicSettings"
+- !private "AnyObject"
+- !private "/"
+- !private "ALChatLauncher"
+- "NSError"
+- "getApplicationKey"
+- "ALChatManager"
+- "TYPE_APPLOZIC"
+- !private "BooleanLiteralType"
+depends-member:
+- !private ["CSo18ALApplozicSettings", "hideRefreshButton"]
+- !private ["CSo18ALApplozicSettings", "setColorForNavigation"]
+- !private ["CSo18ALApplozicSettings", "setColorForNavigationItem"]
+- !private ["CSo18ALApplozicSettings", "setColorForReceiveMessages"]
+- !private ["CSo18ALApplozicSettings", "setColorForSendButton"]
+- !private ["CSo18ALApplozicSettings", "setColorForSendMessages"]
+- !private ["CSo18ALApplozicSettings", "setFilterContactsStatus"]
+- !private ["CSo18ALApplozicSettings", "setFontFace"]
+- !private ["CSo18ALApplozicSettings", "setGroupOption"]
+- !private ["CSo18ALApplozicSettings", "setMaxCompressionFactor"]
+- !private ["CSo18ALApplozicSettings", "setMaxImageSizeForUploadInMB"]
+- !private ["CSo18ALApplozicSettings", "setNotificationTitle"]
+- !private ["CSo18ALApplozicSettings", "setTitleForBackButtonChatVC"]
+- !private ["CSo18ALApplozicSettings", "setTitleForBackButtonMsgVC"]
+- !private ["CSo18ALApplozicSettings", "setTitleForConversationScreen"]
+- !private ["CSo18ALApplozicSettings", "setUserProfileHidden"]
+- ["CSo14ALChatLauncher", "deinit"]
+- !private ["CSo14ALChatLauncher", "init"]
+- !private ["CSo14ALChatLauncher", "launchChatList"]
+- !private ["CSo14ALChatLauncher", "launchIndividualChat"]
+- !private ["CSo14ALChatLauncher", "registerForNotification"]
+- !private ["C15sampleapp_swift13ALChatManager", "ALChatLauncher"]
+- !private ["C15sampleapp_swift13ALChatManager", "ALChatManager"]
+- ["C15sampleapp_swift13ALChatManager", "ALConversationProxy"]
+- !private ["C15sampleapp_swift13ALChatManager", "ALConversationService"]
+- !private ["C15sampleapp_swift13ALChatManager", "ALDefaultChatViewSettings"]
+- !private ["C15sampleapp_swift13ALChatManager", "ALRegisterUserClientService"]
+- ["C15sampleapp_swift13ALChatManager", "ALRegistrationResponse"]
+- ["C15sampleapp_swift13ALChatManager", "ALUser"]
+- !private ["C15sampleapp_swift13ALChatManager", "ALUserDefaultsHandler"]
+- !private ["C15sampleapp_swift13ALChatManager", "ALUtilityClass"]
+- ["C15sampleapp_swift13ALChatManager", "Bool"]
+- ["C15sampleapp_swift13ALChatManager", "NSError"]
+- ["C15sampleapp_swift13ALChatManager", "NSString"]
+- ["C15sampleapp_swift13ALChatManager", "String"]
+- ["C15sampleapp_swift13ALChatManager", "UIViewController"]
+- ["C15sampleapp_swift13ALChatManager", "Void"]
+- ["C15sampleapp_swift13ALChatManager", "applicationId"]
+- ["C15sampleapp_swift13ALChatManager", "createAndLaunchChatWithSellerWithConversationProxy"]
+- ["C15sampleapp_swift13ALChatManager", "deinit"]
+- !private ["C15sampleapp_swift13ALChatManager", "getApplicationKey"]
+- ["C15sampleapp_swift13ALChatManager", "getUserDetail"]
+- ["C15sampleapp_swift13ALChatManager", "init"]
+- ["C15sampleapp_swift13ALChatManager", "isNilOrEmpty"]
+- ["C15sampleapp_swift13ALChatManager", "launchChat"]
+- ["C15sampleapp_swift13ALChatManager", "launchChatForUser"]
+- !private ["C15sampleapp_swift13ALChatManager", "print"]
+- ["C15sampleapp_swift13ALChatManager", "registerUser"]
+- ["C15sampleapp_swift13ALChatManager", "registerUserAndLaunchChat"]
+- ["CSo19ALConversationProxy", "deinit"]
+- !private ["CSo19ALConversationProxy", "groupId"]
+- !private ["CSo19ALConversationProxy", "id"]
+- !private ["CSo19ALConversationProxy", "init"]
+- !private ["CSo19ALConversationProxy", "topicDetailJson"]
+- !private ["CSo19ALConversationProxy", "userId"]
+- ["CSo21ALConversationService", "deinit"]
+- !private ["CSo21ALConversationService", "init"]
+- !private ["CSo6ALJson", "applicationId"]
+- !private ["CSo6ALJson", "groupId"]
+- !private ["CSo6ALJson", "id"]
+- !private ["CSo6ALJson", "init"]
+- !private ["CSo6ALJson", "message"]
+- !private ["CSo6ALJson", "topicDetailJson"]
+- !private ["CSo6ALJson", "userId"]
+- ["CSo27ALRegisterUserClientService", "deinit"]
+- !private ["CSo27ALRegisterUserClientService", "init"]
+- !private ["CSo27ALRegisterUserClientService", "initWithCompletion"]
+- !private ["CSo22ALRegistrationResponse", "deinit"]
+- !private ["CSo22ALRegistrationResponse", "message"]
+- !private ["CSo6ALUser", "applicationId"]
+- ["CSo6ALUser", "deinit"]
+- !private ["CSo6ALUser", "init"]
+- !private ["CSo6ALUser", "userId"]
+- !private ["CSo21ALUserDefaultsHandler", "getApnDeviceToken"]
+- !private ["CSo21ALUserDefaultsHandler", "getApplicationKey"]
+- !private ["CSo21ALUserDefaultsHandler", "getDeviceKeyString"]
+- !private ["CSo21ALUserDefaultsHandler", "setApplicationKey"]
+- !private ["CSo21ALUserDefaultsHandler", "setBottomTabBarHidden"]
+- !private ["CSo21ALUserDefaultsHandler", "setDebugLogsRequire"]
+- !private ["CSo21ALUserDefaultsHandler", "setDeviceApnsType"]
+- !private ["CSo21ALUserDefaultsHandler", "setNavigationRightButtonHidden"]
+- !private ["CSo21ALUserDefaultsHandler", "setUserAuthenticationTypeId"]
+- !private ["CSo14ALUtilityClass", "showAlertMessage"]
+- !private ["Ps9AnyObject", "ALChatLauncher"]
+- !private ["Ps9AnyObject", "ALChatManager"]
+- !private ["Ps9AnyObject", "ALConversationService"]
+- !private ["Ps9AnyObject", "ALDefaultChatViewSettings"]
+- !private ["Ps9AnyObject", "ALRegisterUserClientService"]
+- !private ["Ps9AnyObject", "ALUser"]
+- !private ["Ps9AnyObject", "ALUserDefaultsHandler"]
+- !private ["Ps9AnyObject", "ALUtilityClass"]
+- ["Ps9AnyObject", "applicationId"]
+- ["Ps9AnyObject", "createAndLaunchChatWithSellerWithConversationProxy"]
+- ["Ps9AnyObject", "deinit"]
+- !private ["Ps9AnyObject", "getApnDeviceToken"]
+- !private ["Ps9AnyObject", "getApplicationKey"]
+- !private ["Ps9AnyObject", "getDeviceKeyString"]
+- ["Ps9AnyObject", "getUserDetail"]
+- !private ["Ps9AnyObject", "groupId"]
+- !private ["Ps9AnyObject", "hideRefreshButton"]
+- !private ["Ps9AnyObject", "id"]
+- !private ["Ps9AnyObject", "infoDictionary"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "initWithCompletion"]
+- !private ["Ps9AnyObject", "isEqual"]
+- ["Ps9AnyObject", "isNilOrEmpty"]
+- ["Ps9AnyObject", "launchChat"]
+- ["Ps9AnyObject", "launchChatForUser"]
+- !private ["Ps9AnyObject", "launchChatList"]
+- !private ["Ps9AnyObject", "launchIndividualChat"]
+- !private ["Ps9AnyObject", "length"]
+- !private ["Ps9AnyObject", "main"]
+- !private ["Ps9AnyObject", "message"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "registerForNotification"]
+- ["Ps9AnyObject", "registerUser"]
+- ["Ps9AnyObject", "registerUserAndLaunchChat"]
+- !private ["Ps9AnyObject", "setApplicationKey"]
+- !private ["Ps9AnyObject", "setBottomTabBarHidden"]
+- !private ["Ps9AnyObject", "setColorForNavigation"]
+- !private ["Ps9AnyObject", "setColorForNavigationItem"]
+- !private ["Ps9AnyObject", "setColorForReceiveMessages"]
+- !private ["Ps9AnyObject", "setColorForSendButton"]
+- !private ["Ps9AnyObject", "setColorForSendMessages"]
+- !private ["Ps9AnyObject", "setDebugLogsRequire"]
+- !private ["Ps9AnyObject", "setDeviceApnsType"]
+- !private ["Ps9AnyObject", "setFilterContactsStatus"]
+- !private ["Ps9AnyObject", "setFontFace"]
+- !private ["Ps9AnyObject", "setGroupOption"]
+- !private ["Ps9AnyObject", "setMaxCompressionFactor"]
+- !private ["Ps9AnyObject", "setMaxImageSizeForUploadInMB"]
+- !private ["Ps9AnyObject", "setNavigationRightButtonHidden"]
+- !private ["Ps9AnyObject", "setNotificationTitle"]
+- !private ["Ps9AnyObject", "setTitleForBackButtonChatVC"]
+- !private ["Ps9AnyObject", "setTitleForBackButtonMsgVC"]
+- !private ["Ps9AnyObject", "setTitleForConversationScreen"]
+- !private ["Ps9AnyObject", "setUserAuthenticationTypeId"]
+- !private ["Ps9AnyObject", "setUserProfileHidden"]
+- !private ["Ps9AnyObject", "showAlertMessage"]
+- !private ["Ps9AnyObject", "string"]
+- !private ["Ps9AnyObject", "title"]
+- !private ["Ps9AnyObject", "topicDetailJson"]
+- !private ["Ps9AnyObject", "userId"]
+- !private ["Ps9AnyObject", "white"]
+- ["Ps9AnyObject", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
+- ["CSo6Bundle", "deinit"]
+- !private ["CSo6Bundle", "infoDictionary"]
+- !private ["CSo6Bundle", "main"]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- ["PSo15CNKeyDescriptor", "init"]
+- !private ["PSo15CNKeyDescriptor", "isEqual"]
+- !private ["PSo15CNKeyDescriptor", "length"]
+- !private ["Ps7CVarArg", "ALChatLauncher"]
+- !private ["Ps7CVarArg", "ALChatManager"]
+- !private ["Ps7CVarArg", "ALConversationService"]
+- !private ["Ps7CVarArg", "ALDefaultChatViewSettings"]
+- !private ["Ps7CVarArg", "ALRegisterUserClientService"]
+- !private ["Ps7CVarArg", "ALUser"]
+- !private ["Ps7CVarArg", "ALUserDefaultsHandler"]
+- !private ["Ps7CVarArg", "ALUtilityClass"]
+- !private ["Ps7CVarArg", "Index"]
+- !private ["Ps7CVarArg", "SubSequence"]
+- ["Ps7CVarArg", "applicationId"]
+- ["Ps7CVarArg", "createAndLaunchChatWithSellerWithConversationProxy"]
+- !private ["Ps7CVarArg", "getApnDeviceToken"]
+- !private ["Ps7CVarArg", "getApplicationKey"]
+- !private ["Ps7CVarArg", "getDeviceKeyString"]
+- ["Ps7CVarArg", "getUserDetail"]
+- !private ["Ps7CVarArg", "groupId"]
+- !private ["Ps7CVarArg", "hideRefreshButton"]
+- !private ["Ps7CVarArg", "id"]
+- !private ["Ps7CVarArg", "infoDictionary"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "initWithCompletion"]
+- !private ["Ps7CVarArg", "isEqual"]
+- ["Ps7CVarArg", "isNilOrEmpty"]
+- ["Ps7CVarArg", "launchChat"]
+- ["Ps7CVarArg", "launchChatForUser"]
+- !private ["Ps7CVarArg", "launchChatList"]
+- !private ["Ps7CVarArg", "launchIndividualChat"]
+- !private ["Ps7CVarArg", "length"]
+- !private ["Ps7CVarArg", "main"]
+- !private ["Ps7CVarArg", "message"]
+- !private ["Ps7CVarArg", "print"]
+- !private ["Ps7CVarArg", "registerForNotification"]
+- ["Ps7CVarArg", "registerUser"]
+- ["Ps7CVarArg", "registerUserAndLaunchChat"]
+- !private ["Ps7CVarArg", "setApplicationKey"]
+- !private ["Ps7CVarArg", "setBottomTabBarHidden"]
+- !private ["Ps7CVarArg", "setColorForNavigation"]
+- !private ["Ps7CVarArg", "setColorForNavigationItem"]
+- !private ["Ps7CVarArg", "setColorForReceiveMessages"]
+- !private ["Ps7CVarArg", "setColorForSendButton"]
+- !private ["Ps7CVarArg", "setColorForSendMessages"]
+- !private ["Ps7CVarArg", "setDebugLogsRequire"]
+- !private ["Ps7CVarArg", "setDeviceApnsType"]
+- !private ["Ps7CVarArg", "setFilterContactsStatus"]
+- !private ["Ps7CVarArg", "setFontFace"]
+- !private ["Ps7CVarArg", "setGroupOption"]
+- !private ["Ps7CVarArg", "setMaxCompressionFactor"]
+- !private ["Ps7CVarArg", "setMaxImageSizeForUploadInMB"]
+- !private ["Ps7CVarArg", "setNavigationRightButtonHidden"]
+- !private ["Ps7CVarArg", "setNotificationTitle"]
+- !private ["Ps7CVarArg", "setTitleForBackButtonChatVC"]
+- !private ["Ps7CVarArg", "setTitleForBackButtonMsgVC"]
+- !private ["Ps7CVarArg", "setTitleForConversationScreen"]
+- !private ["Ps7CVarArg", "setUserAuthenticationTypeId"]
+- !private ["Ps7CVarArg", "setUserProfileHidden"]
+- !private ["Ps7CVarArg", "showAlertMessage"]
+- !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps7CVarArg", "title"]
+- !private ["Ps7CVarArg", "topicDetailJson"]
+- !private ["Ps7CVarArg", "userId"]
+- !private ["Ps7CVarArg", "white"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Collection", "Index"]
+- !private ["Ps10Collection", "Iterator"]
+- !private ["Ps10Collection", "SubSequence"]
+- !private ["Ps10Collection", "_Element"]
+- !private ["Ps10Collection", "subscript"]
+- ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "isEqual"]
+- !private ["Ps28CustomDebugStringConvertible", "ALChatLauncher"]
+- !private ["Ps28CustomDebugStringConvertible", "ALChatManager"]
+- !private ["Ps28CustomDebugStringConvertible", "ALConversationService"]
+- !private ["Ps28CustomDebugStringConvertible", "ALDefaultChatViewSettings"]
+- !private ["Ps28CustomDebugStringConvertible", "ALRegisterUserClientService"]
+- !private ["Ps28CustomDebugStringConvertible", "ALUser"]
+- !private ["Ps28CustomDebugStringConvertible", "ALUserDefaultsHandler"]
+- !private ["Ps28CustomDebugStringConvertible", "ALUtilityClass"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- ["Ps28CustomDebugStringConvertible", "applicationId"]
+- ["Ps28CustomDebugStringConvertible", "createAndLaunchChatWithSellerWithConversationProxy"]
+- !private ["Ps28CustomDebugStringConvertible", "getApnDeviceToken"]
+- !private ["Ps28CustomDebugStringConvertible", "getApplicationKey"]
+- !private ["Ps28CustomDebugStringConvertible", "getDeviceKeyString"]
+- ["Ps28CustomDebugStringConvertible", "getUserDetail"]
+- !private ["Ps28CustomDebugStringConvertible", "groupId"]
+- !private ["Ps28CustomDebugStringConvertible", "hideRefreshButton"]
+- !private ["Ps28CustomDebugStringConvertible", "id"]
+- !private ["Ps28CustomDebugStringConvertible", "infoDictionary"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "initWithCompletion"]
+- !private ["Ps28CustomDebugStringConvertible", "isEqual"]
+- ["Ps28CustomDebugStringConvertible", "isNilOrEmpty"]
+- ["Ps28CustomDebugStringConvertible", "launchChat"]
+- ["Ps28CustomDebugStringConvertible", "launchChatForUser"]
+- !private ["Ps28CustomDebugStringConvertible", "launchChatList"]
+- !private ["Ps28CustomDebugStringConvertible", "launchIndividualChat"]
+- !private ["Ps28CustomDebugStringConvertible", "length"]
+- !private ["Ps28CustomDebugStringConvertible", "main"]
+- !private ["Ps28CustomDebugStringConvertible", "message"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "registerForNotification"]
+- ["Ps28CustomDebugStringConvertible", "registerUser"]
+- ["Ps28CustomDebugStringConvertible", "registerUserAndLaunchChat"]
+- !private ["Ps28CustomDebugStringConvertible", "setApplicationKey"]
+- !private ["Ps28CustomDebugStringConvertible", "setBottomTabBarHidden"]
+- !private ["Ps28CustomDebugStringConvertible", "setColorForNavigation"]
+- !private ["Ps28CustomDebugStringConvertible", "setColorForNavigationItem"]
+- !private ["Ps28CustomDebugStringConvertible", "setColorForReceiveMessages"]
+- !private ["Ps28CustomDebugStringConvertible", "setColorForSendButton"]
+- !private ["Ps28CustomDebugStringConvertible", "setColorForSendMessages"]
+- !private ["Ps28CustomDebugStringConvertible", "setDebugLogsRequire"]
+- !private ["Ps28CustomDebugStringConvertible", "setDeviceApnsType"]
+- !private ["Ps28CustomDebugStringConvertible", "setFilterContactsStatus"]
+- !private ["Ps28CustomDebugStringConvertible", "setFontFace"]
+- !private ["Ps28CustomDebugStringConvertible", "setGroupOption"]
+- !private ["Ps28CustomDebugStringConvertible", "setMaxCompressionFactor"]
+- !private ["Ps28CustomDebugStringConvertible", "setMaxImageSizeForUploadInMB"]
+- !private ["Ps28CustomDebugStringConvertible", "setNavigationRightButtonHidden"]
+- !private ["Ps28CustomDebugStringConvertible", "setNotificationTitle"]
+- !private ["Ps28CustomDebugStringConvertible", "setTitleForBackButtonChatVC"]
+- !private ["Ps28CustomDebugStringConvertible", "setTitleForBackButtonMsgVC"]
+- !private ["Ps28CustomDebugStringConvertible", "setTitleForConversationScreen"]
+- !private ["Ps28CustomDebugStringConvertible", "setUserAuthenticationTypeId"]
+- !private ["Ps28CustomDebugStringConvertible", "setUserProfileHidden"]
+- !private ["Ps28CustomDebugStringConvertible", "showAlertMessage"]
+- ["Ps28CustomDebugStringConvertible", "some"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "title"]
+- !private ["Ps28CustomDebugStringConvertible", "topicDetailJson"]
+- !private ["Ps28CustomDebugStringConvertible", "userId"]
+- !private ["Ps28CustomDebugStringConvertible", "white"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "isEqual"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "length"]
+- !private ["Ps17CustomReflectable", "Index"]
+- !private ["Ps17CustomReflectable", "SubSequence"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "isEqual"]
+- ["Ps17CustomReflectable", "some"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps23CustomStringConvertible", "ALChatLauncher"]
+- !private ["Ps23CustomStringConvertible", "ALChatManager"]
+- !private ["Ps23CustomStringConvertible", "ALConversationService"]
+- !private ["Ps23CustomStringConvertible", "ALDefaultChatViewSettings"]
+- !private ["Ps23CustomStringConvertible", "ALRegisterUserClientService"]
+- !private ["Ps23CustomStringConvertible", "ALUser"]
+- !private ["Ps23CustomStringConvertible", "ALUserDefaultsHandler"]
+- !private ["Ps23CustomStringConvertible", "ALUtilityClass"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "applicationId"]
+- ["Ps23CustomStringConvertible", "createAndLaunchChatWithSellerWithConversationProxy"]
+- !private ["Ps23CustomStringConvertible", "getApnDeviceToken"]
+- !private ["Ps23CustomStringConvertible", "getApplicationKey"]
+- !private ["Ps23CustomStringConvertible", "getDeviceKeyString"]
+- ["Ps23CustomStringConvertible", "getUserDetail"]
+- !private ["Ps23CustomStringConvertible", "groupId"]
+- !private ["Ps23CustomStringConvertible", "hideRefreshButton"]
+- !private ["Ps23CustomStringConvertible", "id"]
+- !private ["Ps23CustomStringConvertible", "infoDictionary"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "initWithCompletion"]
+- !private ["Ps23CustomStringConvertible", "isEqual"]
+- ["Ps23CustomStringConvertible", "isNilOrEmpty"]
+- ["Ps23CustomStringConvertible", "launchChat"]
+- ["Ps23CustomStringConvertible", "launchChatForUser"]
+- !private ["Ps23CustomStringConvertible", "launchChatList"]
+- !private ["Ps23CustomStringConvertible", "launchIndividualChat"]
+- !private ["Ps23CustomStringConvertible", "length"]
+- !private ["Ps23CustomStringConvertible", "main"]
+- !private ["Ps23CustomStringConvertible", "message"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "registerForNotification"]
+- ["Ps23CustomStringConvertible", "registerUser"]
+- ["Ps23CustomStringConvertible", "registerUserAndLaunchChat"]
+- !private ["Ps23CustomStringConvertible", "setApplicationKey"]
+- !private ["Ps23CustomStringConvertible", "setBottomTabBarHidden"]
+- !private ["Ps23CustomStringConvertible", "setColorForNavigation"]
+- !private ["Ps23CustomStringConvertible", "setColorForNavigationItem"]
+- !private ["Ps23CustomStringConvertible", "setColorForReceiveMessages"]
+- !private ["Ps23CustomStringConvertible", "setColorForSendButton"]
+- !private ["Ps23CustomStringConvertible", "setColorForSendMessages"]
+- !private ["Ps23CustomStringConvertible", "setDebugLogsRequire"]
+- !private ["Ps23CustomStringConvertible", "setDeviceApnsType"]
+- !private ["Ps23CustomStringConvertible", "setFilterContactsStatus"]
+- !private ["Ps23CustomStringConvertible", "setFontFace"]
+- !private ["Ps23CustomStringConvertible", "setGroupOption"]
+- !private ["Ps23CustomStringConvertible", "setMaxCompressionFactor"]
+- !private ["Ps23CustomStringConvertible", "setMaxImageSizeForUploadInMB"]
+- !private ["Ps23CustomStringConvertible", "setNavigationRightButtonHidden"]
+- !private ["Ps23CustomStringConvertible", "setNotificationTitle"]
+- !private ["Ps23CustomStringConvertible", "setTitleForBackButtonChatVC"]
+- !private ["Ps23CustomStringConvertible", "setTitleForBackButtonMsgVC"]
+- !private ["Ps23CustomStringConvertible", "setTitleForConversationScreen"]
+- !private ["Ps23CustomStringConvertible", "setUserAuthenticationTypeId"]
+- !private ["Ps23CustomStringConvertible", "setUserProfileHidden"]
+- !private ["Ps23CustomStringConvertible", "showAlertMessage"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "title"]
+- !private ["Ps23CustomStringConvertible", "topicDetailJson"]
+- !private ["Ps23CustomStringConvertible", "userId"]
+- !private ["Ps23CustomStringConvertible", "white"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Index"]
+- !private ["Vs10Dictionary", "SubSequence"]
+- ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "subscript"]
+- ["Sd", "deinit"]
+- !private ["Ps9Equatable", "ALChatLauncher"]
+- !private ["Ps9Equatable", "ALChatManager"]
+- !private ["Ps9Equatable", "ALConversationService"]
+- !private ["Ps9Equatable", "ALDefaultChatViewSettings"]
+- !private ["Ps9Equatable", "ALRegisterUserClientService"]
+- !private ["Ps9Equatable", "ALUser"]
+- !private ["Ps9Equatable", "ALUserDefaultsHandler"]
+- !private ["Ps9Equatable", "ALUtilityClass"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "applicationId"]
+- ["Ps9Equatable", "createAndLaunchChatWithSellerWithConversationProxy"]
+- !private ["Ps9Equatable", "getApnDeviceToken"]
+- !private ["Ps9Equatable", "getApplicationKey"]
+- !private ["Ps9Equatable", "getDeviceKeyString"]
+- ["Ps9Equatable", "getUserDetail"]
+- !private ["Ps9Equatable", "groupId"]
+- !private ["Ps9Equatable", "hideRefreshButton"]
+- !private ["Ps9Equatable", "id"]
+- !private ["Ps9Equatable", "infoDictionary"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "initWithCompletion"]
+- !private ["Ps9Equatable", "isEqual"]
+- ["Ps9Equatable", "isNilOrEmpty"]
+- ["Ps9Equatable", "launchChat"]
+- ["Ps9Equatable", "launchChatForUser"]
+- !private ["Ps9Equatable", "launchChatList"]
+- !private ["Ps9Equatable", "launchIndividualChat"]
+- !private ["Ps9Equatable", "length"]
+- !private ["Ps9Equatable", "main"]
+- !private ["Ps9Equatable", "message"]
+- !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "registerForNotification"]
+- ["Ps9Equatable", "registerUser"]
+- ["Ps9Equatable", "registerUserAndLaunchChat"]
+- !private ["Ps9Equatable", "setApplicationKey"]
+- !private ["Ps9Equatable", "setBottomTabBarHidden"]
+- !private ["Ps9Equatable", "setColorForNavigation"]
+- !private ["Ps9Equatable", "setColorForNavigationItem"]
+- !private ["Ps9Equatable", "setColorForReceiveMessages"]
+- !private ["Ps9Equatable", "setColorForSendButton"]
+- !private ["Ps9Equatable", "setColorForSendMessages"]
+- !private ["Ps9Equatable", "setDebugLogsRequire"]
+- !private ["Ps9Equatable", "setDeviceApnsType"]
+- !private ["Ps9Equatable", "setFilterContactsStatus"]
+- !private ["Ps9Equatable", "setFontFace"]
+- !private ["Ps9Equatable", "setGroupOption"]
+- !private ["Ps9Equatable", "setMaxCompressionFactor"]
+- !private ["Ps9Equatable", "setMaxImageSizeForUploadInMB"]
+- !private ["Ps9Equatable", "setNavigationRightButtonHidden"]
+- !private ["Ps9Equatable", "setNotificationTitle"]
+- !private ["Ps9Equatable", "setTitleForBackButtonChatVC"]
+- !private ["Ps9Equatable", "setTitleForBackButtonMsgVC"]
+- !private ["Ps9Equatable", "setTitleForConversationScreen"]
+- !private ["Ps9Equatable", "setUserAuthenticationTypeId"]
+- !private ["Ps9Equatable", "setUserProfileHidden"]
+- !private ["Ps9Equatable", "showAlertMessage"]
+- !private ["Ps9Equatable", "title"]
+- !private ["Ps9Equatable", "topicDetailJson"]
+- !private ["Ps9Equatable", "userId"]
+- !private ["Ps9Equatable", "white"]
+- ["Ps9Equatable", ""]
+- !private ["Ps5Error", "deinit"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "Index"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "SubSequence"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "isEqual"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "length"]
+- ["Ps23ExpressibleByNilLiteral", "some"]
+- ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "isEqual"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "isEqual"]
+- !private ["Ps26ExpressibleByStringLiteral", "length"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "isEqual"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "length"]
+- !private ["Ps8Hashable", "ALChatLauncher"]
+- !private ["Ps8Hashable", "ALChatManager"]
+- !private ["Ps8Hashable", "ALConversationService"]
+- !private ["Ps8Hashable", "ALDefaultChatViewSettings"]
+- !private ["Ps8Hashable", "ALRegisterUserClientService"]
+- !private ["Ps8Hashable", "ALUser"]
+- !private ["Ps8Hashable", "ALUserDefaultsHandler"]
+- !private ["Ps8Hashable", "ALUtilityClass"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "applicationId"]
+- ["Ps8Hashable", "createAndLaunchChatWithSellerWithConversationProxy"]
+- !private ["Ps8Hashable", "getApnDeviceToken"]
+- !private ["Ps8Hashable", "getApplicationKey"]
+- !private ["Ps8Hashable", "getDeviceKeyString"]
+- ["Ps8Hashable", "getUserDetail"]
+- !private ["Ps8Hashable", "groupId"]
+- !private ["Ps8Hashable", "hideRefreshButton"]
+- !private ["Ps8Hashable", "id"]
+- !private ["Ps8Hashable", "infoDictionary"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "initWithCompletion"]
+- !private ["Ps8Hashable", "isEqual"]
+- ["Ps8Hashable", "isNilOrEmpty"]
+- ["Ps8Hashable", "launchChat"]
+- ["Ps8Hashable", "launchChatForUser"]
+- !private ["Ps8Hashable", "launchChatList"]
+- !private ["Ps8Hashable", "launchIndividualChat"]
+- !private ["Ps8Hashable", "length"]
+- !private ["Ps8Hashable", "main"]
+- !private ["Ps8Hashable", "message"]
+- !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "registerForNotification"]
+- ["Ps8Hashable", "registerUser"]
+- ["Ps8Hashable", "registerUserAndLaunchChat"]
+- !private ["Ps8Hashable", "setApplicationKey"]
+- !private ["Ps8Hashable", "setBottomTabBarHidden"]
+- !private ["Ps8Hashable", "setColorForNavigation"]
+- !private ["Ps8Hashable", "setColorForNavigationItem"]
+- !private ["Ps8Hashable", "setColorForReceiveMessages"]
+- !private ["Ps8Hashable", "setColorForSendButton"]
+- !private ["Ps8Hashable", "setColorForSendMessages"]
+- !private ["Ps8Hashable", "setDebugLogsRequire"]
+- !private ["Ps8Hashable", "setDeviceApnsType"]
+- !private ["Ps8Hashable", "setFilterContactsStatus"]
+- !private ["Ps8Hashable", "setFontFace"]
+- !private ["Ps8Hashable", "setGroupOption"]
+- !private ["Ps8Hashable", "setMaxCompressionFactor"]
+- !private ["Ps8Hashable", "setMaxImageSizeForUploadInMB"]
+- !private ["Ps8Hashable", "setNavigationRightButtonHidden"]
+- !private ["Ps8Hashable", "setNotificationTitle"]
+- !private ["Ps8Hashable", "setTitleForBackButtonChatVC"]
+- !private ["Ps8Hashable", "setTitleForBackButtonMsgVC"]
+- !private ["Ps8Hashable", "setTitleForConversationScreen"]
+- !private ["Ps8Hashable", "setUserAuthenticationTypeId"]
+- !private ["Ps8Hashable", "setUserProfileHidden"]
+- !private ["Ps8Hashable", "showAlertMessage"]
+- !private ["Ps8Hashable", "title"]
+- !private ["Ps8Hashable", "topicDetailJson"]
+- !private ["Ps8Hashable", "userId"]
+- !private ["Ps8Hashable", "white"]
+- ["Ps8Hashable", ""]
+- ["SQ", "deinit"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "Iterator"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Ps13IndexableBase", "Index"]
+- !private ["Ps13IndexableBase", "Iterator"]
+- !private ["Ps13IndexableBase", "SubSequence"]
+- !private ["Ps13IndexableBase", "_Element"]
+- !private ["Ps13IndexableBase", "subscript"]
+- !private ["Vs16IndexingIterator", "Element"]
+- ["Si", "deinit"]
+- ["Vs5Int16", "deinit"]
+- !private ["Ps16IteratorProtocol", "Element"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps25LosslessStringConvertible", "isEqual"]
+- ["Ps10MirrorPath", "init"]
+- !private ["Ps10MirrorPath", "isEqual"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isEqual"]
+- !private ["PSo8NSCoding", "length"]
+- !private ["PSo8NSCoding", "title"]
+- !private ["PSo8NSCoding", "white"]
+- ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "isEqual"]
+- !private ["PSo9NSCopying", "length"]
+- !private ["PSo9NSCopying", "white"]
+- !private ["PSo26NSExtensionRequestHandling", "title"]
+- ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "isEqual"]
+- !private ["PSo16NSMutableCopying", "length"]
+- !private ["CSo8NSObject", "ALChatLauncher"]
+- !private ["CSo8NSObject", "ALChatManager"]
+- ["CSo8NSObject", "ALConversationProxy"]
+- !private ["CSo8NSObject", "ALConversationService"]
+- !private ["CSo8NSObject", "ALDefaultChatViewSettings"]
+- !private ["CSo8NSObject", "ALRegisterUserClientService"]
+- ["CSo8NSObject", "ALRegistrationResponse"]
+- ["CSo8NSObject", "ALUser"]
+- !private ["CSo8NSObject", "ALUserDefaultsHandler"]
+- !private ["CSo8NSObject", "ALUtilityClass"]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "NSError"]
+- ["CSo8NSObject", "NSString"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIViewController"]
+- ["CSo8NSObject", "Void"]
+- ["CSo8NSObject", "applicationId"]
+- ["CSo8NSObject", "createAndLaunchChatWithSellerWithConversationProxy"]
+- ["CSo8NSObject", "deinit"]
+- !private ["CSo8NSObject", "getApnDeviceToken"]
+- !private ["CSo8NSObject", "getApplicationKey"]
+- !private ["CSo8NSObject", "getDeviceKeyString"]
+- ["CSo8NSObject", "getUserDetail"]
+- !private ["CSo8NSObject", "groupId"]
+- !private ["CSo8NSObject", "hideRefreshButton"]
+- !private ["CSo8NSObject", "id"]
+- !private ["CSo8NSObject", "infoDictionary"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "initWithCompletion"]
+- !private ["CSo8NSObject", "isEqual"]
+- ["CSo8NSObject", "isNilOrEmpty"]
+- ["CSo8NSObject", "launchChat"]
+- ["CSo8NSObject", "launchChatForUser"]
+- !private ["CSo8NSObject", "launchChatList"]
+- !private ["CSo8NSObject", "launchIndividualChat"]
+- !private ["CSo8NSObject", "length"]
+- !private ["CSo8NSObject", "main"]
+- !private ["CSo8NSObject", "message"]
+- !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "registerForNotification"]
+- ["CSo8NSObject", "registerUser"]
+- ["CSo8NSObject", "registerUserAndLaunchChat"]
+- !private ["CSo8NSObject", "setApplicationKey"]
+- !private ["CSo8NSObject", "setBottomTabBarHidden"]
+- !private ["CSo8NSObject", "setColorForNavigation"]
+- !private ["CSo8NSObject", "setColorForNavigationItem"]
+- !private ["CSo8NSObject", "setColorForReceiveMessages"]
+- !private ["CSo8NSObject", "setColorForSendButton"]
+- !private ["CSo8NSObject", "setColorForSendMessages"]
+- !private ["CSo8NSObject", "setDebugLogsRequire"]
+- !private ["CSo8NSObject", "setDeviceApnsType"]
+- !private ["CSo8NSObject", "setFilterContactsStatus"]
+- !private ["CSo8NSObject", "setFontFace"]
+- !private ["CSo8NSObject", "setGroupOption"]
+- !private ["CSo8NSObject", "setMaxCompressionFactor"]
+- !private ["CSo8NSObject", "setMaxImageSizeForUploadInMB"]
+- !private ["CSo8NSObject", "setNavigationRightButtonHidden"]
+- !private ["CSo8NSObject", "setNotificationTitle"]
+- !private ["CSo8NSObject", "setTitleForBackButtonChatVC"]
+- !private ["CSo8NSObject", "setTitleForBackButtonMsgVC"]
+- !private ["CSo8NSObject", "setTitleForConversationScreen"]
+- !private ["CSo8NSObject", "setUserAuthenticationTypeId"]
+- !private ["CSo8NSObject", "setUserProfileHidden"]
+- !private ["CSo8NSObject", "showAlertMessage"]
+- !private ["CSo8NSObject", "title"]
+- !private ["CSo8NSObject", "topicDetailJson"]
+- !private ["CSo8NSObject", "userId"]
+- !private ["CSo8NSObject", "white"]
+- ["CSo8NSObject", ""]
+- !private ["PSo16NSObjectProtocol", "ALChatLauncher"]
+- !private ["PSo16NSObjectProtocol", "ALChatManager"]
+- !private ["PSo16NSObjectProtocol", "ALConversationService"]
+- !private ["PSo16NSObjectProtocol", "ALDefaultChatViewSettings"]
+- !private ["PSo16NSObjectProtocol", "ALRegisterUserClientService"]
+- !private ["PSo16NSObjectProtocol", "ALUser"]
+- !private ["PSo16NSObjectProtocol", "ALUserDefaultsHandler"]
+- !private ["PSo16NSObjectProtocol", "ALUtilityClass"]
+- ["PSo16NSObjectProtocol", "applicationId"]
+- ["PSo16NSObjectProtocol", "createAndLaunchChatWithSellerWithConversationProxy"]
+- !private ["PSo16NSObjectProtocol", "getApnDeviceToken"]
+- !private ["PSo16NSObjectProtocol", "getApplicationKey"]
+- !private ["PSo16NSObjectProtocol", "getDeviceKeyString"]
+- ["PSo16NSObjectProtocol", "getUserDetail"]
+- !private ["PSo16NSObjectProtocol", "groupId"]
+- !private ["PSo16NSObjectProtocol", "hideRefreshButton"]
+- !private ["PSo16NSObjectProtocol", "id"]
+- !private ["PSo16NSObjectProtocol", "infoDictionary"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "initWithCompletion"]
+- !private ["PSo16NSObjectProtocol", "isEqual"]
+- ["PSo16NSObjectProtocol", "isNilOrEmpty"]
+- ["PSo16NSObjectProtocol", "launchChat"]
+- ["PSo16NSObjectProtocol", "launchChatForUser"]
+- !private ["PSo16NSObjectProtocol", "launchChatList"]
+- !private ["PSo16NSObjectProtocol", "launchIndividualChat"]
+- !private ["PSo16NSObjectProtocol", "length"]
+- !private ["PSo16NSObjectProtocol", "main"]
+- !private ["PSo16NSObjectProtocol", "message"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "registerForNotification"]
+- ["PSo16NSObjectProtocol", "registerUser"]
+- ["PSo16NSObjectProtocol", "registerUserAndLaunchChat"]
+- !private ["PSo16NSObjectProtocol", "setApplicationKey"]
+- !private ["PSo16NSObjectProtocol", "setBottomTabBarHidden"]
+- !private ["PSo16NSObjectProtocol", "setColorForNavigation"]
+- !private ["PSo16NSObjectProtocol", "setColorForNavigationItem"]
+- !private ["PSo16NSObjectProtocol", "setColorForReceiveMessages"]
+- !private ["PSo16NSObjectProtocol", "setColorForSendButton"]
+- !private ["PSo16NSObjectProtocol", "setColorForSendMessages"]
+- !private ["PSo16NSObjectProtocol", "setDebugLogsRequire"]
+- !private ["PSo16NSObjectProtocol", "setDeviceApnsType"]
+- !private ["PSo16NSObjectProtocol", "setFilterContactsStatus"]
+- !private ["PSo16NSObjectProtocol", "setFontFace"]
+- !private ["PSo16NSObjectProtocol", "setGroupOption"]
+- !private ["PSo16NSObjectProtocol", "setMaxCompressionFactor"]
+- !private ["PSo16NSObjectProtocol", "setMaxImageSizeForUploadInMB"]
+- !private ["PSo16NSObjectProtocol", "setNavigationRightButtonHidden"]
+- !private ["PSo16NSObjectProtocol", "setNotificationTitle"]
+- !private ["PSo16NSObjectProtocol", "setTitleForBackButtonChatVC"]
+- !private ["PSo16NSObjectProtocol", "setTitleForBackButtonMsgVC"]
+- !private ["PSo16NSObjectProtocol", "setTitleForConversationScreen"]
+- !private ["PSo16NSObjectProtocol", "setUserAuthenticationTypeId"]
+- !private ["PSo16NSObjectProtocol", "setUserProfileHidden"]
+- !private ["PSo16NSObjectProtocol", "showAlertMessage"]
+- !private ["PSo16NSObjectProtocol", "title"]
+- !private ["PSo16NSObjectProtocol", "topicDetailJson"]
+- !private ["PSo16NSObjectProtocol", "userId"]
+- !private ["PSo16NSObjectProtocol", "white"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "isEqual"]
+- !private ["PSo14NSSecureCoding", "length"]
+- !private ["PSo14NSSecureCoding", "white"]
+- ["CSo8NSString", "deinit"]
+- ["CSo8NSString", "init"]
+- !private ["CSo8NSString", "isEqual"]
+- !private ["CSo8NSString", "length"]
+- ["Os5Never", "deinit"]
+- ["Sq", "deinit"]
+- ["Sq", "some"]
+- !private ["Ps8Sequence", "Element"]
+- !private ["Ps8Sequence", "Index"]
+- !private ["Ps8Sequence", "Iterator"]
+- !private ["Ps8Sequence", "SubSequence"]
+- !private ["Ps8Sequence", "_Element"]
+- !private ["Ps8Sequence", "subscript"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "Iterator"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- ["Vs12StaticString", "deinit"]
+- !private ["Vs12StaticString", "init"]
+- ["SS", "deinit"]
+- ["SS", "init"]
+- !private ["SS", "isEqual"]
+- ["Ps16TextOutputStream", "init"]
+- !private ["Ps16TextOutputStream", "isEqual"]
+- ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps20TextOutputStreamable", "isEqual"]
+- !private ["PSo21UIAppearanceContainer", "title"]
+- ["CSo7UIColor", "deinit"]
+- !private ["CSo7UIColor", "init"]
+- !private ["CSo7UIColor", "white"]
+- !private ["PSo18UIContentContainer", "title"]
+- !private ["PSo18UIFocusEnvironment", "title"]
+- !private ["CSo11UIResponder", "title"]
+- !private ["PSo30UIResponderStandardEditActions", "title"]
+- !private ["PSo16UIStateRestoring", "title"]
+- !private ["PSo18UITraitEnvironment", "title"]
+- ["CSo16UIViewController", "deinit"]
+- !private ["CSo16UIViewController", "title"]
+- ["Su", "deinit"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "isEqual"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "isEqual"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "isEqual"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "isEqual"]
+- !private ["Ps26_ExpressibleByColorLiteral", "init"]
+- !private ["Ps26_ExpressibleByColorLiteral", "white"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "isEqual"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "length"]
+- !private ["Ps9_Hashable", "ALChatLauncher"]
+- !private ["Ps9_Hashable", "ALChatManager"]
+- !private ["Ps9_Hashable", "ALConversationService"]
+- !private ["Ps9_Hashable", "ALDefaultChatViewSettings"]
+- !private ["Ps9_Hashable", "ALRegisterUserClientService"]
+- !private ["Ps9_Hashable", "ALUser"]
+- !private ["Ps9_Hashable", "ALUserDefaultsHandler"]
+- !private ["Ps9_Hashable", "ALUtilityClass"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "applicationId"]
+- ["Ps9_Hashable", "createAndLaunchChatWithSellerWithConversationProxy"]
+- !private ["Ps9_Hashable", "getApnDeviceToken"]
+- !private ["Ps9_Hashable", "getApplicationKey"]
+- !private ["Ps9_Hashable", "getDeviceKeyString"]
+- ["Ps9_Hashable", "getUserDetail"]
+- !private ["Ps9_Hashable", "groupId"]
+- !private ["Ps9_Hashable", "hideRefreshButton"]
+- !private ["Ps9_Hashable", "id"]
+- !private ["Ps9_Hashable", "infoDictionary"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "initWithCompletion"]
+- !private ["Ps9_Hashable", "isEqual"]
+- ["Ps9_Hashable", "isNilOrEmpty"]
+- ["Ps9_Hashable", "launchChat"]
+- ["Ps9_Hashable", "launchChatForUser"]
+- !private ["Ps9_Hashable", "launchChatList"]
+- !private ["Ps9_Hashable", "launchIndividualChat"]
+- !private ["Ps9_Hashable", "length"]
+- !private ["Ps9_Hashable", "main"]
+- !private ["Ps9_Hashable", "message"]
+- !private ["Ps9_Hashable", "print"]
+- !private ["Ps9_Hashable", "registerForNotification"]
+- ["Ps9_Hashable", "registerUser"]
+- ["Ps9_Hashable", "registerUserAndLaunchChat"]
+- !private ["Ps9_Hashable", "setApplicationKey"]
+- !private ["Ps9_Hashable", "setBottomTabBarHidden"]
+- !private ["Ps9_Hashable", "setColorForNavigation"]
+- !private ["Ps9_Hashable", "setColorForNavigationItem"]
+- !private ["Ps9_Hashable", "setColorForReceiveMessages"]
+- !private ["Ps9_Hashable", "setColorForSendButton"]
+- !private ["Ps9_Hashable", "setColorForSendMessages"]
+- !private ["Ps9_Hashable", "setDebugLogsRequire"]
+- !private ["Ps9_Hashable", "setDeviceApnsType"]
+- !private ["Ps9_Hashable", "setFilterContactsStatus"]
+- !private ["Ps9_Hashable", "setFontFace"]
+- !private ["Ps9_Hashable", "setGroupOption"]
+- !private ["Ps9_Hashable", "setMaxCompressionFactor"]
+- !private ["Ps9_Hashable", "setMaxImageSizeForUploadInMB"]
+- !private ["Ps9_Hashable", "setNavigationRightButtonHidden"]
+- !private ["Ps9_Hashable", "setNotificationTitle"]
+- !private ["Ps9_Hashable", "setTitleForBackButtonChatVC"]
+- !private ["Ps9_Hashable", "setTitleForBackButtonMsgVC"]
+- !private ["Ps9_Hashable", "setTitleForConversationScreen"]
+- !private ["Ps9_Hashable", "setUserAuthenticationTypeId"]
+- !private ["Ps9_Hashable", "setUserProfileHidden"]
+- !private ["Ps9_Hashable", "showAlertMessage"]
+- !private ["Ps9_Hashable", "title"]
+- !private ["Ps9_Hashable", "topicDetailJson"]
+- !private ["Ps9_Hashable", "userId"]
+- !private ["Ps9_Hashable", "white"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "isEqual"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+depends-nominal:
+- !private "CSo18ALApplozicSettings"
+- "CSo14ALChatLauncher"
+- "C15sampleapp_swift13ALChatManager"
+- "CSo19ALConversationProxy"
+- "CSo21ALConversationService"
+- !private "CSo6ALJson"
+- "CSo27ALRegisterUserClientService"
+- !private "CSo22ALRegistrationResponse"
+- "CSo6ALUser"
+- !private "CSo21ALUserDefaultsHandler"
+- !private "CSo14ALUtilityClass"
+- "Ps9AnyObject"
+- "Sb"
+- "CSo6Bundle"
+- "V12CoreGraphics7CGFloat"
+- "PSo15CNKeyDescriptor"
+- "Ps7CVarArg"
+- !private "Ps10Collection"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Vs10Dictionary"
+- "Sd"
+- "Ps9Equatable"
+- !private "Ps5Error"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps30ExpressibleByDictionaryLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps23ExpressibleByNilLiteral"
+- "Ps32ExpressibleByStringInterpolation"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "SQ"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- !private "Vs16IndexingIterator"
+- "Si"
+- "Vs5Int16"
+- !private "Ps16IteratorProtocol"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- !private "PSo26NSExtensionRequestHandling"
+- "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
+- "Os5Never"
+- "Sq"
+- !private "Ps8Sequence"
+- !private "Vs5Slice"
+- "Vs12StaticString"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- !private "PSo21UIAppearanceContainer"
+- "CSo7UIColor"
+- !private "PSo18UIContentContainer"
+- !private "PSo18UIFocusEnvironment"
+- !private "CSo11UIResponder"
+- !private "PSo30UIResponderStandardEditActions"
+- !private "PSo16UIStateRestoring"
+- !private "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+- "Su"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps26_ExpressibleByColorLiteral"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+depends-dynamic-lookup:
+- !private "string"
+depends-external:
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/sampleapp-swift/sampleapp-swift-Bridging-Header.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/HexColors.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTDecoder.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTEncoder.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTSessionManager.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/NSString+Encode.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TSBlurView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TSMessageView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TSMessage.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALVideoCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALShowImageViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALSendMessageResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALPushAssist.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMultipleAttachmentView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMQTTConversationService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLogs.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationCreateResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserProfileVC.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALReceiverUserProfileVC.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/AlMultipleAttachmentCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALVCFClass.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageInfoViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLocationCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImagePickerController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImageActivity.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALGroupDetailViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALGroupCreationViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALDocumentsCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALCustomCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactMessageCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALCollectionReusableView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserBlockResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLastSeenSyncFeed.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALReachability.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAppLocalNotifications.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALDataNetworkConnection.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConnectionQueueHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConnection.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImageCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALNotificationView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImagePickerHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALNewContactCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLocationManager.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_Message.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALNewContactsViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALVCardClass.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAudioAttachmentViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMediaPlayer.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUIConstant.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMediaBaseCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUtilityClass.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TPPropertyAnimation.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/KAProgressLabel.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactsResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserBlocked.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageInfoResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MessageListRequest.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelSyncResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAPIResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelCreateResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALResponseHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/UIImage+Utility.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALRequestHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelFeed.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_FileMetaInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageList.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALSyncMessageFeed.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALApplozicSettings.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALColorUtility.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAudioCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelUserX.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALDBHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_CHANNEL_USER_X.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_CHANNEL.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannel.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageArrayWrapper.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALHyperLabel.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChatCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_Contact.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALBaseViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMapViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChatViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessagesViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALSyncCallService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserDetail.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALPushNotificationService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTSSLSecurityPolicy.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTPersistence.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTMessage.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTSession.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTClient.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALFileMetaInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessage.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_ConversationProxy.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALTopicDetail.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationProxy.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChatLauncher.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContact.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserDefaultsHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConstant.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUser.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALJson.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALRegistrationResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALRegisterUserClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/Applozic.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Modules/module.modulemap"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "46defda67185b2d2b183545e75337eb5"

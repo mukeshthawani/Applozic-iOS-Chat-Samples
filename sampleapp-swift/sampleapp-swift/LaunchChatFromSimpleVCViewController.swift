@@ -22,20 +22,20 @@ class LaunchChatFromSimpleVCViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func launchList(sender: AnyObject) {
+    @IBAction func launchList(_ sender: AnyObject) {
         
         let chatManager : ALChatManager = ALChatManager(applicationKey: "applozic-sample-app")
         chatManager.registerUserAndLaunchChat(getUserDetail(), fromController: self, forUser:nil)
     }
     
-    @IBAction func launchUserChat(sender: AnyObject)
+    @IBAction func launchUserChat(_ sender: AnyObject)
     {
         let chatManager : ALChatManager =  ALChatManager(applicationKey: "applozic-sample-app")
         chatManager.registerUserAndLaunchChat(getUserDetail(), fromController: self, forUser:"applozic")
     }
     
     
-    @IBAction func launchSellerChat(sender: AnyObject)
+    @IBAction func launchSellerChat(_ sender: AnyObject)
     {
         var alconversationProxy : ALConversationProxy =  ALConversationProxy()
         alconversationProxy = self.makeupConversationDetails()
@@ -59,19 +59,19 @@ class LaunchChatFromSimpleVCViewController: UIViewController {
         alTopicDetails.key2      = "Price"
         alTopicDetails.value2    = "Rs.1,04,999.00"
         
-        let jsonData: NSData = jsonToNSData(alTopicDetails.dictionary())!
+        let jsonData: Data = jsonToNSData(alTopicDetails.dictionary() as AnyObject)!
         
-        let resultTopicDetails : NSString = NSString.init(data: jsonData, encoding: NSUTF8StringEncoding)!
+        let resultTopicDetails : NSString = NSString.init(data: jsonData, encoding: String.Encoding.utf8.rawValue)!
         alConversationProxy.topicDetailJson = resultTopicDetails as String
         
         return alConversationProxy
     }
     
-    func jsonToNSData(json: AnyObject) -> NSData?
+    func jsonToNSData(_ json: AnyObject) -> Data?
     {
         do
         {
-            return try NSJSONSerialization.dataWithJSONObject(json, options:NSJSONWritingOptions.PrettyPrinted)
+            return try JSONSerialization.data(withJSONObject: json, options:JSONSerialization.WritingOptions.prettyPrinted)
         }
         catch let Error
         {
@@ -80,11 +80,11 @@ class LaunchChatFromSimpleVCViewController: UIViewController {
         return nil;
     }
     
-    @IBAction func logout(sender: AnyObject)
+    @IBAction func logout(_ sender: AnyObject)
     {
         let registerUserClientService: ALRegisterUserClientService = ALRegisterUserClientService()
         registerUserClientService.logout();
-        self.dismissViewControllerAnimated(false, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     func getUserDetail() -> ALUser {
@@ -97,7 +97,7 @@ class LaunchChatFromSimpleVCViewController: UIViewController {
         user.displayName = ALUserDefaultsHandler.getDisplayName()
 
         user.applicationId = ALChatManager.applicationId;
-        if(!ALChatManager.isNilOrEmpty(ALUserDefaultsHandler.getEmailId())){
+        if(!ALChatManager.isNilOrEmpty(ALUserDefaultsHandler.getEmailId() as NSString?)){
             user.email = ALUserDefaultsHandler.getEmailId();
         }
         return user;

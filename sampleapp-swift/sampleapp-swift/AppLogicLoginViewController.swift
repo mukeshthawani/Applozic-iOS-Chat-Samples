@@ -31,16 +31,16 @@ class AppLogicLoginViewController: UIViewController {
     }
 
     
-    @IBAction func getStartedBtn(sender: AnyObject) {
+    @IBAction func getStartedBtn(_ sender: AnyObject) {
 
         let alUser : ALUser =  ALUser();
         alUser.applicationId = ALChatManager.applicationId
         
-        if(ALChatManager.isNilOrEmpty( self.userName.text))
+        if(ALChatManager.isNilOrEmpty( self.userName.text as NSString?))
         {
-            let alert = UIAlertController(title: "Applozic", message: "Please enter userId ", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Applozic", message: "Please enter userId ", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return;
         }
         alUser.userId = self.userName.text
@@ -60,21 +60,21 @@ class AppLogicLoginViewController: UIViewController {
         let chatManager = ALChatManager(applicationKey: "applozic-sample-app")
          chatManager.registerUser(alUser) { (response, error) in
             
-            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LaunchChatFromSimpleViewController") as UIViewController
-            self.presentViewController(viewController, animated:true, completion: nil)
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LaunchChatFromSimpleViewController") as UIViewController
+            self.present(viewController, animated:true, completion: nil)
         }
     }
     
    
-    @IBAction func moreButtonAction(sender: AnyObject) {
+    @IBAction func moreButtonAction(_ sender: AnyObject) {
         
         let alUser : ALUser =  ALUser();
         alUser.applicationId = ALChatManager.applicationId
         
-        if(ALChatManager.isNilOrEmpty( self.userName.text)){
-            let alert = UIAlertController(title: "Applozic", message: "Please enter userId ", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+        if(ALChatManager.isNilOrEmpty( self.userName.text as NSString?)){
+            let alert = UIAlertController(title: "Applozic", message: "Please enter userId ", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return;
         }
         alUser.userId = self.userName.text
@@ -94,8 +94,8 @@ class AppLogicLoginViewController: UIViewController {
         let chatManager = ALChatManager(applicationKey: "applozic-sample-app")
         chatManager.registerUser(alUser) { (response, error) in
             
-            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("moreTabBar") as UIViewController
-            self.presentViewController(viewController, animated:true, completion: nil)
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "moreTabBar") as UIViewController
+            self.present(viewController, animated:true, completion: nil)
         }
     }
    

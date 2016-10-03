@@ -55,7 +55,7 @@
         [vc removeFromParentViewController];
     }
     
-    [self addChildViewController:viewController];
+    [self addChildViewController:viewController]; 
     viewController.view.frame = CGRectMake(0, 0, self.containerView.frame.size.width, self.containerView.frame.size.height);
     [self.containerView addSubview:viewController.view];
     [viewController didMoveToParentViewController:self];

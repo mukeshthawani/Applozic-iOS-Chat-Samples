@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2997194A1C94068E00A897E0 /* LaunchChatFromSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299719481C94068E00A897E0 /* LaunchChatFromSimpleViewController.m */; };
-		460E2C731D81523900D42F1E /* Applozic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460E2C721D81523900D42F1E /* Applozic.framework */; };
-		460E2C741D81523900D42F1E /* Applozic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460E2C721D81523900D42F1E /* Applozic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		46D161A31DA247EB00B9C23C /* Applozic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D161A21DA247EB00B9C23C /* Applozic.framework */; };
+		46D161A41DA247EB00B9C23C /* Applozic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46D161A21DA247EB00B9C23C /* Applozic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6D4F28CB1BC58F6C007E7B35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4F28B01BC554D8007E7B35 /* Main.storyboard */; };
 		6D4F28CF1BC6429F007E7B35 /* ApplozicLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F28CE1BC6429F007E7B35 /* ApplozicLoginViewController.m */; };
 		6D6DF1F61BC551FA00EBA00F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DF1F51BC551FA00EBA00F /* main.m */; };
@@ -29,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				460E2C741D81523900D42F1E /* Applozic.framework in Embed Frameworks */,
+				46D161A41DA247EB00B9C23C /* Applozic.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		299719481C94068E00A897E0 /* LaunchChatFromSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchChatFromSimpleViewController.m; sourceTree = "<group>"; };
 		299719491C94068E00A897E0 /* LaunchChatFromSimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchChatFromSimpleViewController.h; sourceTree = "<group>"; };
-		460E2C721D81523900D42F1E /* Applozic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Applozic.framework; sourceTree = "<group>"; };
+		46D161A21DA247EB00B9C23C /* Applozic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Applozic.framework; sourceTree = "<group>"; };
 		6D4F28B01BC554D8007E7B35 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6D4F28CD1BC6429F007E7B35 /* ApplozicLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplozicLoginViewController.h; sourceTree = "<group>"; };
 		6D4F28CE1BC6429F007E7B35 /* ApplozicLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplozicLoginViewController.m; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				460E2C731D81523900D42F1E /* Applozic.framework in Frameworks */,
+				46D161A31DA247EB00B9C23C /* Applozic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		6D6DF1E81BC551FA00EBA00F = {
 			isa = PBXGroup;
 			children = (
-				460E2C721D81523900D42F1E /* Applozic.framework */,
+				46D161A21DA247EB00B9C23C /* Applozic.framework */,
 				6D6DF1F31BC551FA00EBA00F /* applozicdemo */,
 				6D6DF1F21BC551FA00EBA00F /* Products */,
 			);
@@ -178,6 +178,7 @@
 					6D6DF1F01BC551FA00EBA00F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = C25JNDCBM4;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 0;
@@ -339,6 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = C25JNDCBM4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Users/devashish/framework/applozicdemo,
@@ -350,7 +352,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applozic.customer.demo;
 				PRODUCT_NAME = applozicsample;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d15515f3-ee5b-4af1-ba2c-588cb6f02c10";
+				PROVISIONING_PROFILE_SPECIFIER = "Dev applozic demo";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -364,6 +367,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Adarsh Kumar (C25JNDCBM4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = C25JNDCBM4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Users/devashish/framework/applozicdemo,
@@ -375,7 +379,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applozic.customer.demo;
 				PRODUCT_NAME = applozicsample;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d15515f3-ee5b-4af1-ba2c-588cb6f02c10";
+				PROVISIONING_PROFILE_SPECIFIER = "Dev applozic demo";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

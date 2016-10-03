@@ -1,0 +1,899 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AppLogicLoginViewController"
+provides-nominal:
+- "C15sampleapp_swift27AppLogicLoginViewController"
+provides-member:
+- ["C15sampleapp_swift27AppLogicLoginViewController", ""]
+provides-dynamic-lookup:
+- "emailId"
+- "getStartedBtn"
+- "userName"
+- "password"
+- "moreButtonAction"
+- "viewDidLoad"
+- "didReceiveMemoryWarning"
+depends-top-level:
+- !private "UIAlertAction"
+- !private "ALUserDefaultsHandler"
+- !private "UIStoryboard"
+- "CastingPrecedence"
+- !private "!"
+- "AssignmentPrecedence"
+- "UIViewController"
+- !private "UIAlertControllerStyle"
+- !private "ALUser"
+- !private "ALChatManager"
+- !private "print"
+- !private "UIAlertActionStyle"
+- "UITextField"
+- "AnyObject"
+- "AppLogicLoginViewController"
+- !private "BooleanLiteralType"
+- !private "NSString"
+- !private "UIAlertController"
+depends-member:
+- !private ["C15sampleapp_swift13ALChatManager", "applicationId"]
+- ["C15sampleapp_swift13ALChatManager", "deinit"]
+- !private ["C15sampleapp_swift13ALChatManager", "init"]
+- !private ["C15sampleapp_swift13ALChatManager", "isNilOrEmpty"]
+- !private ["C15sampleapp_swift13ALChatManager", "registerUser"]
+- !private ["CSo6ALJson", "applicationId"]
+- !private ["CSo6ALJson", "email"]
+- !private ["CSo6ALJson", "init"]
+- !private ["CSo6ALJson", "password"]
+- !private ["CSo6ALJson", "userId"]
+- !private ["CSo6ALUser", "applicationId"]
+- ["CSo6ALUser", "deinit"]
+- !private ["CSo6ALUser", "email"]
+- !private ["CSo6ALUser", "init"]
+- !private ["CSo6ALUser", "password"]
+- !private ["CSo6ALUser", "userId"]
+- !private ["CSo21ALUserDefaultsHandler", "setEmailId"]
+- !private ["CSo21ALUserDefaultsHandler", "setPassword"]
+- !private ["CSo21ALUserDefaultsHandler", "setUserAuthenticationTypeId"]
+- !private ["CSo21ALUserDefaultsHandler", "setUserId"]
+- !private ["Ps9AnyObject", "ALChatManager"]
+- !private ["Ps9AnyObject", "ALUser"]
+- !private ["Ps9AnyObject", "ALUserDefaultsHandler"]
+- !private ["Ps9AnyObject", "UIAlertAction"]
+- !private ["Ps9AnyObject", "UIAlertActionStyle"]
+- !private ["Ps9AnyObject", "UIAlertController"]
+- !private ["Ps9AnyObject", "UIAlertControllerStyle"]
+- !private ["Ps9AnyObject", "UIStoryboard"]
+- !private ["Ps9AnyObject", "addAction"]
+- !private ["Ps9AnyObject", "applicationId"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "email"]
+- ["Ps9AnyObject", "emailId"]
+- ["Ps9AnyObject", "getStartedBtn"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "instantiateViewController"]
+- !private ["Ps9AnyObject", "isEmpty"]
+- !private ["Ps9AnyObject", "isNilOrEmpty"]
+- ["Ps9AnyObject", "moreButtonAction"]
+- ["Ps9AnyObject", "password"]
+- !private ["Ps9AnyObject", "present"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "registerUser"]
+- !private ["Ps9AnyObject", "setEmailId"]
+- !private ["Ps9AnyObject", "setPassword"]
+- !private ["Ps9AnyObject", "setUserAuthenticationTypeId"]
+- !private ["Ps9AnyObject", "setUserId"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "userId"]
+- ["Ps9AnyObject", "userName"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "ALChatManager"]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "ALUser"]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "ALUserDefaultsHandler"]
+- ["C15sampleapp_swift27AppLogicLoginViewController", "AnyObject"]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "NSString"]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "UIAlertAction"]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "UIAlertActionStyle"]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "UIAlertController"]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "UIAlertControllerStyle"]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "UIStoryboard"]
+- ["C15sampleapp_swift27AppLogicLoginViewController", "UITextField"]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "UIViewController"]
+- ["C15sampleapp_swift27AppLogicLoginViewController", "deinit"]
+- ["C15sampleapp_swift27AppLogicLoginViewController", "didReceiveMemoryWarning"]
+- ["C15sampleapp_swift27AppLogicLoginViewController", "emailId"]
+- ["C15sampleapp_swift27AppLogicLoginViewController", "getStartedBtn"]
+- ["C15sampleapp_swift27AppLogicLoginViewController", "init"]
+- ["C15sampleapp_swift27AppLogicLoginViewController", "moreButtonAction"]
+- ["C15sampleapp_swift27AppLogicLoginViewController", "password"]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "present"]
+- !private ["C15sampleapp_swift27AppLogicLoginViewController", "print"]
+- ["C15sampleapp_swift27AppLogicLoginViewController", "userName"]
+- ["C15sampleapp_swift27AppLogicLoginViewController", "viewDidLoad"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
+- !private ["PSo15CALayerDelegate", "text"]
+- !private ["PSo15CNKeyDescriptor", "init"]
+- !private ["PSo15CNKeyDescriptor", "isEmpty"]
+- !private ["Ps7CVarArg", "ALChatManager"]
+- !private ["Ps7CVarArg", "ALUser"]
+- !private ["Ps7CVarArg", "ALUserDefaultsHandler"]
+- !private ["Ps7CVarArg", "UIAlertAction"]
+- !private ["Ps7CVarArg", "UIAlertActionStyle"]
+- !private ["Ps7CVarArg", "UIAlertController"]
+- !private ["Ps7CVarArg", "UIAlertControllerStyle"]
+- !private ["Ps7CVarArg", "UIStoryboard"]
+- !private ["Ps7CVarArg", "addAction"]
+- !private ["Ps7CVarArg", "applicationId"]
+- ["Ps7CVarArg", "didReceiveMemoryWarning"]
+- !private ["Ps7CVarArg", "email"]
+- ["Ps7CVarArg", "emailId"]
+- ["Ps7CVarArg", "getStartedBtn"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "instantiateViewController"]
+- !private ["Ps7CVarArg", "isEmpty"]
+- !private ["Ps7CVarArg", "isNilOrEmpty"]
+- ["Ps7CVarArg", "moreButtonAction"]
+- ["Ps7CVarArg", "password"]
+- !private ["Ps7CVarArg", "present"]
+- !private ["Ps7CVarArg", "print"]
+- !private ["Ps7CVarArg", "registerUser"]
+- !private ["Ps7CVarArg", "setEmailId"]
+- !private ["Ps7CVarArg", "setPassword"]
+- !private ["Ps7CVarArg", "setUserAuthenticationTypeId"]
+- !private ["Ps7CVarArg", "setUserId"]
+- !private ["Ps7CVarArg", "text"]
+- !private ["Ps7CVarArg", "userId"]
+- ["Ps7CVarArg", "userName"]
+- ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "isEmpty"]
+- !private ["Ps28CustomDebugStringConvertible", "ALChatManager"]
+- !private ["Ps28CustomDebugStringConvertible", "ALUser"]
+- !private ["Ps28CustomDebugStringConvertible", "ALUserDefaultsHandler"]
+- !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
+- !private ["Ps28CustomDebugStringConvertible", "UIAlertActionStyle"]
+- !private ["Ps28CustomDebugStringConvertible", "UIAlertController"]
+- !private ["Ps28CustomDebugStringConvertible", "UIAlertControllerStyle"]
+- !private ["Ps28CustomDebugStringConvertible", "UIStoryboard"]
+- !private ["Ps28CustomDebugStringConvertible", "addAction"]
+- !private ["Ps28CustomDebugStringConvertible", "applicationId"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps28CustomDebugStringConvertible", "email"]
+- ["Ps28CustomDebugStringConvertible", "emailId"]
+- ["Ps28CustomDebugStringConvertible", "getStartedBtn"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "instantiateViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "isEmpty"]
+- !private ["Ps28CustomDebugStringConvertible", "isNilOrEmpty"]
+- ["Ps28CustomDebugStringConvertible", "moreButtonAction"]
+- ["Ps28CustomDebugStringConvertible", "password"]
+- !private ["Ps28CustomDebugStringConvertible", "present"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "registerUser"]
+- !private ["Ps28CustomDebugStringConvertible", "setEmailId"]
+- !private ["Ps28CustomDebugStringConvertible", "setPassword"]
+- !private ["Ps28CustomDebugStringConvertible", "setUserAuthenticationTypeId"]
+- !private ["Ps28CustomDebugStringConvertible", "setUserId"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "userId"]
+- ["Ps28CustomDebugStringConvertible", "userName"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "isEmpty"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "isEmpty"]
+- !private ["Ps23CustomStringConvertible", "ALChatManager"]
+- !private ["Ps23CustomStringConvertible", "ALUser"]
+- !private ["Ps23CustomStringConvertible", "ALUserDefaultsHandler"]
+- !private ["Ps23CustomStringConvertible", "UIAlertAction"]
+- !private ["Ps23CustomStringConvertible", "UIAlertActionStyle"]
+- !private ["Ps23CustomStringConvertible", "UIAlertController"]
+- !private ["Ps23CustomStringConvertible", "UIAlertControllerStyle"]
+- !private ["Ps23CustomStringConvertible", "UIStoryboard"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addAction"]
+- !private ["Ps23CustomStringConvertible", "applicationId"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps23CustomStringConvertible", "email"]
+- ["Ps23CustomStringConvertible", "emailId"]
+- ["Ps23CustomStringConvertible", "getStartedBtn"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "instantiateViewController"]
+- !private ["Ps23CustomStringConvertible", "isEmpty"]
+- !private ["Ps23CustomStringConvertible", "isNilOrEmpty"]
+- ["Ps23CustomStringConvertible", "moreButtonAction"]
+- ["Ps23CustomStringConvertible", "password"]
+- !private ["Ps23CustomStringConvertible", "present"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "registerUser"]
+- !private ["Ps23CustomStringConvertible", "setEmailId"]
+- !private ["Ps23CustomStringConvertible", "setPassword"]
+- !private ["Ps23CustomStringConvertible", "setUserAuthenticationTypeId"]
+- !private ["Ps23CustomStringConvertible", "setUserId"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "userId"]
+- ["Ps23CustomStringConvertible", "userName"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "ALChatManager"]
+- !private ["Ps9Equatable", "ALUser"]
+- !private ["Ps9Equatable", "ALUserDefaultsHandler"]
+- !private ["Ps9Equatable", "UIAlertAction"]
+- !private ["Ps9Equatable", "UIAlertActionStyle"]
+- !private ["Ps9Equatable", "UIAlertController"]
+- !private ["Ps9Equatable", "UIAlertControllerStyle"]
+- !private ["Ps9Equatable", "UIStoryboard"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addAction"]
+- !private ["Ps9Equatable", "alert"]
+- !private ["Ps9Equatable", "applicationId"]
+- !private ["Ps9Equatable", "default"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "email"]
+- ["Ps9Equatable", "emailId"]
+- ["Ps9Equatable", "getStartedBtn"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "instantiateViewController"]
+- !private ["Ps9Equatable", "isEmpty"]
+- !private ["Ps9Equatable", "isNilOrEmpty"]
+- ["Ps9Equatable", "moreButtonAction"]
+- ["Ps9Equatable", "password"]
+- !private ["Ps9Equatable", "present"]
+- !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "registerUser"]
+- !private ["Ps9Equatable", "setEmailId"]
+- !private ["Ps9Equatable", "setPassword"]
+- !private ["Ps9Equatable", "setUserAuthenticationTypeId"]
+- !private ["Ps9Equatable", "setUserId"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "userId"]
+- ["Ps9Equatable", "userName"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "isEmpty"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "isEmpty"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "isEmpty"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "isEmpty"]
+- !private ["Ps8Hashable", "ALChatManager"]
+- !private ["Ps8Hashable", "ALUser"]
+- !private ["Ps8Hashable", "ALUserDefaultsHandler"]
+- !private ["Ps8Hashable", "UIAlertAction"]
+- !private ["Ps8Hashable", "UIAlertActionStyle"]
+- !private ["Ps8Hashable", "UIAlertController"]
+- !private ["Ps8Hashable", "UIAlertControllerStyle"]
+- !private ["Ps8Hashable", "UIStoryboard"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addAction"]
+- !private ["Ps8Hashable", "alert"]
+- !private ["Ps8Hashable", "applicationId"]
+- !private ["Ps8Hashable", "default"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "email"]
+- ["Ps8Hashable", "emailId"]
+- ["Ps8Hashable", "getStartedBtn"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "instantiateViewController"]
+- !private ["Ps8Hashable", "isEmpty"]
+- !private ["Ps8Hashable", "isNilOrEmpty"]
+- ["Ps8Hashable", "moreButtonAction"]
+- ["Ps8Hashable", "password"]
+- !private ["Ps8Hashable", "present"]
+- !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "registerUser"]
+- !private ["Ps8Hashable", "setEmailId"]
+- !private ["Ps8Hashable", "setPassword"]
+- !private ["Ps8Hashable", "setUserAuthenticationTypeId"]
+- !private ["Ps8Hashable", "setUserId"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "userId"]
+- ["Ps8Hashable", "userName"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- ["SQ", "deinit"]
+- ["Vs5Int16", "deinit"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps25LosslessStringConvertible", "isEmpty"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps10MirrorPath", "isEmpty"]
+- ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "ALChatManager"]
+- !private ["PSo8NSCoding", "ALUser"]
+- !private ["PSo8NSCoding", "ALUserDefaultsHandler"]
+- !private ["PSo8NSCoding", "UIAlertAction"]
+- !private ["PSo8NSCoding", "UIAlertActionStyle"]
+- !private ["PSo8NSCoding", "UIAlertController"]
+- !private ["PSo8NSCoding", "UIAlertControllerStyle"]
+- !private ["PSo8NSCoding", "UIStoryboard"]
+- !private ["PSo8NSCoding", "addAction"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- ["PSo8NSCoding", "emailId"]
+- ["PSo8NSCoding", "getStartedBtn"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isEmpty"]
+- ["PSo8NSCoding", "moreButtonAction"]
+- ["PSo8NSCoding", "password"]
+- !private ["PSo8NSCoding", "present"]
+- !private ["PSo8NSCoding", "print"]
+- !private ["PSo8NSCoding", "text"]
+- ["PSo8NSCoding", "userName"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "isEmpty"]
+- !private ["PSo26NSExtensionRequestHandling", "ALChatManager"]
+- !private ["PSo26NSExtensionRequestHandling", "ALUser"]
+- !private ["PSo26NSExtensionRequestHandling", "ALUserDefaultsHandler"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertActionStyle"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertControllerStyle"]
+- !private ["PSo26NSExtensionRequestHandling", "UIStoryboard"]
+- !private ["PSo26NSExtensionRequestHandling", "addAction"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- ["PSo26NSExtensionRequestHandling", "emailId"]
+- ["PSo26NSExtensionRequestHandling", "getStartedBtn"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "moreButtonAction"]
+- ["PSo26NSExtensionRequestHandling", "password"]
+- !private ["PSo26NSExtensionRequestHandling", "present"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
+- ["PSo26NSExtensionRequestHandling", "userName"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "isEmpty"]
+- !private ["CSo8NSObject", "ALChatManager"]
+- !private ["CSo8NSObject", "ALUser"]
+- !private ["CSo8NSObject", "ALUserDefaultsHandler"]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "NSString"]
+- !private ["CSo8NSObject", "UIAlertAction"]
+- !private ["CSo8NSObject", "UIAlertActionStyle"]
+- !private ["CSo8NSObject", "UIAlertController"]
+- !private ["CSo8NSObject", "UIAlertControllerStyle"]
+- !private ["CSo8NSObject", "UIStoryboard"]
+- ["CSo8NSObject", "UITextField"]
+- !private ["CSo8NSObject", "UIViewController"]
+- !private ["CSo8NSObject", "addAction"]
+- !private ["CSo8NSObject", "applicationId"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- !private ["CSo8NSObject", "email"]
+- ["CSo8NSObject", "emailId"]
+- ["CSo8NSObject", "getStartedBtn"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "instantiateViewController"]
+- !private ["CSo8NSObject", "isEmpty"]
+- !private ["CSo8NSObject", "isNilOrEmpty"]
+- ["CSo8NSObject", "moreButtonAction"]
+- ["CSo8NSObject", "password"]
+- !private ["CSo8NSObject", "present"]
+- !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "registerUser"]
+- !private ["CSo8NSObject", "setEmailId"]
+- !private ["CSo8NSObject", "setPassword"]
+- !private ["CSo8NSObject", "setUserAuthenticationTypeId"]
+- !private ["CSo8NSObject", "setUserId"]
+- !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "userId"]
+- ["CSo8NSObject", "userName"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "ALChatManager"]
+- !private ["PSo16NSObjectProtocol", "ALUser"]
+- !private ["PSo16NSObjectProtocol", "ALUserDefaultsHandler"]
+- !private ["PSo16NSObjectProtocol", "UIAlertAction"]
+- !private ["PSo16NSObjectProtocol", "UIAlertActionStyle"]
+- !private ["PSo16NSObjectProtocol", "UIAlertController"]
+- !private ["PSo16NSObjectProtocol", "UIAlertControllerStyle"]
+- !private ["PSo16NSObjectProtocol", "UIStoryboard"]
+- !private ["PSo16NSObjectProtocol", "addAction"]
+- !private ["PSo16NSObjectProtocol", "applicationId"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "email"]
+- ["PSo16NSObjectProtocol", "emailId"]
+- ["PSo16NSObjectProtocol", "getStartedBtn"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "instantiateViewController"]
+- !private ["PSo16NSObjectProtocol", "isEmpty"]
+- !private ["PSo16NSObjectProtocol", "isNilOrEmpty"]
+- ["PSo16NSObjectProtocol", "moreButtonAction"]
+- ["PSo16NSObjectProtocol", "password"]
+- !private ["PSo16NSObjectProtocol", "present"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "registerUser"]
+- !private ["PSo16NSObjectProtocol", "setEmailId"]
+- !private ["PSo16NSObjectProtocol", "setPassword"]
+- !private ["PSo16NSObjectProtocol", "setUserAuthenticationTypeId"]
+- !private ["PSo16NSObjectProtocol", "setUserId"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "userId"]
+- ["PSo16NSObjectProtocol", "userName"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "isEmpty"]
+- ["CSo8NSString", "deinit"]
+- !private ["CSo8NSString", "init"]
+- !private ["CSo8NSString", "isEmpty"]
+- ["Sq", "deinit"]
+- !private ["Ps16RawRepresentable", "alert"]
+- !private ["Ps16RawRepresentable", "default"]
+- !private ["Vs12StaticString", "init"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["SS", "isEmpty"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps16TextOutputStream", "isEmpty"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps20TextOutputStreamable", "isEmpty"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- ["CSo13UIAlertAction", "deinit"]
+- !private ["CSo13UIAlertAction", "init"]
+- !private ["OSC18UIAlertActionStyle", "default"]
+- ["OSC18UIAlertActionStyle", "deinit"]
+- !private ["CSo17UIAlertController", "addAction"]
+- ["CSo17UIAlertController", "deinit"]
+- !private ["CSo17UIAlertController", "init"]
+- !private ["OSC22UIAlertControllerStyle", "alert"]
+- ["OSC22UIAlertControllerStyle", "deinit"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo21UIAppearanceContainer", "ALChatManager"]
+- !private ["PSo21UIAppearanceContainer", "ALUser"]
+- !private ["PSo21UIAppearanceContainer", "ALUserDefaultsHandler"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertActionStyle"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertController"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertControllerStyle"]
+- !private ["PSo21UIAppearanceContainer", "UIStoryboard"]
+- !private ["PSo21UIAppearanceContainer", "addAction"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- ["PSo21UIAppearanceContainer", "emailId"]
+- ["PSo21UIAppearanceContainer", "getStartedBtn"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "moreButtonAction"]
+- ["PSo21UIAppearanceContainer", "password"]
+- !private ["PSo21UIAppearanceContainer", "present"]
+- !private ["PSo21UIAppearanceContainer", "print"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- ["PSo21UIAppearanceContainer", "userName"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "ALChatManager"]
+- !private ["PSo18UIContentContainer", "ALUser"]
+- !private ["PSo18UIContentContainer", "ALUserDefaultsHandler"]
+- !private ["PSo18UIContentContainer", "UIAlertAction"]
+- !private ["PSo18UIContentContainer", "UIAlertActionStyle"]
+- !private ["PSo18UIContentContainer", "UIAlertController"]
+- !private ["PSo18UIContentContainer", "UIAlertControllerStyle"]
+- !private ["PSo18UIContentContainer", "UIStoryboard"]
+- !private ["PSo18UIContentContainer", "addAction"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- ["PSo18UIContentContainer", "emailId"]
+- ["PSo18UIContentContainer", "getStartedBtn"]
+- !private ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "moreButtonAction"]
+- ["PSo18UIContentContainer", "password"]
+- !private ["PSo18UIContentContainer", "present"]
+- !private ["PSo18UIContentContainer", "print"]
+- ["PSo18UIContentContainer", "userName"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["CSo9UIControl", "text"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo18UIFocusEnvironment", "ALChatManager"]
+- !private ["PSo18UIFocusEnvironment", "ALUser"]
+- !private ["PSo18UIFocusEnvironment", "ALUserDefaultsHandler"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertActionStyle"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertController"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertControllerStyle"]
+- !private ["PSo18UIFocusEnvironment", "UIStoryboard"]
+- !private ["PSo18UIFocusEnvironment", "addAction"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UIFocusEnvironment", "emailId"]
+- ["PSo18UIFocusEnvironment", "getStartedBtn"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "moreButtonAction"]
+- ["PSo18UIFocusEnvironment", "password"]
+- !private ["PSo18UIFocusEnvironment", "present"]
+- !private ["PSo18UIFocusEnvironment", "print"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- ["PSo18UIFocusEnvironment", "userName"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "text"]
+- !private ["PSo10UIKeyInput", "text"]
+- !private ["CSo11UIResponder", "ALChatManager"]
+- !private ["CSo11UIResponder", "ALUser"]
+- !private ["CSo11UIResponder", "ALUserDefaultsHandler"]
+- ["CSo11UIResponder", "AnyObject"]
+- !private ["CSo11UIResponder", "NSString"]
+- !private ["CSo11UIResponder", "UIAlertAction"]
+- !private ["CSo11UIResponder", "UIAlertActionStyle"]
+- !private ["CSo11UIResponder", "UIAlertController"]
+- !private ["CSo11UIResponder", "UIAlertControllerStyle"]
+- !private ["CSo11UIResponder", "UIStoryboard"]
+- ["CSo11UIResponder", "UITextField"]
+- !private ["CSo11UIResponder", "UIViewController"]
+- !private ["CSo11UIResponder", "addAction"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "emailId"]
+- ["CSo11UIResponder", "getStartedBtn"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "moreButtonAction"]
+- ["CSo11UIResponder", "password"]
+- !private ["CSo11UIResponder", "present"]
+- !private ["CSo11UIResponder", "print"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "userName"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "ALChatManager"]
+- !private ["PSo30UIResponderStandardEditActions", "ALUser"]
+- !private ["PSo30UIResponderStandardEditActions", "ALUserDefaultsHandler"]
+- !private ["PSo30UIResponderStandardEditActions", "UIAlertAction"]
+- !private ["PSo30UIResponderStandardEditActions", "UIAlertActionStyle"]
+- !private ["PSo30UIResponderStandardEditActions", "UIAlertController"]
+- !private ["PSo30UIResponderStandardEditActions", "UIAlertControllerStyle"]
+- !private ["PSo30UIResponderStandardEditActions", "UIStoryboard"]
+- !private ["PSo30UIResponderStandardEditActions", "addAction"]
+- ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
+- ["PSo30UIResponderStandardEditActions", "emailId"]
+- ["PSo30UIResponderStandardEditActions", "getStartedBtn"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- ["PSo30UIResponderStandardEditActions", "moreButtonAction"]
+- ["PSo30UIResponderStandardEditActions", "password"]
+- !private ["PSo30UIResponderStandardEditActions", "present"]
+- !private ["PSo30UIResponderStandardEditActions", "print"]
+- !private ["PSo30UIResponderStandardEditActions", "text"]
+- ["PSo30UIResponderStandardEditActions", "userName"]
+- ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "ALChatManager"]
+- !private ["PSo16UIStateRestoring", "ALUser"]
+- !private ["PSo16UIStateRestoring", "ALUserDefaultsHandler"]
+- !private ["PSo16UIStateRestoring", "UIAlertAction"]
+- !private ["PSo16UIStateRestoring", "UIAlertActionStyle"]
+- !private ["PSo16UIStateRestoring", "UIAlertController"]
+- !private ["PSo16UIStateRestoring", "UIAlertControllerStyle"]
+- !private ["PSo16UIStateRestoring", "UIStoryboard"]
+- !private ["PSo16UIStateRestoring", "addAction"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- ["PSo16UIStateRestoring", "emailId"]
+- ["PSo16UIStateRestoring", "getStartedBtn"]
+- !private ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "moreButtonAction"]
+- ["PSo16UIStateRestoring", "password"]
+- !private ["PSo16UIStateRestoring", "present"]
+- !private ["PSo16UIStateRestoring", "print"]
+- ["PSo16UIStateRestoring", "userName"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo12UIStoryboard", "deinit"]
+- !private ["CSo12UIStoryboard", "init"]
+- !private ["CSo12UIStoryboard", "instantiateViewController"]
+- !private ["CSo11UITextField", "text"]
+- !private ["PSo11UITextInput", "text"]
+- !private ["PSo17UITextInputTraits", "text"]
+- !private ["PSo18UITraitEnvironment", "ALChatManager"]
+- !private ["PSo18UITraitEnvironment", "ALUser"]
+- !private ["PSo18UITraitEnvironment", "ALUserDefaultsHandler"]
+- !private ["PSo18UITraitEnvironment", "UIAlertAction"]
+- !private ["PSo18UITraitEnvironment", "UIAlertActionStyle"]
+- !private ["PSo18UITraitEnvironment", "UIAlertController"]
+- !private ["PSo18UITraitEnvironment", "UIAlertControllerStyle"]
+- !private ["PSo18UITraitEnvironment", "UIStoryboard"]
+- !private ["PSo18UITraitEnvironment", "addAction"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UITraitEnvironment", "emailId"]
+- ["PSo18UITraitEnvironment", "getStartedBtn"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "moreButtonAction"]
+- ["PSo18UITraitEnvironment", "password"]
+- !private ["PSo18UITraitEnvironment", "present"]
+- !private ["PSo18UITraitEnvironment", "print"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- ["PSo18UITraitEnvironment", "userName"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "text"]
+- !private ["CSo16UIViewController", "ALChatManager"]
+- !private ["CSo16UIViewController", "ALUser"]
+- !private ["CSo16UIViewController", "ALUserDefaultsHandler"]
+- ["CSo16UIViewController", "AnyObject"]
+- !private ["CSo16UIViewController", "NSString"]
+- !private ["CSo16UIViewController", "UIAlertAction"]
+- !private ["CSo16UIViewController", "UIAlertActionStyle"]
+- !private ["CSo16UIViewController", "UIAlertController"]
+- !private ["CSo16UIViewController", "UIAlertControllerStyle"]
+- !private ["CSo16UIViewController", "UIStoryboard"]
+- ["CSo16UIViewController", "UITextField"]
+- !private ["CSo16UIViewController", "UIViewController"]
+- !private ["CSo16UIViewController", "addAction"]
+- ["CSo16UIViewController", "deinit"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "emailId"]
+- ["CSo16UIViewController", "getStartedBtn"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "moreButtonAction"]
+- ["CSo16UIViewController", "password"]
+- !private ["CSo16UIViewController", "present"]
+- !private ["CSo16UIViewController", "print"]
+- ["CSo16UIViewController", "userName"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "isEmpty"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "isEmpty"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "isEmpty"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "isEmpty"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "isEmpty"]
+- !private ["Ps9_Hashable", "ALChatManager"]
+- !private ["Ps9_Hashable", "ALUser"]
+- !private ["Ps9_Hashable", "ALUserDefaultsHandler"]
+- !private ["Ps9_Hashable", "UIAlertAction"]
+- !private ["Ps9_Hashable", "UIAlertActionStyle"]
+- !private ["Ps9_Hashable", "UIAlertController"]
+- !private ["Ps9_Hashable", "UIAlertControllerStyle"]
+- !private ["Ps9_Hashable", "UIStoryboard"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "addAction"]
+- !private ["Ps9_Hashable", "alert"]
+- !private ["Ps9_Hashable", "applicationId"]
+- !private ["Ps9_Hashable", "default"]
+- ["Ps9_Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps9_Hashable", "email"]
+- ["Ps9_Hashable", "emailId"]
+- ["Ps9_Hashable", "getStartedBtn"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "instantiateViewController"]
+- !private ["Ps9_Hashable", "isEmpty"]
+- !private ["Ps9_Hashable", "isNilOrEmpty"]
+- ["Ps9_Hashable", "moreButtonAction"]
+- ["Ps9_Hashable", "password"]
+- !private ["Ps9_Hashable", "present"]
+- !private ["Ps9_Hashable", "print"]
+- !private ["Ps9_Hashable", "registerUser"]
+- !private ["Ps9_Hashable", "setEmailId"]
+- !private ["Ps9_Hashable", "setPassword"]
+- !private ["Ps9_Hashable", "setUserAuthenticationTypeId"]
+- !private ["Ps9_Hashable", "setUserId"]
+- !private ["Ps9_Hashable", "text"]
+- !private ["Ps9_Hashable", "userId"]
+- ["Ps9_Hashable", "userName"]
+- ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "isEmpty"]
+depends-nominal:
+- "C15sampleapp_swift13ALChatManager"
+- !private "CSo6ALJson"
+- "CSo6ALUser"
+- !private "CSo21ALUserDefaultsHandler"
+- "Ps9AnyObject"
+- "C15sampleapp_swift27AppLogicLoginViewController"
+- "Sb"
+- !private "PSo15CALayerDelegate"
+- !private "PSo15CNKeyDescriptor"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "SQ"
+- "Vs5Int16"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- "CSo7NSCoder"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- "CSo8NSString"
+- "Sq"
+- !private "Ps16RawRepresentable"
+- !private "Vs12StaticString"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- "CSo13UIAlertAction"
+- "OSC18UIAlertActionStyle"
+- "CSo17UIAlertController"
+- "OSC22UIAlertControllerStyle"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo30UIContentSizeCategoryAdjusting"
+- !private "CSo9UIControl"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "PSo10UIKeyInput"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- !private "CSo12UIStoryboard"
+- !private "CSo11UITextField"
+- !private "PSo11UITextInput"
+- !private "PSo17UITextInputTraits"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/sampleapp-swift/sampleapp-swift-Bridging-Header.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/HexColors.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTDecoder.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTEncoder.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTSessionManager.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/NSString+Encode.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TSBlurView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TSMessageView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TSMessage.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALVideoCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALShowImageViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALSendMessageResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALPushAssist.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMultipleAttachmentView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMQTTConversationService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLogs.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationCreateResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserProfileVC.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALReceiverUserProfileVC.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/AlMultipleAttachmentCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALVCFClass.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageInfoViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLocationCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImagePickerController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImageActivity.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALGroupDetailViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALGroupCreationViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALDocumentsCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALCustomCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactMessageCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALCollectionReusableView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserBlockResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLastSeenSyncFeed.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALReachability.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAppLocalNotifications.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALDataNetworkConnection.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConnectionQueueHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConnection.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImageCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALNotificationView.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALImagePickerHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALNewContactCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALLocationManager.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_Message.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALNewContactsViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALVCardClass.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAudioAttachmentViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMediaPlayer.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUIConstant.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMediaBaseCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUtilityClass.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/TPPropertyAnimation.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/KAProgressLabel.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactsResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserBlocked.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContactDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageInfoResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MessageListRequest.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelSyncResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAPIResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelCreateResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALResponseHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/UIImage+Utility.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALRequestHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelFeed.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_FileMetaInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageList.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALSyncMessageFeed.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALApplozicSettings.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALColorUtility.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALAudioCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelUserX.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALDBHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_CHANNEL_USER_X.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_CHANNEL.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannel.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChannelDBService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessageArrayWrapper.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALHyperLabel.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChatCell.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_Contact.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALBaseViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMapViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChatViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessagesViewController.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALSyncCallService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserDetail.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALPushNotificationService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTSSLSecurityPolicy.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTPersistence.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTMessage.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTSession.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/MQTTClient.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALFileMetaInfo.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALMessage.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/DB_ConversationProxy.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALTopicDetail.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConversationProxy.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALChatLauncher.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALContact.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUserDefaultsHandler.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALConstant.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALUser.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALJson.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALRegistrationResponse.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/ALRegisterUserClientService.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Headers/Applozic.h"
+- "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/Applozic.framework/Modules/module.modulemap"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Users/Abhishek/Downloads/Mac Softwares/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "4aa3179a0fec02ec80cbf9c7cbd4cd7b"

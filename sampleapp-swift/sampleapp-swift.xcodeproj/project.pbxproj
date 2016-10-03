@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		29A5114D1CC0C14900E1D2D8 /* DVChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5114C1CC0C14900E1D2D8 /* DVChatViewController.swift */; };
-		4673CD3C1D93D34E007F93BA /* Applozic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4673CD3B1D93D34E007F93BA /* Applozic.framework */; };
-		4673CD3D1D93D34E007F93BA /* Applozic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4673CD3B1D93D34E007F93BA /* Applozic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		46D161A01DA2478500B9C23C /* Applozic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D1619F1DA2478500B9C23C /* Applozic.framework */; };
+		46D161A11DA2478500B9C23C /* Applozic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46D1619F1DA2478500B9C23C /* Applozic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6DB2153E1C69FD00007CA71B /* LaunchChatFromSimpleVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB2153D1C69FCFF007CA71B /* LaunchChatFromSimpleVCViewController.swift */; };
 		6DB75B551C35221700077658 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB75B541C35221700077658 /* AppDelegate.swift */; };
 		6DB75B5D1C35221700077658 /* sampleapp_swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6DB75B5B1C35221700077658 /* sampleapp_swift.xcdatamodeld */; };
@@ -28,7 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4673CD3D1D93D34E007F93BA /* Applozic.framework in Embed Frameworks */,
+				46D161A11DA2478500B9C23C /* Applozic.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		29A5114C1CC0C14900E1D2D8 /* DVChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVChatViewController.swift; sourceTree = "<group>"; };
-		4673CD3B1D93D34E007F93BA /* Applozic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Applozic.framework; sourceTree = "<group>"; };
+		46D1619F1DA2478500B9C23C /* Applozic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Applozic.framework; sourceTree = "<group>"; };
 		6DB2153D1C69FCFF007CA71B /* LaunchChatFromSimpleVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchChatFromSimpleVCViewController.swift; sourceTree = "<group>"; };
 		6DB75B511C35221700077658 /* sampleapp-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sampleapp-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB75B541C35221700077658 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4673CD3C1D93D34E007F93BA /* Applozic.framework in Frameworks */,
+				46D161A01DA2478500B9C23C /* Applozic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +68,7 @@
 		6DB75B481C35221700077658 = {
 			isa = PBXGroup;
 			children = (
-				4673CD3B1D93D34E007F93BA /* Applozic.framework */,
+				46D1619F1DA2478500B9C23C /* Applozic.framework */,
 				6DB75B781C35250800077658 /* NSObject+ApplozicBridge.h */,
 				6DB75B791C35250800077658 /* NSObject+ApplozicBridge.m */,
 				6DB75B531C35221700077658 /* sampleapp-swift */,
@@ -308,6 +308,7 @@
 		6DB75B671C35221700077658 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -325,13 +326,14 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "sampleapp-swift/sampleapp-swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		6DB75B681C35221700077658 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -348,7 +350,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "sampleapp-swift/sampleapp-swift-Bridging-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

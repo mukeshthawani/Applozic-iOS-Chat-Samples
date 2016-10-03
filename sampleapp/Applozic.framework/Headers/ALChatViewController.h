@@ -18,6 +18,8 @@
 #import "ALChannel.h"
 #import "ALAudioCell.h"
 #import "ALAudioAttachmentViewController.h"
+#import "ALVCardClass.h"
+#import <ContactsUI/CNContactPickerViewController.h>
 
 @protocol ALChatViewControllerDelegate <NSObject>
 
@@ -26,7 +28,7 @@
 
 @end
 
-@interface ALChatViewController : ALBaseViewController<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,ALMapViewControllerDelegate,ALChatCellDelegate>
+@interface ALChatViewController : ALBaseViewController<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,ALMapViewControllerDelegate,ALChatCellDelegate,CNContactPickerDelegate>
 
 @property (strong, nonatomic) ALContact * alContact;
 @property (nonatomic, strong) ALChannel * alChannel;

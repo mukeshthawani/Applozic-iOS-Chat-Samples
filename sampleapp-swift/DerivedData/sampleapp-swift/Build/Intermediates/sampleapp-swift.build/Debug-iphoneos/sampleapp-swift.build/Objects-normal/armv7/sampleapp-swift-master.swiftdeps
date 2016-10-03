@@ -1,0 +1,9 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "d25eaea758cee07410bfe1af5432db1f"
+build_time: [528796833, 884216000]
+inputs:
+  "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/sampleapp-swift/AppLogicLoginViewController.swift": [527940573, 0]
+  "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/sampleapp-swift/ALChatManager.swift": [527940573, 0]
+  "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/sampleapp-swift/LaunchChatFromSimpleVCViewController.swift": [527940573, 0]
+  "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/sampleapp-swift/AppDelegate.swift": [527940466, 0]
+  "/Users/Abhishek/Documents/Github/Applozic-iOS-Chat-Samples/sampleapp-swift/sampleapp-swift/DVChatViewController.swift": [527940466, 0]

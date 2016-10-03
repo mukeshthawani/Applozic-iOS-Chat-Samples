@@ -4,6 +4,14 @@
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow location sharing</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Use photos</string>
+    <key>NSContactsUsageDescription</key>
+    <string>Allow Contact Updates</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Allow Camera</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Allow MicroPhone</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
