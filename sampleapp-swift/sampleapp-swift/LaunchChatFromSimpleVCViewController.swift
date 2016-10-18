@@ -83,7 +83,9 @@ class LaunchChatFromSimpleVCViewController: UIViewController {
     @IBAction func logout(_ sender: AnyObject)
     {
         let registerUserClientService: ALRegisterUserClientService = ALRegisterUserClientService()
-        registerUserClientService.logout();
+        registerUserClientService.logout { 
+            
+        }
         self.dismiss(animated: false, completion: nil)
     }
     

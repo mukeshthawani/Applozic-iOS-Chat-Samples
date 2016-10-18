@@ -10,7 +10,7 @@
 @import Contacts;
 @import ContactsUI;
 
-@interface ALVCardClass : NSObject
+@interface ALVCardClass : NSObject <UIAlertViewDelegate>
 
 @property (nonatomic, strong) UIImage * contactImage;
 @property (nonatomic, strong) NSString * fullName;
