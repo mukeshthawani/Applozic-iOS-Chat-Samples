@@ -21,7 +21,7 @@
 
 -(instancetype)initWithApplicationKey:(NSString *)applicationKey;
 
--(void)registerUser:(ALUser * )alUser;
+-(void)registerUser:(ALUser *)alUser;
 
 -(void)registerUserWithCompletion:(ALUser *)alUser withHandler:(void(^)(ALRegistrationResponse *rResponse, NSError *error))completion;
 

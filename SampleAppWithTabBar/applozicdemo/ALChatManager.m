@@ -9,7 +9,6 @@
 #import "ALChatManager.h"
 #import <Applozic/ALUserDefaultsHandler.h>
 #import <Applozic/ALMessageClientService.h>
-#import "LaunchChatFromSimpleViewController.h"
 #import <Applozic/ALApplozicSettings.h>
 #import <Applozic/ALChatViewController.h>
 #import <Applozic/ALMessage.h>
@@ -61,8 +60,7 @@
         
         if(rResponse && [rResponse.message containsString: @"REGISTERED"])
         {
-            ALMessageClientService *messageClientService = [[ALMessageClientService alloc] init];
-            [messageClientService addWelcomeMessage:nil];
+            
         }
         
         //        if(![ALUserDefaultsHandler getApnDeviceToken]){
@@ -160,9 +158,6 @@
     //User is already registered ..directly launch the chat...
     if([ALUserDefaultsHandler getDeviceKeyString])
     {
-        LaunchChatFromSimpleViewController *lObj = [[LaunchChatFromSimpleViewController alloc] init];
-        [lObj.activityView removeFromSuperview];
-        
         if(userId)
         {
             [self.chatLauncher launchIndividualChat:userId withGroupId:groupID
@@ -207,8 +202,7 @@
         
         if (rResponse && [rResponse.message containsString: @"REGISTERED"])
         {
-            ALMessageClientService *messageClientService = [[ALMessageClientService alloc] init];
-            [messageClientService addWelcomeMessage:nil];
+            
         }
         
         //        if(![ALUserDefaultsHandler getApnDeviceToken]){
@@ -286,8 +280,7 @@
         
         if (rResponse && [rResponse.message containsString: @"REGISTERED"])
         {
-            ALMessageClientService *messageClientService = [[ALMessageClientService alloc] init];
-            [messageClientService addWelcomeMessage:nil];
+            
         }
         
         [self.chatLauncher launchIndividualChat:userId withGroupId:groupID withDisplayName:displayName
@@ -344,6 +337,19 @@
 }
 
 //==============================================================================================================================================
+// LAUNCH OPEN GROUP
+//==============================================================================================================================================
+
+-(void)launchOpenGroupWithKey:(NSNumber *)channelKey fromViewController:(UIViewController *)viewController
+{
+    ALChannelService *service = [ALChannelService new];
+    [service getChannelInformation:channelKey orClientChannelKey:nil withCompletion:^(ALChannel *alChannel3) {
+        
+        [self launchChatForUserWithDisplayName:nil withGroupId:alChannel3.key andwithDisplayName:nil andFromViewController:viewController];
+    }];
+}
+
+//==============================================================================================================================================
 // This method can be used to get app logged-in user's information.
 // If user information is stored in DB or preference, Code to get user's information should go here.
 // This might be used to get existing user information in case of app update.
@@ -395,6 +401,12 @@
     [ALApplozicSettings setReceiveMsgTextColor:[UIColor grayColor]];
     [ALApplozicSettings setColorForReceiveMessages:[UIColor colorWithRed:255/255 green:255/255 blue:255/255 alpha:1]];
     [ALApplozicSettings setColorForSendMessages:[UIColor colorWithRed:66.0/255 green:173.0/255 blue:247.0/255 alpha:1]];
+    
+    /***************  SEND MESSAGE ABUSE CHECK  ******************/
+    
+    [ALApplozicSettings setAbuseWarningText:@"AVOID USE OF ABUSE WORDS"];
+    [ALApplozicSettings setMessageAbuseMode:YES];
+    
     /****************************************************************************************************************/
     
     
@@ -424,7 +436,7 @@
     NSString * appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
     [ALApplozicSettings setNotificationTitle:appName];
     
-    //    [ALApplozicSettings enableNotification]; //0
+    [ALApplozicSettings enableNotification]; //0
     //    [ALApplozicSettings disableNotification]; //2
     //    [ALApplozicSettings disableNotificationSound]; //1                /*  IF NOTIFICATION SOUND NOT NEEDED  */
     //    [ALApplozicSettings enableNotificationSound];//0                   /*  IF NOTIFICATION SOUND NEEDED    */
@@ -486,9 +498,11 @@
     /****************************************************************************************************************/
     
     
-    /***************************************** APPLICATION URL CONFIGURATION  ***************************************/
+    /***************************************** APPLICATION URL CONFIGURATION + ENCRYPTION  ***************************************/
     
     //    [self getApplicationBaseURL];                                         /* Note: PLEASE DO NOT COMMENT THIS IF ARCHIVING/RELEASING  */
+    
+    [ALUserDefaultsHandler setEnableEncryption:NO];                            /* Note: PLEASE DO YES (IF NEEDED)  */
     /****************************************************************************************************************/
     
 }
@@ -519,9 +533,6 @@
     //User is already registered ..directly launch the chat...
     if([ALUserDefaultsHandler getDeviceKeyString])
     {
-        LaunchChatFromSimpleViewController *lObj = [[LaunchChatFromSimpleViewController alloc] init];
-        [lObj.activityView removeFromSuperview];
-        
         //Launch
         if(userId || groupId)
         {
@@ -568,8 +579,7 @@
         
         if (rResponse && [rResponse.message containsString: @"REGISTERED"])
         {
-            ALMessageClientService *messageClientService = [[ALMessageClientService alloc] init];
-            [messageClientService addWelcomeMessage:nil];
+            
         }
         
         //        if(![ALUserDefaultsHandler getApnDeviceToken]){

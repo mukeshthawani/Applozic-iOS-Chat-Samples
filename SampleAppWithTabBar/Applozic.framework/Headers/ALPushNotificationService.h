@@ -36,16 +36,11 @@
 #define APPLOZIC_PREFIX @"APPLOZIC_"
 
 
-
-
 #import <Foundation/Foundation.h>
 #import "ALMessage.h"
 #import "ALUserDetail.h"
 #import "ALSyncCallService.h"
 #import <Applozic/ALChatLauncher.h>
-
-
-
 
 
 @interface ALPushNotificationService : NSObject
