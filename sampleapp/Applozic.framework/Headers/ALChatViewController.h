@@ -78,5 +78,5 @@
 -(NSString*)formatDateTime:(ALUserDetail*)alUserDetail  andValue:(double)value;
 -(void)checkUserBlockStatus;
 -(void)updateChannelSubscribing:(NSNumber *)oldChannelKey andNewChannel:(NSNumber *)newChannelKey;
-
+-(void)subProcessDetailUpdate:(ALUserDetail *)userId;
 @end
