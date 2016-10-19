@@ -58,7 +58,9 @@
     ALRegisterUserClientService * userClient = [ALRegisterUserClientService new];
     if([ALUserDefaultsHandler getDeviceKeyString])
     {
-        [userClient logout];
+        [userClient logoutWithCompletionHandler:^{
+            
+        }];
     }
     [self dismissViewControllerAnimated:YES completion:nil];
 }

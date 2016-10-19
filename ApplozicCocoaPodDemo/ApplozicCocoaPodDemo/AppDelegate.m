@@ -87,7 +87,7 @@
     
     NSLog(@"APP_ENTER_IN_FOREGROUND");
     [[NSNotificationCenter defaultCenter] postNotificationName:@"APP_ENTER_IN_FOREGROUND" object:nil];
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [application setApplicationIconBadgeNumber:0];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -102,12 +102,18 @@
       [[ALDBHandler sharedInstance] saveContext];
 }
 
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler
-{
+- (void)application:(UIApplication*)application didReceiveRemoteNotification:(NSDictionary*)dictionary {
     
-    NSLog(@"Received notification Completion: %@", userInfo);
+    NSLog(@"Received notification Without Completion :: %@", dictionary);
     ALPushNotificationService *pushNotificationService = [[ALPushNotificationService alloc] init];
-    [pushNotificationService notificationArrivedToApplication:application withDictionary:userInfo];
+    [pushNotificationService processPushNotification:dictionary updateUI:[NSNumber numberWithInt:APP_STATE_INACTIVE]];
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
+    
+    NSLog(@"Received notification Completion :: %@", userInfo);
+    ALPushNotificationService *pushNotificationService = [[ALPushNotificationService alloc] init];
+    [pushNotificationService processPushNotification:userInfo updateUI:[NSNumber numberWithInt:APP_STATE_BACKGROUND]];
     completionHandler(UIBackgroundFetchResultNewData);
     
 }

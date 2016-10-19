@@ -44,5 +44,9 @@
 +(UIImage *)subProcessThumbnail:(NSURL *)url;
 +(void)showAlertMessage:(NSString *)text andTitle:(NSString *)title;
 +(UIImage *)getNormalizedImage:(UIImage *)rawImage;
++(BOOL)isThisDebugBuild;
++(void)openApplicationSettings;
++(void)permissionPopUpWithMessage:(NSString *)msgText andViewController:(UIViewController *)viewController;
++(void)setAlertControllerFrame:(UIAlertController *)alertController andViewController:(UIViewController *)viewController;
 
 @end

@@ -23,12 +23,6 @@ case "${TARGETED_DEVICE_FAMILY}" in
     ;;
 esac
 
-realpath() {
-  DIRECTORY="$(cd "${1%/*}" && pwd)"
-  FILENAME="${1##*/}"
-  echo "$DIRECTORY/$FILENAME"
-}
-
 install_resource()
 {
   if [[ "$1" = /* ]] ; then
@@ -70,7 +64,7 @@ EOM
       xcrun mapc "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcmappingmodel`.cdm"
       ;;
     *.xcassets)
-      ABSOLUTE_XCASSET_FILE=$(realpath "$RESOURCE_PATH")
+      ABSOLUTE_XCASSET_FILE="$RESOURCE_PATH"
       XCASSET_FILES+=("$ABSOLUTE_XCASSET_FILE")
       ;;
     *)
@@ -83,8 +77,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "Applozic/Applozic/Base.lproj/Applozic.storyboard"
   install_resource "Applozic/Applozic/Images.xcassets/AppIcon.appiconset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_about.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_attachment.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_attachment2.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_call.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_call_holo_light.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_camera.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_chat.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_message_delivered.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_message_sent.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_read.imageset/Contents.json"
@@ -93,9 +92,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_map_no_data.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_upload.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/location_filled.imageset/Contents.json"
-  install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/applozic_edit.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/mobicom_ic_action_send_now.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/mobicom_social_forward.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/mobicom_social_reply.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/applozic_group_icon.imageset/Contents.json"
-  install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/applozic_uploadCamera.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/attachments.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/audio_mic.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/bbb.imageset/Contents.json"
@@ -108,8 +108,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/downloadI6.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/DownloadiOS.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/DTDT.imageset/Contents.json"
-  install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/ic_action_video.imageset/Contents.json"
-  install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/ic_phone_gray.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/itmusic1.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/NotificationIcon.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/online_show.imageset/Contents.json"
@@ -120,12 +118,16 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/playImage.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/Plus_PNG.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/SendButton20.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/send_PNG2.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/submit.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/TYMSGBG.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/uploadI1.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/UploadiOS2.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/VIDEO.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applozic_edit.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applozic_uploadCamera.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/ic_phone_gray.imageset/Contents.json"
   install_resource "Applozic/Applozic/TSMessagesDefaultDesign.json"
   install_resource "Applozic/Applozic/AppLozic.xcdatamodeld"
   install_resource "Applozic/Applozic/Base.lproj"
@@ -141,8 +143,13 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "Applozic/Applozic/Base.lproj/Applozic.storyboard"
   install_resource "Applozic/Applozic/Images.xcassets/AppIcon.appiconset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_about.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_attachment.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_attachment2.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_call.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_call_holo_light.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_camera.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_chat.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_message_delivered.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_message_sent.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_read.imageset/Contents.json"
@@ -151,9 +158,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_map_no_data.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_upload.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/location_filled.imageset/Contents.json"
-  install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/applozic_edit.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/mobicom_ic_action_send_now.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/mobicom_social_forward.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/mobicom_social_reply.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/applozic_group_icon.imageset/Contents.json"
-  install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/applozic_uploadCamera.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/attachments.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/audio_mic.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/bbb.imageset/Contents.json"
@@ -166,8 +174,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/downloadI6.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/DownloadiOS.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/DTDT.imageset/Contents.json"
-  install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/ic_action_video.imageset/Contents.json"
-  install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/ic_phone_gray.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/itmusic1.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/NotificationIcon.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/online_show.imageset/Contents.json"
@@ -178,12 +184,16 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/playImage.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/Plus_PNG.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/SendButton20.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/send_PNG2.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/submit.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/TYMSGBG.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/uploadI1.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/UploadiOS2.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image2/VIDEO.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applozic_edit.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applozic_uploadCamera.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/ic_phone_gray.imageset/Contents.json"
   install_resource "Applozic/Applozic/TSMessagesDefaultDesign.json"
   install_resource "Applozic/Applozic/AppLozic.xcdatamodeld"
   install_resource "Applozic/Applozic/Base.lproj"
@@ -209,7 +219,7 @@ then
   # Find all other xcassets (this unfortunately includes those of path pods and other targets).
   OTHER_XCASSETS=$(find "$PWD" -iname "*.xcassets" -type d)
   while read line; do
-    if [[ $line != "`realpath $PODS_ROOT`*" ]]; then
+    if [[ $line != "${PODS_ROOT}*" ]]; then
       XCASSET_FILES+=("$line")
     fi
   done <<<"$OTHER_XCASSETS"

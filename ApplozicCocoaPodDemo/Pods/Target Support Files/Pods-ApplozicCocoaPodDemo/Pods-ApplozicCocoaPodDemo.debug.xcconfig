@@ -1,8 +1,9 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Applozic"
 LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Applozic"
 OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Applozic"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Applozic" -framework "AVFoundation" -framework "AddressBook" -framework "AddressBookUI" -framework "CoreLocation" -framework "Foundation" -framework "MediaPlayer" -framework "SystemConfiguration" -framework "UIKit"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Applozic" -framework "AVFoundation" -framework "AddressBook" -framework "AddressBookUI" -framework "Contacts" -framework "ContactsUI" -framework "CoreLocation" -framework "Foundation" -framework "MediaPlayer" -framework "SystemConfiguration" -framework "UIKit"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

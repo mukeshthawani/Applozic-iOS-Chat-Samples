@@ -1,12 +1,12 @@
 PODS:
-  - Applozic (3.2.5)
+  - Applozic (3.4.3)
 
 DEPENDENCIES:
-  - Applozic (~> 3.2)
+  - Applozic (~> 3.4)
 
 SPEC CHECKSUMS:
-  Applozic: ca5a21cfb1d2b99766a4d992fcb424aa996710b4
+  Applozic: ae3475d6c57b1b8366f48df423e9994674fba86e
 
-PODFILE CHECKSUM: ea3089ec707c5a25ad689724ee1f5f21f1b3dae4
+PODFILE CHECKSUM: 2a99b7700673f6956e1e426c09cebc1b00be552a
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.3
