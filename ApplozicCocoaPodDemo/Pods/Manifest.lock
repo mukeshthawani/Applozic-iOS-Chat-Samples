@@ -1,11 +1,11 @@
 PODS:
-  - Applozic (3.4.3)
+  - Applozic (3.4.4)
 
 DEPENDENCIES:
   - Applozic (~> 3.4)
 
 SPEC CHECKSUMS:
-  Applozic: ae3475d6c57b1b8366f48df423e9994674fba86e
+  Applozic: 21d9d013f6d5d1232cd4d08bef1ac22df8d956bf
 
 PODFILE CHECKSUM: 2a99b7700673f6956e1e426c09cebc1b00be552a
 

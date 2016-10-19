@@ -48,6 +48,7 @@
 		392F5F12752B173808BF159C /* libPods-ApplozicCocoaPodDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApplozicCocoaPodDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4602CADC1D81C9B600FA549B /* ALChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALChatManager.h; sourceTree = "<group>"; };
 		4602CADD1D81C9B600FA549B /* ALChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALChatManager.m; sourceTree = "<group>"; };
+		467492F91DB7E68100933729 /* ApplozicCocoaPodDemo.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ApplozicCocoaPodDemo.entitlements; sourceTree = "<group>"; };
 		46A534E31D82149000EDB682 /* ChatOptionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatOptionVC.h; sourceTree = "<group>"; };
 		46A534E41D82149000EDB682 /* ChatOptionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatOptionVC.m; sourceTree = "<group>"; };
 		46BC83241D82E78100200962 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -165,6 +166,7 @@
 				46E363221D81C8F000FBDE4C /* Assets.xcassets */,
 				46E363241D81C8F000FBDE4C /* LaunchScreen.storyboard */,
 				46E363271D81C8F000FBDE4C /* Info.plist */,
+				467492F91DB7E68100933729 /* ApplozicCocoaPodDemo.entitlements */,
 				46E3631F1D81C8EF00FBDE4C /* ApplozicCocoaPodDemo.xcdatamodeld */,
 				46E363131D81C8EF00FBDE4C /* Supporting Files */,
 			);
@@ -635,6 +637,7 @@
 			baseConfigurationReference = 356D12DA41230E700DDF75E3 /* Pods-ApplozicCocoaPodDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ApplozicCocoaPodDemo/ApplozicCocoaPodDemo.entitlements;
 				INFOPLIST_FILE = ApplozicCocoaPodDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -648,6 +651,7 @@
 			baseConfigurationReference = C399ACD57D23FDAA34FDEB44 /* Pods-ApplozicCocoaPodDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ApplozicCocoaPodDemo/ApplozicCocoaPodDemo.entitlements;
 				INFOPLIST_FILE = ApplozicCocoaPodDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
