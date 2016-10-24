@@ -55,7 +55,7 @@
     [ALUserDefaultsHandler setPassword:user.password];
     [ALUserDefaultsHandler setEmailId:user.email];
     
-    ALChatManager *manager = [ALChatManager new];
+    ALChatManager *manager = [[ALChatManager alloc] initWithApplicationKey:@"applozic-sample-app"]; // SET APPLICATION ID
     [manager registerUserWithCompletion:user withHandler:^(ALRegistrationResponse *rResponse, NSError *error) {
         
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

@@ -14,15 +14,18 @@
 
 #define APPLICATION_ID @"applozic-sample-app"
 
+
 @interface ALChatManager : NSObject
 
 @property(nonatomic,strong) ALChatLauncher * chatLauncher;
+
+-(instancetype)initWithApplicationKey:(NSString *)applicationKey;
 
 -(void)registerUser:(ALUser * )alUser;
 
 -(void)registerUserWithCompletion:(ALUser *)alUser withHandler:(void(^)(ALRegistrationResponse *rResponse, NSError *error))completion;
 
-@property(nonatomic,retain) NSString * userID;
+@property (nonatomic,retain) NSString * userID;
 
 -(void)launchChat: (UIViewController *)fromViewController;
 
@@ -36,6 +39,10 @@
 
 -(void)launchListWithUserORGroup: (NSString *)userId ORWithGroupID: (NSNumber *)groupId andFromViewController:(UIViewController*)fromViewController;
 
+-(void)launchOpenGroupWithKey:(NSNumber *)channelKey fromViewController:(UIViewController *)viewController;
+
 -(BOOL)isUserHaveMessages:(NSString *)userId;
+
+-(NSString *)getApplicationKey;
 
 @end
