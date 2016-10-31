@@ -238,39 +238,154 @@ func makeFinalProxyWithGeneratedProxy (_ generatedProxy:ALConversationProxy, res
 // This method helps you customise various settings
 //--------------------------------------------------------------------------------------------------------------
 
-func ALDefaultChatViewSettings () {
+func ALDefaultChatViewSettings ()
+{
     
-    //////////////////////////   SET AUTHENTICATION-TYPE-ID FOR INTERNAL USAGE ONLY ////////////////////////
-    ALUserDefaultsHandler.setUserAuthenticationTypeId(TYPE_APPLOZIC) 
-    ////////////////////////// ////////////////////////// ////////////////////////// ///////////////////////
+     //////////////////////////   SET AUTHENTICATION-TYPE-ID FOR INTERNAL USAGE ONLY ////////////////////////
+     ALUserDefaultsHandler.setUserAuthenticationTypeId(TYPE_APPLOZIC)
+     ////////////////////////// ////////////////////////// ////////////////////////// ///////////////////////
 
-    let flag : Bool = false
-    ALUserDefaultsHandler.setNavigationRightButtonHidden(flag)
-    ALUserDefaultsHandler.setBottomTabBarHidden(flag)
-    ALApplozicSettings.setUserProfileHidden(flag)
-    ALApplozicSettings.hideRefreshButton(flag)
-    ALApplozicSettings.setTitleForConversationScreen("Chats")
+     
+     /*********************************************  NAVIGATION SETTINGS  ********************************************/
+     
+     ALApplozicSettings.setStatusBarBGColor(UIColor(red:66.0/255, green:173.0/255, blue:247.0/255, alpha:1))
+     ALApplozicSettings.setStatusBarStyle(.lightContent)
+     /* BY DEFAULT Black:UIStatusBarStyleDefault IF REQ. White: UIStatusBarStyleLightContent  */
+     /* ADD property in info.plist "View controller-based status bar appearance" type: BOOLEAN value: false */
+     
+     ALApplozicSettings.setColorForNavigation(UIColor(red:66.0/255, green:173.0/255, blue:247.0/255, alpha:1))
+     ALApplozicSettings.setColorForNavigationItem(UIColor.white)
+     ALApplozicSettings.hideRefreshButton(false)
+     ALUserDefaultsHandler.setNavigationRightButtonHidden(false)
+     ALUserDefaultsHandler.setBottomTabBarHidden(false)
+     ALApplozicSettings.setTitleForConversationScreen("Chats")
+     ALApplozicSettings.setCustomNavRightButtonMsgVC(false)               /*  SET VISIBILITY FOR REFRESH BUTTON (COMES FROM TOP IN MSG VC)   */
+     ALApplozicSettings.setTitleForBackButtonMsgVC("Back")                /*  SET BACK BUTTON FOR MSG VC  */
+     ALApplozicSettings.setTitleForBackButtonChatVC("Back")               /*  SET BACK BUTTON FOR CHAT VC */
+     /****************************************************************************************************************/
+     
+     
+     /***************************************  SEND RECEIVE MESSAGES SETTINGS  ***************************************/
+     
+     ALApplozicSettings.setSendMsgTextColor(UIColor.white)
+     ALApplozicSettings.setReceiveMsgTextColor(UIColor.gray)
+     ALApplozicSettings.setColorForReceiveMessages(UIColor(red:255/255, green:255/255, blue:255/255, alpha:1))
+     ALApplozicSettings.setColorForSendMessages(UIColor (red:66.0/255, green:173.0/255, blue:247.0/255, alpha:1))
+     
+     //****************** DATE COLOUR : AT THE BOTTOM OF MESSAGE BUBBLE ******************/
     
-    ALApplozicSettings.setFontFace("Helvetica")
-    ALApplozicSettings.setColorForReceiveMessages(UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha:1))
-    ALApplozicSettings.setColorForSendMessages(UIColor(red: 66.0/255, green: 173.0/255, blue: 247.0/255, alpha:1))
-    ALApplozicSettings.setColorForNavigation(UIColor(red: 66.0/255, green: 173.0/255, blue: 247.0/255, alpha:1))
-    ALApplozicSettings.setColorForNavigationItem(UIColor.white)
-
-    let appName = Bundle.main.infoDictionary!["CFBundleName"]
-    ALApplozicSettings.setNotificationTitle((appName as AnyObject).string)
-    ALApplozicSettings.setMaxCompressionFactor(0.1)
-    ALApplozicSettings.setMaxImageSizeForUploadInMB(3)
-    ALApplozicSettings.setGroupOption(true)
-
-    ALApplozicSettings.setTitleForBackButtonChatVC("Back")
-    ALApplozicSettings.setTitleForBackButtonMsgVC("Back")
-    ALApplozicSettings.setColorForSendButton(UIColor(red:66.0/255, green:173.0/255, blue:247.0/255, alpha:1))
-    ALApplozicSettings.setFilterContactsStatus(true);
-    ALUserDefaultsHandler.setDebugLogsRequire(true);
-    ALUserDefaultsHandler.setDeviceApnsType(APNS_TYPE_DEVELOPMENT);
-    //For Distribution CERT::
-//     ALUserDefaultsHandler.setDeviceApnsType(APNS_TYPE_DISTRIBUTION);
+     ALApplozicSettings.setDateColor(UIColor(red:51.0/255, green:51.0/255, blue:51.0/255, alpha:0.5))
+     
+     //****************** MESSAGE SEPERATE DATE COLOUR : DATE MESSAGE ******************/
+    
+     ALApplozicSettings.setMsgDateColor(UIColor.black)
+     
+     /***************  SEND MESSAGE ABUSE CHECK  ******************/
+     
+     ALApplozicSettings.setAbuseWarningText("AVOID USE OF ABUSE WORDS")
+     ALApplozicSettings.setMessageAbuseMode(true)
+     
+     //****************** SHOW/HIDE RECEIVER USER PROFILE ******************/
+    
+     ALApplozicSettings.setReceiverUserProfileOption(false)
+     
+     /****************************************************************************************************************/
+     
+     
+     /**********************************************  IMAGE SETTINGS  ************************************************/
+     
+     ALApplozicSettings.setMaxCompressionFactor(0.1)
+     ALApplozicSettings.setMaxImageSizeForUploadInMB(3)
+     ALApplozicSettings.setMultipleAttachmentMaxLimit(5)
+     /****************************************************************************************************************/
+     
+     
+     /**********************************************  GROUP SETTINGS  ************************************************/
+     
+     ALApplozicSettings.setGroupOption(true)
+     ALApplozicSettings.setGroupExitOption(true)
+     ALApplozicSettings.setGroupMemberAddOption(true)
+     ALApplozicSettings.setGroupMemberRemoveOption(true)
+     /****************************************************************************************************************/
+     
+     
+     /******************************************** NOTIIFCATION SETTINGS  ********************************************/
+     
+     ALUserDefaultsHandler.setDeviceApnsType(APNS_TYPE_DEVELOPMENT)
+     //For Distribution CERT::
+     //ALUserDefaultsHandler.setDeviceApnsType(APNS_TYPE_DISTRIBUTION)
+     
+     let appName = Bundle.main.infoDictionary!["CFBundleName"]
+     ALApplozicSettings.setNotificationTitle((appName as AnyObject).string)
+     
+     ALApplozicSettings.enableNotification() //0
+     //    ALApplozicSettings.disableNotification() //2
+     //    ALApplozicSettings.disableNotificationSound() //1                /*  IF NOTIFICATION SOUND NOT NEEDED  */
+     //    ALApplozicSettings.enableNotificationSound() //0                   /*  IF NOTIFICATION SOUND NEEDED    */
+     /****************************************************************************************************************/
+     
+     
+     /********************************************* CHAT VIEW SETTINGS  **********************************************/
+     
+     ALApplozicSettings.setVisibilityForNoMoreConversationMsgVC(false)               /*  SET VISIBILITY NO MORE CONVERSATION (COMES FROM TOP IN MSG VC)  */
+     ALApplozicSettings.setEmptyConversationText("You have no conversations yet")    /*  SET TEXT FOR EMPTY CONVERSATION    */
+     ALApplozicSettings.setVisibilityForOnlineIndicator(true)                        /*  SET VISIBILITY FOR ONLINE INDICATOR */
+    
+     let sendButtonColor = UIColor(red: 66.0 / 255, green: 173.0 / 255, blue: 247.0 / 255, alpha: 1)   /*  SET COLOR FOR SEND BUTTON   */
+     ALApplozicSettings.setColorForSendButton(sendButtonColor)
+    
+     ALApplozicSettings.setColorForTypeMsgBackground(UIColor.clear)             /*  SET COLOR FOR TYPE MESSAGE OUTER VIEW */
+     ALApplozicSettings.setMsgTextViewBGColor(UIColor.lightGray)                /*  SET BG COLOR FOR MESSAGE TEXT VIEW */
+     ALApplozicSettings.setPlaceHolderColor(UIColor.gray)                       /*  SET COLOR FOR PLACEHOLDER TEXT */
+     ALApplozicSettings.setVisibilityNoConversationLabelChatVC(true)            /*  SET NO CONVERSATION LABEL IN CHAT VC    */
+     ALApplozicSettings.setBGColorForTypingLabel(UIColor(red:242/255.0, green:242/255.0, blue:242/255.0, alpha:1))   /*  SET COLOR FOR TYPING LABEL  */
+     ALApplozicSettings.setTextColorForTypingLabel(UIColor(red:51.0/255, green:51.0/255, blue:51.0/255, alpha:0.5))  /*  SET COLOR FOR TEXT TYPING LABEL  */
+     /****************************************************************************************************************/
+     
+     
+     /********************************************** CHAT TYPE SETTINGS  *********************************************/
+     
+     ALApplozicSettings.setContextualChat(true)                                 /*  IF CONTEXTUAL NEEDED    */
+     /*  Note: Please uncomment below setter to use app_module_name */
+     //   ALUserDefaultsHandler.setAppModuleName("<APP_MODULE_NAME>")
+     //   ALUserDefaultsHandler.setAppModuleName("SELLER")
+     /****************************************************************************************************************/
+     
+     
+     /*********************************************** CONTACT SETTINGS  **********************************************/
+     
+     ALApplozicSettings.setFilterContactsStatus(true)                           /*  IF NEEDED ALL REGISTERED CONTACTS   */
+     ALApplozicSettings.setOnlineContactLimit(0)                                /*  IF NEEDED ONLINE USERS WITH LIMIT   */
+     /****************************************************************************************************************/
+     
+     
+     /***************************************** TOAST + CALL OPTION SETTINGS  ****************************************/
+     
+     ALApplozicSettings.setColorForToastText(UIColor.black)                     /*  SET COLOR FOR TOAST TEXT    */
+     ALApplozicSettings.setColorForToastBackground(UIColor.gray)                /*  SET COLOR FOR TOAST BG      */
+     ALApplozicSettings.setCallOption(true)                                     /*  IF CALL OPTION NEEDED   */
+     /****************************************************************************************************************/
+     
+     
+     /********************************************* DEMAND/MISC SETTINGS  ********************************************/
+     
+     ALApplozicSettings.setUnreadCountLabelBGColor(UIColor.purple)
+     ALApplozicSettings.setCustomClassName("ALChatManager")                     /*  SET 3rd Party Class Name OR ALChatManager */
+     ALUserDefaultsHandler.setFetchConversationPageSize(20)                     /*  SET MESSAGE LIST PAGE SIZE  */ // DEFAULT VALUE 20
+     ALUserDefaultsHandler.setUnreadCountType(1)                                /*  SET UNRAED COUNT TYPE   */ // DEFAULT VALUE 0
+     ALApplozicSettings.setMaxTextViewLines(4)
+     ALUserDefaultsHandler.setDebugLogsRequire(true)                            /*   ENABLE / DISABLE LOGS   */
+     ALUserDefaultsHandler.setLoginUserConatactVisibility(false)
+     ALApplozicSettings.setUserProfileHidden(false)
+     ALApplozicSettings.setFontFace("Helvetica")
+     ALApplozicSettings.setChatWallpaperImageName("<WALLPAPER NAME>")
+     /****************************************************************************************************************/
+     
+     
+     /***************************************** APPLICATION URL CONFIGURATION + ENCRYPTION  ***************************************/
+    
+     ALUserDefaultsHandler.setEnableEncryption(false)                            /* Note: PLEASE DO YES (IF NEEDED)  */
+     /****************************************************************************************************************/
     
 }
 
