@@ -383,8 +383,8 @@
     /* BY DEFAULT Black:UIStatusBarStyleDefault IF REQ. White: UIStatusBarStyleLightContent  */
     /* ADD property in info.plist "View controller-based status bar appearance" type: BOOLEAN value: NO */
     
-    [ALApplozicSettings setColorForNavigation: [UIColor colorWithRed:66.0/255 green:173.0/255 blue:247.0/255 alpha:1]];
-    [ALApplozicSettings setColorForNavigationItem: [UIColor whiteColor]];
+    [ALApplozicSettings setColorForNavigation:[UIColor colorWithRed:66.0/255 green:173.0/255 blue:247.0/255 alpha:1]];
+    [ALApplozicSettings setColorForNavigationItem:[UIColor whiteColor]];
     [ALApplozicSettings hideRefreshButton:NO];
     [ALUserDefaultsHandler setNavigationRightButtonHidden:NO];
     [ALUserDefaultsHandler setBottomTabBarHidden:NO];
@@ -402,10 +402,19 @@
     [ALApplozicSettings setColorForReceiveMessages:[UIColor colorWithRed:255/255 green:255/255 blue:255/255 alpha:1]];
     [ALApplozicSettings setColorForSendMessages:[UIColor colorWithRed:66.0/255 green:173.0/255 blue:247.0/255 alpha:1]];
     
+    //****************** DATE COLOUR : AT THE BOTTOM OF MESSAGE BUBBLE ******************/
+    [ALApplozicSettings setDateColor:[UIColor colorWithRed:51.0/255 green:51.0/255 blue:51.0/255 alpha:0.5]];
+    
+    //****************** MESSAGE SEPERATE DATE COLOUR : DATE MESSAGE ******************/
+    [ALApplozicSettings setMsgDateColor:[UIColor blackColor]];
+    
     /***************  SEND MESSAGE ABUSE CHECK  ******************/
     
     [ALApplozicSettings setAbuseWarningText:@"AVOID USE OF ABUSE WORDS"];
     [ALApplozicSettings setMessageAbuseMode:YES];
+    
+    //****************** SHOW/HIDE RECEIVER USER PROFILE ******************/
+    [ALApplozicSettings setReceiverUserProfileOption:NO];
     
     /****************************************************************************************************************/
     
