@@ -251,7 +251,7 @@ func ALDefaultChatViewSettings ()
      ALApplozicSettings.setStatusBarBGColor(UIColor(red:66.0/255, green:173.0/255, blue:247.0/255, alpha:1))
      ALApplozicSettings.setStatusBarStyle(.lightContent)
      /* BY DEFAULT Black:UIStatusBarStyleDefault IF REQ. White: UIStatusBarStyleLightContent  */
-     /* ADD property in info.plist "View controller-based status bar appearance" type: BOOLEAN value: false */
+     /* ADD property in info.plist "View controller-based status bar appearance" type: BOOLEAN value: NO */
      
      ALApplozicSettings.setColorForNavigation(UIColor(red:66.0/255, green:173.0/255, blue:247.0/255, alpha:1))
      ALApplozicSettings.setColorForNavigationItem(UIColor.white)
@@ -331,7 +331,7 @@ func ALDefaultChatViewSettings ()
      ALApplozicSettings.setEmptyConversationText("You have no conversations yet")    /*  SET TEXT FOR EMPTY CONVERSATION    */
      ALApplozicSettings.setVisibilityForOnlineIndicator(true)                        /*  SET VISIBILITY FOR ONLINE INDICATOR */
     
-     let sendButtonColor = UIColor(red: 66.0 / 255, green: 173.0 / 255, blue: 247.0 / 255, alpha: 1)   /*  SET COLOR FOR SEND BUTTON   */
+     let sendButtonColor = UIColor(red:66.0/255, green:173.0/255, blue:247.0/255, alpha:1)   /*  SET COLOR FOR SEND BUTTON   */
      ALApplozicSettings.setColorForSendButton(sendButtonColor)
     
      ALApplozicSettings.setColorForTypeMsgBackground(UIColor.clear)             /*  SET COLOR FOR TYPE MESSAGE OUTER VIEW */
