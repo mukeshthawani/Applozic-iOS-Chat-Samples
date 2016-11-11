@@ -174,8 +174,12 @@ class ALChatManager: NSObject {
         // TODO:Write your won code to get userId in case of update or in case of user is not registered....
         
         let user: ALUser = ALUser()
-        user.userId = "iosdevtest"
+        user.userId = ALUserDefaultsHandler.getUserId()
         user.applicationId = ALChatManager.applicationId
+        user.email = ALUserDefaultsHandler.getEmailId()
+        user.password = ALUserDefaultsHandler.getPassword()
+//        user.displayName = ALUserDefaultsHandler.getDisplayName()
+        
         return user;
         
     }
