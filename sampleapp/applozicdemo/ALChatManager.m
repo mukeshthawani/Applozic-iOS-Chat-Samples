@@ -362,10 +362,11 @@
     [user setApplicationId:[[[self alloc] init] getApplicationKey]];
     [user setAppModuleName:[ALUserDefaultsHandler getAppModuleName]];      // 3. APP_MODULE_NAME setter
     
-    //random userId. Write your logic to get user information here.
-    [user setUserId:@"demo-test"];
-    //[user setEmailId:[self.emailField text]];
-    //[user setPassword:[self.passwordField text]];
+    [user setUserId:[ALUserDefaultsHandler getUserId]];
+    [user setEmail:[ALUserDefaultsHandler getEmailId]];
+    [user setPassword:[ALUserDefaultsHandler getPassword]];
+    //    [user setDisplayName:[ALUserDefaultsHandler getDisplayName]]; // IF SETTING ANY DISPLAY NAME THEN UNCOMMENT IT
+    
     return user;
 }
 
