@@ -434,6 +434,9 @@
     [ALApplozicSettings setGroupExitOption:YES];
     [ALApplozicSettings setGroupMemberAddOption:YES];
     [ALApplozicSettings setGroupMemberRemoveOption:YES];
+    
+    [ALApplozicSettings setGroupInfoDisabled:NO];
+    [ALApplozicSettings setGroupInfoEditDisabled:NO];
     /****************************************************************************************************************/
     
     
@@ -514,7 +517,8 @@
     
     [ALUserDefaultsHandler setEnableEncryption:NO];                            /* Note: PLEASE DO YES (IF NEEDED)  */
     /****************************************************************************************************************/
-    
+    [ALUserDefaultsHandler setGoogleMapAPIKey:@"AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk"];
+
 }
 
 -(void)getApplicationBaseURL

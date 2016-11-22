@@ -310,6 +310,11 @@ func ALDefaultChatViewSettings ()
      ALApplozicSettings.setGroupExitOption(true)
      ALApplozicSettings.setGroupMemberAddOption(true)
      ALApplozicSettings.setGroupMemberRemoveOption(true)
+    
+     ALApplozicSettings.setGroupInfoDisabled(false)
+     ALApplozicSettings.setGroupInfoEditDisabled(false)
+
+    
      /****************************************************************************************************************/
      
      
@@ -391,5 +396,6 @@ func ALDefaultChatViewSettings ()
      ALUserDefaultsHandler.setEnableEncryption(false)                            /* Note: PLEASE DO YES (IF NEEDED)  */
      /****************************************************************************************************************/
     
+    ALUserDefaultsHandler.setGoogleMapAPIKey("AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk")  /*Note: REPLEACE WITH YOUR GOOGLE MAP KEY  */
 }
 

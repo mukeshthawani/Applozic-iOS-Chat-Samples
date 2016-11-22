@@ -434,6 +434,9 @@
     [ALApplozicSettings setGroupExitOption:YES];
     [ALApplozicSettings setGroupMemberAddOption:YES];
     [ALApplozicSettings setGroupMemberRemoveOption:YES];
+    
+    [ALApplozicSettings setGroupInfoDisabled:NO];
+    [ALApplozicSettings setGroupInfoEditDisabled:NO];
     /****************************************************************************************************************/
     
     
@@ -508,12 +511,15 @@
     /****************************************************************************************************************/
     
     
-    /***************************************** APPLICATION URL CONFIGURATION + ENCRYPTION  ***************************************/
+    /***************************  APPLICATION URL CONFIGURATION + ENCRYPTION  ***************************************/
     
-    //    [self getApplicationBaseURL];                                         /* Note: PLEASE DO NOT COMMENT THIS IF ARCHIVING/RELEASING  */
+    // [self getApplicationBaseURL];    /* Note: PLEASE DO NOT COMMENT THIS IF ARCHIVING/RELEASING  */
     
     [ALUserDefaultsHandler setEnableEncryption:NO];                            /* Note: PLEASE DO YES (IF NEEDED)  */
-    /****************************************************************************************************************/
+    
+    /*******************************GOOGLE MAP API KEY ******************************************************/
+    [ALUserDefaultsHandler setGoogleMapAPIKey:@"AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk"];
+    
     
 }
 
