@@ -64,7 +64,7 @@
 #include <tgmath.h>
 @import AddressBookUI;
 
-#define MQTT_MAX_RETRY 3
+#define MQTT_MAX_RETRY 0
 #define NEW_MESSAGE_NOTIFICATION @"newMessageNotification"
 
 
@@ -145,6 +145,7 @@
     [self loadChatView];
     self.placeHolderTxt = @"Write a Message...";
     self.sendMessageTextView.text = self.placeHolderTxt;
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -161,6 +162,10 @@
         [self.sendMessageTextView setScrollEnabled:YES];
 
     }];
+    if(self.alMessage){
+        [self handleMessageForward:self.alMessage];
+        
+    }
     
 }
 
@@ -518,6 +523,7 @@
     if(![self.alMessageWrapper getUpdatedMessageArray].count && [ALApplozicSettings getVisibilityNoConversationLabelChatVC])
     {
         [self.noConLabel setHidden:NO];
+
         return;
     }
     [self.noConLabel setHidden:YES];
@@ -955,18 +961,21 @@
 
 -(void)didTapTitleView:(id)sender
 {
+    //If one to one chat, launch receiver profile.
     if(self.contactIds && !self.channelKey)
     {
         [self getUserInformation];
-        return;
+   
+    }else if ( ![ALApplozicSettings isGroupInfoDisabled] ){
+        
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Applozic" bundle:[NSBundle bundleForClass:[self class]]];
+        ALGroupDetailViewController * groupDetailViewController = (ALGroupDetailViewController*)[storyboard instantiateViewControllerWithIdentifier:@"ALGroupDetailViewController"];
+        groupDetailViewController.channelKeyID = self.channelKey;
+        groupDetailViewController.alChatViewController = self;
+        
+        [self.navigationController pushViewController:groupDetailViewController animated:YES];
     }
 
-    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Applozic" bundle:[NSBundle bundleForClass:[self class]]];
-    ALGroupDetailViewController * groupDetailViewController = (ALGroupDetailViewController*)[storyboard instantiateViewControllerWithIdentifier:@"ALGroupDetailViewController"];
-    groupDetailViewController.channelKeyID = self.channelKey;
-    groupDetailViewController.alChatViewController = self;
-    
-    [self.navigationController pushViewController:groupDetailViewController animated:YES];
 }
 
 -(void)fetchMessageFromDB
@@ -1019,6 +1028,31 @@
 -(BOOL)canBecomeFirstResponder
 {
     return YES;
+}
+
+-(void)handleMessageForward:(ALMessage* )almessage{
+    
+    ALMessage * message = [self getMessageToPost];
+    message.message  = almessage.message;
+    message.metadata = almessage.metadata;
+    message.fileMeta = almessage.fileMeta;
+    message.imageFilePath = almessage.imageFilePath;
+    message.fileMetaKey = almessage.fileMetaKey;
+
+    if( message.imageFilePath ){
+        [self processAttachment:message.imageFilePath andMessageText:message.message  andContentType:almessage.contentType];
+        self.alMessage=nil;
+        [self showNoConversationLabel];
+        return;
+    }
+    //SEND MESSAGE
+    [[self.alMessageWrapper getUpdatedMessageArray] addObject:message];
+    [self showNoConversationLabel];
+    [self sendMessage:message];
+    [self.mTableView reloadData];       //RELOAD MANUALLY SINCE NO NETWORK ERROR
+    [self setRefreshMainView:TRUE];
+    [self scrollTableViewToBottomWithAnimation:YES];
+    self.alMessage=nil;
 }
 
 //==============================================================================================================================================
@@ -2635,7 +2669,7 @@
     
     NSArray *componentsContactId = [contactId componentsSeparatedByString:@":"];
     
-    if(componentsContactId.count > 1)
+    if(componentsContactId.count > 1 && [componentsContactId[0] isEqualToString:@"AL_GROUP"] )
     {
         NSNumber * appendedGroupId = [NSNumber numberWithInt:[componentsContactId[1] intValue]];
         alMessage.groupId = appendedGroupId;
@@ -2932,6 +2966,11 @@
 
 -(void)serverCallForLastSeen
 {
+    if([self isGroup])
+    {
+        return;
+    }
+    
     [ALUserService userDetailServerCall:self.contactIds withCompletion:^(ALUserDetail *alUserDetail)
     {
         if(alUserDetail)
@@ -3319,20 +3358,18 @@
 -(void)updateUserDetail:(NSString *)userId  // MQTT DELEGATE
 {
     NSLog(@"ALCHATVC : USER_DETAIL_CHANGED_CALL_UPDATE");
-    if([userId isEqualToString:self.contactIds])
-    {
-        [ALUserService updateUserDetail:userId withCompletion:^(ALUserDetail *userDetail) {
-            
-            [self subProcessDetailUpdate:userDetail];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"USER_DETAIL_OTHER_VC" object:userDetail];
-         }];
-    }
+    
+    [ALUserService updateUserDetail:userId withCompletion:^(ALUserDetail *userDetail) {
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"USER_DETAIL_OTHER_VC" object:userDetail];
+        [self subProcessDetailUpdate:userDetail];
+    }];
 }
 
 -(void)subProcessDetailUpdate:(ALUserDetail *)userDetail  // (COMMON METHOD CALL FROM SELF and ALMSGVC)
 {
     NSLog(@"ALCHATVC : USER_DETAIL_SUB_PROCESS");
-    if(![self isGroup])
+    if(![self isGroup] && [userDetail.userId isEqualToString:self.contactIds])
     {
         ALContactService *contactService = [ALContactService new];
         self.alContact = [contactService loadContactByKey:@"userId" value:userDetail.userId];
@@ -3345,6 +3382,11 @@
 {
     NSString *userID = (NSString *)notifyObj.object;
     [self updateUserDetail:userID];
+}
+
+-(void)reloadDataForUserBlockNotification:(NSString *)userId andBlockFlag:(BOOL)flag
+{
+    [self checkUserBlockStatus];
 }
 
 //==============================================================================================================================================
@@ -3466,10 +3508,6 @@
     }
     [self showNoConversationLabel];
     
-    if(self.mqttRetryCount >= 3)
-    {
-        self.mqttRetryCount = 0;
-    }
 }
 
 -(void)appWillResignActive
