@@ -514,7 +514,7 @@
     
     [ALUserDefaultsHandler setEnableEncryption:NO];                            /* Note: PLEASE DO YES (IF NEEDED)  */
     /****************************************************************************************************************/
-    
+    [ALUserDefaultsHandler setGoogleMapAPIKey:@"AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk"]; //REPLACE with your google-key;
 }
 
 -(void)getApplicationBaseURL
