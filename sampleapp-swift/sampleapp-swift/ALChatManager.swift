@@ -163,6 +163,45 @@ class ALChatManager: NSObject {
         })
     }
     
+    
+    func launchChatForGroup(groupId:NSNumber, fromController:UIViewController) -> Void {
+        
+        let alChatLauncher : ALChatLauncher = ALChatLauncher(applicationId : getApplicationKey() as String)
+        
+        if(!ALChatManager.isNilOrEmpty(ALUserDefaultsHandler.getDeviceKeyString() as NSString?)) {
+            
+            alChatLauncher.launchIndividualChat(nil, withGroupId: groupId, andViewControllerObject: fromController, andWithText: nil)
+             return;
+        }
+        
+        let alUser : ALUser = ALChatManager.getUserDetail()
+        let alRegisterUser  = ALRegisterUserClientService()
+        alRegisterUser.initWithCompletion(alUser, withCompletion: { (rResponse, error) in
+            
+            print("USER_REGISTRATION_RESPONSE :: \(rResponse)");
+            if (error != nil) {
+                print("REGISTRATION_ERROR :: \(error?.localizedDescription)")
+                ALUtilityClass.showAlertMessage(rResponse?.message, andTitle:"Response: Cant Register User Client")
+                return
+            }
+            if (rResponse?.message.isEqual("PASSWORD_INVALID"))! {
+                ALUtilityClass.showAlertMessage("INAVALID PASSWORD", andTitle:"ALERT!!!")
+                return
+            }
+
+            if (rResponse?.message.isEqual("REGISTERED"))! {
+                
+            }
+            
+            alChatLauncher.launchIndividualChat(nil, withGroupId: groupId, andViewControllerObject: fromController, andWithText: nil)
+
+            if (!(UIApplication.shared.isRegisteredForRemoteNotifications)) {
+                alChatLauncher.registerForNotification();
+            }
+        })
+    }
+
+    
     // ----------------------  ---------------------------------------------------------------------------------------------//
     //     This method can be used to get app logged-in user's information.
     //     if user information is stored in DB or preference, Code to get user's information should go here.
@@ -398,4 +437,5 @@ func ALDefaultChatViewSettings ()
     
     ALUserDefaultsHandler.setGoogleMapAPIKey("AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk")  /*Note: REPLEACE WITH YOUR GOOGLE MAP KEY  */
 }
+
 

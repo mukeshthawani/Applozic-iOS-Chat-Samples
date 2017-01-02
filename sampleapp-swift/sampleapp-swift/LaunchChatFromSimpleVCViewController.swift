@@ -32,6 +32,7 @@ class LaunchChatFromSimpleVCViewController: UIViewController {
     {
         let chatManager : ALChatManager =  ALChatManager(applicationKey: "applozic-sample-app")
         chatManager.registerUserAndLaunchChat(getUserDetail(), fromController: self, forUser:"applozic")
+        //        chatManager.launchChatForGroup(groupId: NSNumber(value:1344640 as Int32), fromController: self)
     }
     
     
