@@ -130,8 +130,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Received notification :: \(userInfo.description)")
         let alPushNotificationService: ALPushNotificationService = ALPushNotificationService()
         
-        let appState: NSNumber = NSNumber(value: 0 as Int32)                        // APP_STATE_INACTIVE
-        alPushNotificationService.processPushNotification(userInfo, updateUI: appState)
+//        let appState: NSNumber = NSNumber(value: 0 as Int32)                        // APP_STATE_INACTIVE
+//        alPushNotificationService.processPushNotification(userInfo, updateUI: appState)
+        alPushNotificationService.notificationArrived(to: application, with: userInfo)
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler
@@ -140,8 +141,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Received notification With Completion :: \(userInfo.description)")
         let alPushNotificationService: ALPushNotificationService = ALPushNotificationService()
         
-        let appState: NSNumber = NSNumber(value: -1 as Int32)                       // APP_STATE_BACKGROUND
-        alPushNotificationService.processPushNotification(userInfo, updateUI: appState)
+//        let appState: NSNumber = NSNumber(value: -1 as Int32)                       // APP_STATE_BACKGROUND
+//        alPushNotificationService.processPushNotification(userInfo, updateUI: appState)
+        alPushNotificationService.notificationArrived(to: application, with: userInfo)
         completionHandler(UIBackgroundFetchResult.newData)
     }
     
