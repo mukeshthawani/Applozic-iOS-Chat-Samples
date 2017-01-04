@@ -404,6 +404,7 @@ func ALDefaultChatViewSettings ()
      
      ALApplozicSettings.setFilterContactsStatus(true)                           /*  IF NEEDED ALL REGISTERED CONTACTS   */
      ALApplozicSettings.setOnlineContactLimit(0)                                /*  IF NEEDED ONLINE USERS WITH LIMIT   */
+     ALApplozicSettings.setSubGroupLaunchFlag(false)                            /*  IF NEEDED SUB GROUP LAUNCH   */
      /****************************************************************************************************************/
      
      
@@ -435,7 +436,9 @@ func ALDefaultChatViewSettings ()
      ALUserDefaultsHandler.setEnableEncryption(false)                            /* Note: PLEASE DO YES (IF NEEDED)  */
      /****************************************************************************************************************/
     
-    ALUserDefaultsHandler.setGoogleMapAPIKey("AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk")  /*Note: REPLEACE WITH YOUR GOOGLE MAP KEY  */
+     ALUserDefaultsHandler.setGoogleMapAPIKey("AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk")  /*Note: REPLEACE WITH YOUR GOOGLE MAP KEY  */
+    
+     ALApplozicSettings.setMsgContainerVC("sampleapp_swift.DVChatViewController")  // appname.ClassName i.e. sampleapp_swift.DVChatViewController
 }
 
 

@@ -485,6 +485,7 @@
     
     [ALApplozicSettings setFilterContactsStatus:YES];                           /*  IF NEEDED ALL REGISTERED CONTACTS   */
     [ALApplozicSettings setOnlineContactLimit:0];                               /*  IF NEEDED ONLINE USERS WITH LIMIT   */
+    [ALApplozicSettings setSubGroupLaunchFlag:NO];                              /*  IF NEEDED SUB GROUP LAUNCH   */
     /****************************************************************************************************************/
     
     
@@ -519,7 +520,7 @@
     
     /*******************************GOOGLE MAP API KEY ******************************************************/
     [ALUserDefaultsHandler setGoogleMapAPIKey:@"AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk"];
-    
+    [ALApplozicSettings setMsgContainerVC:@"ALParentContainerVC"];
     
 }
 

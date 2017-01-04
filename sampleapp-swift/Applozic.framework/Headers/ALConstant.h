@@ -16,8 +16,8 @@
 //#define MQTT_URL @"apps.applozic.com"
 //#define KBASE_FILE_URL @"https://applozic.appspot.com"
 
-//#define KBASE_URL @"https://test.applozic.com"
-//#define MQTT_URL @"staging.applozic.com"
+//#define KBASE_URL @"https://apps-test.applozic.com"
+//#define MQTT_URL @"apps-test.applozic.com"
 //#define KBASE_FILE_URL @"https://mobi-com-alpha.appspot.com"
 
 //#define KBASE_URL @"https://staging.applozic.com"

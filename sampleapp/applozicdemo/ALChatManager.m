@@ -485,6 +485,7 @@
     
     [ALApplozicSettings setFilterContactsStatus:YES];                           /*  IF NEEDED ALL REGISTERED CONTACTS   */
     [ALApplozicSettings setOnlineContactLimit:0];                               /*  IF NEEDED ONLINE USERS WITH LIMIT   */
+    [ALApplozicSettings setSubGroupLaunchFlag:NO];                              /*  IF NEEDED SUB GROUP LAUNCH   */
     /****************************************************************************************************************/
     
     
@@ -518,7 +519,7 @@
     [ALUserDefaultsHandler setEnableEncryption:NO];                            /* Note: PLEASE DO YES (IF NEEDED)  */
     /****************************************************************************************************************/
     [ALUserDefaultsHandler setGoogleMapAPIKey:@"AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk"];
-
+ 
 }
 
 -(void)getApplicationBaseURL
