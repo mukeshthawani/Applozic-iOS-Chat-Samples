@@ -18,6 +18,9 @@ case "${TARGETED_DEVICE_FAMILY}" in
   2)
     TARGET_DEVICE_ARGS="--target-device ipad"
     ;;
+  3)
+    TARGET_DEVICE_ARGS="--target-device tv"
+    ;;
   *)
     TARGET_DEVICE_ARGS="--target-device mac"
     ;;
@@ -127,6 +130,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "Applozic/Applozic/en.lproj"
   install_resource "Applozic/Applozic/hu.lproj"
   install_resource "Applozic/Applozic/Images.xcassets"
+  install_resource "Applozic/Applozic/MQTT/MQTTClient.xcdatamodeld"
   install_resource "Applozic/Applozic/Resources/Base.lproj"
   install_resource "Applozic/Applozic/Resources/en.lproj"
   install_resource "Applozic/Applozic/Resources/Files/en.lproj"
@@ -186,6 +190,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "Applozic/Applozic/en.lproj"
   install_resource "Applozic/Applozic/hu.lproj"
   install_resource "Applozic/Applozic/Images.xcassets"
+  install_resource "Applozic/Applozic/MQTT/MQTTClient.xcdatamodeld"
   install_resource "Applozic/Applozic/Resources/Base.lproj"
   install_resource "Applozic/Applozic/Resources/en.lproj"
   install_resource "Applozic/Applozic/Resources/Files/en.lproj"

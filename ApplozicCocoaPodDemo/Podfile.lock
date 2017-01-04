@@ -1,17 +1,17 @@
 PODS:
-  - Applozic (3.7.3):
+  - Applozic (3.8.1):
     - SDWebImage (~> 3.8)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
-  - Applozic (~> 3.7.3)
+  - Applozic (~> 3.8)
 
 SPEC CHECKSUMS:
-  Applozic: 0c775b7a12d40e424c3de9ce59823aaaa492a561
+  Applozic: 22195271e71771b5411351a3d2e238cd2b106b27
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: d2ea255457565488cfbe865dcda747ec52aa0548
+PODFILE CHECKSUM: f9bcd2039fb0d6c010188e392d95118ae58efa6b
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0.beta.3

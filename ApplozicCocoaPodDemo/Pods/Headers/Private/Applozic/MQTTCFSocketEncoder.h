@@ -1,0 +1,1 @@
+../../../Applozic/Applozic/MQTT/MQTTCFSocketEncoder.h
