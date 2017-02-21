@@ -59,9 +59,11 @@ class AppLogicLoginViewController: UIViewController {
         
         let chatManager = ALChatManager(applicationKey: "applozic-sample-app")
          chatManager.registerUser(alUser) { (response, error) in
-            
-            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LaunchChatFromSimpleViewController") as UIViewController
-            self.present(viewController, animated:true, completion: nil)
+            if (error == nil)
+            {
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LaunchChatFromSimpleViewController") as UIViewController
+                self.present(viewController, animated:true, completion: nil)
+            }
         }
     }
     
@@ -94,8 +96,11 @@ class AppLogicLoginViewController: UIViewController {
         let chatManager = ALChatManager(applicationKey: "applozic-sample-app")
         chatManager.registerUser(alUser) { (response, error) in
             
-            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "moreTabBar") as UIViewController
-            self.present(viewController, animated:true, completion: nil)
+            if (error == nil)
+            {
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "moreTabBar") as UIViewController
+                self.present(viewController, animated:true, completion: nil)
+            }
         }
     }
    

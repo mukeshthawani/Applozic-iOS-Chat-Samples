@@ -57,7 +57,7 @@ class ALChatManager: NSObject {
         })
     }
     
-     func registerUser(_ alUser: ALUser, completion : @escaping (_ response: ALRegistrationResponse, _ error: NSError?) -> Void) {
+     func registerUser(_ alUser: ALUser, completion : @escaping (_ response: ALRegistrationResponse?, _ error: NSError?) -> Void) {
     
         let alChatLauncher: ALChatLauncher = ALChatLauncher(applicationId: getApplicationKey() as String)
         ALDefaultChatViewSettings()
@@ -68,11 +68,15 @@ class ALChatManager: NSObject {
     
             if (error != nil)
             {
-                print("error while registering to applozic");
+                print("Error while registering to applozic");
+                let errorPass = NSError(domain:"Error while registering to applozic", code:0, userInfo:nil)
+                completion(response , errorPass as NSError?)
             }
             else if(response?.message.isEqual("PASSWORD_INVALID"))!
             {
-                ALUtilityClass.showAlertMessage("Invalid Passoword", andTitle: "Oops!!!")
+                ALUtilityClass.showAlertMessage("Invalid Password", andTitle: "Oops!!!")
+                let errorPass = NSError(domain:"Invalid Password", code:0, userInfo:nil)
+                completion(response , errorPass as NSError?)
             }
             else
             {
@@ -81,7 +85,7 @@ class ALChatManager: NSObject {
                 {
                     alChatLauncher.registerForNotification()
                 }
-                completion(response! , error as NSError?)
+                completion(response , error as NSError?)
             }
         })
     }
