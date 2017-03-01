@@ -168,7 +168,7 @@ class ALChatManager: NSObject {
     }
     
     
-    func launchChatForGroup(groupId:NSNumber, fromController:UIViewController) -> Void {
+    func launchChatForGroup(_ groupId:NSNumber, fromController:UIViewController) -> Void {
         
         let alChatLauncher : ALChatLauncher = ALChatLauncher(applicationId : getApplicationKey() as String)
         

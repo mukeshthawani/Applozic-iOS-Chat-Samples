@@ -149,7 +149,7 @@
 					6DB75B501C35221700077658 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = C25JNDCBM4;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
