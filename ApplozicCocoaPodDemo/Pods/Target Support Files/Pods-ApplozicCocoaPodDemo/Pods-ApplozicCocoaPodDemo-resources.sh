@@ -79,6 +79,8 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "Applozic/Applozic/Base.lproj/Applozic.storyboard"
   install_resource "Applozic/Applozic/Images.xcassets/AppIcon.appiconset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/chat_default.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/contact_default.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_about.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_attachment.imageset/Contents.json"
@@ -128,17 +130,17 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "Applozic/Applozic/AppLozic.xcdatamodeld"
   install_resource "Applozic/Applozic/Base.lproj"
   install_resource "Applozic/Applozic/en.lproj"
-  install_resource "Applozic/Applozic/hu.lproj"
   install_resource "Applozic/Applozic/Images.xcassets"
   install_resource "Applozic/Applozic/MQTT/MQTTClient.xcdatamodeld"
   install_resource "Applozic/Applozic/Resources/Base.lproj"
   install_resource "Applozic/Applozic/Resources/en.lproj"
   install_resource "Applozic/Applozic/Resources/Files/en.lproj"
-  install_resource "Applozic/Applozic/Resources/hu.lproj"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "Applozic/Applozic/Base.lproj/Applozic.storyboard"
   install_resource "Applozic/Applozic/Images.xcassets/AppIcon.appiconset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/chat_default.imageset/Contents.json"
+  install_resource "Applozic/Applozic/Images.xcassets/applogic_image/contact_default.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_about.imageset/Contents.json"
   install_resource "Applozic/Applozic/Images.xcassets/applogic_image/ic_action_attachment.imageset/Contents.json"
@@ -188,13 +190,11 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "Applozic/Applozic/AppLozic.xcdatamodeld"
   install_resource "Applozic/Applozic/Base.lproj"
   install_resource "Applozic/Applozic/en.lproj"
-  install_resource "Applozic/Applozic/hu.lproj"
   install_resource "Applozic/Applozic/Images.xcassets"
   install_resource "Applozic/Applozic/MQTT/MQTTClient.xcdatamodeld"
   install_resource "Applozic/Applozic/Resources/Base.lproj"
   install_resource "Applozic/Applozic/Resources/en.lproj"
   install_resource "Applozic/Applozic/Resources/Files/en.lproj"
-  install_resource "Applozic/Applozic/Resources/hu.lproj"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

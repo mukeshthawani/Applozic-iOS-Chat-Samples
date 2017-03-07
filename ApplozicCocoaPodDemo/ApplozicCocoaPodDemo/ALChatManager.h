@@ -19,6 +19,8 @@
 
 @property(nonatomic,strong) ALChatLauncher * chatLauncher;
 
+@property(nonatomic,strong) NSArray * permissableVCList;
+
 -(instancetype)initWithApplicationKey:(NSString *)applicationKey;
 
 -(void)registerUser:(ALUser * )alUser;
@@ -43,6 +45,10 @@
 
 -(BOOL)isUserHaveMessages:(NSString *)userId;
 
+-(void) launchContactScreenWithMessage:(ALMessage *)alMessage andFromViewController:(UIViewController*)viewController;
+
 -(NSString *)getApplicationKey;
+
+-(void)launchChatListWithParentKey:(NSNumber *)parentGroupKey andFromViewController:(UIViewController *)viewController;
 
 @end
