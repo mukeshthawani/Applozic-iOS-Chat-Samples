@@ -64,16 +64,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
         print("APP_ENTER_IN_BACKGROUND")
-        let registerUserClientService = ALRegisterUserClientService()
-        registerUserClientService.disconnect()
         NotificationCenter.default.post(name: Notification.Name(rawValue: "APP_ENTER_IN_BACKGROUND"), object: nil)
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 
-        let registerUserClientService = ALRegisterUserClientService()
-        registerUserClientService.connect()
         ALPushNotificationService.applicationEntersForeground()
         print("APP_ENTER_IN_FOREGROUND")
         
@@ -90,7 +86,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ALDBHandler.sharedInstance().saveContext()
     }
-    
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)
     {
