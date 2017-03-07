@@ -42,9 +42,9 @@ class ALChatManager: NSObject {
             {
                 print("error while registering to applozic");
             }
-            else if(response?.message.isEqual("PASSWORD_INVALID"))!
+            else if(!(response?.isRegisteredSuccessfully())!)
             {
-                ALUtilityClass.showAlertMessage("Invalid Passoword", andTitle: "Oops!!!")
+                ALUtilityClass.showAlertMessage("Invalid Password", andTitle: "Oops!!!")
             }
             else
             {
@@ -72,7 +72,7 @@ class ALChatManager: NSObject {
                 let errorPass = NSError(domain:"Error while registering to applozic", code:0, userInfo:nil)
                 completion(response , errorPass as NSError?)
             }
-            else if(response?.message.isEqual("PASSWORD_INVALID"))!
+            else if(!(response?.isRegisteredSuccessfully())!)
             {
                 ALUtilityClass.showAlertMessage("Invalid Password", andTitle: "Oops!!!")
                 let errorPass = NSError(domain:"Invalid Password", code:0, userInfo:nil)
@@ -443,6 +443,19 @@ func ALDefaultChatViewSettings ()
      ALUserDefaultsHandler.setGoogleMapAPIKey("AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk")  /*Note: REPLEACE WITH YOUR GOOGLE MAP KEY  */
     
      ALApplozicSettings.setMsgContainerVC("sampleapp_swift.DVChatViewController")  // appname.ClassName i.e. sampleapp_swift.DVChatViewController
+    
+    /**********************************************************************************************************************/
+    
+     ALApplozicSettings.setUserDeletedText("User has been deleted")            /*  SET DELETED USER NOTIFICATION TITLE   */
+    
+    
+    /******************************************** CUSTOM TAB BAR ITEM : ICON && TEXT ************************************************/
+     ALApplozicSettings.setChatListTabIcon("")
+     ALApplozicSettings.setProfileTabIcon("")
+    
+     ALApplozicSettings.setChatListTabTitle("")
+     ALApplozicSettings.setProfileTabTitle("")
+    
 }
 
 

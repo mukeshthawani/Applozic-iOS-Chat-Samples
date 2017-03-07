@@ -23,7 +23,7 @@
 
     [super viewDidLoad];
     
-     self.barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self setCustomBackButton:[ALApplozicSettings getTitleForBackButtonMsgVC]]];
+    self.barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self setCustomBackButton:[ALApplozicSettings getTitleForBackButtonMsgVC]]];
 }
 
 - (void)didReceiveMemoryWarning {

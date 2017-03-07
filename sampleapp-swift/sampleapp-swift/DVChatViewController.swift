@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Applozic
 
 class DVChatViewController: UIViewController {
  
@@ -17,6 +18,15 @@ class DVChatViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    @IBAction func backAction(_ sender: Any) {
+        /************************ THIS ACTION FOR APPLOZIC USAGE ONLY *************************/
+        let registerUserClientService = ALRegisterUserClientService()
+        registerUserClientService.logout {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
