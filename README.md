@@ -8,3 +8,5 @@ Applozic iOS Chat and In-App Messaging Samples
 **sampleapp-swift :** Sample app in **Swift** using Applozic framework.
 
 **sampleapp :** Sample app in **Objective-C** using Applozic framework.
+
+**SWIFT Sample 2.3/sampleapp-swift :** Sample app in **Swift 2.3** using Applozic framework.
