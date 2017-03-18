@@ -22,8 +22,8 @@ class DVChatViewController: UIViewController {
     @IBAction func backAction(_ sender: Any) {
         /************************ THIS ACTION FOR APPLOZIC USAGE ONLY *************************/
         let registerUserClientService = ALRegisterUserClientService()
-        registerUserClientService.logout {
-            self.dismiss(animated: true, completion: nil)
+        registerUserClientService.logout { (response, error) in
+            
         }
     }
     
