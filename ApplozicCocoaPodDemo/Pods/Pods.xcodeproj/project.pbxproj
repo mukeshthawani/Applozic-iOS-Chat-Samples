@@ -378,6 +378,7 @@
 		0B108F7E02721D77E6B532097C8F212B /* HexColors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HexColors.m; path = Applozic/HexColors.m; sourceTree = "<group>"; };
 		0B6690105EBB12855A5B717445B40519 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/SDWebImageDownloader.h; sourceTree = "<group>"; };
 		0C6B8E1952833F5CCADC375C37539DE1 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		0CBEE7F654D7AEC2697937178C597D71 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Applozic/en.lproj; sourceTree = "<group>"; };
 		0CD3E8C6CD22C96F1A31A11192146217 /* ALNewContactCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALNewContactCell.m; path = Applozic/Views/ALNewContactCell.m; sourceTree = "<group>"; };
 		0D18980C36DE9F38612F431CC5EC0F8B /* ALChannelService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALChannelService.h; path = Applozic/ALChannelService.h; sourceTree = "<group>"; };
 		0D294F2EFEE45F2617D863E5BB149C9C /* ALContactService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALContactService.h; path = Applozic/ALContactService.h; sourceTree = "<group>"; };
@@ -400,10 +401,10 @@
 		1BD332AC9458D52399F4D551939883B4 /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
 		1C004AD74EEF5196E860985E2A62ACAB /* ALMessagesViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALMessagesViewController.h; path = Applozic/ViewControllers/ALMessagesViewController.h; sourceTree = "<group>"; };
 		1D5424F2B33CAD18ACF111D7095F8A07 /* MQTTCoreDataPersistence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTCoreDataPersistence.h; path = Applozic/MQTT/MQTTCoreDataPersistence.h; sourceTree = "<group>"; };
+		1E6CAA95DC9E3FA0C19CE26208B61113 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Applozic/Images.xcassets; sourceTree = "<group>"; };
 		1E883C5AA167E7C92FCE277A226DC1DB /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		1EFAAFE4503A4ACB59E1EFDBC082DC03 /* MQTTTransport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTTransport.h; path = Applozic/MQTT/MQTTTransport.h; sourceTree = "<group>"; };
 		1F494424BEB8C274F577F30BF7DB915D /* TPPropertyAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPPropertyAnimation.m; path = Applozic/Resources/ProgressView/TPPropertyAnimation.m; sourceTree = "<group>"; };
-		1FB1ADD2E80DB2C251B5A9CA56221A68 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Applozic/Images.xcassets; sourceTree = "<group>"; };
 		2063F77FD2ECAEDA12D38D161F66DB20 /* MQTTCFSocketTransport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTCFSocketTransport.m; path = Applozic/MQTT/MQTTCFSocketTransport.m; sourceTree = "<group>"; };
 		207F494CFC3EEBD4358D6F098EF3F322 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
 		2110E34B89FF0D8CC89C86FE4A765B60 /* ALUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALUser.h; path = Applozic/DomainClasses/ALUser.h; sourceTree = "<group>"; };
@@ -414,6 +415,7 @@
 		249ABCEE904790D4904D321DD45AB9EF /* MQTTCoreDataPersistence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTCoreDataPersistence.m; path = Applozic/MQTT/MQTTCoreDataPersistence.m; sourceTree = "<group>"; };
 		266262CB74E36DEE4D6B951F1A56538A /* Pods-ApplozicCocoaPodDemoUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ApplozicCocoaPodDemoUITests-resources.sh"; sourceTree = "<group>"; };
 		269B55C695468195101ADF0B450CD233 /* ALChatViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALChatViewController.m; path = Applozic/ViewControllers/ALChatViewController.m; sourceTree = "<group>"; };
+		288327C7D9D4B64CC45B7A5A3ED06149 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Applozic/Resources/en.lproj; sourceTree = "<group>"; };
 		2922F5636261C420BBCD96F193FCBE90 /* MQTTMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTMessage.h; path = Applozic/MQTT/MQTTMessage.h; sourceTree = "<group>"; };
 		292574858F3E88EEB9ADDD840CC4CDE9 /* ALContactCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALContactCell.m; path = Applozic/Views/ALContactCell.m; sourceTree = "<group>"; };
 		2A81EE4D16D19E90501E757D1ED72852 /* MessageListRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MessageListRequest.m; path = Applozic/MessageListRequest.m; sourceTree = "<group>"; };
@@ -423,7 +425,6 @@
 		2CE09B5B874E7F445E636FB8D7F24956 /* ALAppLocalNotifications.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALAppLocalNotifications.m; path = Applozic/ALAppLocalNotifications.m; sourceTree = "<group>"; };
 		2E6743ACAC141F0C0B0349C4A35956EE /* ALSyncMessageFeed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALSyncMessageFeed.h; path = Applozic/DomainClasses/ALSyncMessageFeed.h; sourceTree = "<group>"; };
 		2ED6642F590D96A658145EA8BF2624AE /* ALVCFClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALVCFClass.h; path = Applozic/ALVCFClass.h; sourceTree = "<group>"; };
-		2FE6C00DAA1E8EE9FD3D5EF1FDC12433 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = Applozic/Resources/Base.lproj; sourceTree = "<group>"; };
 		3332A8500070DAB9670569EB13FA526A /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		33886168510D01423275CFADA28C04AC /* ALAudioCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALAudioCell.m; path = Applozic/ALAudioCell.m; sourceTree = "<group>"; };
 		341726412E168BD54B5B99C09A196374 /* ALMessageDBService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALMessageDBService.m; path = Applozic/ALMessageDBService.m; sourceTree = "<group>"; };
@@ -452,7 +453,6 @@
 		422E228621B0014F93038B7648F83D2E /* ALUserDetail.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALUserDetail.m; path = Applozic/ALUserDetail.m; sourceTree = "<group>"; };
 		436CC3FA0D580FF253C6644E8F99F766 /* ALNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALNavigationController.h; path = Applozic/ViewControllers/ALNavigationController.h; sourceTree = "<group>"; };
 		4372DCF43A96D34A8D5E3208420B7809 /* MQTTCFSocketEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTCFSocketEncoder.h; path = Applozic/MQTT/MQTTCFSocketEncoder.h; sourceTree = "<group>"; };
-		44EB1B1934545FCC5178AF7024E7786F /* AppLozic 4.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = "AppLozic 4.xcdatamodel"; sourceTree = "<group>"; };
 		459A45014CFEAFFC67A00B2F0EBA9784 /* ALSyncCallService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALSyncCallService.m; path = Applozic/ALSyncCallService.m; sourceTree = "<group>"; };
 		45C97C05BEEEEDB3F2432251D9ADC97E /* ALSendMessageResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALSendMessageResponse.h; path = Applozic/ALSendMessageResponse.h; sourceTree = "<group>"; };
 		46783FDAEEAC78984022FFBC472CD5DA /* UIImage+Utility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Utility.m"; path = "Applozic/Utilities/UIImage+Utility.m"; sourceTree = "<group>"; };
@@ -468,12 +468,15 @@
 		50CD6625B5C2B9BE9DA3FA76A10AE0E7 /* ALChannel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALChannel.m; path = Applozic/ALChannel.m; sourceTree = "<group>"; };
 		5103C8EC96E193427404A7FEEA2BDBD2 /* Pods-ApplozicCocoaPodDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ApplozicCocoaPodDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		510CA1573AF39C725EFB3C3ECF0245CE /* MQTTSSLSecurityPolicyDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSSLSecurityPolicyDecoder.h; path = Applozic/MQTT/MQTTSSLSecurityPolicyDecoder.h; sourceTree = "<group>"; };
+		51A3748EF5C4CBF48FA438E112E2D4F8 /* AppLozic 4.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = "AppLozic 4.xcdatamodel"; sourceTree = "<group>"; };
+		5244C2B52A5B6BB38C6841426DA791E5 /* AppLozic 5.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = "AppLozic 5.xcdatamodel"; sourceTree = "<group>"; };
+		53A6AE1E6EC4696CB399DD6120954775 /* AppLozic 3.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = "AppLozic 3.xcdatamodel"; sourceTree = "<group>"; };
 		54A56ADE2979923B555BEB6E6D117EB9 /* libApplozic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libApplozic.a; path = libApplozic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D0BB3ACB271BE8FAF62BCB65374377 /* MQTTPersistence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTPersistence.h; path = Applozic/MQTT/MQTTPersistence.h; sourceTree = "<group>"; };
-		568B90C7E3C67D5F2494BFBBF63F93D2 /* AppLozic 3.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = "AppLozic 3.xcdatamodel"; sourceTree = "<group>"; };
 		58D466CD1771D991FE80260A1B2E3A1D /* MQTTSessionLegacy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSessionLegacy.h; path = Applozic/MQTT/MQTTSessionLegacy.h; sourceTree = "<group>"; };
 		59771DD02193424E8D29AD92F88BB775 /* ALRegisterUserClientService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALRegisterUserClientService.h; path = Applozic/Services/ALRegisterUserClientService.h; sourceTree = "<group>"; };
 		5B5869B3311B48494047647813917E16 /* ALContactMessageCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALContactMessageCell.m; path = Applozic/ViewControllers/ALContactMessageCell.m; sourceTree = "<group>"; };
+		5C1074BEAF1E5CC852D82A096EDE88CE /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = Applozic/Resources/Base.lproj; sourceTree = "<group>"; };
 		5DD9780BF2C820A10BF70FD9B1FDF019 /* ALSendMessageResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALSendMessageResponse.m; path = Applozic/ALSendMessageResponse.m; sourceTree = "<group>"; };
 		5E23549055C1802F01179FBF3B2F64C7 /* ALResponseHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALResponseHandler.h; path = Applozic/Handlers/ALResponseHandler.h; sourceTree = "<group>"; };
 		5EEACB8D9B29A359DD7F6A683C884C2A /* ALChannelFeed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALChannelFeed.h; path = Applozic/ALChannelFeed.h; sourceTree = "<group>"; };
@@ -482,6 +485,7 @@
 		6104316C3BEB8A95DE94AE0567E7EA8B /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		632F34F8A4361F000156A0C2EE33DA94 /* ALUserDetail.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALUserDetail.h; path = Applozic/ALUserDetail.h; sourceTree = "<group>"; };
 		63CCD1374E3F8B86376BC224161183D3 /* ALReceiverUserProfileVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALReceiverUserProfileVC.h; path = Applozic/ViewControllers/ALReceiverUserProfileVC.h; sourceTree = "<group>"; };
+		64021A2744AAF29097DECA029C0D3D3E /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; includeInIndex = 1; name = TSMessagesDefaultDesign.json; path = Applozic/TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
 		6484FC35D4F2FEC6B7CAB1CB99BB0C81 /* ALFileMetaInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALFileMetaInfo.m; path = Applozic/DomainClasses/ALFileMetaInfo.m; sourceTree = "<group>"; };
 		653FC79578572EF22F4DDD96E5B63DDA /* DB_CHANNEL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DB_CHANNEL.m; path = Applozic/DB_CHANNEL.m; sourceTree = "<group>"; };
 		65886E52539DDC7AA771759EFF6E0783 /* ALGroupCreationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALGroupCreationViewController.h; path = Applozic/ViewControllers/ALGroupCreationViewController.h; sourceTree = "<group>"; };
@@ -503,7 +507,6 @@
 		73117F6F9D67101E7FF2F50D17394AA0 /* MQTTInMemoryPersistence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTInMemoryPersistence.m; path = Applozic/MQTT/MQTTInMemoryPersistence.m; sourceTree = "<group>"; };
 		756F96824A8451BF58EE93F019D2B4C8 /* ALShowImageViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALShowImageViewController.m; path = Applozic/ViewControllers/ALShowImageViewController.m; sourceTree = "<group>"; };
 		7696EBA358E58D71B55B2EE611A550CE /* ALReceiverUserProfileVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALReceiverUserProfileVC.m; path = Applozic/ViewControllers/ALReceiverUserProfileVC.m; sourceTree = "<group>"; };
-		76A963CDC3F759C560194DE5E35E97B0 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Applozic/Resources/Files/en.lproj; sourceTree = "<group>"; };
 		76B5E13311929499C6CC0161D57D1CD3 /* ALChannelInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALChannelInfo.h; path = Applozic/ALChannelInfo.h; sourceTree = "<group>"; };
 		76C152BFF80517322F55037CBCD8FE5D /* MQTTSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSessionManager.m; path = Applozic/MQTT/MQTTSessionManager.m; sourceTree = "<group>"; };
 		77BF743C9ED9CBBF3826D921E782EA3F /* ALNewContactsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALNewContactsViewController.h; path = Applozic/ViewControllers/ALNewContactsViewController.h; sourceTree = "<group>"; };
@@ -523,9 +526,7 @@
 		814F80D86D4140F411D254A3F19F2111 /* MQTTDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTDecoder.h; path = Applozic/MQTT/MQTTDecoder.h; sourceTree = "<group>"; };
 		81FB28099ACECE691BEF829ADC4BD53F /* ALMapViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALMapViewController.h; path = Applozic/ViewControllers/ALMapViewController.h; sourceTree = "<group>"; };
 		820CA9DD81F36AC8927A04A50B8EB3EE /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
-		82A5990C593F885AA2E6E20322DD5085 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Applozic/en.lproj; sourceTree = "<group>"; };
 		838D374486B1EB9CAD297A9851F3CCE0 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
-		83A70762F5B8C6E31F3C5C79F617A9EE /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Applozic/Resources/en.lproj; sourceTree = "<group>"; };
 		84166624880E4FE721C94FAFE12D159D /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		842BA0B6A3ED84F3D05F5FC50DEFCA5D /* ALGroupCreationViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALGroupCreationViewController.m; path = Applozic/ViewControllers/ALGroupCreationViewController.m; sourceTree = "<group>"; };
 		8441367090F2D9D10E0ED5FC250349CE /* ALImagePickerHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALImagePickerHandler.m; path = Applozic/Handlers/ALImagePickerHandler.m; sourceTree = "<group>"; };
@@ -541,11 +542,11 @@
 		89E6947D5F7DA60A3AB209AC3BF2264F /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
 		8A66F2262D4488A3DBEEBEED65548AF5 /* ALRegistrationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALRegistrationResponse.h; path = Applozic/DomainClasses/ALRegistrationResponse.h; sourceTree = "<group>"; };
 		8AD51EBBE83EDE3450F62AEB4A32D890 /* ALVCFClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALVCFClass.m; path = Applozic/ALVCFClass.m; sourceTree = "<group>"; };
-		8AE3B1CE608BE66CC1B5A796E527E5D1 /* Applozic.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = Applozic.storyboard; path = Base.lproj/Applozic.storyboard; sourceTree = "<group>"; };
 		8B095B59D3C21B6A9A60BE2A9C6E901F /* ALDataNetworkConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALDataNetworkConnection.h; path = Applozic/ALDataNetworkConnection.h; sourceTree = "<group>"; };
 		8C4226B1A39801B4D4977908AF9D3F05 /* TPPropertyAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPPropertyAnimation.h; path = Applozic/Resources/ProgressView/TPPropertyAnimation.h; sourceTree = "<group>"; };
 		8CE998B430A8014F936020D0425F120F /* ALConversationClientService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALConversationClientService.m; path = Applozic/ALConversationClientService.m; sourceTree = "<group>"; };
 		8D0A1A262A26E34FF1BB66F4DBD37234 /* ALJson.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALJson.m; path = Applozic/DomainClasses/ALJson.m; sourceTree = "<group>"; };
+		8DFBAC148718BA64F2A4A85339E3457F /* AppLozic 2.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = "AppLozic 2.xcdatamodel"; sourceTree = "<group>"; };
 		8E0BCCF42510F9D8803D78E9E2A37654 /* ALRegisterUserClientService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALRegisterUserClientService.m; path = Applozic/Services/ALRegisterUserClientService.m; sourceTree = "<group>"; };
 		8E39D50735C1766160B5F264CBEB7266 /* ALGroupDetailViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALGroupDetailViewController.m; path = Applozic/ViewControllers/ALGroupDetailViewController.m; sourceTree = "<group>"; };
 		8EE152D35E19FFD8580A7F747940104C /* ALConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALConnection.h; path = Applozic/Handlers/ALConnection.h; sourceTree = "<group>"; };
@@ -575,11 +576,10 @@
 		9C85625FA800F146CE149748BCF2774A /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AddressBookUI.framework; sourceTree = DEVELOPER_DIR; };
 		9CB1A02A3CAC1F97B858187CB75E5E9B /* SDWebImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.xcconfig; sourceTree = "<group>"; };
 		9D4C31346B4C59933F2ED6CB72EB6025 /* ALResponseHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALResponseHandler.m; path = Applozic/Handlers/ALResponseHandler.m; sourceTree = "<group>"; };
-		9D7A29A69A42776BE006FE5BB73DB3EE /* MQTTClient.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = MQTTClient.xcdatamodel; sourceTree = "<group>"; };
+		9D71C66177B273EB559CE9315C0234BB /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Applozic/Resources/Files/en.lproj; sourceTree = "<group>"; };
 		9E6A41613B3FF6C1605434CC030AD694 /* ALMessageInfoResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALMessageInfoResponse.h; path = Applozic/ALMessageInfoResponse.h; sourceTree = "<group>"; };
 		9F8B20F57BF1C1ED0C6FC47858476203 /* ALLocationCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALLocationCell.m; path = Applozic/ALLocationCell.m; sourceTree = "<group>"; };
 		A0688632780B6E61B98D937573B9604A /* ALConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALConnection.m; path = Applozic/Handlers/ALConnection.m; sourceTree = "<group>"; };
-		A192F0A8D678D261413780EB3986A928 /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; includeInIndex = 1; name = TSMessagesDefaultDesign.json; path = Applozic/TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
 		A4587D5273C1255D4AC6022357389967 /* ALAudioAttachmentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALAudioAttachmentViewController.h; path = Applozic/ViewControllers/ALAudioAttachmentViewController.h; sourceTree = "<group>"; };
 		A4C12555032D4509E51075B3359F8F77 /* ALTopicDetail.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALTopicDetail.m; path = Applozic/ALTopicDetail.m; sourceTree = "<group>"; };
 		A5BCFE5E42A16E77F77C2AE8B8C4BFED /* ALBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALBaseViewController.m; path = Applozic/ViewControllers/ALBaseViewController.m; sourceTree = "<group>"; };
@@ -589,6 +589,7 @@
 		A70FC4ABF7252E37FCEBFF583614DB0C /* ALUserBlocked.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALUserBlocked.m; path = Applozic/ALUserBlocked.m; sourceTree = "<group>"; };
 		ACBB533AFE9053C97A174FF9740F85AD /* ALDBHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALDBHandler.m; path = Applozic/Handlers/ALDBHandler.m; sourceTree = "<group>"; };
 		AD0707BCC382E502CEF5221D3B12BC15 /* Pods-ApplozicCocoaPodDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ApplozicCocoaPodDemoTests-dummy.m"; sourceTree = "<group>"; };
+		AD16E3CF9E8CB4E6EC0BE2EC6956A093 /* MQTTClient.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = MQTTClient.xcdatamodel; sourceTree = "<group>"; };
 		AE719D0AD87167487BC343EDA82B7FFA /* ALApplozicSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALApplozicSettings.m; path = Applozic/Handlers/ALApplozicSettings.m; sourceTree = "<group>"; };
 		AF1C95379B3B80D7D811FD24490AFB2A /* AlMultipleAttachmentCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AlMultipleAttachmentCell.m; path = Applozic/ViewControllers/AlMultipleAttachmentCell.m; sourceTree = "<group>"; };
 		B0992903C0CD9E29670D9C4A466206BE /* DB_Message.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DB_Message.h; path = Applozic/DomainClasses/DB_Message.h; sourceTree = "<group>"; };
@@ -629,7 +630,6 @@
 		C8A8CD1CBF10C912122854B78DCB4012 /* ALPushNotificationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPushNotificationService.h; path = Applozic/ALPushNotificationService.h; sourceTree = "<group>"; };
 		C933E3CDE01EDF6D41734EE5F436C158 /* ALChannelSyncResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALChannelSyncResponse.m; path = Applozic/ALChannelSyncResponse.m; sourceTree = "<group>"; };
 		C9991C0020F797D06B3B9C949A101FCF /* ALAPIResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALAPIResponse.m; path = Applozic/ALAPIResponse.m; sourceTree = "<group>"; };
-		C9EB435C7FEF9171E976EDB3B6CEFCE5 /* AppLozic 2.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = "AppLozic 2.xcdatamodel"; sourceTree = "<group>"; };
 		CAD560E4CF7F1E1EBC86A6044C9A75FB /* ALContactDBService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALContactDBService.h; path = Applozic/ALContactDBService.h; sourceTree = "<group>"; };
 		CBAFDA67662D6596A377347C31D3279B /* Pods-ApplozicCocoaPodDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ApplozicCocoaPodDemo-frameworks.sh"; sourceTree = "<group>"; };
 		CC2587034C4615967CCB44F3362BA3C6 /* ALSyncMessageFeed.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALSyncMessageFeed.m; path = Applozic/DomainClasses/ALSyncMessageFeed.m; sourceTree = "<group>"; };
@@ -650,6 +650,7 @@
 		D35BDE4EB6354AE1CBBFBD5B42CCAD4A /* ALChatCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALChatCell.h; path = Applozic/Views/ALChatCell.h; sourceTree = "<group>"; };
 		D41B30EA68FC5F028E7F113D52342818 /* ALUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALUser.m; path = Applozic/DomainClasses/ALUser.m; sourceTree = "<group>"; };
 		D47294CDAC593248BAB64F84FC03818E /* ALChatLauncher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALChatLauncher.m; path = Applozic/ALChatLauncher.m; sourceTree = "<group>"; };
+		D5BD8C67D67AC2422F6E2713CE163A89 /* AppLozic.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = AppLozic.xcdatamodel; sourceTree = "<group>"; };
 		D5F3640440D2FC9A5FB34952CD374572 /* ALApplozicSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALApplozicSettings.h; path = Applozic/Handlers/ALApplozicSettings.h; sourceTree = "<group>"; };
 		D5FAF1715F53D5043A1AE4765772A9FB /* NSString+Encode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Encode.m"; path = "Applozic/Utilities/NSString+Encode.m"; sourceTree = "<group>"; };
 		D65224AF7910EFF4E6FA87190D7940D5 /* MQTTSessionLegacy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSessionLegacy.m; path = Applozic/MQTT/MQTTSessionLegacy.m; sourceTree = "<group>"; };
@@ -688,11 +689,11 @@
 		E50BC6CE0D7A5A2FC8606E79C80157F8 /* TSBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSBlurView.m; path = Applozic/TSBlurView.m; sourceTree = "<group>"; };
 		E5AD2CB8C5F79FE34DD7772A9B816CD9 /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
 		E6E02A7819D55DC4B9DE2E9DB313AC45 /* ALVideoCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALVideoCell.h; path = Applozic/ALVideoCell.h; sourceTree = "<group>"; };
-		E908BC51F2F1BDC666D704281269E90F /* AppLozic.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = AppLozic.xcdatamodel; sourceTree = "<group>"; };
 		E95FC6257659C1934C3FBED9C9FBF251 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		EA3D8A357D27A1842D0C89AF7E26CBA8 /* ALImagePickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALImagePickerController.m; path = Applozic/ViewControllers/ALImagePickerController.m; sourceTree = "<group>"; };
 		EA94C108C09E80B5B8208233AF630C1A /* ALUserService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALUserService.m; path = Applozic/ALUserService.m; sourceTree = "<group>"; };
 		EA9AE60503D6B2787CA2555F75A72E99 /* UIView+Toast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "Applozic/Utilities/UIView+Toast.m"; sourceTree = "<group>"; };
+		EAF0628D46E043D9D42D3420E2355F4E /* Applozic.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = Applozic.storyboard; path = Base.lproj/Applozic.storyboard; sourceTree = "<group>"; };
 		EBB27797F2EFAF6E3C0516FD04BDDDC2 /* ALPushAssist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPushAssist.h; path = Applozic/ALPushAssist.h; sourceTree = "<group>"; };
 		EDC1C4B32AE394C6635C255981430C49 /* UIImage+Utility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Utility.h"; path = "Applozic/Utilities/UIImage+Utility.h"; sourceTree = "<group>"; };
 		EDE0EE95199C3202416FC1D95842B2C2 /* ALContactMessageCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALContactMessageCell.h; path = Applozic/ViewControllers/ALContactMessageCell.h; sourceTree = "<group>"; };
@@ -774,6 +775,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27F38006A7CAAD67E03FE716A39580A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C62A8904C61CD4DCEE21F307374B8616 /* Applozic.storyboard */,
+				6E9096FC509AF957B47C3100231F2C5C /* AppLozic.xcdatamodeld */,
+				5C1074BEAF1E5CC852D82A096EDE88CE /* Base.lproj */,
+				288327C7D9D4B64CC45B7A5A3ED06149 /* en.lproj */,
+				0CBEE7F654D7AEC2697937178C597D71 /* en.lproj */,
+				9D71C66177B273EB559CE9315C0234BB /* en.lproj */,
+				1E6CAA95DC9E3FA0C19CE26208B61113 /* Images.xcassets */,
+				F6B2C826B5CF4E75E809FCE5C6E8C78A /* MQTTClient.xcdatamodeld */,
+				64021A2744AAF29097DECA029C0D3D3E /* TSMessagesDefaultDesign.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		3A8F4D74D5D6B753292054599D0399E8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -818,22 +835,6 @@
 			);
 			name = SDWebImage;
 			path = SDWebImage;
-			sourceTree = "<group>";
-		};
-		4450579D37B2E2072BB023DAE8D503B2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				04C298AB35C569AAF2976BCABE690092 /* Applozic.storyboard */,
-				5287ECD2F043F2DCACCB459B59E55B7E /* AppLozic.xcdatamodeld */,
-				2FE6C00DAA1E8EE9FD3D5EF1FDC12433 /* Base.lproj */,
-				83A70762F5B8C6E31F3C5C79F617A9EE /* en.lproj */,
-				82A5990C593F885AA2E6E20322DD5085 /* en.lproj */,
-				76A963CDC3F759C560194DE5E35E97B0 /* en.lproj */,
-				1FB1ADD2E80DB2C251B5A9CA56221A68 /* Images.xcassets */,
-				45F5C48821CCC6F81C1244EC6778BA29 /* MQTTClient.xcdatamodeld */,
-				A192F0A8D678D261413780EB3986A928 /* TSMessagesDefaultDesign.json */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		57016CE3A32FFEA9F3477664909436A6 /* Support Files */ = {
@@ -1135,7 +1136,7 @@
 				46783FDAEEAC78984022FFBC472CD5DA /* UIImage+Utility.m */,
 				B91A92156353669D07D4A53B73E625FF /* UIView+Toast.h */,
 				EA9AE60503D6B2787CA2555F75A72E99 /* UIView+Toast.m */,
-				4450579D37B2E2072BB023DAE8D503B2 /* Resources */,
+				27F38006A7CAAD67E03FE716A39580A8 /* Resources */,
 				57016CE3A32FFEA9F3477664909436A6 /* Support Files */,
 			);
 			name = Applozic;
@@ -1760,10 +1761,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		04C298AB35C569AAF2976BCABE690092 /* Applozic.storyboard */ = {
+		C62A8904C61CD4DCEE21F307374B8616 /* Applozic.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8AE3B1CE608BE66CC1B5A796E527E5D1 /* Applozic.storyboard */,
+				EAF0628D46E043D9D42D3420E2355F4E /* Applozic.storyboard */,
 			);
 			name = Applozic.storyboard;
 			path = Applozic;
@@ -2146,28 +2147,29 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		45F5C48821CCC6F81C1244EC6778BA29 /* MQTTClient.xcdatamodeld */ = {
+		6E9096FC509AF957B47C3100231F2C5C /* AppLozic.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				9D7A29A69A42776BE006FE5BB73DB3EE /* MQTTClient.xcdatamodel */,
+				D5BD8C67D67AC2422F6E2713CE163A89 /* AppLozic.xcdatamodel */,
+				8DFBAC148718BA64F2A4A85339E3457F /* AppLozic 2.xcdatamodel */,
+				53A6AE1E6EC4696CB399DD6120954775 /* AppLozic 3.xcdatamodel */,
+				51A3748EF5C4CBF48FA438E112E2D4F8 /* AppLozic 4.xcdatamodel */,
+				5244C2B52A5B6BB38C6841426DA791E5 /* AppLozic 5.xcdatamodel */,
 			);
-			currentVersion = 9D7A29A69A42776BE006FE5BB73DB3EE /* MQTTClient.xcdatamodel */;
-			name = MQTTClient.xcdatamodeld;
-			path = Applozic/MQTT/MQTTClient.xcdatamodeld;
+			currentVersion = 5244C2B52A5B6BB38C6841426DA791E5 /* AppLozic 5.xcdatamodel */;
+			name = AppLozic.xcdatamodeld;
+			path = Applozic/AppLozic.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		5287ECD2F043F2DCACCB459B59E55B7E /* AppLozic.xcdatamodeld */ = {
+		F6B2C826B5CF4E75E809FCE5C6E8C78A /* MQTTClient.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E908BC51F2F1BDC666D704281269E90F /* AppLozic.xcdatamodel */,
-				C9EB435C7FEF9171E976EDB3B6CEFCE5 /* AppLozic 2.xcdatamodel */,
-				568B90C7E3C67D5F2494BFBBF63F93D2 /* AppLozic 3.xcdatamodel */,
-				44EB1B1934545FCC5178AF7024E7786F /* AppLozic 4.xcdatamodel */,
+				AD16E3CF9E8CB4E6EC0BE2EC6956A093 /* MQTTClient.xcdatamodel */,
 			);
-			currentVersion = 44EB1B1934545FCC5178AF7024E7786F /* AppLozic 4.xcdatamodel */;
-			name = AppLozic.xcdatamodeld;
-			path = Applozic/AppLozic.xcdatamodeld;
+			currentVersion = AD16E3CF9E8CB4E6EC0BE2EC6956A093 /* MQTTClient.xcdatamodel */;
+			name = MQTTClient.xcdatamodeld;
+			path = Applozic/MQTT/MQTTClient.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -58,7 +58,7 @@
     ALRegisterUserClientService * userClient = [ALRegisterUserClientService new];
     if([ALUserDefaultsHandler getDeviceKeyString])
     {
-        [userClient logoutWithCompletionHandler:^{
+        [userClient logoutWithCompletionHandler:^(ALAPIResponse *response, NSError *error) {
             
         }];
     }
