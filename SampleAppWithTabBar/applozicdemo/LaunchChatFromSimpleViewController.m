@@ -46,7 +46,7 @@
     ALRegisterUserClientService * alUserClientService = [[ALRegisterUserClientService alloc]init];
     
     if([ALUserDefaultsHandler getDeviceKeyString]){
-        [alUserClientService logoutWithCompletionHandler:^{
+        [alUserClientService logoutWithCompletionHandler:^(ALAPIResponse *response, NSError *error) {
             
         }];
     }
@@ -163,7 +163,7 @@
     ALRegisterUserClientService * alUserClientService = [[ALRegisterUserClientService alloc]init];
     
     if([ALUserDefaultsHandler getDeviceKeyString]){
-        [alUserClientService logoutWithCompletionHandler:^{
+        [alUserClientService logoutWithCompletionHandler:^(ALAPIResponse *response, NSError *error) {
             
         }];
     }
