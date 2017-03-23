@@ -521,7 +521,7 @@
     //    NSArray * viewArray = @[@"VC1", @"VC2"];    // VC : ViewController's Class Name
     //    [self.permissableVCList arrayByAddingObject:@""];
     
-    //    [ALApplozicSettings setMsgContainerVC:@""];  // ADD CLASS NAME
+        [ALApplozicSettings setMsgContainerVC:@"ALParentContainerVC"];  // ADD CLASS NAME
     /**********************************************************************************************************************/
     
     [ALApplozicSettings setUserDeletedText:@"User has been deleted"];            /*  SET DELETED USER NOTIFICATION TITLE   */
