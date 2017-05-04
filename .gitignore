@@ -1,6 +1,7 @@
 ## Build generated
 build/
 DerivedData/
+*.DS_Store
 
 ## Various settings
 *.pbxuser
@@ -17,3 +18,4 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+config/

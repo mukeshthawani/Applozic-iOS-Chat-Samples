@@ -91,6 +91,8 @@
 		6DB75B531C35221700077658 /* sampleapp-swift */ = {
 			isa = PBXGroup;
 			children = (
+				8BFA879B1EBB14980059CFD2 /* ViewModel */,
+				8BFA879A1EBB14890059CFD2 /* ViewControllers */,
 				4645B1361DA25D2E00044DB7 /* sampleapp-swift.entitlements */,
 				6DB75B7B1C3525E900077658 /* applozicswift-Bridging-Header.h */,
 				6DB75B711C35246100077658 /* Assets.xcassets */,
@@ -113,6 +115,20 @@
 				29A5114C1CC0C14900E1D2D8 /* DVChatViewController.swift */,
 			);
 			name = chat;
+			sourceTree = "<group>";
+		};
+		8BFA879A1EBB14890059CFD2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8BFA879B1EBB14980059CFD2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
