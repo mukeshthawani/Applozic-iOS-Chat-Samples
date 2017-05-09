@@ -21,9 +21,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="woR-mE-dOz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="37.331334332833585"/>
         </scene>
         <!--Messages View Controller-->
         <scene sceneID="E4M-Jb-RyN">
@@ -38,10 +40,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aol-zT-XQX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91m-jp-yg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055" y="139"/>
+            <point key="canvasLocation" x="2935.1999999999998" y="36.431784107946029"/>
+        </scene>
+        <!--Conversation View Controller-->
+        <scene sceneID="asK-94-gML">
+            <objects>
+                <viewController storyboardIdentifier="ALConversationViewController" id="ifS-GI-BG0" customClass="ALConversationViewController" customModule="sampleapp_completeswift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9si-4v-kOV"/>
+                        <viewControllerLayoutGuide type="bottom" id="VCt-6H-VSJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5h9-aO-lPy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RZ9-gN-442" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3956" y="36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uMD-1A-DEk">
+            <objects>
+                <navigationController storyboardIdentifier="messagesNav" automaticallyAdjustsScrollViewInsets="NO" id="Mru-gL-Dvn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LVe-19-dL3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZDd-1w-qNZ" kind="relationship" relationship="rootViewController" id="ocq-Ba-bOn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8av-89-67l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="36.431784107946029"/>
         </scene>
     </scenes>
 </document>

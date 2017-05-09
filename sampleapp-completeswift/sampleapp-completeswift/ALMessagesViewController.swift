@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ALMessagesViewController: UIViewController {
+class ALMessagesViewController: ALBaseViewController {
     
     fileprivate var viewModel: ALMessagesViewModel!
     
@@ -131,6 +131,13 @@ extension ALMessagesViewController: UITableViewDelegate, UITableViewDataSource {
 //        } else {
 //            tableView.deselectRow(at: indexPath, animated: true)
 //        }
+        guard let chat = viewModel.chatForRow(indexPath: indexPath) else { return }
+        let id: String = chat.contactId
+        let convViewModel = ALConversationViewModel(contactId: id)
+        let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: ALConversationViewController.self)) as? ALConversationViewController
+        vc?.viewModel = convViewModel
+//        let vc = ALConversationViewController(viewModel: convViewModel)
+        self.navigationController?.pushViewController(vc!, animated: false)
         
     }
     

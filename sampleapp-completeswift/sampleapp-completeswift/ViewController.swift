@@ -31,13 +31,12 @@ class ViewController: UIViewController {
         ALUserDefaultsHandler.setUserId(alUser.userId)
         ALUserDefaultsHandler.setEmailId(alUser.email)
         ALUserDefaultsHandler.setDisplayName(alUser.displayName)
-        
         let registerUserClientService: ALRegisterUserClientService = ALRegisterUserClientService()
         registerUserClientService.initWithCompletion(alUser, withCompletion: { (response, error) in
             if error == nil {
                 print("message: ", response?.message)
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "messages") as! ALMessagesViewController
-                self.present(vc, animated: true, completion: nil)
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "messagesNav")
+                self.present(vc!, animated: true, completion: nil)
             }
         })
         }

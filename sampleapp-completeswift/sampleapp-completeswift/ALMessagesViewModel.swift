@@ -66,6 +66,10 @@ extension ALMessage: ChatViewModelProtocol {
     var isGroupChat: Bool {
         return false
     }
+    
+    var contactId: String {
+        return self.contactIds
+    }
 }
 
 final class ALMessagesViewModel: NSObject {

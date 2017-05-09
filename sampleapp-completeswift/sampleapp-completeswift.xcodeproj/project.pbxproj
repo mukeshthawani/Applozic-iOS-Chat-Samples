@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BE7AF1E1EC05AA50073FED9 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */; };
+		8BE7AF201EC05BA40073FED9 /* ALBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF1F1EC05BA40073FED9 /* ALBaseNavigationController.swift */; };
+		8BE7AF231EC0B1AC0073FED9 /* ALMessage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */; };
+		8BE7AF251EC0BBFC0073FED9 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF241EC0BBFC0073FED9 /* MessageModel.swift */; };
 		8BFA87601EBB09500059CFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA875F1EBB09500059CFD2 /* AppDelegate.swift */; };
 		8BFA87621EBB09500059CFD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA87611EBB09500059CFD2 /* ViewController.swift */; };
 		8BFA87651EBB09500059CFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA87631EBB09500059CFD2 /* Main.storyboard */; };
@@ -30,6 +34,34 @@
 		8BFA87B41EBB343D0059CFD2 /* SystemMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA87B31EBB343D0059CFD2 /* SystemMessage.swift */; };
 		8BFA87B61EBB35370059CFD2 /* UI+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA87B51EBB35370059CFD2 /* UI+Style.swift */; };
 		8BFA87FA1EBCAB0E0059CFD2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA87F91EBCAB0E0059CFD2 /* API.swift */; };
+		8BFA87FC1EBCB7E10059CFD2 /* ALConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA87FB1EBCB7E10059CFD2 /* ALConversationViewController.swift */; };
+		8BFA87FE1EBCB98D0059CFD2 /* ALConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA87FD1EBCB98D0059CFD2 /* ALConversationViewModel.swift */; };
+		8BFA88021EBCBE2E0059CFD2 /* ALBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88011EBCBE2E0059CFD2 /* ALBaseViewController.swift */; };
+		8BFA88051EBCC4C70059CFD2 /* ChatBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88041EBCC4C70059CFD2 /* ChatBar.swift */; };
+		8BFA88071EBCC58B0059CFD2 /* MoreBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88061EBCC58B0059CFD2 /* MoreBar.swift */; };
+		8BFA880A1EBCC5EB0059CFD2 /* TranslucentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88091EBCC5EB0059CFD2 /* TranslucentView.swift */; };
+		8BFA880D1EBCD0730059CFD2 /* ALChatBarTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA880C1EBCD0730059CFD2 /* ALChatBarTextView.swift */; };
+		8BFA88111EBCD13B0059CFD2 /* SoundRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88101EBCD13B0059CFD2 /* SoundRecordingView.swift */; };
+		8BFA881C1EBED5750059CFD2 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA881B1EBED5750059CFD2 /* MessageCell.swift */; };
+		8BFA881F1EBED6640059CFD2 /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA881E1EBED6640059CFD2 /* Geocode.swift */; };
+		8BFA88211EBED7790059CFD2 /* MyPhotoPortalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88201EBED7790059CFD2 /* MyPhotoPortalCell.swift */; };
+		8BFA88241EBED7C50059CFD2 /* MyPhotoLandscapeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88231EBED7C50059CFD2 /* MyPhotoLandscapeCell.swift */; };
+		8BFA88261EBED80F0059CFD2 /* FriendLandscapeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88251EBED80F0059CFD2 /* FriendLandscapeCell.swift */; };
+		8BFA88281EBED8350059CFD2 /* FriendPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88271EBED8350059CFD2 /* FriendPhotoCell.swift */; };
+		8BFA882A1EBED8640059CFD2 /* FriendPhotoPortalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88291EBED8640059CFD2 /* FriendPhotoPortalCell.swift */; };
+		8BFA882C1EBED8A40059CFD2 /* MyVoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA882B1EBED8A40059CFD2 /* MyVoiceCell.swift */; };
+		8BFA882E1EBED8E90059CFD2 /* VoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA882D1EBED8E90059CFD2 /* VoiceCell.swift */; };
+		8BFA88301EBED96F0059CFD2 /* FriendVoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA882F1EBED96F0059CFD2 /* FriendVoiceCell.swift */; };
+		8BFA88331EBED9AE0059CFD2 /* MyLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88321EBED9AE0059CFD2 /* MyLocationCell.swift */; };
+		8BFA88351EBED9DF0059CFD2 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88341EBED9DF0059CFD2 /* LocationCell.swift */; };
+		8BFA88371EBEDA3E0059CFD2 /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88361EBEDA3E0059CFD2 /* InformationCell.swift */; };
+		8BFA883A1EC053430059CFD2 /* CustomCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88391EC053430059CFD2 /* CustomCameraViewController.swift */; };
+		8BFA883C1EC053A40059CFD2 /* ChatBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA883B1EC053A40059CFD2 /* ChatBaseCell.swift */; };
+		8BFA883E1EC054D00059CFD2 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA883D1EC054D00059CFD2 /* BaseCell.swift */; };
+		8BFA88401EC0557C0059CFD2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA883F1EC0557C0059CFD2 /* PhotoCell.swift */; };
+		8BFA88421EC056830059CFD2 /* Message+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88411EC056830059CFD2 /* Message+Style.swift */; };
+		8BFA88441EC057440059CFD2 /* LocationPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88431EC057440059CFD2 /* LocationPreviewViewModel.swift */; };
+		8BFA88461EC058C80059CFD2 /* ShareLocationBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA88451EC058C80059CFD2 /* ShareLocationBaseViewController.swift */; };
 		8DA818333C3223BF1F1D50F6 /* Pods_sampleapp_completeswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAD8F839221E0C05CE73FF3 /* Pods_sampleapp_completeswift.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +98,10 @@
 
 /* Begin PBXFileReference section */
 		4E240434B3F7DEC52B84E4CD /* Pods-sampleapp-completeswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleapp-completeswift.release.xcconfig"; path = "Pods/Target Support Files/Pods-sampleapp-completeswift/Pods-sampleapp-completeswift.release.xcconfig"; sourceTree = "<group>"; };
+		8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		8BE7AF1F1EC05BA40073FED9 /* ALBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALBaseNavigationController.swift; sourceTree = "<group>"; };
+		8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ALMessage+Extension.swift"; sourceTree = "<group>"; };
+		8BE7AF241EC0BBFC0073FED9 /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		8BFA875C1EBB09500059CFD2 /* sampleapp-completeswift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sampleapp-completeswift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFA875F1EBB09500059CFD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BFA87611EBB09500059CFD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +130,34 @@
 		8BFA87B31EBB343D0059CFD2 /* SystemMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemMessage.swift; sourceTree = "<group>"; };
 		8BFA87B51EBB35370059CFD2 /* UI+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Style.swift"; sourceTree = "<group>"; };
 		8BFA87F91EBCAB0E0059CFD2 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8BFA87FB1EBCB7E10059CFD2 /* ALConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALConversationViewController.swift; sourceTree = "<group>"; };
+		8BFA87FD1EBCB98D0059CFD2 /* ALConversationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALConversationViewModel.swift; sourceTree = "<group>"; };
+		8BFA88011EBCBE2E0059CFD2 /* ALBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALBaseViewController.swift; sourceTree = "<group>"; };
+		8BFA88041EBCC4C70059CFD2 /* ChatBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBar.swift; sourceTree = "<group>"; };
+		8BFA88061EBCC58B0059CFD2 /* MoreBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreBar.swift; sourceTree = "<group>"; };
+		8BFA88091EBCC5EB0059CFD2 /* TranslucentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslucentView.swift; sourceTree = "<group>"; };
+		8BFA880C1EBCD0730059CFD2 /* ALChatBarTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALChatBarTextView.swift; sourceTree = "<group>"; };
+		8BFA88101EBCD13B0059CFD2 /* SoundRecordingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundRecordingView.swift; sourceTree = "<group>"; };
+		8BFA881B1EBED5750059CFD2 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		8BFA881E1EBED6640059CFD2 /* Geocode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geocode.swift; sourceTree = "<group>"; };
+		8BFA88201EBED7790059CFD2 /* MyPhotoPortalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPhotoPortalCell.swift; sourceTree = "<group>"; };
+		8BFA88231EBED7C50059CFD2 /* MyPhotoLandscapeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPhotoLandscapeCell.swift; sourceTree = "<group>"; };
+		8BFA88251EBED80F0059CFD2 /* FriendLandscapeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendLandscapeCell.swift; sourceTree = "<group>"; };
+		8BFA88271EBED8350059CFD2 /* FriendPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPhotoCell.swift; sourceTree = "<group>"; };
+		8BFA88291EBED8640059CFD2 /* FriendPhotoPortalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPhotoPortalCell.swift; sourceTree = "<group>"; };
+		8BFA882B1EBED8A40059CFD2 /* MyVoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyVoiceCell.swift; sourceTree = "<group>"; };
+		8BFA882D1EBED8E90059CFD2 /* VoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceCell.swift; sourceTree = "<group>"; };
+		8BFA882F1EBED96F0059CFD2 /* FriendVoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendVoiceCell.swift; sourceTree = "<group>"; };
+		8BFA88321EBED9AE0059CFD2 /* MyLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocationCell.swift; sourceTree = "<group>"; };
+		8BFA88341EBED9DF0059CFD2 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		8BFA88361EBEDA3E0059CFD2 /* InformationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
+		8BFA88391EC053430059CFD2 /* CustomCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraViewController.swift; sourceTree = "<group>"; };
+		8BFA883B1EC053A40059CFD2 /* ChatBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBaseCell.swift; sourceTree = "<group>"; };
+		8BFA883D1EC054D00059CFD2 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		8BFA883F1EC0557C0059CFD2 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		8BFA88411EC056830059CFD2 /* Message+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+Style.swift"; sourceTree = "<group>"; };
+		8BFA88431EC057440059CFD2 /* LocationPreviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPreviewViewModel.swift; sourceTree = "<group>"; };
+		8BFA88451EC058C80059CFD2 /* ShareLocationBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareLocationBaseViewController.swift; sourceTree = "<group>"; };
 		9AAD8F839221E0C05CE73FF3 /* Pods_sampleapp_completeswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sampleapp_completeswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFBA505FCA0786C30A502C5 /* Pods-sampleapp-completeswift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleapp-completeswift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sampleapp-completeswift/Pods-sampleapp-completeswift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +227,7 @@
 		8BFA875E1EBB09500059CFD2 /* sampleapp-completeswift */ = {
 			isa = PBXGroup;
 			children = (
+				8BFA881D1EBED6470059CFD2 /* Model */,
 				8BFA87F81EBCAB0E0059CFD2 /* config */,
 				8BFA87A41EBB1F180059CFD2 /* View */,
 				8BFA87A01EBB1E770059CFD2 /* Storyboard */,
@@ -174,7 +239,6 @@
 				8BFA87941EBB0F500059CFD2 /* sampleapp-completeswift-Bridging-Header.h */,
 				8BFA875F1EBB09500059CFD2 /* AppDelegate.swift */,
 				8BFA87611EBB09500059CFD2 /* ViewController.swift */,
-				8BFA87631EBB09500059CFD2 /* Main.storyboard */,
 				8BFA87661EBB09500059CFD2 /* Assets.xcassets */,
 				8BFA87681EBB09500059CFD2 /* LaunchScreen.storyboard */,
 				8BFA876B1EBB09500059CFD2 /* Info.plist */,
@@ -203,7 +267,10 @@
 		8BFA879C1EBB14D00059CFD2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8BFA87981EBB145D0059CFD2 /* ALMessagesViewController.swift */,
+				8BFA88381EC052CD0059CFD2 /* Helper */,
+				8BFA88001EBCBDAD0059CFD2 /* Conversation */,
+				8BFA87FF1EBCBDA20059CFD2 /* Base */,
+				8BFA88451EC058C80059CFD2 /* ShareLocationBaseViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -212,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				8BFA879E1EBB18D60059CFD2 /* ALMessagesViewModel.swift */,
+				8BFA87FD1EBCB98D0059CFD2 /* ALConversationViewModel.swift */,
+				8BFA88431EC057440059CFD2 /* LocationPreviewViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -219,6 +288,7 @@
 		8BFA87A01EBB1E770059CFD2 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				8BFA87631EBB09500059CFD2 /* Main.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -228,6 +298,8 @@
 			children = (
 				8BFA87A21EBB1EB10059CFD2 /* UIView+Extension.swift */,
 				8BFA87A81EBB23980059CFD2 /* UIColor+Extension.swift */,
+				8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */,
+				8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -235,6 +307,9 @@
 		8BFA87A41EBB1F180059CFD2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8BFA880B1EBCD0260059CFD2 /* Custom TextView */,
+				8BFA88081EBCC5BF0059CFD2 /* CustomView */,
+				8BFA88031EBCC4910059CFD2 /* Bar */,
 				8BFA87A51EBB1F750059CFD2 /* Table Cell */,
 			);
 			name = View;
@@ -243,7 +318,14 @@
 		8BFA87A51EBB1F750059CFD2 /* Table Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8BFA88311EBED9A10059CFD2 /* Location Cell */,
+				8BFA88221EBED79E0059CFD2 /* Photo Cell */,
+				8BFA880F1EBCD1090059CFD2 /* Voice Cell */,
 				8BFA87A61EBB1F950059CFD2 /* ChatCell.swift */,
+				8BFA881B1EBED5750059CFD2 /* MessageCell.swift */,
+				8BFA88361EBEDA3E0059CFD2 /* InformationCell.swift */,
+				8BFA883B1EC053A40059CFD2 /* ChatBaseCell.swift */,
+				8BFA883D1EC054D00059CFD2 /* BaseCell.swift */,
 			);
 			name = "Table Cell";
 			sourceTree = "<group>";
@@ -262,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				8BFA87AC1EBB24470059CFD2 /* Style.swift */,
+				8BFA88411EC056830059CFD2 /* Message+Style.swift */,
 			);
 			name = Style;
 			sourceTree = "<group>";
@@ -282,6 +365,99 @@
 			);
 			path = config;
 			sourceTree = SOURCE_ROOT;
+		};
+		8BFA87FF1EBCBDA20059CFD2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8BFA88011EBCBE2E0059CFD2 /* ALBaseViewController.swift */,
+				8BE7AF1F1EC05BA40073FED9 /* ALBaseNavigationController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		8BFA88001EBCBDAD0059CFD2 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				8BFA87FB1EBCB7E10059CFD2 /* ALConversationViewController.swift */,
+				8BFA87981EBB145D0059CFD2 /* ALMessagesViewController.swift */,
+			);
+			name = Conversation;
+			sourceTree = "<group>";
+		};
+		8BFA88031EBCC4910059CFD2 /* Bar */ = {
+			isa = PBXGroup;
+			children = (
+				8BFA88041EBCC4C70059CFD2 /* ChatBar.swift */,
+				8BFA88061EBCC58B0059CFD2 /* MoreBar.swift */,
+			);
+			name = Bar;
+			sourceTree = "<group>";
+		};
+		8BFA88081EBCC5BF0059CFD2 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				8BFA88091EBCC5EB0059CFD2 /* TranslucentView.swift */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
+		8BFA880B1EBCD0260059CFD2 /* Custom TextView */ = {
+			isa = PBXGroup;
+			children = (
+				8BFA880C1EBCD0730059CFD2 /* ALChatBarTextView.swift */,
+			);
+			name = "Custom TextView";
+			sourceTree = "<group>";
+		};
+		8BFA880F1EBCD1090059CFD2 /* Voice Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8BFA88101EBCD13B0059CFD2 /* SoundRecordingView.swift */,
+				8BFA882B1EBED8A40059CFD2 /* MyVoiceCell.swift */,
+				8BFA882D1EBED8E90059CFD2 /* VoiceCell.swift */,
+				8BFA882F1EBED96F0059CFD2 /* FriendVoiceCell.swift */,
+			);
+			name = "Voice Cell";
+			sourceTree = "<group>";
+		};
+		8BFA881D1EBED6470059CFD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BFA881E1EBED6640059CFD2 /* Geocode.swift */,
+				8BE7AF241EC0BBFC0073FED9 /* MessageModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8BFA88221EBED79E0059CFD2 /* Photo Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8BFA88201EBED7790059CFD2 /* MyPhotoPortalCell.swift */,
+				8BFA88231EBED7C50059CFD2 /* MyPhotoLandscapeCell.swift */,
+				8BFA88251EBED80F0059CFD2 /* FriendLandscapeCell.swift */,
+				8BFA88271EBED8350059CFD2 /* FriendPhotoCell.swift */,
+				8BFA88291EBED8640059CFD2 /* FriendPhotoPortalCell.swift */,
+				8BFA883F1EC0557C0059CFD2 /* PhotoCell.swift */,
+			);
+			name = "Photo Cell";
+			sourceTree = "<group>";
+		};
+		8BFA88311EBED9A10059CFD2 /* Location Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8BFA88321EBED9AE0059CFD2 /* MyLocationCell.swift */,
+				8BFA88341EBED9DF0059CFD2 /* LocationCell.swift */,
+			);
+			name = "Location Cell";
+			sourceTree = "<group>";
+		};
+		8BFA88381EC052CD0059CFD2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8BFA88391EC053430059CFD2 /* CustomCameraViewController.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
 		};
 		E02FF89C5D1A712BA16D6D57 /* Pods */ = {
 			isa = PBXGroup;
@@ -479,19 +655,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BFA883E1EC054D00059CFD2 /* BaseCell.swift in Sources */,
+				8BFA883C1EC053A40059CFD2 /* ChatBaseCell.swift in Sources */,
+				8BFA883A1EC053430059CFD2 /* CustomCameraViewController.swift in Sources */,
+				8BFA88021EBCBE2E0059CFD2 /* ALBaseViewController.swift in Sources */,
 				8BFA87B41EBB343D0059CFD2 /* SystemMessage.swift in Sources */,
+				8BFA88071EBCC58B0059CFD2 /* MoreBar.swift in Sources */,
+				8BFA88331EBED9AE0059CFD2 /* MyLocationCell.swift in Sources */,
+				8BFA88421EC056830059CFD2 /* Message+Style.swift in Sources */,
+				8BFA88351EBED9DF0059CFD2 /* LocationCell.swift in Sources */,
+				8BFA88261EBED80F0059CFD2 /* FriendLandscapeCell.swift in Sources */,
 				8BFA87A31EBB1EB10059CFD2 /* UIView+Extension.swift in Sources */,
 				8BFA87B21EBB332B0059CFD2 /* IdentityProtocol.swift in Sources */,
+				8BFA880D1EBCD0730059CFD2 /* ALChatBarTextView.swift in Sources */,
+				8BFA88211EBED7790059CFD2 /* MyPhotoPortalCell.swift in Sources */,
+				8BE7AF201EC05BA40073FED9 /* ALBaseNavigationController.swift in Sources */,
+				8BFA881C1EBED5750059CFD2 /* MessageCell.swift in Sources */,
+				8BFA88441EC057440059CFD2 /* LocationPreviewViewModel.swift in Sources */,
 				8BFA87B01EBB32010059CFD2 /* ReusableView.swift in Sources */,
 				8BFA87621EBB09500059CFD2 /* ViewController.swift in Sources */,
+				8BFA88461EC058C80059CFD2 /* ShareLocationBaseViewController.swift in Sources */,
+				8BFA88111EBCD13B0059CFD2 /* SoundRecordingView.swift in Sources */,
 				8BFA87991EBB145D0059CFD2 /* ALMessagesViewController.swift in Sources */,
+				8BFA88051EBCC4C70059CFD2 /* ChatBar.swift in Sources */,
+				8BFA88401EC0557C0059CFD2 /* PhotoCell.swift in Sources */,
+				8BFA88371EBEDA3E0059CFD2 /* InformationCell.swift in Sources */,
+				8BFA88281EBED8350059CFD2 /* FriendPhotoCell.swift in Sources */,
 				8BFA87FA1EBCAB0E0059CFD2 /* API.swift in Sources */,
+				8BFA88241EBED7C50059CFD2 /* MyPhotoLandscapeCell.swift in Sources */,
+				8BFA87FC1EBCB7E10059CFD2 /* ALConversationViewController.swift in Sources */,
+				8BE7AF231EC0B1AC0073FED9 /* ALMessage+Extension.swift in Sources */,
+				8BFA882A1EBED8640059CFD2 /* FriendPhotoPortalCell.swift in Sources */,
 				8BFA879F1EBB18D60059CFD2 /* ALMessagesViewModel.swift in Sources */,
+				8BFA882C1EBED8A40059CFD2 /* MyVoiceCell.swift in Sources */,
+				8BFA882E1EBED8E90059CFD2 /* VoiceCell.swift in Sources */,
+				8BE7AF1E1EC05AA50073FED9 /* UIStoryboard+Extension.swift in Sources */,
 				8BFA87A71EBB1F950059CFD2 /* ChatCell.swift in Sources */,
 				8BFA87AD1EBB24470059CFD2 /* Style.swift in Sources */,
 				8BFA87B61EBB35370059CFD2 /* UI+Style.swift in Sources */,
+				8BFA87FE1EBCB98D0059CFD2 /* ALConversationViewModel.swift in Sources */,
 				8BFA87971EBB0F500059CFD2 /* NSObject+ApplozicBridge.m in Sources */,
 				8BFA87601EBB09500059CFD2 /* AppDelegate.swift in Sources */,
+				8BE7AF251EC0BBFC0073FED9 /* MessageModel.swift in Sources */,
+				8BFA880A1EBCC5EB0059CFD2 /* TranslucentView.swift in Sources */,
+				8BFA881F1EBED6640059CFD2 /* Geocode.swift in Sources */,
+				8BFA88301EBED96F0059CFD2 /* FriendVoiceCell.swift in Sources */,
 				8BFA87A91EBB23980059CFD2 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,10 +19,9 @@ protocol ChatViewModelProtocol {
     var name: String { get }
     var theLastMessage: String? { get }
     var hasUnreadMessages: Bool { get }
-    var identifier: Int { get }
-    var friendIdentifier: String? { get }
     var totalNumberOfUnreadMessages: UInt { get }
     var isGroupChat: Bool { get }
+    var contactId: String { get }
 }
 
 enum ChatCellAction {
