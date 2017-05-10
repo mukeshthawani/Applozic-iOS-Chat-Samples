@@ -12,6 +12,7 @@ import Applozic
 
 protocol ALConversationViewModelDelegate: class {
     func loadingFinished(error: Error?)
+    func messageUpdated()
 }
 
 class ALConversationViewModel {
@@ -20,7 +21,7 @@ class ALConversationViewModel {
     weak var delegate: ALConversationViewModelDelegate?
     
     fileprivate var alMessageWrapper = ALMessageArrayWrapper()
-    fileprivate var messageModels = [MessageModel]()
+    var messageModels = [MessageModel]()
     
     init(contactId: String) {
         self.contactId = contactId
@@ -31,22 +32,28 @@ class ALConversationViewModel {
     }
     
     func loadMessages() {
+        
+        var time: NSNumber? = nil
+        if let messageList = alMessageWrapper.getUpdatedMessageArray(), messageList.count > 1 {
+            time = (messageList.firstObject as! ALMessage).createdAtTime
+        }
+        
         let messageListRequest = MessageListRequest()
         messageListRequest.userId = contactId
-        messageListRequest.endTimeStamp = nil
+        messageListRequest.endTimeStamp = time
         ALMessageService.getMessageList(forUser: messageListRequest, withCompletion: {
             messages, error, userDetail in
-            print("messages for user: ", messages)
             guard error == nil, let messages = messages else {
                 self.delegate?.loadingFinished(error: error)
                 return
             }
+            NSLog("messages loaded: ", messages)
             self.alMessageWrapper.addObject(toMessageArray: messages)
-            self.messageModels = messages.map { ($0 as! ALMessage).messageModel }
+            let models = messages.map { ($0 as! ALMessage).messageModel }
+            self.messageModels = models.reversed()
             if self.messageModels.count < 50 {
                 ALUserDefaultsHandler.setShowLoadEarlierOption(false, forContactId: self.messageModels.first?.contactId)
             }
-            
             self.delegate?.loadingFinished(error: nil)
         })
     }
@@ -77,6 +84,44 @@ class ALConversationViewModel {
             return
         }
         loadMessages()
+    }
+    
+    func send(message: String) {
+        let messageModel = messageModels.first
+        let alMessage = ALMessage()
+        alMessage.to = messageModel?.contactId
+        alMessage.contactIds = messageModel?.contactId
+        alMessage.message = message
+        alMessage.type = "5"
+        let date = Date().timeIntervalSince1970*1000
+        alMessage.createdAtTime = NSNumber(value: date)
+        alMessage.sendToDevice = false
+        alMessage.deviceKey = ALUserDefaultsHandler.getDeviceKeyString()
+        alMessage.shared = false
+        alMessage.fileMeta = nil
+        alMessage.storeOnDevice = false
+        alMessage.contentType = Int16(ALMESSAGE_CONTENT_DEFAULT)
+        alMessage.key = UUID().uuidString
+        alMessage.source = Int16(SOURCE_IOS)
+        alMessage.conversationId = messageModel?.conversationId
+        alMessage.groupId = messageModel?.groupId
+        
+        addToWrapper(message: alMessage)
+        
+        ALMessageService.sendMessages(alMessage, withCompletion: {
+            message, error in
+            print("message sent: ", message, error)
+            guard error == nil else { return }
+            print("no error")
+            alMessage.sentToServer = true
+            self.messageModels[self.messageModels.count-1] = alMessage.messageModel
+            self.delegate?.messageUpdated()
+        })
+    }
+    
+    private func addToWrapper(message: ALMessage) {
+        self.alMessageWrapper.getUpdatedMessageArray().add(message)
+        messageModels.append(message.messageModel)
     }
     
 }

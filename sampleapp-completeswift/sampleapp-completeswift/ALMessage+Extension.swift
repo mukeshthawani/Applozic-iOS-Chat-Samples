@@ -15,7 +15,7 @@ let myMessage = "5"
 extension ALMessage {
     
     var isMyMessage: Bool {
-        return self.type == friendsMessage
+        return self.type == myMessage
     }
     
     func rowHeight(cellFrame frame: CGRect) -> CGFloat {
@@ -34,7 +34,18 @@ extension ALMessage {
         dateFormatterGet.dateFormat = "HH:mm"
         return dateFormatterGet.string(from: date)
     }
-
+    
+    var isSent: Bool {
+        return status == NSNumber(integerLiteral: Int(SENT.rawValue))
+    }
+    
+    var isAllRead: Bool {
+        return status == NSNumber(integerLiteral: Int(DELIVERED_AND_READ.rawValue))
+    }
+    
+    var isAllReceived: Bool {
+        return status == NSNumber(integerLiteral: Int(DELIVERED.rawValue))
+    }
 }
 
 extension ALMessage {
@@ -48,6 +59,11 @@ extension ALMessage {
         messageModel.avatarURL = avatar
         messageModel.displayName = name
         messageModel.contactId = contactId
+        messageModel.conversationId = conversationId
+        messageModel.groupId = groupId
+        messageModel.isSent = isSent
+        messageModel.isAllReceived = isAllReceived
+        messageModel.isAllRead = isAllRead
         return messageModel
     }
 }

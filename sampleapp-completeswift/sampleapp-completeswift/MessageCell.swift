@@ -31,7 +31,11 @@ protocol MessageViewModel {
     var avatarURL: URL? { get }
     var displayName: String? { get }
     var contactId: String { get }
-//    func rowHeight(cellFrame frame: CGRect) -> (CGFloat)
+    var conversationId: NSNumber? { get }
+    var groupId: NSNumber? { get }
+    var isSent: Bool { get }
+    var isAllReceived: Bool { get }
+    var isAllRead: Bool { get }
 }
 
 // MARK: - FriendMessageCell
@@ -188,19 +192,19 @@ final class MyMessageCell: MessageCell {
         timeLabel.bottomAnchor.constraint(equalTo: bubbleView.bottomAnchor, constant: 2).isActive = true
     }
     
-//    override func update(viewModel: MessageViewModel) {
-//        super.update(viewModel: viewModel)
-//        
-//        if viewModel.isAllRead {
-//            stateView.image = UIImage(named: "read_state_3")
-//        } else if viewModel.isAllReceived {
-//            stateView.image = UIImage(named: "read_state_2")
-//        } else if viewModel.isSent {
-//            stateView.image = UIImage(named: "read_state_1")
-//        } else {
-//            stateView.image = UIImage(named: "seen_state_0")
-//        }
-//    }
+    override func update(viewModel: MessageViewModel) {
+        super.update(viewModel: viewModel)
+        
+        if viewModel.isAllRead {
+            stateView.image = UIImage(named: "read_state_3")
+        } else if viewModel.isAllReceived {
+            stateView.image = UIImage(named: "read_state_2")
+        } else if viewModel.isSent {
+            stateView.image = UIImage(named: "read_state_1")
+        } else {
+            stateView.image = UIImage(named: "seen_state_0")
+        }
+    }
     
     // MARK: - ChatMenuCell
     override func menuWillShow(_ sender: Any) {

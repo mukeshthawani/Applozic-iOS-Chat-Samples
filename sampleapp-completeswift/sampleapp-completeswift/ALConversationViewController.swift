@@ -14,8 +14,9 @@ import Applozic
 final class ALConversationViewController: ALBaseViewController {
     
     var viewModel: ALConversationViewModel!
-    var isFirstTime = true
-
+    private var isFirstTime = true
+    private var bottomConstraint: NSLayoutConstraint?
+    private var isJustSent: Bool = false
     
     let tableView : UITableView = {
         let tv = UITableView(frame: .zero, style: .grouped)
@@ -33,6 +34,8 @@ final class ALConversationViewController: ALBaseViewController {
         return titleButton
     }()
     
+    let chatBar: ChatBar = ChatBar(frame: .zero)
+    
     override func viewWillAppear(_ animated: Bool) {
         viewModel.delegate = self
         viewModel.prepareController()
@@ -41,6 +44,8 @@ final class ALConversationViewController: ALBaseViewController {
         } else {
             tableView.reloadData()
         }
+        print("id: ", viewModel.messageModels.first?.contactId)
+//        if ALUserDefaultsHandler.isServerCallDone(forMSGList: <#T##String!#>)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,19 +59,24 @@ final class ALConversationViewController: ALBaseViewController {
         super.viewDidLoad()
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.white
+        ALUserDefaultsHandler.setDebugLogsRequire(true)
     }
-    
-    
     
     func setupView() {
         view.backgroundColor = UIColor.white
-        view.addViewsForAutolayout(views: [tableView])
+        view.addViewsForAutolayout(views: [tableView, chatBar])
         
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        chatBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        chatBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        bottomConstraint = chatBar.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        bottomConstraint?.isActive = true
         prepareTable()
+        prepareChatBar()
+
     }
     
     private func setupNavigation() {
@@ -105,11 +115,82 @@ final class ALConversationViewController: ALBaseViewController {
     func tableTapped(gesture: UITapGestureRecognizer) {
     }
     
+    private func prepareChatBar() {
+        chatBar.accessibilityIdentifier = "chatBar"
+        chatBar.setComingSoonDelegate(delegate: self.view)
+        chatBar.action = { [weak self] (action) in
+            
+            guard let weakSelf = self else {
+                return
+            }
+            
+//            if case .more(_) = action {
+//                
+//                if weakSelf.moreBar.isHidden == true {
+//                    weakSelf.showMoreBar()
+//                } else {
+//                    weakSelf.hideMoreBar()
+//                }
+//                
+//                return
+//            }
+//            
+//            weakSelf.hideMoreBar()
+            
+            switch action {
+                
+            case .sendText(let button, let message):
+                
+                if message.characters.count < 1 {
+                    return
+                }
+                
+                button.isUserInteractionEnabled = false
+//                    weakSelf.viewModel.sendKeyboardDoneTyping()
+                    
+                    weakSelf.isJustSent = true
+                    
+                    weakSelf.chatBar.clear()
+                    
+                    NSLog("Sent: ", message)
+                    
+                    weakSelf.viewModel.send(message: message)
+                    weakSelf.tableView.reloadData()
+                    weakSelf.tableView.scrollToBottom()
+                    button.isUserInteractionEnabled = true
+            case .chatBarTextChange(_):
+                
+//                weakSelf.viewModel.sendKeyboardBeginTyping()
+                
+                UIView.animate(withDuration: 0.05, animations: { () in
+                    weakSelf.view.layoutIfNeeded()
+                }, completion: { [weak self] (_) in
+                    
+                    guard let weakSelf = self else {
+                        return
+                    }
+                    
+                    if weakSelf.tableView.isAtBottom == true && weakSelf.isJustSent == false {
+                        weakSelf.tableView.scrollToBottomByOfset(animated: true)
+                    }
+                })
+                break
+                
+            default:
+                print("Not available")
+            }
+        }
+    }
+    
 }
 
 extension ALConversationViewController: ALConversationViewModelDelegate {
-    func loadingFinished() {
-        print("finshed: ", viewModel.numberOfRows(section: 0))
+    func loadingFinished(error: Error?) {
+        tableView.reloadData()
+        tableView.scrollToBottom()
+    }
+    
+    func messageUpdated() {
         tableView.reloadData()
     }
 }
@@ -121,7 +202,6 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("rows11: ", viewModel.numberOfRows(section: 0))
         return viewModel.numberOfRows(section: section)
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B5D15451EC1EB6500DAA4D0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5D15441EC1EB6500DAA4D0 /* UITableView+Extension.swift */; };
 		8BE7AF1E1EC05AA50073FED9 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */; };
 		8BE7AF201EC05BA40073FED9 /* ALBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF1F1EC05BA40073FED9 /* ALBaseNavigationController.swift */; };
 		8BE7AF231EC0B1AC0073FED9 /* ALMessage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */; };
@@ -98,6 +99,7 @@
 
 /* Begin PBXFileReference section */
 		4E240434B3F7DEC52B84E4CD /* Pods-sampleapp-completeswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleapp-completeswift.release.xcconfig"; path = "Pods/Target Support Files/Pods-sampleapp-completeswift/Pods-sampleapp-completeswift.release.xcconfig"; sourceTree = "<group>"; };
+		8B5D15441EC1EB6500DAA4D0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		8BE7AF1F1EC05BA40073FED9 /* ALBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALBaseNavigationController.swift; sourceTree = "<group>"; };
 		8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ALMessage+Extension.swift"; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				8BFA87A81EBB23980059CFD2 /* UIColor+Extension.swift */,
 				8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */,
 				8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */,
+				8B5D15441EC1EB6500DAA4D0 /* UITableView+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				8BFA88211EBED7790059CFD2 /* MyPhotoPortalCell.swift in Sources */,
 				8BE7AF201EC05BA40073FED9 /* ALBaseNavigationController.swift in Sources */,
 				8BFA881C1EBED5750059CFD2 /* MessageCell.swift in Sources */,
+				8B5D15451EC1EB6500DAA4D0 /* UITableView+Extension.swift in Sources */,
 				8BFA88441EC057440059CFD2 /* LocationPreviewViewModel.swift in Sources */,
 				8BFA87B01EBB32010059CFD2 /* ReusableView.swift in Sources */,
 				8BFA87621EBB09500059CFD2 /* ViewController.swift in Sources */,

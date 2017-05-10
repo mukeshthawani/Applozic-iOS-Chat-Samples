@@ -17,4 +17,9 @@ class MessageModel: MessageViewModel {
     var avatarURL: URL?
     var displayName: String?
     var contactId: String = ""
+    var conversationId: NSNumber?
+    var groupId: NSNumber?
+    var isSent: Bool = false
+    var isAllReceived: Bool = false
+    var isAllRead: Bool = false
 }
