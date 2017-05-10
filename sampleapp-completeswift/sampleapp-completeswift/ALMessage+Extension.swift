@@ -36,14 +36,23 @@ extension ALMessage {
     }
     
     var isSent: Bool {
+        guard let status = status else {
+            return false
+        }
         return status == NSNumber(integerLiteral: Int(SENT.rawValue))
     }
     
     var isAllRead: Bool {
+        guard let status = status else {
+            return false
+        }
         return status == NSNumber(integerLiteral: Int(DELIVERED_AND_READ.rawValue))
     }
     
     var isAllReceived: Bool {
+        guard let status = status else {
+            return false
+        }
         return status == NSNumber(integerLiteral: Int(DELIVERED.rawValue))
     }
 }

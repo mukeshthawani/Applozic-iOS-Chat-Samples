@@ -110,10 +110,10 @@ class ALConversationViewModel {
         
         ALMessageService.sendMessages(alMessage, withCompletion: {
             message, error in
-            print("message sent: ", message, error)
+            NSLog("Message sent: \(message), \(error)")
             guard error == nil else { return }
-            print("no error")
-            alMessage.sentToServer = true
+            NSLog("No errors while sending the message")
+            alMessage.status = NSNumber(integerLiteral: Int(SENT.rawValue))
             self.messageModels[self.messageModels.count-1] = alMessage.messageModel
             self.delegate?.messageUpdated()
         })
