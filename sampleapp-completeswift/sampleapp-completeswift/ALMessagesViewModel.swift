@@ -29,10 +29,10 @@ extension ALMessage: ChatViewModelProtocol {
         
     var name: String {
         let alContactDbService = ALContactDBService()
-        guard let alContact = alContactDbService.loadContact(byKey: "userId", value: self.to) else {
+        guard let alContact = alContactDbService.loadContact(byKey: "userId", value: self.to), let displayName = alContact.displayName else {
             return ""
         }
-        return alContact.displayName
+        return displayName
     }
     
     var theLastMessage: String? {

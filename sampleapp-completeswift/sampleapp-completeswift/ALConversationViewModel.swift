@@ -19,6 +19,7 @@ class ALConversationViewModel {
     
     let contactId: String
     weak var delegate: ALConversationViewModelDelegate?
+    let maxWidth = UIScreen.main.bounds.width
     
     fileprivate var alMessageWrapper = ALMessageArrayWrapper()
     var messageModels = [MessageModel]()
@@ -73,9 +74,58 @@ class ALConversationViewModel {
     }
     
     func heightForRow(indexPath: IndexPath, cellFrame: CGRect) -> CGFloat {
-        let message = alMessageWrapper.getUpdatedMessageArray()[indexPath.row] as? ALMessage
-        let height = ALUIConstant.getCellHeight(message, andCellFrame: cellFrame)
-        return height
+        let messageModel = messageModels[indexPath.row]
+        switch messageModel.messageType {
+        case .text:
+            if messageModel.isMyMessage {
+                
+                let heigh = MyMessageCell.rowHeigh(viewModel: messageModel, width: maxWidth)
+//                cache?.setDouble(value: Double(heigh), forKey: identifier)
+                return heigh
+                
+            } else {
+                
+                let heigh = FriendMessageCell.rowHeigh(viewModel: messageModel, width: maxWidth)
+//                cache?.setDouble(value: Double(heigh), forKey: identifier)
+                return heigh
+                
+            }
+        case .photo:
+            if messageModel.isMyMessage {
+                
+                if messageModel.ratio < 1 {
+                    
+                    let heigh = MyPhotoPortalCell.rowHeigh(viewModel: messageModel, width: maxWidth)
+//                    cache?.setDouble(value: Double(heigh), forKey: identifier)
+                    return heigh
+                    
+                } else {
+                    let heigh = MyPhotoLandscapeCell.rowHeigh(viewModel: messageModel, width: maxWidth)
+//                    cache?.setDouble(value: Double(heigh), forKey: identifier)
+                    return heigh
+                }
+                
+                
+            } else {
+                
+                if messageModel.ratio < 1 {
+                    
+                    let heigh = FriendPhotoPortalCell.rowHeigh(viewModel: messageModel, width: maxWidth)
+//                    cache?.setDouble(value: Double(heigh), forKey: identifier)
+                    return heigh
+                    
+                } else {
+                    let heigh = FriendPhotoLandscapeCell.rowHeigh(viewModel: messageModel, width: maxWidth)
+//                    cache?.setDouble(value: Double(heigh), forKey: identifier)
+                    return heigh
+                }
+                
+                
+            }
+        default:
+            print("Not available")
+            return 0
+        }
     }
     
     func nextPage() {

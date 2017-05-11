@@ -10,15 +10,15 @@ import UIKit
 
 class ChatBaseCell<T>: BaseCell<T> {
     
-//    fileprivate weak var chatBar: ChatBar?
+    fileprivate weak var chatBar: ChatBar?
     
     lazy var longPressGesture: UILongPressGestureRecognizer = {
         return UILongPressGestureRecognizer(target: self, action: #selector(showMenuController(withLongPress:)))
     }()
     
-//    func update(chatBar: ChatBar) {
-//        self.chatBar = chatBar
-//    }
+    func update(chatBar: ChatBar) {
+        self.chatBar = chatBar
+    }
     
     @objc func menuWillShow(_ sender: Any) {
         NotificationCenter.default.removeObserver(self, name: .UIMenuControllerWillShowMenu, object: nil)
@@ -27,9 +27,9 @@ class ChatBaseCell<T>: BaseCell<T> {
     @objc func menuWillHide(_ sender: Any) {
         NotificationCenter.default.removeObserver(self, name: .UIMenuControllerWillHideMenu, object: nil)
         
-//        if let chatBar = self.chatBar {
-//            chatBar.textView.overrideNextResponder = nil
-//        }
+        if let chatBar = self.chatBar {
+            chatBar.textView.overrideNextResponder = nil
+        }
     }
     
     @objc func showMenuController(withLongPress sender: UILongPressGestureRecognizer) {
@@ -37,11 +37,11 @@ class ChatBaseCell<T>: BaseCell<T> {
             NotificationCenter.default.addObserver(self, selector: #selector(menuWillShow(_:)), name: .UIMenuControllerWillShowMenu, object: nil)
             NotificationCenter.default.addObserver(self, selector: #selector(menuWillHide(_:)), name: .UIMenuControllerWillHideMenu, object: nil)
             
-//            if let chatBar = self.chatBar, chatBar.textView.isFirstResponder {
-//                chatBar.textView.overrideNextResponder = self.contentView
-//            } else {
-//                self.canBecomeFirstResponder
-//            }
+            if let chatBar = self.chatBar, chatBar.textView.isFirstResponder {
+                chatBar.textView.overrideNextResponder = self.contentView
+            } else {
+                self.canBecomeFirstResponder
+            }
             
             let sharedMenuController: UIMenuController = UIMenuController.shared
             var menus: [UIMenuItem] = []

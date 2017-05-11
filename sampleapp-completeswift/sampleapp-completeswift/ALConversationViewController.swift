@@ -110,6 +110,19 @@ final class ALConversationViewController: ALBaseViewController {
         
         tableView.register(MyMessageCell.self)
         tableView.register(FriendMessageCell.self)
+        tableView.register(MyPhotoPortalCell.self)
+        tableView.register(MyPhotoLandscapeCell.self)
+        
+        tableView.register(FriendPhotoPortalCell.self)
+        tableView.register(FriendPhotoLandscapeCell.self)
+        
+//        tableView.register(MyVoiceCell.self)
+//        tableView.register(FriendVoiceCell.self)
+//        
+//        tableView.register(MyLocationCell.self)
+//        tableView.register(FriendLocationCell.self)
+//        
+//        tableView.register(InformationCell.self)
     }
     
     func tableTapped(gesture: UITapGestureRecognizer) {
@@ -209,19 +222,54 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
         guard let message = viewModel.messageForRow(indexPath: indexPath) else {
             return UITableViewCell()
         }
-        if message.isMyMessage {
+        switch message.messageType {
+        case .text:
+            if message.isMyMessage {
+                
+                let cell: MyMessageCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                cell.update(viewModel: message)
+                cell.update(chatBar: self.chatBar)
+                return cell
+                
+            } else {
+                let cell: FriendMessageCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                cell.update(viewModel: message)
+                cell.update(chatBar: self.chatBar)
+                return cell
+            }
+        case .photo:
+            if message.isMyMessage {
+                // Right now ratio is fixed to 1.77
+                if message.ratio < 1 {
+                    
+                    let cell: MyPhotoPortalCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                    cell.update(viewModel: message)
+                    return cell
+                    
+                } else {
+                    let cell: MyPhotoLandscapeCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                    cell.update(viewModel: message)
+                    return cell
+                }
+                
+            } else {
+                if message.ratio < 1 {
+                    
+                    let cell: FriendPhotoPortalCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                    cell.update(viewModel: message)
+                    return cell
+                    
+                } else {
+                    let cell: FriendPhotoLandscapeCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                    cell.update(viewModel: message)
+                    return cell
+                }
+            }
             
-            let cell: MyMessageCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            cell.update(viewModel: message)
-//            cell.update(chatBar: self.chatBar)
-            return cell
-            
-        } else {
-            let cell: FriendMessageCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            cell.update(viewModel: message)
-//            cell.update(chatBar: self.chatBar)
-            return cell
+        default:
+            NSLog("Wrong choice")
         }
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

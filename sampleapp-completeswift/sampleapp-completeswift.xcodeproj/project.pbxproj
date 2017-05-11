@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B5D15451EC1EB6500DAA4D0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5D15441EC1EB6500DAA4D0 /* UITableView+Extension.swift */; };
+		8B5D158A1EC34A5400DAA4D0 /* EmptyChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5D15891EC34A5400DAA4D0 /* EmptyChatCell.xib */; };
 		8BE7AF1E1EC05AA50073FED9 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */; };
 		8BE7AF201EC05BA40073FED9 /* ALBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF1F1EC05BA40073FED9 /* ALBaseNavigationController.swift */; };
 		8BE7AF231EC0B1AC0073FED9 /* ALMessage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */; };
@@ -100,6 +101,7 @@
 /* Begin PBXFileReference section */
 		4E240434B3F7DEC52B84E4CD /* Pods-sampleapp-completeswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleapp-completeswift.release.xcconfig"; path = "Pods/Target Support Files/Pods-sampleapp-completeswift/Pods-sampleapp-completeswift.release.xcconfig"; sourceTree = "<group>"; };
 		8B5D15441EC1EB6500DAA4D0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		8B5D15891EC34A5400DAA4D0 /* EmptyChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyChatCell.xib; sourceTree = "<group>"; };
 		8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		8BE7AF1F1EC05BA40073FED9 /* ALBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALBaseNavigationController.swift; sourceTree = "<group>"; };
 		8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ALMessage+Extension.swift"; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				8BFA88361EBEDA3E0059CFD2 /* InformationCell.swift */,
 				8BFA883B1EC053A40059CFD2 /* ChatBaseCell.swift */,
 				8BFA883D1EC054D00059CFD2 /* BaseCell.swift */,
+				8B5D15891EC34A5400DAA4D0 /* EmptyChatCell.xib */,
 			);
 			name = "Table Cell";
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFA876A1EBB09500059CFD2 /* LaunchScreen.storyboard in Resources */,
+				8B5D158A1EC34A5400DAA4D0 /* EmptyChatCell.xib in Resources */,
 				8BFA87671EBB09500059CFD2 /* Assets.xcassets in Resources */,
 				8BFA87651EBB09500059CFD2 /* Main.storyboard in Resources */,
 			);

@@ -17,15 +17,13 @@ enum MessageType {
     case photo
     case voice
     case location
-    case information
-    case createGroup
-    case voxeet
 }
 
 // MARK: - MessageViewModel
 protocol MessageViewModel {
     var message: String? { get }
     var isMyMessage: Bool { get }
+    var messageType: MessageType { get }
     var date: Date { get }
     var time: String? { get }
     var avatarURL: URL? { get }
@@ -36,6 +34,10 @@ protocol MessageViewModel {
     var isSent: Bool { get }
     var isAllReceived: Bool { get }
     var isAllRead: Bool { get }
+    var ratio: CGFloat { get }
+    var size: Int64 { get }
+    var thumbnailURL: URL? { get }
+    var imageURL: URL? { get }
 }
 
 // MARK: - FriendMessageCell

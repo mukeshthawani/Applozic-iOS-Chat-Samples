@@ -12,6 +12,7 @@ class MessageModel: MessageViewModel {
     
     var message: String? = ""
     var isMyMessage: Bool = false
+    var messageType: MessageType = .text
     var date: Date = Date()
     var time: String?
     var avatarURL: URL?
@@ -22,4 +23,8 @@ class MessageModel: MessageViewModel {
     var isSent: Bool = false
     var isAllReceived: Bool = false
     var isAllRead: Bool = false
+    var ratio: CGFloat = 0.0
+    var size: Int64 = 0
+    var thumbnailURL: URL?
+    var imageURL: URL?
 }

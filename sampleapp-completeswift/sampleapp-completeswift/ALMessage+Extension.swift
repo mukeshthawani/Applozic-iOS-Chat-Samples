@@ -12,15 +12,27 @@ import Applozic
 let friendsMessage = "4"
 let myMessage = "5"
 
+let imageBaseUrl = ALUserDefaultsHandler.getFILEURL() + "/rest/ws/aws/file/"
+
 extension ALMessage {
     
     var isMyMessage: Bool {
         return self.type == myMessage
     }
     
-    func rowHeight(cellFrame frame: CGRect) -> CGFloat {
-        let height = ALUIConstant.getCellHeight(self, andCellFrame: frame)
-        return height
+    var messageType: MessageType {
+        if contentType == Int16(ALMESSAGE_CONTENT_DEFAULT) {
+            return .text
+        } else if contentType == Int16(ALMESSAGE_CONTENT_LOCATION) {
+            return .location
+        } else if let fileMeta = fileMeta {
+            if fileMeta.contentType.hasPrefix("image") {
+                return .photo
+            } else if fileMeta.contentType.hasPrefix("audio") {
+                return .voice
+            }
+        }
+        return .text
     }
     
     var date: Date {
@@ -55,6 +67,33 @@ extension ALMessage {
         }
         return status == NSNumber(integerLiteral: Int(DELIVERED.rawValue))
     }
+    
+    var ratio: CGFloat {
+        // Using default
+        return 0.9
+    }
+    
+    var size: Int64 {
+        guard let fileMeta = fileMeta, let size = Int64(fileMeta.getTheSize()) else {
+            return 0
+        }
+        return size
+    }
+    
+    var thumbnailURL: URL? {
+        guard let fileMeta = fileMeta, let urlStr = fileMeta.thumbnailUrl, let url = URL(string: urlStr)  else {
+            return nil
+        }
+        return url
+    }
+    
+    var imageUrl: URL? {
+        guard let fileMeta = fileMeta, let urlStr = fileMeta.blobKey, let imageUrl = URL(string: imageBaseUrl + urlStr) else {
+            return nil
+        }
+        print("imageUrl: ", imageUrl)
+        return imageUrl
+    }
 }
 
 extension ALMessage {
@@ -73,6 +112,11 @@ extension ALMessage {
         messageModel.isSent = isSent
         messageModel.isAllReceived = isAllReceived
         messageModel.isAllRead = isAllRead
+        messageModel.messageType = messageType
+        messageModel.ratio = ratio
+        messageModel.size = size
+        messageModel.thumbnailURL = thumbnailURL
+        messageModel.imageURL = imageUrl
         return messageModel
     }
 }
