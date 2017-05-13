@@ -15,4 +15,5 @@ target 'sampleapp-completeswift' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'GoogleMaps'
+    pod 'Alamofire'
 end

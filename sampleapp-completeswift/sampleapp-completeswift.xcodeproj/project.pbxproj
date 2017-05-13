@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8B5D15451EC1EB6500DAA4D0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5D15441EC1EB6500DAA4D0 /* UITableView+Extension.swift */; };
 		8B5D158A1EC34A5400DAA4D0 /* EmptyChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5D15891EC34A5400DAA4D0 /* EmptyChatCell.xib */; };
+		8B625EBB1EC47C2500D9B48B /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B625EBA1EC47C2500D9B48B /* AudioPlayer.swift */; };
+		8B625EBE1EC5979B00D9B48B /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B625EBD1EC5979B00D9B48B /* DownloadManager.swift */; };
 		8BE7AF1E1EC05AA50073FED9 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */; };
 		8BE7AF201EC05BA40073FED9 /* ALBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF1F1EC05BA40073FED9 /* ALBaseNavigationController.swift */; };
 		8BE7AF231EC0B1AC0073FED9 /* ALMessage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */; };
@@ -20,10 +22,6 @@
 		8BFA876A1EBB09500059CFD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BFA87681EBB09500059CFD2 /* LaunchScreen.storyboard */; };
 		8BFA87751EBB09500059CFD2 /* sampleapp_completeswiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA87741EBB09500059CFD2 /* sampleapp_completeswiftTests.swift */; };
 		8BFA87801EBB09500059CFD2 /* sampleapp_completeswiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA877F1EBB09500059CFD2 /* sampleapp_completeswiftUITests.swift */; };
-		8BFA878F1EBB0DD90059CFD2 /* Applozic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFA878D1EBB0DD90059CFD2 /* Applozic.framework */; };
-		8BFA87901EBB0DD90059CFD2 /* Applozic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFA878D1EBB0DD90059CFD2 /* Applozic.framework */; };
-		8BFA87911EBB0DE10059CFD2 /* Applozic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFA878D1EBB0DD90059CFD2 /* Applozic.framework */; };
-		8BFA87921EBB0DE10059CFD2 /* Applozic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFA878D1EBB0DD90059CFD2 /* Applozic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8BFA87971EBB0F500059CFD2 /* NSObject+ApplozicBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA87961EBB0F500059CFD2 /* NSObject+ApplozicBridge.m */; };
 		8BFA87991EBB145D0059CFD2 /* ALMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA87981EBB145D0059CFD2 /* ALMessagesViewController.swift */; };
 		8BFA879F1EBB18D60059CFD2 /* ALMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA879E1EBB18D60059CFD2 /* ALMessagesViewModel.swift */; };
@@ -68,6 +66,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8B625EC41EC5E86C00D9B48B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B625EC01EC5E86C00D9B48B /* Applozic.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6D6DF07D1BC535C800EBA00F;
+			remoteInfo = Applozic;
+		};
 		8BFA87711EBB09500059CFD2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8BFA87541EBB09500059CFD2 /* Project object */;
@@ -91,7 +96,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8BFA87921EBB0DE10059CFD2 /* Applozic.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +106,9 @@
 		4E240434B3F7DEC52B84E4CD /* Pods-sampleapp-completeswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleapp-completeswift.release.xcconfig"; path = "Pods/Target Support Files/Pods-sampleapp-completeswift/Pods-sampleapp-completeswift.release.xcconfig"; sourceTree = "<group>"; };
 		8B5D15441EC1EB6500DAA4D0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		8B5D15891EC34A5400DAA4D0 /* EmptyChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyChatCell.xib; sourceTree = "<group>"; };
+		8B625EBA1EC47C2500D9B48B /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		8B625EBD1EC5979B00D9B48B /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		8B625EC01EC5E86C00D9B48B /* Applozic.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Applozic.xcodeproj; path = Applozic/Applozic.xcodeproj; sourceTree = "<group>"; };
 		8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		8BE7AF1F1EC05BA40073FED9 /* ALBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALBaseNavigationController.swift; sourceTree = "<group>"; };
 		8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ALMessage+Extension.swift"; sourceTree = "<group>"; };
@@ -119,7 +126,6 @@
 		8BFA877B1EBB09500059CFD2 /* sampleapp-completeswiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sampleapp-completeswiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFA877F1EBB09500059CFD2 /* sampleapp_completeswiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleapp_completeswiftUITests.swift; sourceTree = "<group>"; };
 		8BFA87811EBB09500059CFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BFA878D1EBB0DD90059CFD2 /* Applozic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Applozic.framework; sourceTree = "<group>"; };
 		8BFA87941EBB0F500059CFD2 /* sampleapp-completeswift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sampleapp-completeswift-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		8BFA87951EBB0F500059CFD2 /* NSObject+ApplozicBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ApplozicBridge.h"; sourceTree = "<group>"; };
 		8BFA87961EBB0F500059CFD2 /* NSObject+ApplozicBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ApplozicBridge.m"; sourceTree = "<group>"; };
@@ -171,7 +177,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BFA87911EBB0DE10059CFD2 /* Applozic.framework in Frameworks */,
 				8DA818333C3223BF1F1D50F6 /* Pods_sampleapp_completeswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,7 +185,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BFA878F1EBB0DD90059CFD2 /* Applozic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +192,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BFA87901EBB0DD90059CFD2 /* Applozic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,10 +206,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8B625EBC1EC5978900D9B48B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8B625EBD1EC5979B00D9B48B /* DownloadManager.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		8B625EC11EC5E86C00D9B48B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B625EC51EC5E86C00D9B48B /* Applozic.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8BFA87531EBB09500059CFD2 = {
 			isa = PBXGroup;
 			children = (
-				8BFA878D1EBB0DD90059CFD2 /* Applozic.framework */,
+				8B625EC01EC5E86C00D9B48B /* Applozic.xcodeproj */,
 				8BFA87951EBB0F500059CFD2 /* NSObject+ApplozicBridge.h */,
 				8BFA87961EBB0F500059CFD2 /* NSObject+ApplozicBridge.m */,
 				8BFA875E1EBB09500059CFD2 /* sampleapp-completeswift */,
@@ -231,6 +250,7 @@
 		8BFA875E1EBB09500059CFD2 /* sampleapp-completeswift */ = {
 			isa = PBXGroup;
 			children = (
+				8B625EBC1EC5978900D9B48B /* Helper */,
 				8BFA881D1EBED6470059CFD2 /* Model */,
 				8BFA87F81EBCAB0E0059CFD2 /* config */,
 				8BFA87A41EBB1F180059CFD2 /* View */,
@@ -422,6 +442,7 @@
 				8BFA882B1EBED8A40059CFD2 /* MyVoiceCell.swift */,
 				8BFA882D1EBED8E90059CFD2 /* VoiceCell.swift */,
 				8BFA882F1EBED96F0059CFD2 /* FriendVoiceCell.swift */,
+				8B625EBA1EC47C2500D9B48B /* AudioPlayer.swift */,
 			);
 			name = "Voice Cell";
 			sourceTree = "<group>";
@@ -572,6 +593,12 @@
 			mainGroup = 8BFA87531EBB09500059CFD2;
 			productRefGroup = 8BFA875D1EBB09500059CFD2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8B625EC11EC5E86C00D9B48B /* Products */;
+					ProjectRef = 8B625EC01EC5E86C00D9B48B /* Applozic.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8BFA875B1EBB09500059CFD2 /* sampleapp-completeswift */,
@@ -580,6 +607,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8B625EC51EC5E86C00D9B48B /* Applozic.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Applozic.framework;
+			remoteRef = 8B625EC41EC5E86C00D9B48B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8BFA875A1EBB09500059CFD2 /* Resources */ = {
@@ -673,6 +710,7 @@
 				8BFA88351EBED9DF0059CFD2 /* LocationCell.swift in Sources */,
 				8BFA88261EBED80F0059CFD2 /* FriendLandscapeCell.swift in Sources */,
 				8BFA87A31EBB1EB10059CFD2 /* UIView+Extension.swift in Sources */,
+				8B625EBB1EC47C2500D9B48B /* AudioPlayer.swift in Sources */,
 				8BFA87B21EBB332B0059CFD2 /* IdentityProtocol.swift in Sources */,
 				8BFA880D1EBCD0730059CFD2 /* ALChatBarTextView.swift in Sources */,
 				8BFA88211EBED7790059CFD2 /* MyPhotoPortalCell.swift in Sources */,
@@ -695,6 +733,7 @@
 				8BE7AF231EC0B1AC0073FED9 /* ALMessage+Extension.swift in Sources */,
 				8BFA882A1EBED8640059CFD2 /* FriendPhotoPortalCell.swift in Sources */,
 				8BFA879F1EBB18D60059CFD2 /* ALMessagesViewModel.swift in Sources */,
+				8B625EBE1EC5979B00D9B48B /* DownloadManager.swift in Sources */,
 				8BFA882C1EBED8A40059CFD2 /* MyVoiceCell.swift in Sources */,
 				8BFA882E1EBED8E90059CFD2 /* VoiceCell.swift in Sources */,
 				8BE7AF1E1EC05AA50073FED9 /* UIStoryboard+Extension.swift in Sources */,

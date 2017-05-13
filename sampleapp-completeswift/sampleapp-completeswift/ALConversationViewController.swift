@@ -10,6 +10,8 @@ import UIKit
 
 import MBProgressHUD
 import Applozic
+import Alamofire
+
 
 final class ALConversationViewController: ALBaseViewController {
     
@@ -17,6 +19,7 @@ final class ALConversationViewController: ALBaseViewController {
     private var isFirstTime = true
     private var bottomConstraint: NSLayoutConstraint?
     private var isJustSent: Bool = false
+    let audioPlayer = AudioPlayer()
     
     let tableView : UITableView = {
         let tv = UITableView(frame: .zero, style: .grouped)
@@ -116,9 +119,9 @@ final class ALConversationViewController: ALBaseViewController {
         tableView.register(FriendPhotoPortalCell.self)
         tableView.register(FriendPhotoLandscapeCell.self)
         
-//        tableView.register(MyVoiceCell.self)
-//        tableView.register(FriendVoiceCell.self)
-//        
+        tableView.register(MyVoiceCell.self)
+        tableView.register(FriendVoiceCell.self)
+//
 //        tableView.register(MyLocationCell.self)
 //        tableView.register(FriendLocationCell.self)
 //        
@@ -194,7 +197,6 @@ final class ALConversationViewController: ALBaseViewController {
             }
         }
     }
-    
 }
 
 extension ALConversationViewController: ALConversationViewModelDelegate {
@@ -205,6 +207,10 @@ extension ALConversationViewController: ALConversationViewModelDelegate {
     
     func messageUpdated() {
         tableView.reloadData()
+    }
+    
+    func updateMessageAt(indexPath: IndexPath) {
+        tableView.reloadRows(at: [indexPath], with: .none)
     }
 }
 
@@ -219,7 +225,7 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let message = viewModel.messageForRow(indexPath: indexPath) else {
+        guard var message = viewModel.messageForRow(indexPath: indexPath) else {
             return UITableViewCell()
         }
         switch message.messageType {
@@ -265,7 +271,57 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
                     return cell
                 }
             }
+        case .voice:
+            if message.voiceData == nil {
+//                let dd = NSData(contentsOfFile: message.filePath!)
+//                print("data   content: ", dd?.length)
+                let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+                if let path = message.filePath, let data = NSData(contentsOfFile: (documentsURL.appendingPathComponent(path)).path) as Data? {
+                    self.viewModel.updateMessageModelAt(indexPath: indexPath, data: data)
+                } else {
+                    if let alMessage = viewModel.alMessages[indexPath.row] as? ALMessage {
+                        DownloadManager.shared.downloadAndSaveAudio(message: alMessage) {
+                            path in
+                            guard let path = path else {
+                                return
+                            }
+                            self.viewModel.updateDbMessageWith(key: "key", value: alMessage.key, filePath: path)
+                            alMessage.imageFilePath = path
+                            
+                            if let data = NSData(contentsOfFile: (documentsURL.appendingPathComponent(path)).path) as Data?     {
+                                self.viewModel.updateMessageModelAt(indexPath: indexPath, data: data)
+                            }
+                            
+                        }
+                    }
+                }
+                
+            }
             
+            if message.voiceTotalDuration == 0 {
+                if let data = message.voiceData {
+                    let voice = data as NSData
+                    do {
+                        let player = try AVAudioPlayer(data: voice as Data, fileTypeHint: AVFileTypeWAVE)
+                        message.voiceTotalDuration = CGFloat(player.duration)
+                    } catch let error as NSError {
+//                        Logger.error(message: error)
+                    }
+                }
+            }
+            
+            if message.isMyMessage {
+                let cell: MyVoiceCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                cell.update(viewModel: message)
+                cell.setCellDelegate(delegate: self)
+                return cell
+            } else {
+                let cell: FriendVoiceCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                cell.update(viewModel: message)
+                cell.setCellDelegate(delegate: self)
+                return cell
+            }
+        
         default:
             NSLog("Wrong choice")
         }
@@ -302,5 +358,118 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
         if (!nearTop) {return}
         
         self.viewModel.nextPage()
+    }
+}
+
+extension ALConversationViewController: AudioPlayerProtocol, VoiceCellProtocol {
+    
+    func reloadVoiceCell() {
+        for cell in tableView.visibleCells {
+            guard let indexPath = tableView.indexPath(for: cell) else {return}
+            if let message = viewModel.messageForRow(indexPath: indexPath) {
+                if message.messageType == .voice && message.identifier == audioPlayer.getCurrentAudioTrack(){
+                    tableView.reloadSections([indexPath.section], with: .none)
+                    break
+                }
+            }
+        }
+    }
+    
+    //MAKR: Voice and Audio Delegate
+    func playAudioPress(identifier: String) {
+        DispatchQueue.main.async { [weak self] in
+            
+            guard let weakSelf = self else { return }
+            
+            //if we have previously play audio, stop it first
+            if !weakSelf.audioPlayer.getCurrentAudioTrack().isEmpty && weakSelf.audioPlayer.getCurrentAudioTrack() != identifier {
+                //pause
+                guard var lastMessage =  weakSelf.viewModel.messageForRow(identifier: weakSelf.audioPlayer.getCurrentAudioTrack()) else {return}
+                
+                if Int(lastMessage.voiceCurrentDuration) > 0 {
+                    lastMessage.voiceCurrentState = .pause
+                    lastMessage.voiceCurrentDuration = weakSelf.audioPlayer.secLeft
+                } else {
+                    lastMessage.voiceCurrentDuration = lastMessage.voiceTotalDuration
+                    lastMessage.voiceCurrentState = .stop
+                }
+                weakSelf.audioPlayer.pauseAudio()
+            }
+            
+            //now play
+            guard var currentVoice =  weakSelf.viewModel.messageForRow(identifier: identifier) else {return}
+            if currentVoice.voiceCurrentState == .playing {
+                currentVoice.voiceCurrentState = .pause
+                currentVoice.voiceCurrentDuration = weakSelf.audioPlayer.secLeft
+                weakSelf.audioPlayer.pauseAudio()
+                weakSelf.tableView.reloadData()
+            }
+            else {
+                //reset time to total duration
+                if currentVoice.voiceCurrentState  == .stop || currentVoice.voiceCurrentDuration < 1 {
+                    currentVoice.voiceCurrentDuration = currentVoice.voiceTotalDuration
+                }
+                
+                if let data = currentVoice.voiceData {
+                    let voice = data as NSData
+                    //start playing
+                    weakSelf.audioPlayer.setAudioFile(data: voice, delegate: weakSelf, playFrom: currentVoice.voiceCurrentDuration,lastPlayTrack:currentVoice.identifier)
+                    currentVoice.voiceCurrentState = .playing
+                    weakSelf.tableView.reloadData()
+                }
+            }
+        }
+        
+    }
+    
+    func audioPlaying(maxDuratation: CGFloat, atSec: CGFloat,lastPlayTrack:String) {
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let weakSelf = self else { return }
+            guard var currentVoice =  weakSelf.viewModel.messageForRow(identifier: lastPlayTrack) else {return}
+            if currentVoice.messageType == .voice {
+                
+                if currentVoice.identifier == lastPlayTrack {
+                    if atSec <= 0 {
+                        currentVoice.voiceCurrentState = .stop
+                        currentVoice.voiceCurrentDuration = 0
+                    } else {
+                        currentVoice.voiceCurrentState = .playing
+                        currentVoice.voiceCurrentDuration = atSec
+                    }
+                }
+                weakSelf.reloadVoiceCell()
+            }
+        }
+    }
+    
+    func audioStop(maxDuratation: CGFloat,lastPlayTrack:String) {
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let weakSelf = self else { return }
+            
+            guard var currentVoice =  weakSelf.viewModel.messageForRow(identifier: lastPlayTrack) else {return}
+            if currentVoice.messageType == .voice {
+                if currentVoice.identifier == lastPlayTrack {
+                    currentVoice.voiceCurrentState = .stop
+                    currentVoice.voiceCurrentDuration = 0.0
+                }
+            }
+            weakSelf.reloadVoiceCell()
+        }
+    }
+    
+    func stopAudioPlayer(){
+        DispatchQueue.main.async { [weak self] in
+            guard let weakSelf = self else { return }
+            if var lastMessage = weakSelf.viewModel.messageForRow(identifier: weakSelf.audioPlayer.getCurrentAudioTrack()) {
+                
+                if lastMessage.voiceCurrentState == .playing {
+                    weakSelf.audioPlayer.pauseAudio()
+                    lastMessage.voiceCurrentState = .pause
+                    weakSelf.reloadVoiceCell()
+                }
+            }
+        }
     }
 }

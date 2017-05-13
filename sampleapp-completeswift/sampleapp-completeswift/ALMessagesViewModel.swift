@@ -47,8 +47,8 @@ extension ALMessage: ChatViewModelProtocol {
         return alContact.unreadCount.boolValue
     }
     
-    var identifier: Int {
-        return self.messageId
+    var identifier: String {
+        return self.key
     }
     
     var friendIdentifier: String? {

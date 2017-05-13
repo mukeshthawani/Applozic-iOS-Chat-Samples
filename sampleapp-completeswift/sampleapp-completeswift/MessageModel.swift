@@ -13,6 +13,7 @@ class MessageModel: MessageViewModel {
     var message: String? = ""
     var isMyMessage: Bool = false
     var messageType: MessageType = .text
+    var identifier: String = ""
     var date: Date = Date()
     var time: String?
     var avatarURL: URL?
@@ -27,4 +28,10 @@ class MessageModel: MessageViewModel {
     var size: Int64 = 0
     var thumbnailURL: URL?
     var imageURL: URL?
+    var filePath: String?
+    var voiceTotalDuration: CGFloat = 0
+    var voiceCurrentDuration: CGFloat = 0
+    var voiceCurrentState: VoiceCellState = .stop
+    var voiceData: Data?
 }
+

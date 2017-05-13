@@ -70,6 +70,9 @@ extension ALMessage {
     
     var ratio: CGFloat {
         // Using default
+        if messageType == .text {
+            return 1.7
+        }
         return 0.9
     }
     
@@ -94,6 +97,14 @@ extension ALMessage {
         print("imageUrl: ", imageUrl)
         return imageUrl
     }
+    
+    var filePath: String? {
+        guard let filePath = imageFilePath else {
+            return nil
+        }
+        return filePath
+    }
+    
 }
 
 extension ALMessage {
@@ -102,6 +113,7 @@ extension ALMessage {
         let messageModel = MessageModel()
         messageModel.message = message
         messageModel.isMyMessage = isMyMessage
+        messageModel.identifier = identifier
         messageModel.date = date
         messageModel.time = time
         messageModel.avatarURL = avatar
@@ -117,6 +129,7 @@ extension ALMessage {
         messageModel.size = size
         messageModel.thumbnailURL = thumbnailURL
         messageModel.imageURL = imageUrl
+        messageModel.filePath = filePath
         return messageModel
     }
 }

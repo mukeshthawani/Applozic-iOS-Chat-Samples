@@ -24,6 +24,7 @@ protocol MessageViewModel {
     var message: String? { get }
     var isMyMessage: Bool { get }
     var messageType: MessageType { get }
+    var identifier: String { get }
     var date: Date { get }
     var time: String? { get }
     var avatarURL: URL? { get }
@@ -38,6 +39,11 @@ protocol MessageViewModel {
     var size: Int64 { get }
     var thumbnailURL: URL? { get }
     var imageURL: URL? { get }
+    var filePath: String? { get }
+    var voiceData: Data? { get set }
+    var voiceTotalDuration: CGFloat { get set }
+    var voiceCurrentDuration: CGFloat { get set }
+    var voiceCurrentState: VoiceCellState { get set }
 }
 
 // MARK: - FriendMessageCell

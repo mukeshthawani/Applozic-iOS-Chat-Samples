@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         registerAndLaunch()
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,7 +40,7 @@ class ViewController: UIViewController {
                 self.present(vc!, animated: true, completion: nil)
             }
         })
-        }
+    }
 
 }
 

@@ -13,6 +13,7 @@ import Applozic
 protocol ALConversationViewModelDelegate: class {
     func loadingFinished(error: Error?)
     func messageUpdated()
+    func updateMessageAt(indexPath: IndexPath)
 }
 
 class ALConversationViewModel {
@@ -20,16 +21,23 @@ class ALConversationViewModel {
     let contactId: String
     weak var delegate: ALConversationViewModelDelegate?
     let maxWidth = UIScreen.main.bounds.width
+    let isGroup = false
     
     fileprivate var alMessageWrapper = ALMessageArrayWrapper()
     var messageModels = [MessageModel]()
+    var alMessages = NSMutableArray()
     
     init(contactId: String) {
         self.contactId = contactId
     }
     
     func prepareController() {
-        loadMessages()
+        if ALUserDefaultsHandler.isServerCallDone(forMSGList: contactId) {
+            loadMessagesFromDB()
+        } else {
+            loadMessages()
+        }
+        
     }
     
     func loadMessages() {
@@ -49,9 +57,30 @@ class ALConversationViewModel {
                 return
             }
             NSLog("messages loaded: ", messages)
+            self.alMessages = messages.reversed() as! NSMutableArray
+//            print("all file paths: ", messages.map { ($0 as! ALMessage).imageFilePath })
+            self.alMessageWrapper.addObject(toMessageArray: self.alMessages)
+            let models = self.alMessages.map { ($0 as! ALMessage).messageModel }
+            self.messageModels = models
+            if self.messageModels.count < 50 {
+                ALUserDefaultsHandler.setShowLoadEarlierOption(false, forContactId: self.messageModels.first?.contactId)
+            }
+            self.delegate?.loadingFinished(error: nil)
+        })
+    }
+    
+    func loadMessagesFromDB() {
+        ALMessageService.getMessageList(forContactId: contactId, isGroup: isGroup, channelKey: nil, conversationId: nil, start: 0, withCompletion: {
+            messages in
+            guard let messages = messages else {
+                self.delegate?.loadingFinished(error: nil)
+                return
+            }
+            NSLog("messages loaded: ", messages)
+            self.alMessages = messages
             self.alMessageWrapper.addObject(toMessageArray: messages)
             let models = messages.map { ($0 as! ALMessage).messageModel }
-            self.messageModels = models.reversed()
+            self.messageModels = models
             if self.messageModels.count < 50 {
                 ALUserDefaultsHandler.setShowLoadEarlierOption(false, forContactId: self.messageModels.first?.contactId)
             }
@@ -71,6 +100,11 @@ class ALConversationViewModel {
     func messageForRow(indexPath: IndexPath) -> MessageViewModel? {
         guard indexPath.row < messageModels.count else { return nil }
         return messageModels[indexPath.row]
+    }
+    
+    func messageForRow(identifier: String) -> MessageViewModel? {
+        guard let messageModel = messageModels.filter({$0.identifier == identifier}).first else {return nil}
+        return messageModel
     }
     
     func heightForRow(indexPath: IndexPath, cellFrame: CGRect) -> CGFloat {
@@ -120,8 +154,9 @@ class ALConversationViewModel {
                     return heigh
                 }
                 
-                
             }
+        case .voice:
+            return 100
         default:
             print("Not available")
             return 0
@@ -169,9 +204,27 @@ class ALConversationViewModel {
         })
     }
     
+    func updateMessageModelAt(indexPath: IndexPath, data: Data) {
+        var message = messageForRow(indexPath: indexPath)
+        message?.voiceData = data
+        messageModels[indexPath.row] = message as! MessageModel
+        delegate?.updateMessageAt(indexPath: indexPath) 
+    }
+    
+    func updateDbMessageWith(key: String, value: String, filePath: String) {
+        let messageService = ALMessageDBService()
+        let alHandler = ALDBHandler.sharedInstance()
+        let dbMessage: DB_Message = messageService.getMessageByKey(key, value: value) as! DB_Message
+        dbMessage.filePath = filePath
+        do {
+            try alHandler?.managedObjectContext.save()
+        } catch {
+            NSLog("Not saved due to error")
+        }
+    }
+
     private func addToWrapper(message: ALMessage) {
         self.alMessageWrapper.getUpdatedMessageArray().add(message)
         messageModels.append(message.messageModel)
     }
-    
 }
