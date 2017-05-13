@@ -197,6 +197,26 @@ final class ALConversationViewController: ALBaseViewController {
             }
         }
     }
+    
+    func getAudioData(for indexPath: IndexPath, completion: @escaping (Data?)->()) {
+        if let alMessage = viewModel.alMessages[indexPath.row] as? ALMessage {
+            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            DownloadManager.shared.downloadAndSaveAudio(message: alMessage) {
+                path in
+                guard let path = path else {
+                    return
+                }
+                self.viewModel.updateDbMessageWith(key: "key", value: alMessage.key, filePath: path)
+                alMessage.imageFilePath = path
+                
+                if let data = NSData(contentsOfFile: (documentsURL.appendingPathComponent(path)).path) as Data?     {
+                    completion(data)
+                } else {
+                    completion(nil)
+                }
+            }
+        }
+    }
 }
 
 extension ALConversationViewController: ALConversationViewModelDelegate {
@@ -273,29 +293,15 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
             }
         case .voice:
             if message.voiceData == nil {
-//                let dd = NSData(contentsOfFile: message.filePath!)
-//                print("data   content: ", dd?.length)
                 let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
                 if let path = message.filePath, let data = NSData(contentsOfFile: (documentsURL.appendingPathComponent(path)).path) as Data? {
                     self.viewModel.updateMessageModelAt(indexPath: indexPath, data: data)
                 } else {
-                    if let alMessage = viewModel.alMessages[indexPath.row] as? ALMessage {
-                        DownloadManager.shared.downloadAndSaveAudio(message: alMessage) {
-                            path in
-                            guard let path = path else {
-                                return
-                            }
-                            self.viewModel.updateDbMessageWith(key: "key", value: alMessage.key, filePath: path)
-                            alMessage.imageFilePath = path
-                            
-                            if let data = NSData(contentsOfFile: (documentsURL.appendingPathComponent(path)).path) as Data?     {
-                                self.viewModel.updateMessageModelAt(indexPath: indexPath, data: data)
-                            }
-                            
-                        }
+                     getAudioData(for: indexPath) { data in
+                        guard let voiceData = data else { return }
+                        self.viewModel.updateMessageModelAt(indexPath: indexPath, data: voiceData)
                     }
                 }
-                
             }
             
             if message.voiceTotalDuration == 0 {
