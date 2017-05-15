@@ -11,6 +11,17 @@
 		8B5D158A1EC34A5400DAA4D0 /* EmptyChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B5D15891EC34A5400DAA4D0 /* EmptyChatCell.xib */; };
 		8B625EBB1EC47C2500D9B48B /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B625EBA1EC47C2500D9B48B /* AudioPlayer.swift */; };
 		8B625EBE1EC5979B00D9B48B /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B625EBD1EC5979B00D9B48B /* DownloadManager.swift */; };
+		8BA27F8B1EC7347300765581 /* CustomCropImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27F8A1EC7347300765581 /* CustomCropImageViewController.swift */; };
+		8BA27F8E1EC734B300765581 /* CustomCameraPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27F8D1EC734B300765581 /* CustomCameraPreviewController.swift */; };
+		8BA27F901EC734D900765581 /* PreviewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27F8F1EC734D900765581 /* PreviewImageViewController.swift */; };
+		8BA27F921EC735BC00765581 /* PreviewImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27F911EC735BC00765581 /* PreviewImageViewModel.swift */; };
+		8BA27F961EC75FAB00765581 /* PreviewImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA27F951EC75FAB00765581 /* PreviewImage.storyboard */; };
+		8BA27F991EC761BA00765581 /* PhotoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27F981EC761BA00765581 /* PhotoCollectionCell.swift */; };
+		8BA27F9C1EC7624F00765581 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27F9B1EC7624F00765581 /* UIViewController+Extension.swift */; };
+		8BA27FA11EC763DE00765581 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27FA01EC763DE00765581 /* UIImage+Extension.swift */; };
+		8BA27FA41EC7640400765581 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27FA31EC7640400765581 /* CGSize+Extension.swift */; };
+		8BA27FA61EC764AA00765581 /* AVCaptureVideoOrientation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA27FA51EC764AA00765581 /* AVCaptureVideoOrientation+Extension.swift */; };
+		8BA27FA81EC7671800765581 /* CustomCamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA27FA71EC7671800765581 /* CustomCamera.storyboard */; };
 		8BE7AF1E1EC05AA50073FED9 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */; };
 		8BE7AF201EC05BA40073FED9 /* ALBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF1F1EC05BA40073FED9 /* ALBaseNavigationController.swift */; };
 		8BE7AF231EC0B1AC0073FED9 /* ALMessage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */; };
@@ -109,6 +120,17 @@
 		8B625EBA1EC47C2500D9B48B /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		8B625EBD1EC5979B00D9B48B /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		8B625EC01EC5E86C00D9B48B /* Applozic.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Applozic.xcodeproj; path = Applozic/Applozic.xcodeproj; sourceTree = "<group>"; };
+		8BA27F8A1EC7347300765581 /* CustomCropImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCropImageViewController.swift; sourceTree = "<group>"; };
+		8BA27F8D1EC734B300765581 /* CustomCameraPreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraPreviewController.swift; sourceTree = "<group>"; };
+		8BA27F8F1EC734D900765581 /* PreviewImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewImageViewController.swift; sourceTree = "<group>"; };
+		8BA27F911EC735BC00765581 /* PreviewImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewImageViewModel.swift; sourceTree = "<group>"; };
+		8BA27F951EC75FAB00765581 /* PreviewImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PreviewImage.storyboard; sourceTree = "<group>"; };
+		8BA27F981EC761BA00765581 /* PhotoCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionCell.swift; sourceTree = "<group>"; };
+		8BA27F9B1EC7624F00765581 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		8BA27FA01EC763DE00765581 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		8BA27FA31EC7640400765581 /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
+		8BA27FA51EC764AA00765581 /* AVCaptureVideoOrientation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoOrientation+Extension.swift"; sourceTree = "<group>"; };
+		8BA27FA71EC7671800765581 /* CustomCamera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomCamera.storyboard; sourceTree = "<group>"; };
 		8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		8BE7AF1F1EC05BA40073FED9 /* ALBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALBaseNavigationController.swift; sourceTree = "<group>"; };
 		8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ALMessage+Extension.swift"; sourceTree = "<group>"; };
@@ -222,6 +244,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8BA27F931EC75F6F00765581 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8BA27F941EC75F7600765581 /* Function */,
+			);
+			name = "Main Menu";
+			sourceTree = "<group>";
+		};
+		8BA27F941EC75F7600765581 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				8BA27F951EC75FAB00765581 /* PreviewImage.storyboard */,
+				8BA27FA71EC7671800765581 /* CustomCamera.storyboard */,
+			);
+			name = Function;
+			sourceTree = "<group>";
+		};
+		8BA27F971EC7605600765581 /* Collection cell */ = {
+			isa = PBXGroup;
+			children = (
+				8BA27F981EC761BA00765581 /* PhotoCollectionCell.swift */,
+			);
+			name = "Collection cell";
+			sourceTree = "<group>";
+		};
 		8BFA87531EBB09500059CFD2 = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +352,7 @@
 				8BFA879E1EBB18D60059CFD2 /* ALMessagesViewModel.swift */,
 				8BFA87FD1EBCB98D0059CFD2 /* ALConversationViewModel.swift */,
 				8BFA88431EC057440059CFD2 /* LocationPreviewViewModel.swift */,
+				8BA27F911EC735BC00765581 /* PreviewImageViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -312,6 +360,7 @@
 		8BFA87A01EBB1E770059CFD2 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				8BA27F931EC75F6F00765581 /* Main Menu */,
 				8BFA87631EBB09500059CFD2 /* Main.storyboard */,
 			);
 			name = Storyboard;
@@ -325,6 +374,10 @@
 				8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */,
 				8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */,
 				8B5D15441EC1EB6500DAA4D0 /* UITableView+Extension.swift */,
+				8BA27F9B1EC7624F00765581 /* UIViewController+Extension.swift */,
+				8BA27FA01EC763DE00765581 /* UIImage+Extension.swift */,
+				8BA27FA31EC7640400765581 /* CGSize+Extension.swift */,
+				8BA27FA51EC764AA00765581 /* AVCaptureVideoOrientation+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -332,6 +385,7 @@
 		8BFA87A41EBB1F180059CFD2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8BA27F971EC7605600765581 /* Collection cell */,
 				8BFA880B1EBCD0260059CFD2 /* Custom TextView */,
 				8BFA88081EBCC5BF0059CFD2 /* CustomView */,
 				8BFA88031EBCC4910059CFD2 /* Bar */,
@@ -482,6 +536,9 @@
 			isa = PBXGroup;
 			children = (
 				8BFA88391EC053430059CFD2 /* CustomCameraViewController.swift */,
+				8BA27F8A1EC7347300765581 /* CustomCropImageViewController.swift */,
+				8BA27F8D1EC734B300765581 /* CustomCameraPreviewController.swift */,
+				8BA27F8F1EC734D900765581 /* PreviewImageViewController.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -626,6 +683,8 @@
 				8BFA876A1EBB09500059CFD2 /* LaunchScreen.storyboard in Resources */,
 				8B5D158A1EC34A5400DAA4D0 /* EmptyChatCell.xib in Resources */,
 				8BFA87671EBB09500059CFD2 /* Assets.xcassets in Resources */,
+				8BA27F961EC75FAB00765581 /* PreviewImage.storyboard in Resources */,
+				8BA27FA81EC7671800765581 /* CustomCamera.storyboard in Resources */,
 				8BFA87651EBB09500059CFD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,6 +781,7 @@
 				8BFA87621EBB09500059CFD2 /* ViewController.swift in Sources */,
 				8BFA88461EC058C80059CFD2 /* ShareLocationBaseViewController.swift in Sources */,
 				8BFA88111EBCD13B0059CFD2 /* SoundRecordingView.swift in Sources */,
+				8BA27F9C1EC7624F00765581 /* UIViewController+Extension.swift in Sources */,
 				8BFA87991EBB145D0059CFD2 /* ALMessagesViewController.swift in Sources */,
 				8BFA88051EBCC4C70059CFD2 /* ChatBar.swift in Sources */,
 				8BFA88401EC0557C0059CFD2 /* PhotoCell.swift in Sources */,
@@ -729,23 +789,31 @@
 				8BFA88281EBED8350059CFD2 /* FriendPhotoCell.swift in Sources */,
 				8BFA87FA1EBCAB0E0059CFD2 /* API.swift in Sources */,
 				8BFA88241EBED7C50059CFD2 /* MyPhotoLandscapeCell.swift in Sources */,
+				8BA27F991EC761BA00765581 /* PhotoCollectionCell.swift in Sources */,
+				8BA27FA41EC7640400765581 /* CGSize+Extension.swift in Sources */,
 				8BFA87FC1EBCB7E10059CFD2 /* ALConversationViewController.swift in Sources */,
 				8BE7AF231EC0B1AC0073FED9 /* ALMessage+Extension.swift in Sources */,
 				8BFA882A1EBED8640059CFD2 /* FriendPhotoPortalCell.swift in Sources */,
+				8BA27F8E1EC734B300765581 /* CustomCameraPreviewController.swift in Sources */,
 				8BFA879F1EBB18D60059CFD2 /* ALMessagesViewModel.swift in Sources */,
 				8B625EBE1EC5979B00D9B48B /* DownloadManager.swift in Sources */,
 				8BFA882C1EBED8A40059CFD2 /* MyVoiceCell.swift in Sources */,
 				8BFA882E1EBED8E90059CFD2 /* VoiceCell.swift in Sources */,
 				8BE7AF1E1EC05AA50073FED9 /* UIStoryboard+Extension.swift in Sources */,
+				8BA27FA61EC764AA00765581 /* AVCaptureVideoOrientation+Extension.swift in Sources */,
 				8BFA87A71EBB1F950059CFD2 /* ChatCell.swift in Sources */,
 				8BFA87AD1EBB24470059CFD2 /* Style.swift in Sources */,
+				8BA27FA11EC763DE00765581 /* UIImage+Extension.swift in Sources */,
 				8BFA87B61EBB35370059CFD2 /* UI+Style.swift in Sources */,
+				8BA27F901EC734D900765581 /* PreviewImageViewController.swift in Sources */,
+				8BA27F921EC735BC00765581 /* PreviewImageViewModel.swift in Sources */,
 				8BFA87FE1EBCB98D0059CFD2 /* ALConversationViewModel.swift in Sources */,
 				8BFA87971EBB0F500059CFD2 /* NSObject+ApplozicBridge.m in Sources */,
 				8BFA87601EBB09500059CFD2 /* AppDelegate.swift in Sources */,
 				8BE7AF251EC0BBFC0073FED9 /* MessageModel.swift in Sources */,
 				8BFA880A1EBCC5EB0059CFD2 /* TranslucentView.swift in Sources */,
 				8BFA881F1EBED6640059CFD2 /* Geocode.swift in Sources */,
+				8BA27F8B1EC7347300765581 /* CustomCropImageViewController.swift in Sources */,
 				8BFA88301EBED96F0059CFD2 /* FriendVoiceCell.swift in Sources */,
 				8BFA87A91EBB23980059CFD2 /* UIColor+Extension.swift in Sources */,
 			);

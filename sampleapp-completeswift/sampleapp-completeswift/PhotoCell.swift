@@ -91,11 +91,17 @@ class PhotoCell: ChatBaseCell<MessageViewModel> {
 //        }
 //        
         var url: URL? = nil
-        if let imageURL = viewModel.imageURL {
-            url = imageURL
-        } else if let imageUrl = viewModel.thumbnailURL {
-            url = imageUrl
+        if let filePath = viewModel.filePath {
+            let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            url = docDir.appendingPathComponent(filePath)
+        } else {
+            if let imageURL = viewModel.imageURL {
+                url = imageURL
+            } else if let imageUrl = viewModel.thumbnailURL {
+                url = imageUrl
+            }
         }
+        print("file url: ", url)
         photoView.kf.indicatorType = .activity
         photoView.kf.setImage(with: url)
         let fileString = ByteCountFormatter.string(fromByteCount: viewModel.size, countStyle: .file)

@@ -143,13 +143,13 @@ final class ChatBar: UIView {
             
         case photoButton:
             
-//            let storyboard = UIStoryboard.name(storyboard: UIStoryboard.Storyboard.camera)
-//            if let vc = storyboard.instantiateViewController(withIdentifier: "CustomCameraNavigationController") as? AXBaseNavigationViewController {
-//                guard let firstVC = vc.viewControllers.first else {return}
-//                let cameraView = firstVC as! CustomCameraViewController
-//                cameraView.setCustomCamDelegate(camMode: .NoCropOption, camDelegate: self)
-//                UIViewController.topViewController()?.present(vc, animated: false, completion: nil)
-//            }
+            let storyboard = UIStoryboard.name(storyboard: UIStoryboard.Storyboard.camera)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "CustomCameraNavigationController") as? ALBaseNavigationViewController {
+                guard let firstVC = vc.viewControllers.first else {return}
+                let cameraView = firstVC as! CustomCameraViewController
+                cameraView.setCustomCamDelegate(camMode: .NoCropOption, camDelegate: self)
+                UIViewController.topViewController()?.present(vc, animated: false, completion: nil)
+            }
             break
             
         case micButton:
@@ -486,13 +486,13 @@ extension ChatBar: UITextViewDelegate {
     }
 }
 
-//extension ChatBar: CustomCameraProtocol {
-//    
-//    func customCameraDidTakePicture(cropedImage: UIImage) {
-//        action?(.sendPhoto(photoButton, cropedImage))
-//    }
-//}
-//
+extension ChatBar: CustomCameraProtocol {
+    
+    func customCameraDidTakePicture(cropedImage: UIImage) {
+        action?(.sendPhoto(photoButton, cropedImage))
+    }
+}
+
 //extension ChatBar: SoundRecorderProtocol {
 //    
 //    func stopRecording() {

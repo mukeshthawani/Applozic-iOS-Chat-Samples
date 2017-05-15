@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class AXBaseNavigationViewController: UINavigationController {
+class ALBaseNavigationViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

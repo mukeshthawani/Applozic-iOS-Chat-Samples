@@ -171,8 +171,6 @@ final class ALConversationViewController: ALBaseViewController {
                     NSLog("Sent: ", message)
                     
                     weakSelf.viewModel.send(message: message)
-                    weakSelf.tableView.reloadData()
-                    weakSelf.tableView.scrollToBottom()
                     button.isUserInteractionEnabled = true
             case .chatBarTextChange(_):
                 
@@ -190,33 +188,20 @@ final class ALConversationViewController: ALBaseViewController {
                         weakSelf.tableView.scrollToBottomByOfset(animated: true)
                     }
                 })
-                break
-                
+            case .sendPhoto(let button, let image):
+                print("Image call done")
+                    weakSelf.isJustSent = true
+                    
+                    weakSelf.viewModel.send(photo: image)
+                    
+                    button.isUserInteractionEnabled = true
+                    button.isUserInteractionEnabled = true
             default:
                 print("Not available")
             }
         }
     }
     
-    func getAudioData(for indexPath: IndexPath, completion: @escaping (Data?)->()) {
-        if let alMessage = viewModel.alMessages[indexPath.row] as? ALMessage {
-            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            DownloadManager.shared.downloadAndSaveAudio(message: alMessage) {
-                path in
-                guard let path = path else {
-                    return
-                }
-                self.viewModel.updateDbMessageWith(key: "key", value: alMessage.key, filePath: path)
-                alMessage.imageFilePath = path
-                
-                if let data = NSData(contentsOfFile: (documentsURL.appendingPathComponent(path)).path) as Data?     {
-                    completion(data)
-                } else {
-                    completion(nil)
-                }
-            }
-        }
-    }
 }
 
 extension ALConversationViewController: ALConversationViewModelDelegate {
@@ -227,6 +212,7 @@ extension ALConversationViewController: ALConversationViewModelDelegate {
     
     func messageUpdated() {
         tableView.reloadData()
+        tableView.scrollToBottom()
     }
     
     func updateMessageAt(indexPath: IndexPath) {
@@ -267,7 +253,7 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
             if message.isMyMessage {
                 // Right now ratio is fixed to 1.77
                 if message.ratio < 1 {
-                    
+                    print("image messsage called")
                     let cell: MyPhotoPortalCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
                     cell.update(viewModel: message)
                     return cell
@@ -297,7 +283,7 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
                 if let path = message.filePath, let data = NSData(contentsOfFile: (documentsURL.appendingPathComponent(path)).path) as Data? {
                     self.viewModel.updateMessageModelAt(indexPath: indexPath, data: data)
                 } else {
-                     getAudioData(for: indexPath) { data in
+                     viewModel.getAudioData(for: indexPath) { data in
                         guard let voiceData = data else { return }
                         self.viewModel.updateMessageModelAt(indexPath: indexPath, data: voiceData)
                     }

@@ -133,3 +133,13 @@ extension ALMessage {
         return messageModel
     }
 }
+
+extension ALMessage {
+    override open func isEqual(_ object: Any?) -> Bool {
+        if let object = object as? ALMessage {
+            return self.key == object.key
+        } else {
+            return false
+        }
+    }
+}

@@ -16,16 +16,16 @@ protocol ALConversationViewModelDelegate: class {
     func updateMessageAt(indexPath: IndexPath)
 }
 
-class ALConversationViewModel {
+class ALConversationViewModel: NSObject {
     
     let contactId: String
     weak var delegate: ALConversationViewModelDelegate?
     let maxWidth = UIScreen.main.bounds.width
     let isGroup = false
     
-    fileprivate var alMessageWrapper = ALMessageArrayWrapper()
+    var alMessageWrapper = ALMessageArrayWrapper()
     var messageModels = [MessageModel]()
-    var alMessages = NSMutableArray()
+    private var alMessages = NSMutableArray()
     
     init(contactId: String) {
         self.contactId = contactId
@@ -58,7 +58,6 @@ class ALConversationViewModel {
             }
             NSLog("messages loaded: ", messages)
             self.alMessages = messages.reversed() as! NSMutableArray
-//            print("all file paths: ", messages.map { ($0 as! ALMessage).imageFilePath })
             self.alMessageWrapper.addObject(toMessageArray: self.alMessages)
             let models = self.alMessages.map { ($0 as! ALMessage).messageModel }
             self.messageModels = models
@@ -171,6 +170,26 @@ class ALConversationViewModel {
         loadMessages()
     }
     
+    func getAudioData(for indexPath: IndexPath, completion: @escaping (Data?)->()) {
+        if let alMessage = alMessages[indexPath.row] as? ALMessage {
+            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            DownloadManager.shared.downloadAndSaveAudio(message: alMessage) {
+                path in
+                guard let path = path else {
+                    return
+                }
+                self.updateDbMessageWith(key: "key", value: alMessage.key, filePath: path)
+                alMessage.imageFilePath = path
+                
+                if let data = NSData(contentsOfFile: (documentsURL.appendingPathComponent(path)).path) as Data?     {
+                    completion(data)
+                } else {
+                    completion(nil)
+                }
+            }
+        }
+    }
+    
     func send(message: String) {
         let messageModel = messageModels.first
         let alMessage = ALMessage()
@@ -204,6 +223,15 @@ class ALConversationViewModel {
         })
     }
     
+    func send(photo: UIImage) {
+        print("image is:  ", photo)
+        let filePath = ALImagePickerHandler.saveImage(toDocDirectory: photo)
+        print("filepath:: ", filePath)
+        guard let path = filePath, let url = URL(string: path) else { return }
+        processAttachment(filePath: url, text: "", contentType: Int(ALMESSAGE_CONTENT_ATTACHMENT))
+        
+    }
+    
     func updateMessageModelAt(indexPath: IndexPath, data: Data) {
         var message = messageForRow(indexPath: indexPath)
         message?.voiceData = data
@@ -211,7 +239,7 @@ class ALConversationViewModel {
         delegate?.updateMessageAt(indexPath: indexPath) 
     }
     
-    func updateDbMessageWith(key: String, value: String, filePath: String) {
+    private func updateDbMessageWith(key: String, value: String, filePath: String) {
         let messageService = ALMessageDBService()
         let alHandler = ALDBHandler.sharedInstance()
         let dbMessage: DB_Message = messageService.getMessageByKey(key, value: value) as! DB_Message
@@ -226,5 +254,115 @@ class ALConversationViewModel {
     private func addToWrapper(message: ALMessage) {
         self.alMessageWrapper.getUpdatedMessageArray().add(message)
         messageModels.append(message.messageModel)
+    }
+    
+    private func getMessageToPost() -> ALMessage {
+        let messageModel = messageModels.first
+        let alMessage = ALMessage()
+        alMessage.to = messageModel?.contactId
+        alMessage.contactIds = messageModel?.contactId
+        alMessage.message = ""
+        alMessage.type = "5"
+        let date = Date().timeIntervalSince1970*1000
+        alMessage.createdAtTime = NSNumber(value: date)
+        alMessage.sendToDevice = false
+        alMessage.deviceKey = ALUserDefaultsHandler.getDeviceKeyString()
+        alMessage.shared = false
+        alMessage.fileMeta = nil
+        alMessage.storeOnDevice = false
+        alMessage.contentType = Int16(ALMESSAGE_CONTENT_DEFAULT)
+        alMessage.key = UUID().uuidString
+        alMessage.source = Int16(SOURCE_IOS)
+        alMessage.conversationId = messageModel?.conversationId
+        alMessage.groupId = messageModel?.groupId
+        return  alMessage
+    }
+    
+    private func getFileMetaInfo() -> ALFileMetaInfo {
+        let info = ALFileMetaInfo()
+        info.blobKey = nil
+        info.contentType = ""
+        info.createdAtTime = nil
+        info.key = nil
+        info.name = ""
+        info.size = ""
+        info.userKey = ""
+        info.thumbnailUrl = ""
+        info.progressValue = 0
+        return info
+    }
+    
+    private func processAttachment(filePath: URL, text: String, contentType: Int) {
+        var alMessage = getMessageToPost()
+        alMessage.contentType = Int16(contentType)
+        alMessage.fileMeta = getFileMetaInfo()
+        alMessage.imageFilePath = filePath.lastPathComponent
+        alMessage.fileMeta.name = String(format: "%@-5-%@", self.contactId, filePath.lastPathComponent)
+        let pathExtension = filePath.pathExtension
+        let uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, pathExtension as NSString, nil)?.takeRetainedValue()
+        let mimetype = (UTTypeCopyPreferredTagWithClass(uti!, kUTTagClassMIMEType)?.takeRetainedValue()) as! String
+        alMessage.fileMeta.contentType = String(describing: mimetype)
+        
+        let imageSize = NSData(contentsOfFile: filePath.path)
+        alMessage.fileMeta.size = String(format: "%lu", (imageSize?.length)!)
+        alMessageWrapper.addALMessage(toMessageArray: alMessage)
+        
+        let dbHandler = ALDBHandler.sharedInstance()
+        let messageService = ALMessageDBService()
+        let messageEntity = messageService.createMessageEntityForDBInsertion(with: alMessage)
+        do {
+            try dbHandler?.managedObjectContext.save()
+        } catch {
+            NSLog("Not saved due to error")
+        }
+        alMessage.msgDBObjectId = messageEntity?.objectID
+        addToWrapper(message: alMessage)
+        delegate?.messageUpdated()
+        uploadImage(alMessage: alMessage, indexPath: IndexPath(row: messageModels.count-1, section: 0))
+    }
+    
+    private func uploadImage(alMessage: ALMessage, indexPath: IndexPath)  {
+        let clientService = ALMessageClientService()
+        let messageService = ALMessageDBService()
+        let alHandler = ALDBHandler.sharedInstance()
+        var dbMessage = DB_Message()
+        do {
+            dbMessage = try messageService.getMeesageBy(alMessage.msgDBObjectId) as! DB_Message
+        } catch {
+            
+        }
+        dbMessage.inProgress = 1
+        dbMessage.isUploadFailed = 0
+        do {
+            try alHandler?.managedObjectContext.save()
+        } catch {
+            
+        }
+        print("content type: ", alMessage.fileMeta.contentType)
+        print("file path: ", alMessage.imageFilePath)
+        clientService.sendPhoto(forUserInfo: alMessage.dictionary(), withCompletion: {
+            url, error in
+            guard error == nil, let urlStr = url else { return }
+            DownloadManager.shared.uploadImage(message: alMessage, databaseObj: dbMessage.fileMetaInfo, uploadURL: urlStr) {
+                response in
+                guard let fileInfo = response as? [String: Any], let fileMeta = fileInfo["fileMeta"] as? [String: Any] else { return }
+                let message = messageService.createMessageEntity(dbMessage)
+                message?.fileMeta.populate(fileMeta)
+                message?.status = NSNumber(integerLiteral: Int(SENT.rawValue))
+                do {
+                    try alHandler?.managedObjectContext.save()
+                } catch {
+                    NSLog("Not saved due to error")
+                }
+                // Use main queue to update the UI
+                // change this to indexpath
+                DispatchQueue.main.async {
+                    print("UI updated")
+                    self.messageModels[indexPath.row] = (message?.messageModel)!
+                    self.delegate?.updateMessageAt(indexPath: indexPath)
+                }
+//                self.delegate?.messageUpdated()
+            }
+        })
     }
 }

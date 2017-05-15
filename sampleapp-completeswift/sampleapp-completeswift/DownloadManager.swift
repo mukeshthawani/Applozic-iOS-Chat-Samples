@@ -37,4 +37,53 @@ class DownloadManager {
         }
     }
     
+    func uploadImage(message: ALMessage, databaseObj: DB_FileMetaInfo, uploadURL: String, completion:@escaping (_ response: Any?)->()) {
+        let docDirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let timeStamp = message.imageFilePath
+        let filePath = docDirPath.appendingPathComponent(timeStamp!)
+        
+        guard var request = ALRequestHandler.createPOSTRequest(withUrlString: uploadURL, paramString: nil) as URLRequest? else { return }
+        if FileManager.default.fileExists(atPath: filePath.path) {
+            
+            let boundary = "------ApplogicBoundary4QuqLuM1cE5lMwCy"
+            let contentType = String(format: "multipart/form-data; boundary=%@", boundary)
+            request.setValue(contentType, forHTTPHeaderField: "Content-Type")
+            var body = Data()
+            
+            let parameters = [String: String]()
+            
+            let fileParamConstant = "files[]"
+            let imageData = NSData(contentsOfFile: filePath.path)
+            
+            if let data = imageData as Data? {
+                print("data present")
+                body.append(String(format: "--%@\r\n", boundary).data(using: .utf8)!)
+                body.append(String(format: "Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n", fileParamConstant,message.fileMeta.name).data(using: .utf8)!)
+                body.append(String(format: "Content-Type:%@\r\n\r\n", message.fileMeta.contentType).data(using: .utf8)!)
+                body.append(data)
+                body.append(String(format: "\r\n").data(using: .utf8)!)
+            }
+            
+            body.append(String(format: "--%@--\r\n", boundary).data(using: .utf8)!)
+            request.httpBody = body
+            request.url = URL(string: uploadURL)
+            
+            let task = URLSession.shared.dataTask(with: request) {
+                data, response, error in
+                do {
+                    let responseDictionary = try JSONSerialization.jsonObject(with: data!)
+                    print("success == \(responseDictionary)")
+                    completion(responseDictionary)
+                } catch {
+                    print(error)
+                    
+                    let responseString = String(data: data!, encoding: .utf8)
+                    print("responseString = \(responseString)")
+                    completion(nil)
+                }
+            }
+            task.resume()
+        }
+    }
+    
 }
