@@ -155,7 +155,14 @@ class ALConversationViewModel: NSObject {
                 
             }
         case .voice:
-            return 100
+            var height: CGFloat =  0
+            if messageModel.isMyMessage {
+                height = VoiceCell.rowHeigh(viewModel: messageModel, width: maxWidth)
+            } else {
+                height = FriendVoiceCell.rowHeigh(viewModel: messageModel, width: maxWidth)
+            }
+            return height
+            
         default:
             print("Not available")
             return 0
@@ -232,11 +239,25 @@ class ALConversationViewModel: NSObject {
         
     }
     
+    func send(voiceMessage: Data) {
+        print("voice data received: ", voiceMessage.count)
+        let fileName = String(format: "AUD-%f.m4a", Date().timeIntervalSince1970*1000)
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fullPath = documentsURL.appendingPathComponent(fileName)
+        do {
+            try voiceMessage.write(to: fullPath, options: .atomic)
+        } catch {
+            NSLog("error when saving the voice message")
+        }
+        processAttachment(filePath: fullPath, text: "", contentType: Int(ALMESSAGE_CONTENT_AUDIO))
+        
+    }
+    
     func updateMessageModelAt(indexPath: IndexPath, data: Data) {
         var message = messageForRow(indexPath: indexPath)
         message?.voiceData = data
         messageModels[indexPath.row] = message as! MessageModel
-        delegate?.updateMessageAt(indexPath: indexPath) 
+        delegate?.messageUpdated()
     }
     
     private func updateDbMessageWith(key: String, value: String, filePath: String) {
@@ -354,15 +375,33 @@ class ALConversationViewModel: NSObject {
                 } catch {
                     NSLog("Not saved due to error")
                 }
-                // Use main queue to update the UI
-                // change this to indexpath
-                DispatchQueue.main.async {
-                    print("UI updated")
-                    self.messageModels[indexPath.row] = (message?.messageModel)!
-                    self.delegate?.updateMessageAt(indexPath: indexPath)
+                
+                self.send(message: message!) {
+                    success in
+                    guard success else { return }
+                    DispatchQueue.main.async {
+                        print("UI updated at row: ", indexPath.row, message?.isSent)
+                        self.messageModels[indexPath.row] = (message?.messageModel)!
+                        self.delegate?.updateMessageAt(indexPath: indexPath)
+                    }
                 }
-//                self.delegate?.messageUpdated()
+                
             }
+        })
+    }
+    
+    private func send(message: ALMessage, completion: @escaping (Bool)->()) {
+        ALMessageService.sendMessages(message, withCompletion: {
+            message, error in
+            NSLog("Message sent: \(message), \(error)")
+            if error == nil {
+                NSLog("No errors while sending the message")
+                completion(true)
+            }
+            else {
+                completion(false)
+            }
+            
         })
     }
 }

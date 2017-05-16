@@ -23,10 +23,10 @@ final class ALConversationViewController: ALBaseViewController {
     
     let tableView : UITableView = {
         let tv = UITableView(frame: .zero, style: .grouped)
-        tv.separatorStyle   = .none
-        tv.allowsSelection  = false
-        tv.backgroundColor  = UIColor.white
-        tv.clipsToBounds    = true
+//        tv.separatorStyle   = .none
+//        tv.allowsSelection  = false
+//        tv.backgroundColor  = UIColor.white
+//        tv.clipsToBounds    = true
         return tv
     }()
     
@@ -62,8 +62,25 @@ final class ALConversationViewController: ALBaseViewController {
         super.viewDidLoad()
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.white
+        tableView.allowsSelection  = false
+        tableView.clipsToBounds    = true
         ALUserDefaultsHandler.setDebugLogsRequire(true)
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if self.isFirstTime {
+            self.tableView.scrollToBottomByOfset(animated: false)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopAudioPlayer()
+        chatBar.stopRecording()
+    }
+
     
     func setupView() {
         view.backgroundColor = UIColor.white
@@ -196,6 +213,14 @@ final class ALConversationViewController: ALBaseViewController {
                     
                     button.isUserInteractionEnabled = true
                     button.isUserInteractionEnabled = true
+                
+            case .sendVoice(let voice):
+                do {
+                    try weakSelf.viewModel.send(voiceMessage: voice as Data)
+                } catch {
+                    weakSelf.view.makeToast(SystemMessage.Warning.PleaseTryAgain, duration: 1.0, position: .center)
+                }
+                break;
             default:
                 print("Not available")
             }
@@ -207,12 +232,13 @@ final class ALConversationViewController: ALBaseViewController {
 extension ALConversationViewController: ALConversationViewModelDelegate {
     func loadingFinished(error: Error?) {
         tableView.reloadData()
-        tableView.scrollToBottom()
+        DispatchQueue.main.async {
+            self.tableView.scrollToBottom()
+        }
     }
     
     func messageUpdated() {
         tableView.reloadData()
-        tableView.scrollToBottom()
     }
     
     func updateMessageAt(indexPath: IndexPath) {
@@ -234,6 +260,7 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
         guard var message = viewModel.messageForRow(indexPath: indexPath) else {
             return UITableViewCell()
         }
+        print("Cell updated at row: ", indexPath.row, "and type is: ", message.messageType)
         switch message.messageType {
         case .text:
             if message.isMyMessage {
@@ -278,7 +305,10 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
                 }
             }
         case .voice:
-            if message.voiceData == nil {
+            print("voice cell loaded with url", message.filePath)
+            print("current voice state: ", message.voiceCurrentState, "row", indexPath.row, message.voiceTotalDuration, message.voiceData)
+            print("voice identifier: ", message.identifier, "and row: ", indexPath.row)
+            if message.voiceData ==  nil {
                 let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
                 if let path = message.filePath, let data = NSData(contentsOfFile: (documentsURL.appendingPathComponent(path)).path) as Data? {
                     self.viewModel.updateMessageModelAt(indexPath: indexPath, data: data)
@@ -304,16 +334,17 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
             
             if message.isMyMessage {
                 let cell: MyVoiceCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+//                cell.backgroundColor = UIColor.white
                 cell.update(viewModel: message)
                 cell.setCellDelegate(delegate: self)
                 return cell
             } else {
                 let cell: FriendVoiceCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+//                cell.backgroundColor = UIColor.white
                 cell.update(viewModel: message)
                 cell.setCellDelegate(delegate: self)
                 return cell
             }
-        
         default:
             NSLog("Wrong choice")
         }
@@ -360,7 +391,8 @@ extension ALConversationViewController: AudioPlayerProtocol, VoiceCellProtocol {
             guard let indexPath = tableView.indexPath(for: cell) else {return}
             if let message = viewModel.messageForRow(indexPath: indexPath) {
                 if message.messageType == .voice && message.identifier == audioPlayer.getCurrentAudioTrack(){
-                    tableView.reloadSections([indexPath.section], with: .none)
+                    print("voice cell reloaded with row: ", indexPath.row, indexPath.section)
+                    tableView.reloadRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .none)
                     break
                 }
             }
@@ -370,12 +402,13 @@ extension ALConversationViewController: AudioPlayerProtocol, VoiceCellProtocol {
     //MAKR: Voice and Audio Delegate
     func playAudioPress(identifier: String) {
         DispatchQueue.main.async { [weak self] in
-            
+            NSLog("play audio pressed")
             guard let weakSelf = self else { return }
             
             //if we have previously play audio, stop it first
             if !weakSelf.audioPlayer.getCurrentAudioTrack().isEmpty && weakSelf.audioPlayer.getCurrentAudioTrack() != identifier {
                 //pause
+                NSLog("already playing, change it to pause")
                 guard var lastMessage =  weakSelf.viewModel.messageForRow(identifier: weakSelf.audioPlayer.getCurrentAudioTrack()) else {return}
                 
                 if Int(lastMessage.voiceCurrentDuration) > 0 {
@@ -387,7 +420,7 @@ extension ALConversationViewController: AudioPlayerProtocol, VoiceCellProtocol {
                 }
                 weakSelf.audioPlayer.pauseAudio()
             }
-            
+            NSLog("now it will be played")
             //now play
             guard var currentVoice =  weakSelf.viewModel.messageForRow(identifier: identifier) else {return}
             if currentVoice.voiceCurrentState == .playing {
@@ -397,6 +430,7 @@ extension ALConversationViewController: AudioPlayerProtocol, VoiceCellProtocol {
                 weakSelf.tableView.reloadData()
             }
             else {
+                NSLog("reset time to total duration")
                 //reset time to total duration
                 if currentVoice.voiceCurrentState  == .stop || currentVoice.voiceCurrentDuration < 1 {
                     currentVoice.voiceCurrentDuration = currentVoice.voiceTotalDuration
@@ -405,6 +439,7 @@ extension ALConversationViewController: AudioPlayerProtocol, VoiceCellProtocol {
                 if let data = currentVoice.voiceData {
                     let voice = data as NSData
                     //start playing
+                    NSLog("Start playing")
                     weakSelf.audioPlayer.setAudioFile(data: voice, delegate: weakSelf, playFrom: currentVoice.voiceCurrentDuration,lastPlayTrack:currentVoice.identifier)
                     currentVoice.voiceCurrentState = .playing
                     weakSelf.tableView.reloadData()
@@ -430,6 +465,7 @@ extension ALConversationViewController: AudioPlayerProtocol, VoiceCellProtocol {
                         currentVoice.voiceCurrentDuration = atSec
                     }
                 }
+                print("audio playing id: ", currentVoice.identifier)
                 weakSelf.reloadVoiceCell()
             }
         }

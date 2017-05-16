@@ -2494,7 +2494,7 @@
             {
                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Applozic" bundle:[NSBundle bundleForClass:ALChatViewController.class]];
                 ALAudioAttachmentViewController *audioVC = (ALAudioAttachmentViewController *)[storyboard
-                                                                                               instantiateViewControllerWithIdentifier:@"AudioAttachment"];
+                                                                                                instantiateViewControllerWithIdentifier:@"AudioAttachment"];
                 audioVC.audioAttchmentDelegate = self;
                 [self.navigationController pushViewController:audioVC animated:YES];
             }

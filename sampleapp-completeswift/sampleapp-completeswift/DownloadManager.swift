@@ -24,6 +24,11 @@ class DownloadManager {
             
             return (fullPath,[])
         }
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        if NSData(contentsOfFile: (documentsURL.appendingPathComponent(filePath)).path) != nil {
+           completion(filePath)
+
+        } else {
         
         Alamofire.download(urlStr, to: destination).response { response in
             print(response)
@@ -34,6 +39,7 @@ class DownloadManager {
                 NSLog("error while downloading: \(response.error)")
                 completion(nil)
             }
+        }
         }
     }
     

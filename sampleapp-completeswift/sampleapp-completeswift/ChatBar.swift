@@ -153,21 +153,21 @@ final class ChatBar: UIView {
             break
             
         case micButton:
-//            if soundRec.isHidden {
-//                micButton.isSelected = true
-//                soundRec.isHidden = false
-//                
-//                if placeHolder.isFirstResponder {
-//                    placeHolder.resignFirstResponder()
-//                } else if textView.isFirstResponder {
-//                    textView.resignFirstResponder()
-//                }
-//                
-//                soundRec.setSoundRecDelegate(recorderDelegate: self)
-//            } else {
-//                micButton.isSelected = false
-//                soundRec.isHidden = true
-//            }
+            if soundRec.isHidden {
+                micButton.isSelected = true
+                soundRec.isHidden = false
+                
+                if placeHolder.isFirstResponder {
+                    placeHolder.resignFirstResponder()
+                } else if textView.isFirstResponder {
+                    textView.resignFirstResponder()
+                }
+                
+                soundRec.setSoundRecDelegate(recorderDelegate: self)
+            } else {
+                micButton.isSelected = false
+                soundRec.isHidden = true
+            }
 //            
             break
         default: break
@@ -493,29 +493,29 @@ extension ChatBar: CustomCameraProtocol {
     }
 }
 
-//extension ChatBar: SoundRecorderProtocol {
-//    
-//    func stopRecording() {
-//        soundRec.cancelAudioRecord()
-//    }
-//    
-//    func startRecordingAudio() {
-//        action?(.startVoiceRecord())
-//    }
-//    
-//    func finishRecordingAudio(soundData: NSData) {
-////        Logger.debug(message: "receive recording..")
-//        textView.resignFirstResponder()
-//        action?(.sendVoice(soundData))
-//    }
-//    
-//    func cancelRecordingAudio() {
-//        soundRec.isHidden = true
-//        micButton.isSelected = false
-//        textView.becomeFirstResponder()
-//    }
-//    
-//    func permissionNotGrant() {
-//        action?(.noVoiceRecordPermission())
-//    }
-//}
+extension ChatBar: SoundRecorderProtocol {
+    
+    func stopRecording() {
+        soundRec.cancelAudioRecord()
+    }
+    
+    func startRecordingAudio() {
+        action?(.startVoiceRecord())
+    }
+    
+    func finishRecordingAudio(soundData: NSData) {
+//        Logger.debug(message: "receive recording..")
+        textView.resignFirstResponder()
+        action?(.sendVoice(soundData))
+    }
+    
+    func cancelRecordingAudio() {
+        soundRec.isHidden = true
+        micButton.isSelected = false
+        textView.becomeFirstResponder()
+    }
+    
+    func permissionNotGrant() {
+        action?(.noVoiceRecordPermission())
+    }
+}
