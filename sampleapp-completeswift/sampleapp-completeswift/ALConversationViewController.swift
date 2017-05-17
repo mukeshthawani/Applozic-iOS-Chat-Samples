@@ -18,8 +18,15 @@ final class ALConversationViewController: ALBaseViewController {
     var viewModel: ALConversationViewModel!
     private var isFirstTime = true
     private var bottomConstraint: NSLayoutConstraint?
+    private var leftMoreBarConstraint: NSLayoutConstraint?
+    private var typingNoticeViewHeighConstaint: NSLayoutConstraint?
     private var isJustSent: Bool = false
     let audioPlayer = AudioPlayer()
+    
+    fileprivate let moreBar: MoreBar = MoreBar(frame: .zero)
+    fileprivate let typingNoticeView = TypingNotice()
+    
+    fileprivate var keyboardSize: CGRect?
     
     let tableView : UITableView = {
         let tv = UITableView(frame: .zero, style: .grouped)
@@ -39,8 +46,114 @@ final class ALConversationViewController: ALBaseViewController {
     
     let chatBar: ChatBar = ChatBar(frame: .zero)
     
+    
+    override func addObserver() {
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillShow, object: nil, queue: nil, using: { [weak self]
+            notification in
+            print("keyboard will show")
+            guard let weakSelf = self else {return}
+            
+            if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                
+                weakSelf.keyboardSize = keyboardSize
+                
+                let tableView = weakSelf.tableView
+                let isAtBotom = tableView.isAtBottom
+                let isJustSent = weakSelf.isJustSent
+                
+                let view = weakSelf.view
+//                let navigationController = weakSelf.navigationController
+                
+//                let tabController = navigationController?.tabBarController as? MainMenuTabBarViewController
+//                
+//                var h = tabController?.parentMainTab?.tabView.frame.size.height ?? 100
+                var h = CGFloat(100)
+                h = keyboardSize.height-h
+                
+                // Remove 100
+                let newH = -1*h - 100
+                if weakSelf.bottomConstraint?.constant == newH {return}
+                
+                weakSelf.bottomConstraint?.constant = newH
+                
+                let duration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0.05
+                
+                UIView.animate(withDuration: duration, animations: {
+                    view?.layoutIfNeeded()
+                }, completion: { (_) in
+                    print("animated ")
+                    if isAtBotom == true && isJustSent == false {
+                        tableView.scrollToBottomByOfset(animated: true)
+                    }
+                })
+            }
+        })
+        
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillHide, object: nil, queue: nil, using: {[weak self]
+            (notification) in
+            
+            guard let weakSelf = self else {return}
+            let view = weakSelf.view
+            
+            weakSelf.bottomConstraint?.constant = 0
+            
+            let duration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0.05
+            
+            UIView.animate(withDuration: duration, animations: {
+                view?.layoutIfNeeded()
+            }, completion: { (_) in
+//                weakSelf.viewModel.sendKeyboardDoneTyping()
+            })
+            
+        })
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "newMessageNotification"), object: nil, queue: nil, using: { [weak self]
+            notification in
+            guard let weakSelf = self else { return }
+            let msgArray = notification.object as? [ALMessage]
+            print("new notification received: ", msgArray?.first?.message, msgArray?.count)
+            guard let list = notification.object as? [Any] else { return }
+            weakSelf.viewModel.addMessagesToList(list)
+        })
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "notificationIndividualChat"), object: nil, queue: nil, using: {[weak self]
+            notification in
+            print("notification individual chat received")
+        })
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "report_DELIVERED"), object: nil, queue: nil, using: {[weak self]
+            notification in
+            print("report delievered notification received")
+        })
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "report_DELIVERED_READ"), object: nil, queue: nil, using: {[weak self]
+            notification in
+            print("report delievered and read notification received")
+        })
+
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "UPDATE_MESSAGE_SEND_STATUS"), object: nil, queue: nil, using: {[weak self]
+            notification in
+            print("Message sent notification received")
+        })
+    }
+    
+    override func removeObserver() {
+        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "newMessageNotification"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "notificationIndividualChat"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "report_DELIVERED"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "report_DELIVERED_READ"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UPDATE_MESSAGE_SEND_STATUS"), object: nil)
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         viewModel.delegate = self
+//        addObserver()
         viewModel.prepareController()
         if self.isFirstTime {
             self.setupNavigation()
@@ -84,17 +197,29 @@ final class ALConversationViewController: ALBaseViewController {
     
     func setupView() {
         view.backgroundColor = UIColor.white
-        view.addViewsForAutolayout(views: [tableView, chatBar])
+        view.addViewsForAutolayout(views: [tableView,moreBar,chatBar,typingNoticeView])
         
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: typingNoticeView.topAnchor).isActive = true
+        
+        typingNoticeViewHeighConstaint = typingNoticeView.heightAnchor.constraint(equalToConstant: 0)
+        typingNoticeViewHeighConstaint?.isActive = true
+        
+        typingNoticeView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        typingNoticeView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12).isActive = true
+        typingNoticeView.bottomAnchor.constraint(equalTo: chatBar.topAnchor).isActive = true
+        
         chatBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         chatBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         bottomConstraint = chatBar.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         bottomConstraint?.isActive = true
+        
+        leftMoreBarConstraint = moreBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 56)
+        leftMoreBarConstraint?.isActive = true
         prepareTable()
+        prepareMoreBar()
         prepareChatBar()
 
     }
@@ -145,8 +270,19 @@ final class ALConversationViewController: ALBaseViewController {
 //        tableView.register(InformationCell.self)
     }
     
-    func tableTapped(gesture: UITapGestureRecognizer) {
+    
+    private func prepareMoreBar() {
+        
+        moreBar.bottomAnchor.constraint(equalTo: chatBar.topAnchor).isActive = true
+        moreBar.isHidden = true
+        moreBar.setHandleAction { [weak self] (actionType) in
+            self?.view.makeToast(SystemMessage.ComingSoon.ExtraMenu, duration: 1.0, position: .center)
+            self?.hideMoreBar()
+        }
+        
+//        moreBar.setPresenterVC(delegate: self)
     }
+    
     
     private func prepareChatBar() {
         chatBar.accessibilityIdentifier = "chatBar"
@@ -227,6 +363,55 @@ final class ALConversationViewController: ALBaseViewController {
         }
     }
     
+    func tableTapped(gesture: UITapGestureRecognizer) {
+        hideMoreBar()
+        view.endEditing(true)
+    }
+    
+    override func backTapped() {
+        
+//        self.vi   ewModel.sendKeyboardDoneTyping()
+        _ = navigationController?.popToRootViewController(animated: true)
+    }
+    
+    private func showMoreBar() {
+        
+        self.moreBar.isHidden = false
+        self.leftMoreBarConstraint?.constant = 0
+        
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: { [weak self] () in
+            self?.view.layoutIfNeeded()
+            }, completion: { [weak self] (finished) in
+                
+                guard let strongSelf = self else {return}
+                
+                strongSelf.view.bringSubview(toFront: strongSelf.moreBar)
+                strongSelf.view.sendSubview(toBack: strongSelf.tableView)
+        })
+        
+    }
+    
+    private func hideMoreBar() {
+        
+        if self.leftMoreBarConstraint?.constant == 0 {
+            
+            self.leftMoreBarConstraint?.constant = 56
+            
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: { [weak self] () in
+                self?.view.layoutIfNeeded()
+                }, completion: { [weak self] (finished) in
+                    self?.moreBar.isHidden = true
+            })
+            
+        }
+        
+    }
+    
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        UIMenuController.shared.setMenuVisible(false, animated: true)
+        hideMoreBar()
+    }
+    
 }
 
 extension ALConversationViewController: ALConversationViewModelDelegate {
@@ -243,6 +428,11 @@ extension ALConversationViewController: ALConversationViewModelDelegate {
     
     func updateMessageAt(indexPath: IndexPath) {
         tableView.reloadRows(at: [indexPath], with: .none)
+    }
+    
+    func newMessagesAdded() {
+        tableView.reloadData()
+        tableView.scrollToBottom()
     }
 }
 

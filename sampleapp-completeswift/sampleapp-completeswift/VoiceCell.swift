@@ -122,12 +122,14 @@ class VoiceCell:ChatBaseCell<MessageViewModel> {
     
     override func update(viewModel: MessageViewModel) {
         super.update(viewModel: viewModel)
-        
+//        print("viewModel path: ", viewModel.filePath)
+//        print("viewModel state: ", viewModel.voiceCurrentState)
         //pause case
         if viewModel.voiceCurrentState == .pause && viewModel.voiceCurrentDuration > 0{
             actionButton.isSelected = false
             playTimeLabel.text = getTimeString(secLeft:viewModel.voiceCurrentDuration)
         } else if viewModel.voiceCurrentState == .playing {
+            print("identifier: ", viewModel.identifier)
             actionButton.isSelected = true
             playTimeLabel.text = getTimeString(secLeft:viewModel.voiceCurrentDuration)
         }

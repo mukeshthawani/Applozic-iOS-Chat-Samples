@@ -94,7 +94,6 @@ extension ALMessage {
         guard let fileMeta = fileMeta, let urlStr = fileMeta.blobKey, let imageUrl = URL(string: imageBaseUrl + urlStr) else {
             return nil
         }
-        print("imageUrl: ", imageUrl)
         return imageUrl
     }
     

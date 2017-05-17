@@ -14,6 +14,7 @@ protocol ALConversationViewModelDelegate: class {
     func loadingFinished(error: Error?)
     func messageUpdated()
     func updateMessageAt(indexPath: IndexPath)
+    func newMessagesAdded()
 }
 
 class ALConversationViewModel: NSObject {
@@ -195,6 +196,24 @@ class ALConversationViewModel: NSObject {
                 }
             }
         }
+    }
+    
+    /// Received from notification
+    func addMessagesToList(_ messageList: [Any]) {
+        guard let messages = messageList as? [ALMessage] else { return }
+        let filteredArray  = messages.filter { $0.groupId == 0 || $0.groupId == nil && $0.contactId == self.contactId }
+        let sortedArray = filteredArray.sorted { Int($0.createdAtTime) < Int($1.createdAtTime) }
+        guard !sortedArray.isEmpty else { return }
+//        for msg in sortedArray {
+//            if !alMessageWrapper.getUpdatedMessageArray().contains(msg) {
+//                print("not present")
+//            }
+//        }
+        sortedArray.map { self.alMessageWrapper.addALMessage(toMessageArray: $0) }
+        let models = sortedArray.map { $0.messageModel }
+        messageModels.append(contentsOf: models)
+        print("new messages: ", models.map { $0.message })
+        delegate?.newMessagesAdded()
     }
     
     func send(message: String) {
