@@ -10,7 +10,10 @@ import UIKit
 
 class ALMessagesViewController: ALBaseViewController {
     
-    fileprivate var viewModel: ALMessagesViewModel!
+    var viewModel: ALMessagesViewModel!
+    
+    // To check if coming from push notification
+    var contactId: String?
     
     fileprivate var tapToDismiss:UITapGestureRecognizer!
     fileprivate let searchController = UISearchController(searchResultsController: nil)
@@ -33,11 +36,39 @@ class ALMessagesViewController: ALBaseViewController {
         return bar
     }()
     
+    override func addObserver() {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "pushNotification"), object: nil, queue: nil, using: {[weak self] notification in
+            print("push notification received: ", notification.object)
+            
+        })
+    }
+    
+    override func removeObserver() {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "pushNotification"), object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = ALMessagesViewModel()
         setupView()
         viewModel.prepareController()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("contact id: ", contactId)
+        if let contactId = contactId {
+            print("contact id present")
+            let storyBoard = UIStoryboard(name: "Main", bundle: Bundle(for: ALConversationViewController.self))
+            let convViewModel = ALConversationViewModel(contactId: contactId)
+            convViewModel.individualLaunch = true
+            let conversationViewConttroller = storyBoard.instantiateViewController(withIdentifier: "ALConversationViewController") as! ALConversationViewController
+            conversationViewConttroller.viewModel = convViewModel
+            self.navigationController?.pushViewController(conversationViewConttroller, animated: false)
+            self.contactId = nil
+        }
     }
     
     private func setupView() {

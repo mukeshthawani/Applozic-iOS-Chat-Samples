@@ -19,7 +19,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTM-W0-hTn">
+                                <rect key="frame" x="112.5" y="40" width="150" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="YTd-4s-NvP"/>
+                                    <constraint firstAttribute="width" constant="150" id="jiH-yh-nqy"/>
+                                </constraints>
+                                <state key="normal" title="Launch Chat"/>
+                                <connections>
+                                    <action selector="launchChatList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sRo-Lb-gW5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gTM-W0-hTn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="xQa-Sd-WpQ"/>
+                            <constraint firstItem="gTM-W0-hTn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yQb-QZ-R8b"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="woR-mE-dOz"/>
                 </viewController>
@@ -30,7 +47,7 @@
         <!--Messages View Controller-->
         <scene sceneID="E4M-Jb-RyN">
             <objects>
-                <viewController storyboardIdentifier="messages" id="ZDd-1w-qNZ" customClass="ALMessagesViewController" customModule="sampleapp_completeswift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ALMessagesViewController" id="ZDd-1w-qNZ" customClass="ALMessagesViewController" customModule="sampleapp_completeswift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1UC-AV-L9v"/>
                         <viewControllerLayoutGuide type="bottom" id="HfV-E2-DZs"/>
@@ -69,7 +86,7 @@
             <objects>
                 <navigationController storyboardIdentifier="messagesNav" automaticallyAdjustsScrollViewInsets="NO" id="Mru-gL-Dvn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LVe-19-dL3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LVe-19-dL3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

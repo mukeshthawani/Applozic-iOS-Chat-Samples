@@ -45,8 +45,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:)
                                                  name:AL_kReachabilityChangedNotification object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(thirdPartyNotificationHandler:)
-                                                 name:@"showNotificationAndLaunchChat" object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(thirdPartyNotificationHandler:)
+//                                                 name:@"showNotificationAndLaunchChat" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterForegroundBase:)
                                                  name:UIApplicationWillEnterForegroundNotification object:nil];

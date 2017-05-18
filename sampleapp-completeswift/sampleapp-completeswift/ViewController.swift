@@ -12,7 +12,7 @@ import Applozic
 class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
-        registerAndLaunch()
+//        registerAndLaunch()
     
     }
     
@@ -42,5 +42,8 @@ class ViewController: UIViewController {
         })
     }
 
+    @IBAction func launchChatList(_ sender: Any) {
+        registerAndLaunch()
+    }
 }
 

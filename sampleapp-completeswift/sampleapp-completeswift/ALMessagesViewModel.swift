@@ -41,10 +41,10 @@ extension ALMessage: ChatViewModelProtocol {
     
     var hasUnreadMessages: Bool {
         let alContactDbService = ALContactDBService()
-        guard let alContact = alContactDbService.loadContact(byKey: "userId", value: self.to) else {
+        guard let alContact = alContactDbService.loadContact(byKey: "userId", value: self.to), let unreadCount = alContact.unreadCount else {
             return false
         }
-        return alContact.unreadCount.boolValue
+        return unreadCount.boolValue
     }
     
     var identifier: String {
@@ -57,10 +57,10 @@ extension ALMessage: ChatViewModelProtocol {
     
     var totalNumberOfUnreadMessages: UInt {
         let alContactDbService = ALContactDBService()
-        guard let alContact = alContactDbService.loadContact(byKey: "userId", value: self.to) else {
+        guard let alContact = alContactDbService.loadContact(byKey: "userId", value: self.to), let unreadCount = alContact.unreadCount else {
             return 0
         }
-        return UInt(alContact.unreadCount)
+        return UInt(unreadCount)
     }
     
     var isGroupChat: Bool {

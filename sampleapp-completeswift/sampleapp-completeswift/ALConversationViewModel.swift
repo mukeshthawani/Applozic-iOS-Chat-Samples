@@ -23,6 +23,7 @@ class ALConversationViewModel: NSObject {
     weak var delegate: ALConversationViewModelDelegate?
     let maxWidth = UIScreen.main.bounds.width
     let isGroup = false
+    var individualLaunch = false
     
     var alMessageWrapper = ALMessageArrayWrapper()
     var messageModels = [MessageModel]()

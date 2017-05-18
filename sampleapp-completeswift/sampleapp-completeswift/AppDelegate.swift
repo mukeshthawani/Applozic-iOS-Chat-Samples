@@ -17,18 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        prepareRootViewController()
         registerForNotification()
+        ALPushNotificationHandler.shared.dataConnectionNotificationHandler()
         let alApplocalNotificationHnadler : ALAppLocalNotifications =  ALAppLocalNotifications.appLocalNotificationHandler();
         alApplocalNotificationHnadler.dataConnectionNotificationHandler();
         
-        if (ALUserDefaultsHandler.isLoggedIn())
-        {
-            // Get login screen from storyboard and present it
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
-            self.window?.makeKeyAndVisible();
-            self.window?.rootViewController!.present(vc, animated:true, completion: nil)
-            
-        }
+//        if (ALUserDefaultsHandler.isLoggedIn())
+//        {
+//            // Get login screen from storyboard and present it
+//            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+//            self.window?.makeKeyAndVisible();
+//            self.window?.rootViewController!.present(vc, animated:true, completion: nil)
+//            
+//        }
         
         if (launchOptions != nil)
         {
@@ -137,6 +139,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIApplication.shared.registerForRemoteNotifications()
             
         }
+    }
+    
+    func prepareRootViewController() {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let storyboard = UIStoryboard.name(storyboard: UIStoryboard.Storyboard.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as? UIViewController
+        window?.rootViewController = vc
     }
 }
 
