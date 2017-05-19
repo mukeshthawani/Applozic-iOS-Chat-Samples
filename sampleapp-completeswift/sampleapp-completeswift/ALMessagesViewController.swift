@@ -89,7 +89,12 @@ class ALMessagesViewController: ALBaseViewController {
             navigationItem.leftBarButtonItem = indicatorButton
         #endif
         view.addViewsForAutolayout(views: [tableView])
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        
+//         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        
+        //TEMPORARY: Remove this
+        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
+        
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true

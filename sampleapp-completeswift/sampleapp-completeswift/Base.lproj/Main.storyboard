@@ -86,9 +86,10 @@
             <objects>
                 <navigationController storyboardIdentifier="messagesNav" automaticallyAdjustsScrollViewInsets="NO" id="Mru-gL-Dvn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LVe-19-dL3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LVe-19-dL3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
