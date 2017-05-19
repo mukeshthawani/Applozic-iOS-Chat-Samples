@@ -366,14 +366,14 @@ class ALConversationViewModel: NSObject {
         let clientService = ALMessageClientService()
         let messageService = ALMessageDBService()
         let alHandler = ALDBHandler.sharedInstance()
-        var dbMessage = DB_Message()
+        var dbMessage: DB_Message?
         do {
-            dbMessage = try messageService.getMeesageBy(alMessage.msgDBObjectId) as! DB_Message
+            dbMessage = try messageService.getMeesageBy(alMessage.msgDBObjectId) as? DB_Message
         } catch {
             
         }
-        dbMessage.inProgress = 1
-        dbMessage.isUploadFailed = 0
+        dbMessage?.inProgress = 1
+        dbMessage?.isUploadFailed = 0
         do {
             try alHandler?.managedObjectContext.save()
         } catch {
@@ -384,7 +384,7 @@ class ALConversationViewModel: NSObject {
         clientService.sendPhoto(forUserInfo: alMessage.dictionary(), withCompletion: {
             url, error in
             guard error == nil, let urlStr = url else { return }
-            DownloadManager.shared.uploadImage(message: alMessage, databaseObj: dbMessage.fileMetaInfo, uploadURL: urlStr) {
+            DownloadManager.shared.uploadImage(message: alMessage, databaseObj: (dbMessage?.fileMetaInfo)!, uploadURL: urlStr) {
                 response in
                 guard let fileInfo = response as? [String: Any], let fileMeta = fileInfo["fileMeta"] as? [String: Any] else { return }
                 let message = messageService.createMessageEntity(dbMessage)
