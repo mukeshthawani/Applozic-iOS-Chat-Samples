@@ -167,8 +167,6 @@ final class ALConversationViewController: ALBaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         setupView()
         isFirstTime = false
-        
-        //        viewModel.prepareController()
     }
 
     override func viewDidLoad() {
@@ -410,6 +408,15 @@ final class ALConversationViewController: ALBaseViewController {
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         UIMenuController.shared.setMenuVisible(false, animated: true)
         hideMoreBar()
+    }
+    
+    // Called from the parent VC
+    func showTypingLabel(status: Bool, userId: String) {
+        typingNoticeViewHeighConstaint?.constant = status ? 30:0
+        view.layoutIfNeeded()
+        if tableView.isAtBottom {
+            tableView.scrollToBottomByOfset(animated: false)
+        }
     }
     
 }

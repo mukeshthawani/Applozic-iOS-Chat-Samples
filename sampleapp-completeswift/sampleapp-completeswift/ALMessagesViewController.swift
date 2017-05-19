@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Applozic
 
 class ALMessagesViewController: ALBaseViewController {
     
@@ -19,6 +20,8 @@ class ALMessagesViewController: ALBaseViewController {
     fileprivate let searchController = UISearchController(searchResultsController: nil)
     fileprivate var searchActive : Bool = false
     fileprivate var searchFilteredChat:[Any] = []
+    fileprivate var alMqttConversationService: ALMQTTConversationService!
+    fileprivate var conversationViewController: ALConversationViewController?
     
     fileprivate let tableView : UITableView = {
         let tv = UITableView(frame: .zero, style: .plain)
@@ -37,6 +40,7 @@ class ALMessagesViewController: ALBaseViewController {
     }()
     
     override func addObserver() {
+        alMqttConversationService.subscribeToConversation()
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "pushNotification"), object: nil, queue: nil, using: {[weak self] notification in
             print("push notification received: ", notification.object)
             
@@ -44,6 +48,7 @@ class ALMessagesViewController: ALBaseViewController {
     }
     
     override func removeObserver() {
+        alMqttConversationService.unsubscribeToConversation()
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "pushNotification"), object: nil)
     }
     
@@ -55,6 +60,8 @@ class ALMessagesViewController: ALBaseViewController {
         self.viewModel = ALMessagesViewModel()
         setupView()
         viewModel.prepareController()
+        alMqttConversationService = ALMQTTConversationService()
+        alMqttConversationService.mqttConversationDelegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,9 +71,9 @@ class ALMessagesViewController: ALBaseViewController {
             let storyBoard = UIStoryboard(name: "Main", bundle: Bundle(for: ALConversationViewController.self))
             let convViewModel = ALConversationViewModel(contactId: contactId)
             convViewModel.individualLaunch = true
-            let conversationViewConttroller = storyBoard.instantiateViewController(withIdentifier: "ALConversationViewController") as! ALConversationViewController
-            conversationViewConttroller.viewModel = convViewModel
-            self.navigationController?.pushViewController(conversationViewConttroller, animated: false)
+            conversationViewController = storyBoard.instantiateViewController(withIdentifier: "ALConversationViewController") as? ALConversationViewController
+            conversationViewController?.viewModel = convViewModel
+            self.navigationController?.pushViewController(conversationViewController!, animated: false)
             self.contactId = nil
         }
     }
@@ -170,10 +177,11 @@ extension ALMessagesViewController: UITableViewDelegate, UITableViewDataSource {
         guard let chat = viewModel.chatForRow(indexPath: indexPath) else { return }
         let id: String = chat.contactId
         let convViewModel = ALConversationViewModel(contactId: id)
-        let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: ALConversationViewController.self)) as? ALConversationViewController
-        vc?.viewModel = convViewModel
+        conversationViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: ALConversationViewController.self)) as? ALConversationViewController
+        
+        conversationViewController?.viewModel = convViewModel
 //        let vc = ALConversationViewController(viewModel: convViewModel)
-        self.navigationController?.pushViewController(vc!, animated: false)
+        self.navigationController?.pushViewController(conversationViewController!, animated: false)
         
     }
     
@@ -209,3 +217,41 @@ extension ALMessagesViewController: UITableViewDelegate, UITableViewDataSource {
         return true
     }
 }
+
+extension ALMessagesViewController: ALMQTTConversationDelegate {
+    
+    func mqttDidConnected() {
+        print("MQTT did connected")
+    }
+    
+    
+    func syncCall(_ alMessage: ALMessage!, andMessageList messageArray: NSMutableArray!) {
+        
+    }
+    
+    func delivered(_ messageKey: String!, contactId: String!, withStatus status: Int32) {
+        
+    }
+    
+    func updateStatus(forContact contactId: String!, withStatus status: Int32) {
+        
+    }
+    
+    func updateTypingStatus(_ applicationKey: String!, userId: String!, status: Bool) {
+        print("Typing status is", status)
+        guard let viewController = conversationViewController, viewController.viewModel.contactId == userId else { return
+        }
+        print("Contact id matched")
+        viewModel.updateTypingStatus(in: viewController, userId: userId, status: status)
+        
+    }
+    
+    func updateLastSeen(atStatus alUserDetail: ALUserDetail!) {
+        print("Last seen updated")
+    }
+    
+    func mqttConnectionClosed() {
+        NSLog("MQTT connection closed")
+    }
+}
+

@@ -72,10 +72,10 @@ extension ALMessage: ChatViewModelProtocol {
     }
 }
 
+
 final class ALMessagesViewModel: NSObject {
     
     private var dbService: ALMessageDBService!
-    private var alMqttConversationService: ALMQTTConversationService!
     
     fileprivate var allMessages = [Any]()
     
@@ -83,8 +83,6 @@ final class ALMessagesViewModel: NSObject {
         dbService = ALMessageDBService()
         dbService.delegate = self 
         dbService.getMessages(nil)
-        alMqttConversationService = ALMQTTConversationService()
-        alMqttConversationService.mqttConversationDelegate = self
     }
     
     func getChatList() -> [Any] {
@@ -110,6 +108,15 @@ final class ALMessagesViewModel: NSObject {
         
         return alMessage
     }
+    
+    func updateTypingStatus(in viewController: ALConversationViewController, userId: String, status: Bool) {
+        let contactDbService = ALContactDBService()
+        let contact = contactDbService.loadContact(byKey: "userId", value: userId)
+        guard let alContact = contact else { return }
+        guard !alContact.block || !alContact.blockBy else { return }
+        
+        viewController.showTypingLabel(status: status, userId: userId)
+    }
 }
 
 extension ALMessagesViewModel: ALMessagesDelegate {
@@ -125,31 +132,5 @@ extension ALMessagesViewModel: ALMessagesDelegate {
     
     func updateMessageList(_ messagesArray: NSMutableArray!) {
         print("updated message array: ", messagesArray)
-    }
-}
-
-extension ALMessagesViewModel: ALMQTTConversationDelegate {
-    func syncCall(_ alMessage: ALMessage!, andMessageList messageArray: NSMutableArray!) {
-        
-    }
-    
-    func delivered(_ messageKey: String!, contactId: String!, withStatus status: Int32) {
-        
-    }
-    
-    func updateStatus(forContact contactId: String!, withStatus status: Int32) {
-        
-    }
-    
-    func updateTypingStatus(_ applicationKey: String!, userId: String!, status: Bool) {
-        
-    }
-    
-    func updateLastSeen(atStatus alUserDetail: ALUserDetail!) {
-        
-    }
-    
-    func mqttConnectionClosed() {
-        
     }
 }
