@@ -550,7 +550,50 @@ extension ALConversationViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.heightForRow(indexPath: indexPath, cellFrame: self.view.frame)
     }
-    
+
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let heightForHeaderInSection: CGFloat = 40.0
+
+        guard let message1 = viewModel.messageForRow(indexPath: IndexPath(row: 0, section: section)) else {
+            return 0.0
+        }
+        let date1 = message1.date
+//        if section == 0 {
+//            return (message1.type == .createGroup ? 0.0 : heightForHeaderInSection)
+//        }
+
+        if section == 0 {
+            return heightForHeaderInSection
+        }
+
+        guard let message2 = viewModel.messageForRow(indexPath: IndexPath(row: 0, section: section - 1)) else {
+            return 0.0
+        }
+        let date2 = message2.date
+
+        switch Calendar.current.compare(date1, to: date2, toGranularity: .day) {
+        case .orderedDescending:
+            return heightForHeaderInSection
+
+        default:
+//            return (message2.type == .createGroup ? heightForHeaderInSection : 0.0)
+            return 0.0
+        }
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let message = viewModel.messageForRow(indexPath: IndexPath(row: 0, section: section)) else {
+            return nil
+        }
+        let date = message.date
+
+        let dateView = DateSectionHeaderView.instanceFromNib()
+        dateView.setupDate(withDateFormat: date.stringCompareCurrentDate())
+
+        return dateView
+    }
+
     //MARK: Paging
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -588,7 +631,7 @@ extension ALConversationViewController: AudioPlayerProtocol, VoiceCellProtocol {
             if let message = viewModel.messageForRow(indexPath: indexPath) {
                 if message.messageType == .voice && message.identifier == audioPlayer.getCurrentAudioTrack(){
                     print("voice cell reloaded with row: ", indexPath.row, indexPath.section)
-                    tableView.reloadRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .none)
+                    tableView.reloadSections([indexPath.section], with: .none)
                     break
                 }
             }

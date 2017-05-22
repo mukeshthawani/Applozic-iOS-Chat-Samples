@@ -79,7 +79,7 @@ class ALConversationViewModel: NSObject {
                 self.delegate?.loadingFinished(error: nil)
                 return
             }
-            NSLog("messages loaded: ", messages)
+            NSLog("messages loaded: %@", messages)
             self.alMessages = messages
             self.alMessageWrapper.addObject(toMessageArray: messages)
             let models = messages.map { ($0 as! ALMessage).messageModel }
@@ -92,17 +92,16 @@ class ALConversationViewModel: NSObject {
     }
     
     func numberOfSections() -> Int {
-        return 1
-    }
-    
-    func numberOfRows(section: Int) -> Int {
-        guard section == 0 else { return 0 }
         return messageModels.count
     }
     
+    func numberOfRows(section: Int) -> Int {
+        return 1
+    }
+    
     func messageForRow(indexPath: IndexPath) -> MessageViewModel? {
-        guard indexPath.row < messageModels.count else { return nil }
-        return messageModels[indexPath.row]
+        guard indexPath.section < messageModels.count else { return nil }
+        return messageModels[indexPath.section]
     }
     
     func messageForRow(identifier: String) -> MessageViewModel? {
@@ -111,7 +110,7 @@ class ALConversationViewModel: NSObject {
     }
     
     func heightForRow(indexPath: IndexPath, cellFrame: CGRect) -> CGFloat {
-        let messageModel = messageModels[indexPath.row]
+        let messageModel = messageModels[indexPath.section]
         switch messageModel.messageType {
         case .text:
             if messageModel.isMyMessage {
@@ -182,7 +181,7 @@ class ALConversationViewModel: NSObject {
     }
     
     func getAudioData(for indexPath: IndexPath, completion: @escaping (Data?)->()) {
-        if let alMessage = alMessages[indexPath.row] as? ALMessage {
+        if let alMessage = alMessages[indexPath.section] as? ALMessage {
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             DownloadManager.shared.downloadAndSaveAudio(message: alMessage) {
                 path in
@@ -278,7 +277,7 @@ class ALConversationViewModel: NSObject {
     func updateMessageModelAt(indexPath: IndexPath, data: Data) {
         var message = messageForRow(indexPath: indexPath)
         message?.voiceData = data
-        messageModels[indexPath.row] = message as! MessageModel
+        messageModels[indexPath.section] = message as! MessageModel
         delegate?.messageUpdated()
     }
     
@@ -370,7 +369,7 @@ class ALConversationViewModel: NSObject {
         alMessage.msgDBObjectId = messageEntity?.objectID
         addToWrapper(message: alMessage)
         delegate?.messageUpdated()
-        uploadImage(alMessage: alMessage, indexPath: IndexPath(row: messageModels.count-1, section: 0))
+        uploadImage(alMessage: alMessage, indexPath: IndexPath(row: 0, section: messageModels.count-1))
     }
     
     private func uploadImage(alMessage: ALMessage, indexPath: IndexPath)  {
@@ -411,8 +410,8 @@ class ALConversationViewModel: NSObject {
                     success in
                     guard success else { return }
                     DispatchQueue.main.async {
-                        print("UI updated at row: ", indexPath.row, message?.isSent)
-                        self.messageModels[indexPath.row] = (message?.messageModel)!
+                        print("UI updated at section: ", indexPath.section, message?.isSent)
+                        self.messageModels[indexPath.section] = (message?.messageModel)!
                         self.delegate?.updateMessageAt(indexPath: indexPath)
                     }
                 }

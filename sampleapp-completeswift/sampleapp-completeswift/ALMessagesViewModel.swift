@@ -26,7 +26,7 @@ extension ALMessage: ChatViewModelProtocol {
     var avatarGroupImageUrl: String? {
         return nil
     }
-        
+
     var name: String {
         let alContactDbService = ALContactDBService()
         guard let alContact = alContactDbService.loadContact(byKey: "userId", value: self.to), let displayName = alContact.displayName else {

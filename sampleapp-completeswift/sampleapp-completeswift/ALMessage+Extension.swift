@@ -36,7 +36,7 @@ extension ALMessage {
     }
     
     var date: Date {
-        let sentAt = Date(timeIntervalSince1970: Double(self.createdAtTime))
+        let sentAt = Date(timeIntervalSince1970: Double(self.createdAtTime.doubleValue/1000))
         return sentAt
     }
     
