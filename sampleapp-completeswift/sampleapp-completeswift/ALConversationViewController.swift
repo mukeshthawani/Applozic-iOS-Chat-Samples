@@ -104,7 +104,7 @@ final class ALConversationViewController: ALBaseViewController {
             UIView.animate(withDuration: duration, animations: {
                 view?.layoutIfNeeded()
             }, completion: { (_) in
-//                weakSelf.viewModel.sendKeyboardDoneTyping()
+                weakSelf.viewModel.sendKeyboardDoneTyping()
             })
             
         })
@@ -192,6 +192,11 @@ final class ALConversationViewController: ALBaseViewController {
         chatBar.stopRecording()
     }
 
+    override func backTapped() {
+        
+        self.viewModel.sendKeyboardDoneTyping()
+        _ = navigationController?.popToRootViewController(animated: true)
+    }
     
     func setupView() {
         view.backgroundColor = UIColor.white
@@ -313,8 +318,8 @@ final class ALConversationViewController: ALBaseViewController {
                 }
                 
                 button.isUserInteractionEnabled = false
-//                    weakSelf.viewModel.sendKeyboardDoneTyping()
-                    
+                    weakSelf.viewModel.sendKeyboardDoneTyping()
+                
                     weakSelf.isJustSent = true
                     
                     weakSelf.chatBar.clear()
@@ -325,7 +330,7 @@ final class ALConversationViewController: ALBaseViewController {
                     button.isUserInteractionEnabled = true
             case .chatBarTextChange(_):
                 
-//                weakSelf.viewModel.sendKeyboardBeginTyping()
+                weakSelf.viewModel.sendKeyboardBeginTyping()
                 
                 UIView.animate(withDuration: 0.05, animations: { () in
                     weakSelf.view.layoutIfNeeded()
@@ -364,12 +369,6 @@ final class ALConversationViewController: ALBaseViewController {
     func tableTapped(gesture: UITapGestureRecognizer) {
         hideMoreBar()
         view.endEditing(true)
-    }
-    
-    override func backTapped() {
-        
-//        self.vi   ewModel.sendKeyboardDoneTyping()
-        _ = navigationController?.popToRootViewController(animated: true)
     }
     
     private func showMoreBar() {

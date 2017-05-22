@@ -29,6 +29,8 @@ class ALConversationViewModel: NSObject {
     var messageModels = [MessageModel]()
     private var alMessages = NSMutableArray()
     
+    private let mqttObject = ALMQTTConversationService.sharedInstance()
+    
     init(contactId: String) {
         self.contactId = contactId
     }
@@ -278,6 +280,15 @@ class ALConversationViewModel: NSObject {
         message?.voiceData = data
         messageModels[indexPath.row] = message as! MessageModel
         delegate?.messageUpdated()
+    }
+    
+    func sendKeyboardBeginTyping() {
+        self.mqttObject?.sendTypingStatus(ALUserDefaultsHandler.getApplicationKey(), userID: self.contactId, andChannelKey: nil, typing: true)
+        
+    }
+    
+    func sendKeyboardDoneTyping() {
+        self.mqttObject?.sendTypingStatus(ALUserDefaultsHandler.getApplicationKey(), userID: self.contactId, andChannelKey: nil, typing: false)
     }
     
     private func updateDbMessageWith(key: String, value: String, filePath: String) {

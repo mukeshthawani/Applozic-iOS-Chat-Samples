@@ -40,7 +40,6 @@ class ALMessagesViewController: ALBaseViewController {
     }()
     
     override func addObserver() {
-        alMqttConversationService.subscribeToConversation()
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "pushNotification"), object: nil, queue: nil, using: {[weak self] notification in
             print("push notification received: ", notification.object)
             
@@ -60,8 +59,10 @@ class ALMessagesViewController: ALBaseViewController {
         self.viewModel = ALMessagesViewModel()
         setupView()
         viewModel.prepareController()
-        alMqttConversationService = ALMQTTConversationService()
+        alMqttConversationService = ALMQTTConversationService.sharedInstance()
         alMqttConversationService.mqttConversationDelegate = self
+        alMqttConversationService.subscribeToConversation()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
