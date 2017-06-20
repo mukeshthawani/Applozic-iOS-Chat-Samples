@@ -1,9 +1,9 @@
 //
 //  UITableView+Extension.swift
-//  sampleapp-completeswift
+//  Axiata
 //
-//  Created by Mukesh Thawani on 09/05/17.
-//  Copyright © 2017 Applozic. All rights reserved.
+//  Created by Nitigron Ruengmontre on 12/20/2559 BE.
+//  Copyright © 2559 Appsynth. All rights reserved.
 //
 
 import Foundation
@@ -36,6 +36,7 @@ extension UITableView {
             }
             
         }
+
         
     }
     
@@ -57,5 +58,10 @@ extension UITableView {
             setContentOffset(bottomOffset, animated: animated)
         }
     }
-    
+
+    func isCellVisible(section:Int, row: Int) -> Bool {
+        guard let indexes = self.indexPathsForVisibleRows else { return false }
+        return indexes.contains {$0.section == section && $0.row == row }
+    }
+ 
 }

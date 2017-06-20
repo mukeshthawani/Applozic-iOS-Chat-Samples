@@ -1,9 +1,9 @@
 //
 //  CustomCameraViewController.swift
-//  sampleapp-completeswift
+//  Axiata
 //
-//  Created by Mukesh Thawani on 08/05/17.
-//  Copyright © 2017 Applozic. All rights reserved.
+//  Created by Appsynth on 12/15/2559 BE.
+//  Copyright © 2559 Appsynth. All rights reserved.
 //
 
 import UIKit
@@ -28,7 +28,7 @@ protocol CustomCameraProtocol {
 }
 
 final class CustomCameraViewController: ALBaseViewController {
-    
+
     //delegate
     var customCamDelegate:CustomCameraProtocol!
     var camera = CameraType.Back
@@ -55,7 +55,7 @@ final class CustomCameraViewController: ALBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         self.title = "Camera"
         btnSwitchCam.isHidden = true
         checkPhotoLibraryPermission()
@@ -98,7 +98,7 @@ final class CustomCameraViewController: ALBaseViewController {
             present(alertController, animated: true, completion: nil)
         default:()
         }
-        
+
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -202,10 +202,10 @@ final class CustomCameraViewController: ALBaseViewController {
                     break
                 // as above
                 case .denied, .restricted:
-                    break
+                     break
                 default: break
-                    //whatever
-                }
+                //whatever
+            }
             }
         }
     }
@@ -229,7 +229,7 @@ final class CustomCameraViewController: ALBaseViewController {
                 if UIApplication.shared.canOpenURL(settingsUrl) {
                     if #available(iOS 10.0, *) {
                         UIApplication.shared.open(settingsUrl, completionHandler: {(success) in
-                            //
+                        //
                         })
                     } else {
                         // Fallback on earlier versions
@@ -329,7 +329,7 @@ final class CustomCameraViewController: ALBaseViewController {
     
     private func convertCIImageToCGImage(inputImage: CIImage) -> CGImage! {
         let context = CIContext(options: nil)
-        return context.createCGImage(inputImage, from: inputImage.extent)
+            return context.createCGImage(inputImage, from: inputImage.extent)
     }
     
     @IBAction private func switchCamPress(_ sender: Any) {
@@ -421,7 +421,7 @@ final class CustomCameraViewController: ALBaseViewController {
         }
         
     }
-    
+
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var destination = segue.destination
@@ -487,7 +487,7 @@ extension CustomCameraViewController: UICollectionViewDelegate, UICollectionView
         let thumbnailSize:CGSize = CGSize(width: 200, height: 200)
         option.isSynchronous = true
         PHCachingImageManager.default().requestImage(for: asset, targetSize: thumbnailSize, contentMode: .aspectFill, options: option, resultHandler: { image, _ in
-            cell.imgPreview.image = image
+                cell.imgPreview.image = image
         })
         
         cell.imgPreview.backgroundColor = UIColor.white

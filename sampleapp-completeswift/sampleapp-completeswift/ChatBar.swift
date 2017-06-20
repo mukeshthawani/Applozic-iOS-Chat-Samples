@@ -1,11 +1,12 @@
 //
 //  ChatBar.swift
-//  sampleapp-completeswift
+//  Axiata
 //
-//  Created by Mukesh Thawani on 05/05/17.
-//  Copyright © 2017 Applozic. All rights reserved.
+//  Created by Nitigron Ruengmontre on 12/9/2559 BE.
+//  Copyright © 2559 Appsynth. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import AwesomeCache
 
@@ -168,8 +169,7 @@ final class ChatBar: UIView {
                 micButton.isSelected = false
                 soundRec.isHidden = true
             }
-//            
-            break
+ 
         default: break
             
         }
@@ -204,7 +204,7 @@ final class ChatBar: UIView {
         do {
             cache = try Cache<NSString>(name: "ChatBat-TextView")
         } catch {
-            NSLog("ChatBat-TextView Failed")
+//            Logger.error(message: "ChatBat-TextView Failed")
         }
         
         textView.delegate = self
@@ -330,7 +330,7 @@ final class ChatBar: UIView {
         grayView.bottomAnchor.constraint(equalTo: frameView.bottomAnchor, constant: 0).isActive = true
         grayView.leftAnchor.constraint(equalTo: frameView.leftAnchor, constant: 0).isActive = true
         grayView.rightAnchor.constraint(equalTo: frameView.rightAnchor, constant: 0).isActive = true
-        
+    
         bringSubview(toFront: frameView)
         
         changeButtonStateTo(mode: textView.text.isEmpty ? ButtonMode.media : ButtonMode.send)

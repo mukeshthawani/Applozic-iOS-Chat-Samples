@@ -1,9 +1,9 @@
 //
-//  PreviewImageViewController.swift
-//  sampleapp-completeswift
+//  ViewController.swift
+//  TestScrollView
 //
-//  Created by Mukesh Thawani on 13/05/17.
-//  Copyright © 2017 Applozic. All rights reserved.
+//  Created by appsynth on 2/9/17.
+//  Copyright © 2017 Appsynth. All rights reserved.
 //
 
 import UIKit
@@ -23,7 +23,7 @@ final class PreviewImageViewController: UIViewController {
         sv.isScrollEnabled = true
         return sv
     }()
-    
+
     
     fileprivate let imageView: UIImageView = {
         let mv = UIImageView(frame: .zero)
@@ -32,21 +32,21 @@ final class PreviewImageViewController: UIViewController {
         mv.isUserInteractionEnabled = false
         return mv
     }()
-    
+
     private weak var imageViewBottomConstraint: NSLayoutConstraint?
     private weak var imageViewTopConstraint: NSLayoutConstraint?
     private weak var imageViewTrailingConstraint: NSLayoutConstraint?
     private weak var imageViewLeadingConstraint: NSLayoutConstraint?
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        DispatchQueue.main.async { [weak self] in
-            guard let weakSelf = self else { return }
-            MBProgressHUD.showAdded(to: weakSelf.fakeView, animated: true)
-        }
-        
+        setupView()
+//        DispatchQueue.main.async { [weak self] in
+//            guard let weakSelf = self else { return }
+//            MBProgressHUD.showAdded(to: weakSelf.fakeView, animated: true)
+//        }
+//        
 //        viewModel?.prepareActualImage(successBlock: { [weak self] in
 //            guard let weakSelf = self else { return }
 //            
@@ -100,7 +100,7 @@ final class PreviewImageViewController: UIViewController {
         
         singleTap.require(toFail: doubleTap)
         
-        imageView.image = viewModel.image
+        imageView.kf.setImage(with: viewModel.imageUrl)
         imageView.sizeToFit()
         
         view.addViewsForAutolayout(views: [scrollView])
@@ -156,12 +156,11 @@ final class PreviewImageViewController: UIViewController {
     
     @IBAction private func downlaodImgPress(_ sender: Any) {
         guard let viewModel = viewModel else { return }
-//        viewModel.saveImage(successBlock: {
+        viewModel.saveImage(image: imageView.image, successBlock: {
 //            self.view.makeToast(SystemMessage.PhotoAlbum.Success, duration: 1.0, position: .center)
-//        }) { (error) in
+        }) { (error) in
 //            self.view.makeToast(SystemMessage.PhotoAlbum.Fail, duration: 1.0, position: .center)
-//        }
-        
+        }
     }
     
     @objc private func doubleTapped(tap: UITapGestureRecognizer) {
@@ -206,4 +205,3 @@ extension PreviewImageViewController: UIScrollViewDelegate {
         return imageView
     }
 }
-

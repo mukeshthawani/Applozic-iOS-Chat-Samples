@@ -1,19 +1,18 @@
 //
 //  Geocode.swift
-//  sampleapp-completeswift
+//  Axiata
 //
-//  Created by Mukesh Thawani on 07/05/17.
-//  Copyright © 2017 Applozic. All rights reserved.
+//  Created by appsynth on 1/19/17.
+//  Copyright © 2017 Appsynth. All rights reserved.
 //
 
 import Foundation
-
 import ObjectMapper
 import CoreLocation
 import GoogleMaps
 
 final class Geocode: Mappable, CustomStringConvertible {
-    static let defaultFormattedAddress = "-"
+    static let defaultFormattedAddress = ""
     
     var displayName: String         = defaultFormattedAddress
     var formattedAddress: String    = defaultFormattedAddress
@@ -25,12 +24,8 @@ final class Geocode: Mappable, CustomStringConvertible {
     }
     
     func mapping(map: Map) {
-        displayName         <- map["formatted_address"]
-        formattedAddress    <- map["formatted_address"]
-        placeIdentifier     <- map["place_id"]
-        location.latitude   <- map["geometry.location.lat"]
-        location.longitude  <- map["geometry.location.lng"]
-        addressComponents   <- map["address_components"]
+        location.latitude   <- map["lat"]
+        location.longitude  <- map["lon"]
     }
     
     var description: String {

@@ -1,14 +1,13 @@
 //
 //  MoreBar.swift
-//  sampleapp-completeswift
+//  Axiata
 //
-//  Created by Mukesh Thawani on 05/05/17.
-//  Copyright © 2017 Applozic. All rights reserved.
+//  Created by Nitigron Ruengmontre on 12/15/2559 BE.
+//  Copyright © 2559 Appsynth. All rights reserved.
 //
 
+import Foundation
 import UIKit
-
-
 
 final class MoreBar: UIView {
     
@@ -65,7 +64,7 @@ final class MoreBar: UIView {
     
     fileprivate let bgView: TranslucentView = {
         let view = TranslucentView(frame: .zero)
-        
+
         view.translucentAlpha = 0.65
         view.translucentStyle = UIBarStyle.default
         view.translucentTintColor = UIColor.init(netHex: 0xfce6e6)
@@ -73,10 +72,10 @@ final class MoreBar: UIView {
         return view
     }()
     
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         backgroundColor = UIColor.clear
         
         emotionButton.addTarget(self, action: #selector(tapped(button:)), for: .touchUpInside)
@@ -95,18 +94,18 @@ final class MoreBar: UIView {
     func tapped(button: UIButton) {
         
         if button == locationButton {
-            NSLog("Show Share Location")
+//            Logger.debug(message: "Show Share Location")
             
-//            let storyboard = UIStoryboard.name(storyboard: UIStoryboard.Storyboard.shareLocation)
-//            
-//            guard let nav = storyboard.instantiateInitialViewController() as? UINavigationController else { return }
-//            
-//            guard let shareLocationVC = nav.viewControllers.first as? ShareLocationViewController else { return }
-//            
-//            if let vc = presenterVC, let delegate = vc as? ShareLocationViewControllerDelegate {
-//                shareLocationVC.delegate = delegate
-//                presenterVC?.present(nav, animated: true, completion: {})
-//            }
+            let storyboard = UIStoryboard.name(storyboard: UIStoryboard.Storyboard.shareLocation)
+            
+            guard let nav = storyboard.instantiateInitialViewController() as? UINavigationController else { return }
+           
+            guard let shareLocationVC = nav.viewControllers.first as? ShareLocationViewController else { return }
+            
+            if let vc = presenterVC, let delegate = vc as? ShareLocationViewControllerDelegate {
+                shareLocationVC.delegate = delegate
+                presenterVC?.present(nav, animated: true, completion: {})
+            }
             
         } else if button == giftButton {
             action?(.gift(button))
@@ -177,9 +176,9 @@ final class MoreBar: UIView {
         self.action = handleAction
     }
     
-//    func setPresenterVC<T: UIViewController>(delegate: T) where T: ShareLocationViewControllerDelegate {
-//        presenterVC = delegate
-//    }
+    func setPresenterVC<T: UIViewController>(delegate: T) where T: ShareLocationViewControllerDelegate {
+         presenterVC = delegate
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -200,4 +199,3 @@ final class MoreBar: UIView {
         
     }
 }
-

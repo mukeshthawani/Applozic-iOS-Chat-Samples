@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mru-gL-Dvn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTM-W0-hTn">
-                                <rect key="frame" x="112.5" y="40" width="150" height="80"/>
+                                <rect key="frame" x="112" y="84" width="150" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="YTd-4s-NvP"/>
                                     <constraint firstAttribute="width" constant="150" id="jiH-yh-nqy"/>
@@ -42,12 +42,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1911.2" y="37.331334332833585"/>
         </scene>
-        <!--Messages View Controller-->
+        <!--View Controller-->
         <scene sceneID="E4M-Jb-RyN">
             <objects>
-                <viewController storyboardIdentifier="ALMessagesViewController" id="ZDd-1w-qNZ" customClass="ALMessagesViewController" customModule="sampleapp_completeswift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZDd-1w-qNZ" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1UC-AV-L9v"/>
                         <viewControllerLayoutGuide type="bottom" id="HfV-E2-DZs"/>
@@ -61,12 +61,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91m-jp-yg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2935.1999999999998" y="36.431784107946029"/>
+            <point key="canvasLocation" x="3920.8000000000002" y="36.431784107946029"/>
         </scene>
         <!--Conversation View Controller-->
         <scene sceneID="asK-94-gML">
             <objects>
-                <viewController storyboardIdentifier="ALConversationViewController" id="ifS-GI-BG0" customClass="ALConversationViewController" customModule="sampleapp_completeswift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConversationViewController" id="ifS-GI-BG0" customClass="ConversationViewController" customModule="sampleapp_completeswift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9si-4v-kOV"/>
                         <viewControllerLayoutGuide type="bottom" id="VCt-6H-VSJ"/>
@@ -79,26 +79,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZ9-gN-442" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3956" y="36"/>
+            <point key="canvasLocation" x="4895.1999999999998" y="35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uMD-1A-DEk">
             <objects>
                 <navigationController storyboardIdentifier="messagesNav" automaticallyAdjustsScrollViewInsets="NO" id="Mru-gL-Dvn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LVe-19-dL3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LVe-19-dL3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ZDd-1w-qNZ" kind="relationship" relationship="rootViewController" id="ocq-Ba-bOn"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dgJ-Zf-j3g"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8av-89-67l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1996" y="36.431784107946029"/>
+            <point key="canvasLocation" x="876" y="37"/>
         </scene>
     </scenes>
 </document>

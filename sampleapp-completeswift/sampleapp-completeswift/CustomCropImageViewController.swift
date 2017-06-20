@@ -1,13 +1,12 @@
 //
 //  CustomCropImageViewController.swift
-//  sampleapp-completeswift
+//  Axiata
 //
-//  Created by Mukesh Thawani on 13/05/17.
-//  Copyright © 2017 Applozic. All rights reserved.
+//  Created by Appsynth on 12/15/2559 BE.
+//  Copyright © 2559 Appsynth. All rights reserved.
 //
 
 import UIKit
-import Toast_Swift
 
 final class CustomCropImageViewController: ALBaseViewController {
     
@@ -26,7 +25,7 @@ final class CustomCropImageViewController: ALBaseViewController {
         super.viewDidLoad()
         setupUI()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         // Do any additional setup after loading the view.
         self.previewScroll.delegate = self
@@ -36,7 +35,7 @@ final class CustomCropImageViewController: ALBaseViewController {
         
         self.previewScroll.addSubview(self.imgview)
         self.previewScroll.contentSize = self.imgview.image!.size
-        
+    
         self.previewScroll.contentMode = UIViewContentMode.scaleAspectFit
         self.previewScroll.maximumZoomScale = 4.0
         self.previewScroll.minimumZoomScale = 1.0
@@ -49,7 +48,7 @@ final class CustomCropImageViewController: ALBaseViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -85,7 +84,7 @@ final class CustomCropImageViewController: ALBaseViewController {
     
     @IBAction func cropImgPress(_ sender: Any) {
         
-        self.view.makeToast(SystemMessage.Camera.PictureCropped, duration: 1.0, position: .center)
+//        self.view.makeToast(SystemMessage.Camera.PictureCropped, duration: 1.0, position: .center)
         
         //get offset and zoom scale of scrollview
         let offset = previewScroll.contentOffset
@@ -119,15 +118,15 @@ final class CustomCropImageViewController: ALBaseViewController {
     }
     
     /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
 
 extension CustomCropImageViewController:UINavigationControllerDelegate ,UIScrollViewDelegate
@@ -135,12 +134,12 @@ extension CustomCropImageViewController:UINavigationControllerDelegate ,UIScroll
     func setZoomScale() {
         let widthScale = previewScroll.frame.size.width / imgview.bounds.width
         let heightScale = previewScroll.frame.size.height / imgview.bounds.height
-        
+     
         let greaterScale = max(widthScale, heightScale)
         previewScroll.minimumZoomScale = greaterScale
         previewScroll.zoomScale = greaterScale
     }
-    
+
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return imgview
     }
@@ -171,4 +170,3 @@ extension CustomCropImageViewController:UINavigationControllerDelegate ,UIScroll
         }
     }
 }
-

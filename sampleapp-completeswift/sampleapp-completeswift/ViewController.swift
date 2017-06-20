@@ -29,18 +29,22 @@ class ViewController: UIViewController {
         alUser.email = UserEmail
         alUser.displayName = UserDisplayName
         alUser.password = UserPassword
-        ALUserDefaultsHandler.setUserId(alUser.userId)
-        ALUserDefaultsHandler.setEmailId(alUser.email)
-        ALUserDefaultsHandler.setDisplayName(alUser.displayName)
-        let registerUserClientService: ALRegisterUserClientService = ALRegisterUserClientService()
-        registerUserClientService.initWithCompletion(alUser, withCompletion: { (response, error) in
+        registerUserToApplozic(alUser: alUser)
+    }
+
+    private func registerUserToApplozic(alUser: ALUser) {
+        let alChatManager = ALChatManager(applicationKey: ALChatManager.applicationId as NSString)
+        alChatManager.registerUser(alUser, completion: {response, error in
             if error == nil {
-                print("message: ", response?.message)
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "messagesNav")
-                self.present(vc!, animated: true, completion: nil)
+                NSLog("[REGISTRATION] Applozic user registration was successful: %@ \(response?.isRegisteredSuccessfully())")
+                let conversationVC = ConversationListViewController()
+                self.navigationController?.pushViewController(conversationVC, animated: true)
+            } else {
+                NSLog("[REGISTRATION] Applozic user registration error: %@", error.debugDescription)
             }
         })
     }
+
 
     @IBAction func launchChatList(_ sender: Any) {
         registerAndLaunch()

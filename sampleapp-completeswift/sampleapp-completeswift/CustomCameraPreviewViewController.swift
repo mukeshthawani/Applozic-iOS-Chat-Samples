@@ -1,9 +1,9 @@
 //
-//  CustomCameraPreviewController.swift
-//  sampleapp-completeswift
+//  CustomCameraPreviewViewController.swift
+//  Axiata
 //
-//  Created by Mukesh Thawani on 13/05/17.
-//  Copyright © 2017 Applozic. All rights reserved.
+//  Created by Atikom Tancharoen on 2/9/2560 BE.
+//  Copyright © 2560 Appsynth. All rights reserved.
 //
 
 import UIKit
@@ -16,7 +16,7 @@ final class CustomCameraPreviewViewController: ALBaseViewController {
     
     @IBOutlet fileprivate weak var scrollView: UIScrollView!
     @IBOutlet fileprivate weak var imageView: UIImageView!
-    
+
     @IBOutlet private weak var imageViewTopConstraint: NSLayoutConstraint!
     @IBOutlet private weak var imageViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet private weak var imageViewLeadingConstraint: NSLayoutConstraint!
@@ -130,7 +130,7 @@ final class CustomCameraPreviewViewController: ALBaseViewController {
                 self.updateMinZoomScaleForSize(size: self.view.bounds.size)
             }
             
-            }, completion: nil)
+        }, completion: nil)
     }
     
     func setSelectedImage(pickImage:UIImage,camDelegate:CustomCameraProtocol)
@@ -139,7 +139,7 @@ final class CustomCameraPreviewViewController: ALBaseViewController {
         self.customCamDelegate = camDelegate
     }
     
-    
+
     @IBAction private func sendPhotoPress(_ sender: Any) {
         self.navigationController?.dismiss(animated: false, completion: {
             self.customCamDelegate.customCameraDidTakePicture(cropedImage:self.image
@@ -162,4 +162,3 @@ extension CustomCameraPreviewViewController: UIScrollViewDelegate {
         view.layoutIfNeeded()
     }
 }
-

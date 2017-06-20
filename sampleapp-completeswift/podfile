@@ -16,5 +16,6 @@ target 'sampleapp-completeswift' do
     pod 'RxCocoa'
     pod 'GoogleMaps'
     pod 'Alamofire'
+    pod 'AlamofireObjectMapper'
     pod 'Toast-Swift', '~> 2.0.0'
 end

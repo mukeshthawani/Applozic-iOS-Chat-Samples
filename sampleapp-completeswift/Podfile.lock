@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.4.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
   - AwesomeCache (5.0)
   - GoogleMaps (2.2.0):
     - GoogleMaps/Maps (= 2.2.0)
@@ -28,6 +31,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireObjectMapper
   - AwesomeCache
   - GoogleMaps
   - Kingfisher
@@ -41,6 +45,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
   AwesomeCache: d8906955242173357caa0be0214d5e77dec32cc5
   GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
   Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
@@ -52,6 +57,6 @@ SPEC CHECKSUMS:
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: dd61a05969b258825ea29aa559b754f530aa636e
+PODFILE CHECKSUM: e627f299028ead239958b4241078e79c13f2447d
 
 COCOAPODS: 1.2.1

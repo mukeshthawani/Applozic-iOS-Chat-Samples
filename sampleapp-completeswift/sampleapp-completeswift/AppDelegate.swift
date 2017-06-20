@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         prepareRootViewController()
         registerForNotification()
         ALPushNotificationHandler.shared.dataConnectionNotificationHandler()
-        let alApplocalNotificationHnadler : ALAppLocalNotifications =  ALAppLocalNotifications.appLocalNotificationHandler();
-        alApplocalNotificationHnadler.dataConnectionNotificationHandler();
+        let alApplocalNotificationHnadler : ALAppLocalNotifications =  ALAppLocalNotifications.appLocalNotificationHandler()
+        alApplocalNotificationHnadler.dataConnectionNotificationHandler()
         
 //        if (ALUserDefaultsHandler.isLoggedIn())
 //        {
@@ -143,12 +143,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func prepareRootViewController() {
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.makeKeyAndVisible()
         
-        let storyboard = UIStoryboard.name(storyboard: UIStoryboard.Storyboard.main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as? UIViewController
-        window?.rootViewController = vc
+//        let storyboard = UIStoryboard.name(storyboard: UIStoryboard.Storyboard.main)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as? UIViewController
+//        window?.rootViewController = vc
     }
 }
 
