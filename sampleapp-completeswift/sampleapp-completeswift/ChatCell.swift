@@ -142,6 +142,7 @@ final class ChatCell: MGSwipeTableCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        voipButton.isHidden = true
         setupConstraints()
     }
 
