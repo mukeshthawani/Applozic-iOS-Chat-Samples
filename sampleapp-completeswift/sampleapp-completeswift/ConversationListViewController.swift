@@ -17,7 +17,7 @@ final class ConversationListViewController: ALBaseViewController {
 
     // To check if coming from push notification
     var contactId: String?
-
+    var channelKey: NSNumber?
 
     fileprivate var tapToDismiss:UITapGestureRecognizer!
     fileprivate let searchController = UISearchController(searchResultsController: nil)
@@ -54,11 +54,11 @@ final class ConversationListViewController: ALBaseViewController {
     override func addObserver() {
 
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "newMessageNotification"), object: nil, queue: nil, using: {[weak self] notification in
-            guard let weakSelf = self else { return }
+            guard let weakSelf = self, let viewModel = weakSelf.viewModel else { return }
             let msgArray = notification.object as? [ALMessage]
             print("new notification received: ", msgArray?.first?.message)
             guard let list = notification.object as? [Any], !list.isEmpty else { return }
-            weakSelf.viewModel.addMessages(messages: list)
+            viewModel.addMessages(messages: list)
 
         })
 
@@ -81,15 +81,22 @@ final class ConversationListViewController: ALBaseViewController {
             message.groupId = groupId
             let info = notification.userInfo
             let alertValue = info?["alertValue"]
-            guard let updateUI = info?["updateUI"] as? Int, updateUI == Int(APP_STATE_ACTIVE.rawValue), weakSelf.isViewLoaded, (weakSelf.view.window != nil) else { return }
-            guard let alert = alertValue as? String else { return }
-            let alertComponents = alert.components(separatedBy: ":")
-            if alertComponents.count > 1 {
-                message.message = alertComponents[1]
-            } else {
-                message.message = alertComponents.first
+            guard let updateUI = info?["updateUI"] as? Int else { return }
+            if updateUI == Int(APP_STATE_ACTIVE.rawValue), weakSelf.isViewLoaded, (weakSelf.view.window != nil) {
+                guard let alert = alertValue as? String else { return }
+                let alertComponents = alert.components(separatedBy: ":")
+                if alertComponents.count > 1 {
+                    message.message = alertComponents[1]
+                } else {
+                    message.message = alertComponents.first
+                }
+                weakSelf.viewModel.addMessages(messages: [message])
+            } else if updateUI == Int(APP_STATE_BACKGROUND.rawValue) {
+                // Coming from background
+
+                guard contactId != nil || groupId != nil else { return }
+               weakSelf.launchChat(contactId: contactId, groupId: groupId)
             }
-            weakSelf.viewModel.addMessages(messages: [message])
         })
 
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "reloadTable"), object: nil, queue: nil, using: {[weak self] notification in
@@ -155,14 +162,11 @@ final class ConversationListViewController: ALBaseViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         print("contact id: ", contactId)
-        if let contactId = contactId {
+        if contactId != nil || channelKey != nil {
             print("contact id present")
-            let storyBoard = UIStoryboard(name: "Main", bundle: Bundle(for: ConversationViewController.self))
-            let convViewModel = ConversationViewModel(contactId: contactId, channelKey: nil)
-            conversationViewController = storyBoard.instantiateViewController(withIdentifier: "ConversationViewController") as? ConversationViewController
-            conversationViewController?.viewModel = convViewModel
-            self.navigationController?.pushViewController(conversationViewController!, animated: false)
+            launchChat(contactId: contactId, groupId: channelKey)
             self.contactId = nil
+            self.channelKey = nil
         }
     }
 
@@ -182,6 +186,10 @@ final class ConversationListViewController: ALBaseViewController {
         let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "fill_214"), style: .plain, target: self, action: #selector(compose))
         rightBarButtonItem.tintColor = .white
         navigationItem.rightBarButtonItem = rightBarButtonItem
+
+        let leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(customBackAction))
+        leftBarButtonItem.tintColor = .white
+        navigationItem.leftBarButtonItem = leftBarButtonItem
 
         #if DEVELOPMENT
             let indicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
@@ -209,6 +217,24 @@ final class ConversationListViewController: ALBaseViewController {
         let nib = UINib(nibName: "EmptyChatCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "EmptyChatCell")
 
+    }
+
+    func launchChat(contactId: String?, groupId: NSNumber?) {
+        let alChannelService = ALChannelService()
+        let alContactDbService = ALContactDBService()
+        var title = ""
+        if let key = groupId, let alChannel = alChannelService.getChannelByKey(key), let name = alChannel.name {
+            title = name
+        }
+        else if let key = contactId,let alContact = alContactDbService.loadContact(byKey: "userId", value: key), let name = alContact.displayName {
+            title = name
+        }
+        title = title.isEmpty ? "No name":title
+        let convViewModel = ConversationViewModel(contactId: contactId, channelKey: channelKey)
+        conversationViewController = ConversationViewController()
+        conversationViewController?.title = title
+        conversationViewController?.viewModel = convViewModel
+        self.navigationController?.pushViewController(conversationViewController!, animated: false)
     }
 
     func compose() {
@@ -242,6 +268,14 @@ final class ConversationListViewController: ALBaseViewController {
     {
         searchBar.endEditing(true)
         view.endEditing(true)
+    }
+
+    func customBackAction() {
+        guard let nav = self.navigationController else { return }
+        let dd = nav.popViewController(animated: true)
+        if dd == nil {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 
 }

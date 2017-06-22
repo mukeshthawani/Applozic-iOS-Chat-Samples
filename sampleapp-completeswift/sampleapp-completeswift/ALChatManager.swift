@@ -119,7 +119,6 @@ class ALChatManager: NSObject {
             let _ = ALUserDefaultsHandler.getUserId() as String? else {
                 return false
         }
-
         return true
     }
 
@@ -135,6 +134,8 @@ class ALChatManager: NSObject {
 
     func defaultChatViewSettings() {
         ALUserDefaultsHandler.setGoogleMapAPIKey("AIzaSyCOacEeJi-ZWLLrOtYyj3PKMTOFEG7HDlw") //REPLACE WITH YOUR GOOGLE MAPKEY
+
+        ALApplozicSettings.setListOfViewControllers([ConversationListViewController.description(), ConversationViewController.description()])
     }
 
 }

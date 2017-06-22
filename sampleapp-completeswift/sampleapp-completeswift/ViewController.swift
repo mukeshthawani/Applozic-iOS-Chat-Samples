@@ -13,7 +13,11 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
 //        registerAndLaunch()
-    
+
+    }
+
+    override func viewDidLoad() {
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,8 +41,12 @@ class ViewController: UIViewController {
         alChatManager.registerUser(alUser, completion: {response, error in
             if error == nil {
                 NSLog("[REGISTRATION] Applozic user registration was successful: %@ \(response?.isRegisteredSuccessfully())")
+
+
+
                 let conversationVC = ConversationListViewController()
-                self.navigationController?.pushViewController(conversationVC, animated: true)
+                let nav = UINavigationController(rootViewController: conversationVC)
+                self.present(nav, animated: false, completion: nil)
             } else {
                 NSLog("[REGISTRATION] Applozic user registration error: %@", error.debugDescription)
             }

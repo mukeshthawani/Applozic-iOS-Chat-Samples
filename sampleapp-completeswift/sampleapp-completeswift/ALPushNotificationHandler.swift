@@ -38,6 +38,7 @@ class ALPushNotificationHandler {
         return alChannel
     }
 
+
     func dataConnectionNotificationHandler() {
 
         // No need to add removeObserver() as it is present in pushAssist.
@@ -56,23 +57,24 @@ class ALPushNotificationHandler {
 
             } else {
                 weakSelf.contactId = object
-                guard let alContact = weakSelf.alContact, let displayName = alContact.displayName else { return }
+                guard let alContact = weakSelf.alContact else { return }
+                let displayName = alContact.displayName ?? "No name"
                 weakSelf.title = displayName
             }
 
-            //            weakSelf.launchIndividualChatWith(userId: contactId)
+            weakSelf.launchIndividualChatWith(userId: weakSelf.contactId!, groupId: weakSelf.groupId)
         })
     }
 
+    func launchIndividualChatWith(userId: String?, groupId: NSNumber?) {
+        print("Called via notification and user id is: ", userId)
 
-        func launchIndividualChatWith(userId: String) {
-            print("Called via notification and user id is: ", userId)
-    
-            let messagesVC = ConversationListViewController()
-            messagesVC.contactId = userId
-            let rootVC =  UIApplication.shared.keyWindow?.rootViewController
-            navVC = UINavigationController(rootViewController: messagesVC)
-            navVC?.modalTransitionStyle = .crossDissolve
-            rootVC?.present(navVC!, animated: true, completion: nil)
-        }
+        let messagesVC = ConversationListViewController()
+        messagesVC.contactId = userId
+        messagesVC.channelKey = groupId
+        let rootVC =  UIApplication.shared.keyWindow?.rootViewController
+        navVC = UINavigationController(rootViewController: messagesVC)
+        navVC?.modalTransitionStyle = .crossDissolve
+        rootVC?.present(navVC!, animated: true, completion: nil)
+    }
 }

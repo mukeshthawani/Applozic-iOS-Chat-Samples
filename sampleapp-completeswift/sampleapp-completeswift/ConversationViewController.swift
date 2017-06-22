@@ -256,9 +256,9 @@ final class ConversationViewController: ALBaseViewController {
     override func backTapped() {
         print("back tapped")
         self.viewModel.sendKeyboardDoneTyping()
-//        _ = navigationController?.popToRootViewController(animated: true)
+        _ = navigationController?.popToRootViewController(animated: true)
 
-        navigationController?.popViewController(animated: true)
+//        navigationController?.popViewController(animated: true)
     }
 
     func setupView() {
