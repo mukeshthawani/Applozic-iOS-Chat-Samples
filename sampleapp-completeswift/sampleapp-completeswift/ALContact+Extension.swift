@@ -22,7 +22,11 @@ extension ALContact: ContactProtocol {
     }
 
     var friendProfileName: String? {
-        return self.displayName
+        if let name = displayName, !name.isEmpty {
+            return name
+        } else {
+            return userId
+        }
     }
 
     var friendMood: String? {

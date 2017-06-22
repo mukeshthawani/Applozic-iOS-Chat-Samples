@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B07A3981EFBCD2600595642 /* FriendNewChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3971EFBCD2600595642 /* FriendNewChatCell.swift */; };
+		8B07A39A1EFBCD6C00595642 /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3991EFBCD6C00595642 /* UISearchBar+Extension.swift */; };
+		8B07A39C1EFBCE1600595642 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A39B1EFBCE1600595642 /* FriendCell.swift */; };
 		8B2FBFDC1EF91B1200B0BA14 /* ShareLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2FBFDB1EF91B1200B0BA14 /* ShareLocation.storyboard */; };
 		8B2FBFDF1EF93CC800B0BA14 /* ReverseGeoCodingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FBFDE1EF93CC800B0BA14 /* ReverseGeoCodingRequest.swift */; };
 		8B2FBFE91EF9556000B0BA14 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FBFE81EF9556000B0BA14 /* RequestAPI.swift */; };
@@ -151,6 +154,9 @@
 
 /* Begin PBXFileReference section */
 		4E240434B3F7DEC52B84E4CD /* Pods-sampleapp-completeswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleapp-completeswift.release.xcconfig"; path = "Pods/Target Support Files/Pods-sampleapp-completeswift/Pods-sampleapp-completeswift.release.xcconfig"; sourceTree = "<group>"; };
+		8B07A3971EFBCD2600595642 /* FriendNewChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendNewChatCell.swift; sourceTree = "<group>"; };
+		8B07A3991EFBCD6C00595642 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
+		8B07A39B1EFBCE1600595642 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		8B2FBFDB1EF91B1200B0BA14 /* ShareLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShareLocation.storyboard; sourceTree = "<group>"; };
 		8B2FBFDE1EF93CC800B0BA14 /* ReverseGeoCodingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeoCodingRequest.swift; sourceTree = "<group>"; };
 		8B2FBFE81EF9556000B0BA14 /* RequestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
@@ -458,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				8BF1C1111ED2E89000FDF9C8 /* Date+Extension.swift */,
+				8B07A3991EFBCD6C00595642 /* UISearchBar+Extension.swift */,
 				8BF05BA11EF807AC000BDFDD /* CLLocationManager+Extension.swift */,
 				8BFA87A21EBB1EB10059CFD2 /* UIView+Extension.swift */,
 				8BFA87A81EBB23980059CFD2 /* UIColor+Extension.swift */,
@@ -497,6 +504,8 @@
 				8BF05B8B1EF7EF51000BDFDD /* MessageCell.swift */,
 				8BF05B8D1EF7EF9B000BDFDD /* InformationCell.swift */,
 				8BFA883B1EC053A40059CFD2 /* ChatBaseCell.swift */,
+				8B07A39B1EFBCE1600595642 /* FriendCell.swift */,
+				8B07A3971EFBCD2600595642 /* FriendNewChatCell.swift */,
 				8BFA883D1EC054D00059CFD2 /* BaseCell.swift */,
 				8B5D15891EC34A5400DAA4D0 /* EmptyChatCell.xib */,
 			);
@@ -885,6 +894,7 @@
 				8BFA883C1EC053A40059CFD2 /* ChatBaseCell.swift in Sources */,
 				8BC47CBE1EF3F3E400A70015 /* ConversationListViewModel.swift in Sources */,
 				8BFA88021EBCBE2E0059CFD2 /* ALBaseViewController.swift in Sources */,
+				8B07A39C1EFBCE1600595642 /* FriendCell.swift in Sources */,
 				8BC47CD31EF4142500A70015 /* SelectParticipantToAddViewController.swift in Sources */,
 				8BFA87B41EBB343D0059CFD2 /* SystemMessage.swift in Sources */,
 				8BC47CCD1EF4142500A70015 /* CreateGroupViewController.swift in Sources */,
@@ -934,6 +944,7 @@
 				8BA27F991EC761BA00765581 /* PhotoCollectionCell.swift in Sources */,
 				8BF05BA01EF80610000BDFDD /* CustomCameraPreviewViewController.swift in Sources */,
 				8BA27FA41EC7640400765581 /* CGSize+Extension.swift in Sources */,
+				8B07A3981EFBCD2600595642 /* FriendNewChatCell.swift in Sources */,
 				8BE7AF231EC0B1AC0073FED9 /* ALMessage+Extension.swift in Sources */,
 				8BC47CD41EF4142500A70015 /* SelectProfilePicViewController.swift in Sources */,
 				8BFA882A1EBED8640059CFD2 /* FriendPhotoPortalCell.swift in Sources */,
@@ -949,6 +960,7 @@
 				8BA27FA11EC763DE00765581 /* UIImage+Extension.swift in Sources */,
 				8BF05B9A1EF7F4BF000BDFDD /* UITableView+Extension.swift in Sources */,
 				8BF05BA21EF807AC000BDFDD /* CLLocationManager+Extension.swift in Sources */,
+				8B07A39A1EFBCD6C00595642 /* UISearchBar+Extension.swift in Sources */,
 				8BF05BA61EF80833000BDFDD /* MarkerInfoWindowView.swift in Sources */,
 				8BFA87B61EBB35370059CFD2 /* UI+Style.swift in Sources */,
 				8BFA87971EBB0F500059CFD2 /* NSObject+ApplozicBridge.m in Sources */,

@@ -238,11 +238,8 @@ final class ConversationListViewController: ALBaseViewController {
     }
 
     func compose() {
-//        guard let account = AuthenticationManager.shared.account else {return}
-
-//        let friendDataService = FriendDataService.init(account: account, apiService: apiClient, dbService: db)
-//        let newChatVC = NewChatViewController(viewModel: NewChatViewModel(friendDataService: friendDataService))
-//        navigationController?.pushViewController(newChatVC, animated: true)
+        let newChatVC = NewChatViewController(viewModel: NewChatViewModel())
+        navigationController?.pushViewController(newChatVC, animated: true)
     }
 
     func sync(message: ALMessage) {
@@ -277,7 +274,6 @@ final class ConversationListViewController: ALBaseViewController {
             self.dismiss(animated: true, completion: nil)
         }
     }
-
 }
 
 extension ConversationListViewController: UITableViewDelegate, UITableViewDataSource {

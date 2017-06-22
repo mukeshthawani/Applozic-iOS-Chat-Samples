@@ -13,7 +13,6 @@ protocol IdentityProtocol {
     var displayName: String {get}
     var displayPhoto: URL? {get}
     var userID: String {get}
-    var layerID: String {get}
     var mood: String? {get}
     var emailAddress: String? {get}
     var mood_expired_at: NSNumber? {get}
