@@ -10,6 +10,17 @@
 		8B07A3981EFBCD2600595642 /* FriendNewChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3971EFBCD2600595642 /* FriendNewChatCell.swift */; };
 		8B07A39A1EFBCD6C00595642 /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3991EFBCD6C00595642 /* UISearchBar+Extension.swift */; };
 		8B07A39C1EFBCE1600595642 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A39B1EFBCE1600595642 /* FriendCell.swift */; };
+		8B07A39E1EFC166700595642 /* CreateGroupChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B07A39D1EFC166700595642 /* CreateGroupChat.storyboard */; };
+		8B07A3A01EFC443A00595642 /* ALGroupChatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A39F1EFC443A00595642 /* ALGroupChatTextField.swift */; };
+		8B07A3A21EFC475F00595642 /* CreateGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3A11EFC475F00595642 /* CreateGroupViewModel.swift */; };
+		8B07A3A41EFC478200595642 /* AddParticipantCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3A31EFC478200595642 /* AddParticipantCollectionCell.swift */; };
+		8B07A3A61EFCE51A00595642 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3A51EFCE51A00595642 /* UIAlertController+Extension.swift */; };
+		8B07A3A81EFCE5E800595642 /* AlertInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3A71EFCE5E800595642 /* AlertInformation.swift */; };
+		8B07A3B41EFD097300595642 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3B31EFD097300595642 /* UITextField+Extension.swift */; };
+		8B07A3B91EFD289400595642 /* FriendDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3B81EFD289400595642 /* FriendDatasource.swift */; };
+		8B07A3BB1EFD2E5400595642 /* FriendContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3BA1EFD2E5400595642 /* FriendContactCell.swift */; };
+		8B07A3BD1EFD2EA700595642 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3BC1EFD2EA700595642 /* Array+Extension.swift */; };
+		8B07A3C01EFD2F9A00595642 /* UIImaveView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3BF1EFD2F9A00595642 /* UIImaveView+Extension.swift */; };
 		8B2FBFDC1EF91B1200B0BA14 /* ShareLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2FBFDB1EF91B1200B0BA14 /* ShareLocation.storyboard */; };
 		8B2FBFDF1EF93CC800B0BA14 /* ReverseGeoCodingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FBFDE1EF93CC800B0BA14 /* ReverseGeoCodingRequest.swift */; };
 		8B2FBFE91EF9556000B0BA14 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FBFE81EF9556000B0BA14 /* RequestAPI.swift */; };
@@ -157,6 +168,17 @@
 		8B07A3971EFBCD2600595642 /* FriendNewChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendNewChatCell.swift; sourceTree = "<group>"; };
 		8B07A3991EFBCD6C00595642 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
 		8B07A39B1EFBCE1600595642 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		8B07A39D1EFC166700595642 /* CreateGroupChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateGroupChat.storyboard; sourceTree = "<group>"; };
+		8B07A39F1EFC443A00595642 /* ALGroupChatTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALGroupChatTextField.swift; sourceTree = "<group>"; };
+		8B07A3A11EFC475F00595642 /* CreateGroupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupViewModel.swift; sourceTree = "<group>"; };
+		8B07A3A31EFC478200595642 /* AddParticipantCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddParticipantCollectionCell.swift; sourceTree = "<group>"; };
+		8B07A3A51EFCE51A00595642 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		8B07A3A71EFCE5E800595642 /* AlertInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertInformation.swift; sourceTree = "<group>"; };
+		8B07A3B31EFD097300595642 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		8B07A3B81EFD289400595642 /* FriendDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDatasource.swift; sourceTree = "<group>"; };
+		8B07A3BA1EFD2E5400595642 /* FriendContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendContactCell.swift; sourceTree = "<group>"; };
+		8B07A3BC1EFD2EA700595642 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		8B07A3BF1EFD2F9A00595642 /* UIImaveView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImaveView+Extension.swift"; sourceTree = "<group>"; };
 		8B2FBFDB1EF91B1200B0BA14 /* ShareLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShareLocation.storyboard; sourceTree = "<group>"; };
 		8B2FBFDE1EF93CC800B0BA14 /* ReverseGeoCodingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeoCodingRequest.swift; sourceTree = "<group>"; };
 		8B2FBFE81EF9556000B0BA14 /* RequestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
@@ -336,6 +358,7 @@
 		8BA27F941EC75F7600765581 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				8B07A39D1EFC166700595642 /* CreateGroupChat.storyboard */,
 				8BA27F951EC75FAB00765581 /* PreviewImage.storyboard */,
 				8BA27FA71EC7671800765581 /* CustomCamera.storyboard */,
 			);
@@ -441,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				8BF05B851EF7A993000BDFDD /* FriendViewModel.swift */,
+				8B07A3A11EFC475F00595642 /* CreateGroupViewModel.swift */,
 				8BC47CC11EF3F56E00A70015 /* NewChatViewModel.swift */,
 				8BC47CBD1EF3F3E400A70015 /* ConversationListViewModel.swift */,
 				8BC47CBF1EF3F3F100A70015 /* ConversationViewModel.swift */,
@@ -465,15 +489,19 @@
 			children = (
 				8BF1C1111ED2E89000FDF9C8 /* Date+Extension.swift */,
 				8B07A3991EFBCD6C00595642 /* UISearchBar+Extension.swift */,
+				8B07A3BC1EFD2EA700595642 /* Array+Extension.swift */,
 				8BF05BA11EF807AC000BDFDD /* CLLocationManager+Extension.swift */,
 				8BFA87A21EBB1EB10059CFD2 /* UIView+Extension.swift */,
 				8BFA87A81EBB23980059CFD2 /* UIColor+Extension.swift */,
 				8BE7AF1D1EC05AA50073FED9 /* UIStoryboard+Extension.swift */,
+				8B07A3A51EFCE51A00595642 /* UIAlertController+Extension.swift */,
 				8BE7AF221EC0B1AC0073FED9 /* ALMessage+Extension.swift */,
 				8BA27F9B1EC7624F00765581 /* UIViewController+Extension.swift */,
 				8BF05B9B1EF7F578000BDFDD /* ALContact+Extension.swift */,
+				8B07A3B31EFD097300595642 /* UITextField+Extension.swift */,
 				8BF05B991EF7F4BF000BDFDD /* UITableView+Extension.swift */,
 				8BA27FA01EC763DE00765581 /* UIImage+Extension.swift */,
+				8B07A3BF1EFD2F9A00595642 /* UIImaveView+Extension.swift */,
 				8BA27FA31EC7640400765581 /* CGSize+Extension.swift */,
 				8BA27FA51EC764AA00765581 /* AVCaptureVideoOrientation+Extension.swift */,
 				8BA2816C1ECC4B5400765581 /* String+Extension.swift */,
@@ -503,6 +531,7 @@
 				8BFA87A61EBB1F950059CFD2 /* ChatCell.swift */,
 				8BF05B8B1EF7EF51000BDFDD /* MessageCell.swift */,
 				8BF05B8D1EF7EF9B000BDFDD /* InformationCell.swift */,
+				8B07A3BA1EFD2E5400595642 /* FriendContactCell.swift */,
 				8BFA883B1EC053A40059CFD2 /* ChatBaseCell.swift */,
 				8B07A39B1EFBCE1600595642 /* FriendCell.swift */,
 				8B07A3971EFBCD2600595642 /* FriendNewChatCell.swift */,
@@ -518,6 +547,7 @@
 				8B2FBFDD1EF93C8F00B0BA14 /* API */,
 				8BFA87AB1EBB24330059CFD2 /* Style */,
 				8BFA87B31EBB343D0059CFD2 /* SystemMessage.swift */,
+				8B07A3A71EFCE5E800595642 /* AlertInformation.swift */,
 				8BFA87B51EBB35370059CFD2 /* UI+Style.swift */,
 			);
 			name = Util;
@@ -592,6 +622,7 @@
 		8BFA880B1EBCD0260059CFD2 /* Custom TextView */ = {
 			isa = PBXGroup;
 			children = (
+				8B07A39F1EFC443A00595642 /* ALGroupChatTextField.swift */,
 				8BFA880C1EBCD0730059CFD2 /* ALChatBarTextView.swift */,
 			);
 			name = "Custom TextView";
@@ -600,6 +631,7 @@
 		8BFA880F1EBCD1090059CFD2 /* Voice Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8B07A3A31EFC478200595642 /* AddParticipantCollectionCell.swift */,
 				8BFA88101EBCD13B0059CFD2 /* SoundRecordingView.swift */,
 				8BFA882B1EBED8A40059CFD2 /* MyVoiceCell.swift */,
 				8BFA882D1EBED8E90059CFD2 /* VoiceCell.swift */,
@@ -612,6 +644,7 @@
 		8BFA881D1EBED6470059CFD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8B07A3B81EFD289400595642 /* FriendDatasource.swift */,
 				8B2FBFEC1EF964E300B0BA14 /* Geocode.swift */,
 				8BE7AF241EC0BBFC0073FED9 /* MessageModel.swift */,
 			);
@@ -812,6 +845,7 @@
 				8BF05BA41EF80825000BDFDD /* MarkerInfoWindowView.xib in Resources */,
 				8B5D158A1EC34A5400DAA4D0 /* EmptyChatCell.xib in Resources */,
 				8BFA87671EBB09500059CFD2 /* Assets.xcassets in Resources */,
+				8B07A39E1EFC166700595642 /* CreateGroupChat.storyboard in Resources */,
 				8BA27F961EC75FAB00765581 /* PreviewImage.storyboard in Resources */,
 				8BA27FA81EC7671800765581 /* CustomCamera.storyboard in Resources */,
 				8BFA87651EBB09500059CFD2 /* Main.storyboard in Resources */,
@@ -889,12 +923,14 @@
 			files = (
 				8BC47CD11EF4142500A70015 /* PreviewLocationViewController.swift in Sources */,
 				8BC47CBC1EF3F09D00A70015 /* ConversationListViewController.swift in Sources */,
+				8B07A3A61EFCE51A00595642 /* UIAlertController+Extension.swift in Sources */,
 				8BFA883E1EC054D00059CFD2 /* BaseCell.swift in Sources */,
 				8BF1C10D1ED2DF2500FDF9C8 /* DateSectionHeaderView.swift in Sources */,
 				8BFA883C1EC053A40059CFD2 /* ChatBaseCell.swift in Sources */,
 				8BC47CBE1EF3F3E400A70015 /* ConversationListViewModel.swift in Sources */,
 				8BFA88021EBCBE2E0059CFD2 /* ALBaseViewController.swift in Sources */,
 				8B07A39C1EFBCE1600595642 /* FriendCell.swift in Sources */,
+				8B07A3BD1EFD2EA700595642 /* Array+Extension.swift in Sources */,
 				8BC47CD31EF4142500A70015 /* SelectParticipantToAddViewController.swift in Sources */,
 				8BFA87B41EBB343D0059CFD2 /* SystemMessage.swift in Sources */,
 				8BC47CCD1EF4142500A70015 /* CreateGroupViewController.swift in Sources */,
@@ -911,6 +947,7 @@
 				8BF05B9E1EF7FD5C000BDFDD /* ALChatManager.swift in Sources */,
 				8BF05B8C1EF7EF51000BDFDD /* MessageCell.swift in Sources */,
 				8BFA87B21EBB332B0059CFD2 /* IdentityProtocol.swift in Sources */,
+				8B07A3A21EFC475F00595642 /* CreateGroupViewModel.swift in Sources */,
 				8BFA880D1EBCD0730059CFD2 /* ALChatBarTextView.swift in Sources */,
 				8BFA88211EBED7790059CFD2 /* MyPhotoPortalCell.swift in Sources */,
 				8BF05B861EF7A993000BDFDD /* FriendViewModel.swift in Sources */,
@@ -919,20 +956,24 @@
 				8BC47CBA1EF3F08700A70015 /* ConversationViewController.swift in Sources */,
 				8BF05B9C1EF7F578000BDFDD /* ALContact+Extension.swift in Sources */,
 				8BC47CD21EF4142500A70015 /* PreviewPhotoViewController.swift in Sources */,
+				8B07A3A41EFC478200595642 /* AddParticipantCollectionCell.swift in Sources */,
 				8BF05B941EF7F1B4000BDFDD /* PreviewImageViewModel.swift in Sources */,
 				8BC47CC01EF3F3F100A70015 /* ConversationViewModel.swift in Sources */,
 				8BFA87B01EBB32010059CFD2 /* ReusableView.swift in Sources */,
 				8BC47CC21EF3F56E00A70015 /* NewChatViewModel.swift in Sources */,
 				8BF1C1121ED2E89000FDF9C8 /* Date+Extension.swift in Sources */,
+				8B07A3C01EFD2F9A00595642 /* UIImaveView+Extension.swift in Sources */,
 				8BF05B8E1EF7EF9B000BDFDD /* InformationCell.swift in Sources */,
 				8BC47CCE1EF4142500A70015 /* CustomCameraViewController.swift in Sources */,
 				8BFA87621EBB09500059CFD2 /* ViewController.swift in Sources */,
 				8BC47CD01EF4142500A70015 /* PreviewImageViewController.swift in Sources */,
 				8BF05B901EF7EFC4000BDFDD /* FriendLocationCell.swift in Sources */,
+				8B07A3B41EFD097300595642 /* UITextField+Extension.swift in Sources */,
 				8BFA88111EBCD13B0059CFD2 /* SoundRecordingView.swift in Sources */,
 				8BA27F9C1EC7624F00765581 /* UIViewController+Extension.swift in Sources */,
 				8BA2816B1ECC4AFD00765581 /* TypingNoticeView.swift in Sources */,
 				8BA2816D1ECC4B5400765581 /* String+Extension.swift in Sources */,
+				8B07A3A81EFCE5E800595642 /* AlertInformation.swift in Sources */,
 				8BC47CB61EF3F02800A70015 /* NewChatViewController.swift in Sources */,
 				8BA281731ECD751400765581 /* ALPushNotificationHandler.swift in Sources */,
 				8BC47CB81EF3F07200A70015 /* ConversationViewController+TableView.swift in Sources */,
@@ -943,6 +984,7 @@
 				8BFA88241EBED7C50059CFD2 /* MyPhotoLandscapeCell.swift in Sources */,
 				8BA27F991EC761BA00765581 /* PhotoCollectionCell.swift in Sources */,
 				8BF05BA01EF80610000BDFDD /* CustomCameraPreviewViewController.swift in Sources */,
+				8B07A3A01EFC443A00595642 /* ALGroupChatTextField.swift in Sources */,
 				8BA27FA41EC7640400765581 /* CGSize+Extension.swift in Sources */,
 				8B07A3981EFBCD2600595642 /* FriendNewChatCell.swift in Sources */,
 				8BE7AF231EC0B1AC0073FED9 /* ALMessage+Extension.swift in Sources */,
@@ -960,8 +1002,10 @@
 				8BA27FA11EC763DE00765581 /* UIImage+Extension.swift in Sources */,
 				8BF05B9A1EF7F4BF000BDFDD /* UITableView+Extension.swift in Sources */,
 				8BF05BA21EF807AC000BDFDD /* CLLocationManager+Extension.swift in Sources */,
+				8B07A3B91EFD289400595642 /* FriendDatasource.swift in Sources */,
 				8B07A39A1EFBCD6C00595642 /* UISearchBar+Extension.swift in Sources */,
 				8BF05BA61EF80833000BDFDD /* MarkerInfoWindowView.swift in Sources */,
+				8B07A3BB1EFD2E5400595642 /* FriendContactCell.swift in Sources */,
 				8BFA87B61EBB35370059CFD2 /* UI+Style.swift in Sources */,
 				8BFA87971EBB0F500059CFD2 /* NSObject+ApplozicBridge.m in Sources */,
 				8BF05B841EF7A808000BDFDD /* ShareLocationViewController.swift in Sources */,

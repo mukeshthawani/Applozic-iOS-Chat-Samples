@@ -114,12 +114,12 @@ extension NewChatViewController: UITableViewDelegate, UITableViewDataSource {
             
             tableView.deselectRow(at: indexPath, animated: true)
             
-//            let storyboard = UIStoryboard.name(storyboard: UIStoryboard.Storyboard.createGroupChat)
-//            if let vc = storyboard.instantiateViewController(withIdentifier: "CreateGroupViewController") as? CreateGroupViewController {
-//                vc.setCurrentGroupSelected(groupName: "", groupProfileImg: nil, groupSelected: [FriendViewModel](), delegate: self)
-//                vc.addContactMode = .newChat
-//                navigationController?.pushViewController(vc, animated: true)
-//            }
+            let storyboard = UIStoryboard.name(storyboard: UIStoryboard.Storyboard.createGroupChat)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "CreateGroupViewController") as? CreateGroupViewController {
+                vc.setCurrentGroupSelected(groupName: "", groupProfileImg: nil, groupSelected: [FriendViewModel](), delegate: self)
+                vc.addContactMode = .newChat
+                navigationController?.pushViewController(vc, animated: true)
+            }
 //
             return
         }
@@ -165,69 +165,69 @@ extension NewChatViewController: UISearchBarDelegate {
 
 
 //MARK: - CreateGroupChatAddFriendProtocol
-//extension NewChatViewController: CreateGroupChatAddFriendProtocol {
-//    
-//    func createGroupGetFriendInGroupList(friendsSelected: [FriendViewModel], groupName: String, groupImgUrl: String, friendsAdded: [FriendViewModel]) {
-//        //TODO
-////        let users = friendsSelected.flatMap({$0.friendLayerUserID})
-//
-//        guard ALDataNetworkConnection.checkDataNetworkAvailable() else { return }
-//
-//        //Server call
-//
-//        let newChannel = ALChannelService()
-//        let membersList = NSMutableArray()
-//        let _ = friendsSelected.map { membersList.add($0.friendUUID as Any) }
-//
-//        newChannel.createChannel(groupName, orClientChannelKey: nil, andMembersList: membersList, andImageLink: groupImgUrl, withCompletion: {
-//            channel, error in
-//            guard let alChannel = channel else {
-//                print("error creating group", error.debugDescription)
-//                return
-//            }
-//            print("group created")
-//            let message = ALMessage()
-//            message.groupId = alChannel.key
-//            let list = NSMutableArray(object: message)
-//            NotificationCenter.default.post(name: Notification.Name(rawValue: "reloadTable"), object: list)
-//
-//            let viewModel = ConversationViewModel(contactId: nil, channelKey: alChannel.key)
-//            let conversationVC = ConversationViewController()
-//            conversationVC.viewModel = viewModel
-//            conversationVC.title = groupName
-//            self.navigationController?.pushViewController(conversationVC, animated: true)
-//            self.tableView.isUserInteractionEnabled = true
-//        })
-//
-////        if let conversation = ConversationListViewModel().createConversation(users: users) {
-////            
-////            conversation.setValue(groupName, forMetadataAtKeyPath: "group_name")
-////            conversation.setValue(groupImgUrl, forMetadataAtKeyPath: "group_profile_url")
-////            
-////            let cache = RowHeighCache(identity: conversation.identifier.absoluteString)
-////            let viewModel = ConversationViewModel(conversation: conversation, cache: cache)
-////            
-////            let hud = MBProgressHUD.showAdded(to: self.tableView, animated: true)
-////            
-////            viewModel.fetch(complete: { [weak self] (_) in
-////                
-////                hud.hide(animated: true)
-////                
-////                guard let strongSelf = self else {return}
-////                
-////                let conversationVC = ConversationViewController(viewModel: viewModel)
-////                conversationVC.title = groupName
-////                
-////                strongSelf.navigationController?.pushViewController(conversationVC, animated: true)
-////                strongSelf.tableView.isUserInteractionEnabled = true
-////            })
-////            
-////            do {
-////                try viewModel.send(createdConversation: conversation)
-////            } catch {
-////                Logger.error(message: "Fail to send 'create group' message", tag: .createConversation)
-////            }
-////        }
-//    }
+extension NewChatViewController: CreateGroupChatAddFriendProtocol {
+    
+    func createGroupGetFriendInGroupList(friendsSelected: [FriendViewModel], groupName: String, groupImgUrl: String, friendsAdded: [FriendViewModel]) {
+        //TODO
+//        let users = friendsSelected.flatMap({$0.friendLayerUserID})
 
-//}
+        guard ALDataNetworkConnection.checkDataNetworkAvailable() else { return }
+
+        //Server call
+
+        let newChannel = ALChannelService()
+        let membersList = NSMutableArray()
+        let _ = friendsSelected.map { membersList.add($0.friendUUID as Any) }
+
+        newChannel.createChannel(groupName, orClientChannelKey: nil, andMembersList: membersList, andImageLink: groupImgUrl, withCompletion: {
+            channel, error in
+            guard let alChannel = channel else {
+                print("error creating group", error.debugDescription)
+                return
+            }
+            print("group created")
+            let message = ALMessage()
+            message.groupId = alChannel.key
+            let list = NSMutableArray(object: message)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "reloadTable"), object: list)
+
+            let viewModel = ConversationViewModel(contactId: nil, channelKey: alChannel.key)
+            let conversationVC = ConversationViewController()
+            conversationVC.viewModel = viewModel
+            conversationVC.title = groupName
+            self.navigationController?.pushViewController(conversationVC, animated: true)
+            self.tableView.isUserInteractionEnabled = true
+        })
+
+//        if let conversation = ConversationListViewModel().createConversation(users: users) {
+//            
+//            conversation.setValue(groupName, forMetadataAtKeyPath: "group_name")
+//            conversation.setValue(groupImgUrl, forMetadataAtKeyPath: "group_profile_url")
+//            
+//            let cache = RowHeighCache(identity: conversation.identifier.absoluteString)
+//            let viewModel = ConversationViewModel(conversation: conversation, cache: cache)
+//            
+//            let hud = MBProgressHUD.showAdded(to: self.tableView, animated: true)
+//            
+//            viewModel.fetch(complete: { [weak self] (_) in
+//                
+//                hud.hide(animated: true)
+//                
+//                guard let strongSelf = self else {return}
+//                
+//                let conversationVC = ConversationViewController(viewModel: viewModel)
+//                conversationVC.title = groupName
+//                
+//                strongSelf.navigationController?.pushViewController(conversationVC, animated: true)
+//                strongSelf.tableView.isUserInteractionEnabled = true
+//            })
+//            
+//            do {
+//                try viewModel.send(createdConversation: conversation)
+//            } catch {
+//                Logger.error(message: "Fail to send 'create group' message", tag: .createConversation)
+//            }
+//        }
+    }
+
+}
