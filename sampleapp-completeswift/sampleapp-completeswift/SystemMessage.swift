@@ -11,42 +11,7 @@ import Foundation
 
 //handle all in app's display messages
 struct SystemMessage {
-    struct ComingSoon {
-        static let EmailSignIn = "Email sign in is coming soon!"
-        static let EmailSignUp = "Email sign up is coming soon!"
-        static let ForgotPassword = "Forgot password is coming soon!"
-        static let Community = "Community is coming soon!"
-        static let OtherService = "Other services is coming soon!"
-        static let VoIP = "VoIP is coming soon!"
-        static let BuyVMSim = "Buy VM SIM is coming soon!"
-        static let JustUseVMApp = "Just use a VM App is coming soon!"
-        static let LuckyNumber = "Lucky number is coming soon!"
-        static let InviteFriends = "Invite Friends is coming soon!"
-        static let FindFriends = "Find Friends is coming soon!"
-        static let BuyData = "Buy Data is coming soon!"
-        static let BuyVoice = "Buy Voice is coming soon!"
-        static let AutoRenew = "Auto Renew is coming soon!"
-        static let SettingMenu = "Setting Menu is coming soon!"
-        static let Basket   = "Basket is coming soon!"
-        static let CallOnChatList   = "Calling is coming soon!"
-        static let Favorite   = "Save as Favorite is coming soon!"
-        static let Mute   = "Mute Conversation is coming soon!"
-        static let ExtraMenu   = "Extra Menu is coming soon!"
-        static let Store   = "Store is coming soon!"
-        static let ChatForAssist   = "Chat for Assistance is coming soon!"
-        static let Voice   = "Voice Message is coming soon!"
-        
-        static let HelpFeedBack   = "Help & Feedback is coming soon!"
-        static let Notification   = "Notifications is coming soon!"
-        static let PaymentDetails   = "Payment details is coming soon!"
-        static let ChatRenew   = "Free Chat auto renew is coming soon!"
-        static let WalletReload   = "Wallet auto reload is coming soon!"
-        static let DataRenew   = "Data auto renew is coming soon!"
-        static let VoiceRenew   = "Voice auto renew is coming soon!"
-        static let WhatHot   = "Deals & Recommendations coming soon!"
-        static let CustomerCare   = "Customer Care is coming soon!"
-    }
-    
+
     struct Camera {
         static let CamNotAvailable = "Camera is not available"
         static let GalleryAvailable = "Gallery is not available"
@@ -69,7 +34,7 @@ struct SystemMessage {
     struct Information {
         static let FriendAdded = "Friend Added"
         static let FriendRemoved = "Friend Removed"
-        static let AppName = "Axiata"
+        static let AppName = ""
         static let ChatHere = "Chat here..."
     }
     

@@ -1,9 +1,9 @@
 //
 //  PreviewPhotoViewController.swift
-//  Axiata
+//  
 //
-//  Created by Nitigron Ruengmontre on 12/16/2559 BE.
-//  Copyright © 2559 Appsynth. All rights reserved.
+//  Created by Mukesh Thawani on 04/05/17.
+//  Copyright © 2017 Applozic. All rights reserved.
 //
 
 import Foundation

@@ -1,9 +1,9 @@
 //
 //  DateSectionHeaderView.swift
-//  Axiata
+//  
 //
-//  Created by Atikom Tancharoen on 3/8/2560 BE.
-//  Copyright © 2560 Appsynth. All rights reserved.
+//  Created by Mukesh Thawani on 04/05/17.
+//  Copyright © 2017 Applozic. All rights reserved.
 //
 
 import UIKit

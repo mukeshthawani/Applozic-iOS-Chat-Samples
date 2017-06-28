@@ -1,9 +1,9 @@
 //
 //  APIRequest.swift
-//  Axiata
+//  
 //
-//  Created by appsynth on 12/20/16.
-//  Copyright © 2016 Appsynth. All rights reserved.
+//  Created by Mukesh Thawani on 04/05/17.
+//  Copyright © 2017 Applozic. All rights reserved.
 //
 
 import Foundation

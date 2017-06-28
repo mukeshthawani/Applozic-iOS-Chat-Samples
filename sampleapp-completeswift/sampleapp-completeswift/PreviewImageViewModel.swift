@@ -1,9 +1,9 @@
 //
 //  PreviewImageViewModel.swift
-//  Axiata
+//  
 //
-//  Created by appsynth on 2/8/17.
-//  Copyright © 2017 Appsynth. All rights reserved.
+//  Created by Mukesh Thawani on 04/05/17.
+//  Copyright © 2017 Applozic. All rights reserved.
 //
 
 import Foundation

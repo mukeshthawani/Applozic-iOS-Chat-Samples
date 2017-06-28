@@ -1,9 +1,9 @@
 //
 //  LocationCell.swift
-//  Axiata
+//  
 //
-//  Created by Mo on 3/23/17.
-//  Copyright © 2017 Appsynth. All rights reserved.
+//  Created by Mukesh Thawani on 04/05/17.
+//  Copyright © 2017 Applozic. All rights reserved.
 //
 
 import UIKit
