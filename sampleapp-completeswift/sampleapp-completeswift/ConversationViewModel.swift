@@ -371,12 +371,13 @@ final class ConversationViewModel: NSObject {
     }
 
     func updateDeliveryReport(messageKey: String, status: Int32) {
-        guard let mesgArray = alMessageWrapper.getUpdatedMessageArray() as? [ALMessage], !mesgArray.isEmpty else { return }
+        let mesgArray = alMessages
+        guard !mesgArray.isEmpty else { return }
         let filteredList = mesgArray.filter { ($0.key != nil) ? $0.key == messageKey:false }
         if filteredList.count > 0 {
             updateMessageStatus(filteredList: filteredList, status: status)
         } else {
-            guard let mesgFromService = ALMessageService.getMessagefromKeyValuePair("key", andValue: messageKey) as? ALMessage, let objectId = mesgFromService.msgDBObjectId else { return }
+            guard let mesgFromService = ALMessageService.getMessagefromKeyValuePair("key", andValue: messageKey), let objectId = mesgFromService.msgDBObjectId else { return }
             let newFilteredList = mesgArray.filter { ($0.msgDBObjectId != nil) ? $0.msgDBObjectId == objectId:false }
             updateMessageStatus(filteredList: newFilteredList, status: status)
         }
@@ -475,13 +476,14 @@ final class ConversationViewModel: NSObject {
         alMessageWrapper.addALMessage(toMessageArray: message)
         addToWrapper(message: message)
         delegate?.messageSent()
-        self.send(message: message) {
-            success in
-            guard success else { return }
+        self.send(alMessage: message) {
+            updatedMessage in
+            guard let mesg = updatedMessage else { return }
             DispatchQueue.main.async {
                 print("UI updated at section: ", indexPath.section, message.isSent)
                 message.status = NSNumber(integerLiteral: Int(SENT.rawValue))
-                self.messageModels[indexPath.section] = (message.messageModel)
+                self.alMessages[indexPath.section] = mesg
+                self.messageModels[indexPath.section] = (mesg.messageModel)
                 self.delegate?.updateMessageAt(indexPath: indexPath)
             }
         }
@@ -654,12 +656,13 @@ final class ConversationViewModel: NSObject {
                     NSLog("Not saved due to error")
                 }
 
-                self.send(message: message!) {
-                    success in
-                    guard success else { return }
+                self.send(alMessage: message!) {
+                    updatedMessage in
+                    guard let mesg = updatedMessage else { return }
                     DispatchQueue.main.async {
                         print("UI updated at section: ", indexPath.section, message?.isSent)
-                        self.messageModels[indexPath.section] = (message?.messageModel)!
+                        self.alMessages[indexPath.section] = mesg
+                        self.messageModels[indexPath.section] = (mesg.messageModel)
                         self.delegate?.updateMessageAt(indexPath: indexPath)
                     }
                 }
@@ -688,16 +691,18 @@ final class ConversationViewModel: NSObject {
         return alMessage
     }
 
-    private func send(message: ALMessage, completion: @escaping (Bool)->()) {
-        ALMessageService.sendMessages(message, withCompletion: {
+    private func send(alMessage: ALMessage, completion: @escaping (ALMessage?)->()) {
+        ALMessageService.sendMessages(alMessage, withCompletion: {
             message, error in
+            let newMesg = alMessage
+            NSLog("message is: ", newMesg.key)
             NSLog("Message sent: \(message), \(error)")
             if error == nil {
                 NSLog("No errors while sending the message")
-                completion(true)
+                completion(newMesg)
             }
             else {
-                completion(false)
+                completion(nil)
             }
         })
     }
