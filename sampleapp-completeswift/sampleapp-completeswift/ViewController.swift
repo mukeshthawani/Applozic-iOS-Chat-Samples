@@ -25,37 +25,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func registerAndLaunch() {
-        let appId = ApplicationId
-        let alUser = ALUser()
-        alUser.applicationId = appId
-        alUser.userId = UserId
-        alUser.email = UserEmail
-        alUser.displayName = UserDisplayName
-        alUser.password = UserPassword
-        registerUserToApplozic(alUser: alUser)
+
+    @IBAction func logoutAction(_ sender: UIButton) {
+        let registerUserClientService: ALRegisterUserClientService = ALRegisterUserClientService()
+        registerUserClientService.logout { (response, error) in
+
+        }
+        self.dismiss(animated: false, completion: nil)
     }
-
-    private func registerUserToApplozic(alUser: ALUser) {
-        let alChatManager = ALChatManager(applicationKey: ALChatManager.applicationId as NSString)
-        alChatManager.registerUser(alUser, completion: {response, error in
-            if error == nil {
-                NSLog("[REGISTRATION] Applozic user registration was successful: %@ \(response?.isRegisteredSuccessfully())")
-
-
-
-                let conversationVC = ConversationListViewController()
-                let nav = UINavigationController(rootViewController: conversationVC)
-                self.present(nav, animated: false, completion: nil)
-            } else {
-                NSLog("[REGISTRATION] Applozic user registration error: %@", error.debugDescription)
-            }
-        })
-    }
-
 
     @IBAction func launchChatList(_ sender: Any) {
-        registerAndLaunch()
+        let conversationVC = ConversationListViewController()
+        let nav = UINavigationController(rootViewController: conversationVC)
+        self.present(nav, animated: false, completion: nil)
     }
 }
 

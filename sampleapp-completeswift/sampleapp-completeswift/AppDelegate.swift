@@ -22,6 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ALPushNotificationHandler.shared.dataConnectionNotificationHandler()
         let alApplocalNotificationHnadler : ALAppLocalNotifications =  ALAppLocalNotifications.appLocalNotificationHandler()
         alApplocalNotificationHnadler.dataConnectionNotificationHandler()
+
+        if (ALUserDefaultsHandler.isLoggedIn())
+        {
+            // Get login screen from storyboard and present it
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as UIViewController
+            self.window?.makeKeyAndVisible();
+            self.window?.rootViewController!.present(viewController, animated:true, completion: nil)
+
+        }
         
 //        if (ALUserDefaultsHandler.isLoggedIn())
 //        {

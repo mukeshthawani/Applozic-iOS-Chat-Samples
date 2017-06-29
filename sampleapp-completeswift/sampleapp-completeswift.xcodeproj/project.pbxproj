@@ -21,6 +21,7 @@
 		8B07A3BB1EFD2E5400595642 /* FriendContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3BA1EFD2E5400595642 /* FriendContactCell.swift */; };
 		8B07A3BD1EFD2EA700595642 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3BC1EFD2EA700595642 /* Array+Extension.swift */; };
 		8B07A3C01EFD2F9A00595642 /* UIImaveView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3BF1EFD2F9A00595642 /* UIImaveView+Extension.swift */; };
+		8B07A3C51F038CEF00595642 /* AppLogicLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B07A3C41F038CEF00595642 /* AppLogicLoginViewController.swift */; };
 		8B2FBFDC1EF91B1200B0BA14 /* ShareLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2FBFDB1EF91B1200B0BA14 /* ShareLocation.storyboard */; };
 		8B2FBFDF1EF93CC800B0BA14 /* ReverseGeoCodingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FBFDE1EF93CC800B0BA14 /* ReverseGeoCodingRequest.swift */; };
 		8B2FBFE91EF9556000B0BA14 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FBFE81EF9556000B0BA14 /* RequestAPI.swift */; };
@@ -179,6 +180,7 @@
 		8B07A3BA1EFD2E5400595642 /* FriendContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendContactCell.swift; sourceTree = "<group>"; };
 		8B07A3BC1EFD2EA700595642 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		8B07A3BF1EFD2F9A00595642 /* UIImaveView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImaveView+Extension.swift"; sourceTree = "<group>"; };
+		8B07A3C41F038CEF00595642 /* AppLogicLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLogicLoginViewController.swift; sourceTree = "<group>"; };
 		8B2FBFDB1EF91B1200B0BA14 /* ShareLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShareLocation.storyboard; sourceTree = "<group>"; };
 		8B2FBFDE1EF93CC800B0BA14 /* ReverseGeoCodingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeoCodingRequest.swift; sourceTree = "<group>"; };
 		8B2FBFE81EF9556000B0BA14 /* RequestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 		8BFA879C1EBB14D00059CFD2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8B07A3C41F038CEF00595642 /* AppLogicLoginViewController.swift */,
 				8BFA88381EC052CD0059CFD2 /* Helper */,
 				8BFA88001EBCBDAD0059CFD2 /* Conversation */,
 				8BFA87FF1EBCBDA20059CFD2 /* Base */,
@@ -955,6 +958,7 @@
 				8BE7AF201EC05BA40073FED9 /* ALBaseNavigationController.swift in Sources */,
 				8BC47CBA1EF3F08700A70015 /* ConversationViewController.swift in Sources */,
 				8BF05B9C1EF7F578000BDFDD /* ALContact+Extension.swift in Sources */,
+				8B07A3C51F038CEF00595642 /* AppLogicLoginViewController.swift in Sources */,
 				8BC47CD21EF4142500A70015 /* PreviewPhotoViewController.swift in Sources */,
 				8B07A3A41EFC478200595642 /* AddParticipantCollectionCell.swift in Sources */,
 				8BF05B941EF7F1B4000BDFDD /* PreviewImageViewModel.swift in Sources */,
