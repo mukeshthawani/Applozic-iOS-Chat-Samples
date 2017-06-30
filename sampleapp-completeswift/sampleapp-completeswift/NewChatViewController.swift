@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MBProgressHUD
 import Applozic
 
 final class NewChatViewController: ALBaseViewController {

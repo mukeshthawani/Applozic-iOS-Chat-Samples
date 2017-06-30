@@ -12,7 +12,6 @@ import UIKit
 import Foundation
 import Kingfisher
 import AVFoundation
-import MBProgressHUD
 
 class MyVoiceCell: VoiceCell {
     

@@ -6,16 +6,9 @@ use_frameworks!
 target 'sampleapp-completeswift' do
     pod 'Kingfisher'
     pod 'MGSwipeTableCell'
-    pod 'Toast-Swift', '~> 2.0.0'
-    pod 'MBProgressHUD', '~> 1.0.0'
-    pod 'AwesomeCache'
     pod 'ObjectMapper'
 
-    pod 'PromiseKit'
-    pod 'RxSwift'
-    pod 'RxCocoa'
     pod 'GoogleMaps'
     pod 'Alamofire'
     pod 'AlamofireObjectMapper'
-    pod 'Toast-Swift', '~> 2.0.0'
 end

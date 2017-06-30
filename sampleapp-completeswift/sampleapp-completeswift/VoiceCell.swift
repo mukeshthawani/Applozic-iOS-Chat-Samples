@@ -12,7 +12,6 @@ import UIKit
 import Foundation
 import Kingfisher
 import AVFoundation
-import MBProgressHUD
 
 protocol VoiceCellProtocol: class {
     func playAudioPress(identifier: String)

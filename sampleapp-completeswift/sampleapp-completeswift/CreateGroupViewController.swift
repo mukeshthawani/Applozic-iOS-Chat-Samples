@@ -9,7 +9,6 @@
 
 import UIKit
 import Kingfisher
-import MBProgressHUD
 
 enum AddContactMode {
     case newChat

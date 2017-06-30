@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import RxSwift
-import RxCocoa
 import Applozic
 
 protocol ConversationViewModelDelegate: class {

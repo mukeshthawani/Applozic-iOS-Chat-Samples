@@ -9,7 +9,6 @@
 
 import Foundation
 import UIKit
-import MBProgressHUD
 
 extension UIViewController
 {
@@ -28,10 +27,6 @@ extension UIViewController
     }
     
     func alert(msg: String) {
-        let hud = MBProgressHUD.showAdded(to: view, animated: true)
-        hud.mode = .text
-        hud.label.text = msg
-        hud.hide(animated: true, afterDelay: 1.0)
     }
     
     class func topViewController() -> UIViewController? {

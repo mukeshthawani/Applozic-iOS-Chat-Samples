@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import AwesomeCache
+
 
 
 final class ChatBar: UIView {
@@ -31,7 +31,6 @@ final class ChatBar: UIView {
     }
     
     var action: ((ActionType) -> ())?
-    fileprivate var cache: Cache<NSString>?
     
     let soundRec: SoundRecorderBtn = {
         let bt = SoundRecorderBtn.init(frame: CGRect.init())
@@ -130,10 +129,6 @@ final class ChatBar: UIView {
             let text = textView.text.trimmingCharacters(in: .whitespacesAndNewlines)
             if text.lengthOfBytes(using: .utf8) > 0 {
                 action?(.sendText(button,text))
-                
-                if let identifier = chatIdentifier {
-                    cache?.setObject(NSString(string: ""), forKey: identifier)
-                }
             }
             
             break
@@ -201,12 +196,6 @@ final class ChatBar: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        do {
-            cache = try Cache<NSString>(name: "ChatBat-TextView")
-        } catch {
-//            Logger.error(message: "ChatBat-TextView Failed")
-        }
-        
         textView.delegate = self
         backgroundColor = .white
         translatesAutoresizingMaskIntoConstraints = false
@@ -220,15 +209,6 @@ final class ChatBar: UIView {
     }
     
     deinit {
-        
-        if let identifier = chatIdentifier, let text = textView.text {
-            if !text.isEmpty {
-                let string = NSString(string: text)
-                cache?.setObject(string, forKey: identifier)
-            } else{
-                cache?.setObject("", forKey: identifier)
-            }
-        }
         
         micButton.removeTarget(self, action: #selector(tapped(button:)), for: .touchUpInside)
         plusButton.removeTarget(self, action: #selector(tapped(button:)), for: .touchUpInside)
@@ -246,17 +226,7 @@ final class ChatBar: UIView {
             guard let identifier = chatIdentifier else {
                 return
             }
-            
-            if let cache = cache, let text = cache.object(forKey: identifier) {
-                let initText = text as String
-                
-                if !initText.isEmpty {
-                    textView.text = initText
-                    _ = textView(textView, shouldChangeTextIn: NSRange.init(location: 0, length: initText.characters.count), replacementText: initText)
-                    textViewDidChange(textView)
-                }
-            }
-            
+
             isNeedInitText = false
         }
         
