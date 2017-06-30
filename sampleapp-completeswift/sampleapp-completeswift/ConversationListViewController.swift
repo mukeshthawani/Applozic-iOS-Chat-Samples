@@ -439,7 +439,10 @@ extension ConversationListViewController: ALMQTTConversationDelegate {
 
     func updateTypingStatus(_ applicationKey: String!, userId: String!, status: Bool) {
         print("Typing status is", status)
-        guard let viewController = conversationViewController,let vm = viewController.viewModel, let id = vm.contactId, id == userId else { return
+        guard let viewController = conversationViewController,let vm = viewController.viewModel else { return
+        }
+        guard (vm.contactId != nil && vm.contactId == userId) || vm.channelKey != nil else {
+            return
         }
         print("Contact id matched")
         viewModel.updateTypingStatus(in: viewController, userId: userId, status: status)

@@ -201,9 +201,8 @@ final class ConversationViewController: ALBaseViewController {
         } else {
             viewModel.individualLaunch = false
         }
-
+        alMqttConversationService = ALMQTTConversationService.sharedInstance()
         if viewModel.individualLaunch {
-            alMqttConversationService = ALMQTTConversationService.sharedInstance()
             alMqttConversationService.mqttConversationDelegate = self
             alMqttConversationService.subscribeToConversation()
         }
@@ -221,6 +220,7 @@ final class ConversationViewController: ALBaseViewController {
         } else {
             tableView.reloadData()
         }
+        subscribingChannel()
         print("id: ", viewModel.messageModels.first?.contactId)
     }
 
@@ -248,9 +248,12 @@ final class ConversationViewController: ALBaseViewController {
         super.viewWillDisappear(animated)
         stopAudioPlayer()
         chatBar.stopRecording()
-        if let _ = alMqttConversationService {
-            alMqttConversationService.unsubscribeToConversation()
+        if viewModel.individualLaunch {
+            if let _ = alMqttConversationService {
+                alMqttConversationService.unsubscribeToConversation()
+            }
         }
+        unsubscribingChannel()
     }
 
     override func backTapped() {
@@ -512,6 +515,25 @@ final class ConversationViewController: ALBaseViewController {
         }
         viewModel.updateStatusReportForConversation(contactId: id, status: status)
     }
+
+    private func subscribingChannel() {
+        let channelService = ALChannelService()
+        if viewModel.isGroup, let groupId = viewModel.channelKey, !channelService.isChannelLeft(groupId) && !ALChannelService.isChannelDeleted(groupId) {
+            self.alMqttConversationService.subscribe(toChannelConversation: groupId)
+        } else if !viewModel.isGroup {
+            self.alMqttConversationService.subscribe(toChannelConversation: nil)
+        }
+        if viewModel.isGroup, ALUserDefaultsHandler.isUserLoggedInUserSubscribedMQTT(){
+            self.alMqttConversationService.unSubscribe(toChannelConversation: nil)
+        }
+
+    }
+
+    private func unsubscribingChannel() {
+
+        self.alMqttConversationService.sendTypingStatus(ALUserDefaultsHandler.getApplicationKey(), userID: viewModel.contactId, andChannelKey: viewModel.channelKey, typing: false)
+        self.alMqttConversationService.unSubscribe(toChannelConversation: viewModel.channelKey)
+    }
 }
 
 extension ConversationViewController: ConversationViewModelDelegate {
@@ -741,7 +763,8 @@ extension ConversationViewController: ALMQTTConversationDelegate {
 
     func updateTypingStatus(_ applicationKey: String!, userId: String!, status: Bool) {
         print("Typing status is", status)
-        guard viewModel.contactId == userId else { return
+        guard viewModel.contactId == userId || viewModel.channelKey != nil else {
+            return
         }
         print("Contact id matched")
         showTypingLabel(status: status, userId: userId)
