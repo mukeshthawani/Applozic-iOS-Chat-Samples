@@ -30,8 +30,7 @@ class ALChatManager: NSObject {
 //        let list = [MainMenuViewController.description()]
 //        ALApplozicSettings.setListOfViewControllers(list)
         self.defaultChatViewSettings()
-        guard let apiKey = ALUserDefaultsHandler.getGoogleMapAPIKey() else { return }
-        GMSServices.provideAPIKey(apiKey)
+
     }
 
     var pushNotificationTokenData: Data? {
